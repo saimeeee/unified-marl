@@ -1,0 +1,2 @@
+# Preserve exact ZIP input bytes, including original CRLF documents.
+* -text
