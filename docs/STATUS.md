@@ -227,3 +227,8 @@ nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader
 等待用户发送第 2 阶段。目标是先建立项目隔离环境，打通原版 QMIX 的小型确定性环境训练→参数更新→保存→加载→评估，再增加真实 SMAC 3m 验证。当前没有一条已通过的强化学习训练链路。
 
 迁移矩阵中所有条目保持 NOT_STARTED，实现/本地/真实环境验证列均为 NO；本阶段工具和原组件检查的成功不得传播为算法迁移完成。
+
+
+## GitHub 发布已完成
+
+2026-10-21，已通过 GitHub 插件提交并由仓库发布流程完成 [v0.7.0-internal.1](https://github.com/saimeeee/unified-marl/releases/tag/v0.7.0-internal.1)。仓库仍为 private，9 个附件的远端大小与 SHA-256 全部和本地原件一致；Windows/Linux ZIP 字节哈希均未改变。发布提交为 `a92d0bea9a6acb44e5576ab81d43ac152b6d2c3e`，[最终发布任务](https://github.com/saimeeee/unified-marl/actions/runs/39558172643) 通过。早期任务因换行和草稿查询失败，日志保留；最终结果以本回执为准。Linux 仅准备文件、没有安装/训练测试，hf-xet 仍由接收方联网补齐。机器回执为 `docs/releases/v0.7.0-internal.1.verification.json`。

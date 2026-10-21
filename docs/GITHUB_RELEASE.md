@@ -24,3 +24,8 @@ GitHub 连接恢复后，先读取远端状态，保留其他已有修改；更�
 `.github/workflows/publish-internal.yml` 在 Windows runner 上运行 `tools/publish_internal_github.py`；仅下载精确版本/哈希的 wheel 和重建文件，不安装 Linux 包、不执行 Linux 脚本、不下载 hf-xet。原核心 wheel、源码包及仅有源包上游的 gym wheel 随发布输入保留，其他大依赖从官方 PyPI/PyTorch 索引按哈希取回。ZIP 大小及 SHA-256 必须与本地已交付产物逐字节一致，否则停止，不发布。
 
 流程使用 GitHub 为当前仓库任务提供的短期令牌，仅声明 contents: write，用于创建本仓库 Release；先核对仓库为 private，默认草稿，全部 9 个附件大小与 GitHub 摘要核对后才发布。已有不同附件或同名已发布版本会明确拒绝覆盖。不会创建用户 API key、改变权限/可见性或上传原始数据/模型/环境。
+
+
+## GitHub 发布已完成
+
+2026-10-21，已通过 GitHub 插件提交并由仓库发布流程完成 [v0.7.0-internal.1](https://github.com/saimeeee/unified-marl/releases/tag/v0.7.0-internal.1)。仓库仍为 private，9 个附件的远端大小与 SHA-256 全部和本地原件一致；Windows/Linux ZIP 字节哈希均未改变。发布提交为 `a92d0bea9a6acb44e5576ab81d43ac152b6d2c3e`，[最终发布任务](https://github.com/saimeeee/unified-marl/actions/runs/39558172643) 通过。早期任务因换行和草稿查询失败，日志保留；最终结果以本回执为准。Linux 仅准备文件、没有安装/训练测试，hf-xet 仍由接收方联网补齐。机器回执为 `docs/releases/v0.7.0-internal.1.verification.json`。

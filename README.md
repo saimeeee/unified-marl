@@ -1,6 +1,6 @@
 # unified-marl
 
-[中文使用说明书](docs/USER_GUIDE.md) · [下载安装包（Releases）](https://github.com/saimeeee/unified-marl/releases) · [支持范围](docs/SUPPORT_MATRIX.md) · [已知问题](docs/KNOWN_ISSUES.md)
+[中文使用说明书](docs/USER_GUIDE.md) · [下载安装包（Releases）](https://github.com/saimeeee/unified-marl/releases/tag/v0.7.0-internal.1) · [支持范围](docs/SUPPORT_MATRIX.md) · [已知问题](docs/KNOWN_ISSUES.md)
 
 **给同事安装使用，请从 Releases 下载对应 Windows 或 Linux ZIP，按包内 README 安装。** GitHub 自动生成的源码 ZIP 不包含平台依赖。接收方需要预先安装 CPython 3.12；Windows 版依赖完整离线，Linux 版安装时联网补齐 hf-xet。两版均为 CPU 版本，Python 解释器、真实数据和仿真器另行提供。
 
