@@ -1,6 +1,6 @@
 # unified-marl
 
-**0.8.2 工程修复版**：[安装与升级](docs/ENGINEERING_RELEASE_082.md) · [三轮验收范围](docs/VALIDATION_REPORT_082.md) · [0.8.2发布入口（待远端确认）](https://github.com/saimeeee/unified-marl/releases/tag/v0.8.2-engineering.1)。首次安装复用0.8.0平台依赖包，再应用完整0.8.2补丁。
+**0.8.2 工程修复版**：[安装与升级](docs/ENGINEERING_RELEASE_082.md) · [三轮验收范围](docs/VALIDATION_REPORT_082.md) · [0.8.2正式发布](https://github.com/saimeeee/unified-marl/releases/tag/v0.8.2-engineering.1)。首次安装复用0.8.0平台依赖包，再应用完整0.8.2补丁。
 
 
 

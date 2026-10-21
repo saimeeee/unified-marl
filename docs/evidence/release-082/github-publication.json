@@ -1,0 +1,78 @@
+{
+  "repository": "saimeeee/unified-marl",
+  "tag": "v0.8.2-engineering.1",
+  "visibility": "public",
+  "runs": [
+    {
+      "id": 39621848630,
+      "html_url": "https://github.com/saimeeee/unified-marl/actions/runs/39621848630",
+      "head_sha": "0c5f2d34bf977a2e75ca5635b16ba5a64f20dbb1",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "release": {
+    "id": 419693145,
+    "url": "https://github.com/saimeeee/unified-marl/releases/tag/v0.8.2-engineering.1",
+    "draft": false,
+    "target_commitish": "0c5f2d34bf977a2e75ca5635b16ba5a64f20dbb1",
+    "asset_hashes_verified": true,
+    "assets": [
+      {
+        "name": "DELIVERY_MANIFEST.json",
+        "size": 1594,
+        "digest": "sha256:d434246385497c915c5deb7270e16712998f4746f815618237dea9148d5253ed",
+        "browser_download_url": "https://github.com/saimeeee/unified-marl/releases/download/v0.8.2-engineering.1/DELIVERY_MANIFEST.json"
+      },
+      {
+        "name": "ENGINEERING_RELEASE_082.zh-CN.md",
+        "size": 3313,
+        "digest": "sha256:9dfaec8e32d8a738e0f9939a8a5ddf7aa9a21ea7ca337cbb1f3a180be0d223e4",
+        "browser_download_url": "https://github.com/saimeeee/unified-marl/releases/download/v0.8.2-engineering.1/ENGINEERING_RELEASE_082.zh-CN.md"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "size": 816,
+        "digest": "sha256:885cce5f0ec126c279b7219e1fca480b87d74e178d5e5592f3e47b7662b9c195",
+        "browser_download_url": "https://github.com/saimeeee/unified-marl/releases/download/v0.8.2-engineering.1/SHA256SUMS.txt"
+      },
+      {
+        "name": "unified-marl-0.8.2-engineering-hotfix.zip",
+        "size": 550100,
+        "digest": "sha256:7e44b40cc4db661a1fe1b0442bc2f44865c9e109cc37b14fa36db96b7bab7bd1",
+        "browser_download_url": "https://github.com/saimeeee/unified-marl/releases/download/v0.8.2-engineering.1/unified-marl-0.8.2-engineering-hotfix.zip"
+      },
+      {
+        "name": "unified-marl-0.8.2-engineering-hotfix.zip.sha256",
+        "size": 109,
+        "digest": "sha256:bd33c95d13cd9732af0d71c3ce9dcece1686fe49455b86233f724324b3d2b3f1",
+        "browser_download_url": "https://github.com/saimeeee/unified-marl/releases/download/v0.8.2-engineering.1/unified-marl-0.8.2-engineering-hotfix.zip.sha256"
+      },
+      {
+        "name": "unified-marl-0.8.2-supporting-files.zip",
+        "size": 13644,
+        "digest": "sha256:2c4dbb795fbf1a85fba4ec7afcdd3dc925a3dd57c26f1142517b34c756de8c95",
+        "browser_download_url": "https://github.com/saimeeee/unified-marl/releases/download/v0.8.2-engineering.1/unified-marl-0.8.2-supporting-files.zip"
+      },
+      {
+        "name": "unified_marl-0.8.2-py3-none-any.whl",
+        "size": 582357,
+        "digest": "sha256:951d22ed25500301c48991cb43ab589539316eadc683fafccdef30d44b4bd58d",
+        "browser_download_url": "https://github.com/saimeeee/unified-marl/releases/download/v0.8.2-engineering.1/unified_marl-0.8.2-py3-none-any.whl"
+      },
+      {
+        "name": "unified_marl-0.8.2.tar.gz",
+        "size": 1146087,
+        "digest": "sha256:ed2e8e9739b83d72fffd91577aa717bf13c6003dc6132ab5a3fce204981776cb",
+        "browser_download_url": "https://github.com/saimeeee/unified-marl/releases/download/v0.8.2-engineering.1/unified_marl-0.8.2.tar.gz"
+      },
+      {
+        "name": "VALIDATION_REPORT_082.zh-CN.md",
+        "size": 4135,
+        "digest": "sha256:43d84f75052a0cf3022d902a6951994184dca228e151cf1ebd1c3325c0641095",
+        "browser_download_url": "https://github.com/saimeeee/unified-marl/releases/download/v0.8.2-engineering.1/VALIDATION_REPORT_082.zh-CN.md"
+      }
+    ]
+  },
+  "status": "PUBLISHED"
+}

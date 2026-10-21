@@ -1,3 +1,9 @@
+# 当前发布状态：0.8.2已发布
+
+[v0.8.2-engineering.1](https://github.com/saimeeee/unified-marl/releases/tag/v0.8.2-engineering.1)已正式发布，Actions成功；9份附件的远端摘要及实际下载SHA256全部通过。源码提交0c5f2d34bf977a2e75ca5635b16ba5a64f20dbb1，仓库public未改动。具体命令和回执见PUBLICATION_STATUS_082.md。下面早期“private/待连接/待发布”等内容为历史准备记录，以本段和实际回执为准。
+
+---
+
 最新发布：0.8.0工程版已发布 https://github.com/saimeeee/unified-marl/releases/tag/v0.8.0-engineering.1，仓库保持private；9附件大小/SHA-256逐项一致，Actions 39569403057通过。运行时源码与wheel逐字节一致，具体回执见docs/releases/v0.8.0-engineering.1.verification.json。新能力未跑训练或环境实验。
 
 # GitHub 内部分发记录

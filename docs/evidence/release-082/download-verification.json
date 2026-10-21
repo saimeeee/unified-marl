@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "release_url": "https://github.com/saimeeee/unified-marl/releases/tag/v0.8.2-engineering.1",
+  "scope": "Direct anonymous download and SHA256 verification of all published Release assets",
+  "assets": [
+    {
+      "name": "DELIVERY_MANIFEST.json",
+      "bytes": 1594,
+      "sha256": "d434246385497c915c5deb7270e16712998f4746f815618237dea9148d5253ed",
+      "verified": true
+    },
+    {
+      "name": "ENGINEERING_RELEASE_082.zh-CN.md",
+      "bytes": 3313,
+      "sha256": "9dfaec8e32d8a738e0f9939a8a5ddf7aa9a21ea7ca337cbb1f3a180be0d223e4",
+      "verified": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 816,
+      "sha256": "885cce5f0ec126c279b7219e1fca480b87d74e178d5e5592f3e47b7662b9c195",
+      "verified": true
+    },
+    {
+      "name": "unified-marl-0.8.2-engineering-hotfix.zip",
+      "bytes": 550100,
+      "sha256": "7e44b40cc4db661a1fe1b0442bc2f44865c9e109cc37b14fa36db96b7bab7bd1",
+      "verified": true
+    },
+    {
+      "name": "unified-marl-0.8.2-engineering-hotfix.zip.sha256",
+      "bytes": 109,
+      "sha256": "bd33c95d13cd9732af0d71c3ce9dcece1686fe49455b86233f724324b3d2b3f1",
+      "verified": true
+    },
+    {
+      "name": "unified-marl-0.8.2-supporting-files.zip",
+      "bytes": 13644,
+      "sha256": "2c4dbb795fbf1a85fba4ec7afcdd3dc925a3dd57c26f1142517b34c756de8c95",
+      "verified": true
+    },
+    {
+      "name": "unified_marl-0.8.2-py3-none-any.whl",
+      "bytes": 582357,
+      "sha256": "951d22ed25500301c48991cb43ab589539316eadc683fafccdef30d44b4bd58d",
+      "verified": true
+    },
+    {
+      "name": "unified_marl-0.8.2.tar.gz",
+      "bytes": 1146087,
+      "sha256": "ed2e8e9739b83d72fffd91577aa717bf13c6003dc6132ab5a3fce204981776cb",
+      "verified": true
+    },
+    {
+      "name": "VALIDATION_REPORT_082.zh-CN.md",
+      "bytes": 4135,
+      "sha256": "43d84f75052a0cf3022d902a6951994184dca228e151cf1ebd1c3325c0641095",
+      "verified": true
+    }
+  ],
+  "training_run": false
+}
