@@ -13,6 +13,10 @@
 | 7 | 剩余能力迁移、干净安装、wheel、示例和验证报告 | 各前置阶段有证据或显式阻塞 | 来源追踪完整；真实可运行产物；已实现/本地/真实状态分开；文档支持矩阵 | 0.7.0 支持子集交付验收结束；220 测试、独立安装与真实数据/回环验证通过；全部未通过项保留于 KNOWN_ISSUES，不表示全部原实验完成 |
 | 8 可选 | FastAPI/Vue 平台、K8s Operator 与包联调 | 阶段 7 可安装产物；数据库/集群等 | 提交/取消/日志/结果/失败链路验证；集群验证单列 | 不属于当前执行范围 |
 
+## 后续用户授权：内部分发包
+
+Windows x64 和 Linux x86_64 CPU / CPython 3.12 两版已准备。Windows 为完整离线包并完成本机全新环境验收；Linux 为接收方联网补齐 hf-xet 的混合版，按用户要求不在此电脑进行 Linux 功能测试。原算法支持范围、383 行迁移清单及未通过项不变。接收方须预装 Python/系统运行库；真实数据与仿真器另行提供。产物、安装流程和实际验证层次见 INTERNAL_DISTRIBUTION.md、INTERNAL_WINDOWS_REPORT.md、INTERNAL_LINUX_REPORT.md。此补充不进入 Web/K8s 阶段。
+
 ## 阶段 2 的第一条训练链路
 
 优先建立项目隔离环境，并验证 CPU PyTorch 与 NumPy；先迁移原版 PyMARL QMIX。

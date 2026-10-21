@@ -1,0 +1,47 @@
+[
+  {
+    "name": "unified-marl-0.7.0-windows-x64-cpu-py312-offline.zip",
+    "bytes": 307140455,
+    "sha256": "1a824094e15a6a5ebd9c2f730a5e16d7fce0601230221c824da199a565e193f8"
+  },
+  {
+    "name": "unified-marl-0.7.0-linux-x86_64-cpu-py312.zip",
+    "bytes": 281863343,
+    "sha256": "3321f210acf859a99f98ad1afb87f6c04d8e43dc8816c5b46d3808cd93e1be3b"
+  },
+  {
+    "name": "unified_marl-0.7.0-py3-none-any.whl",
+    "bytes": 516838,
+    "sha256": "ba6fec1d7eb805a86ef62ae61fa9e7a866bdbfc49ad6a1c8be1d3cbe27e445e7"
+  },
+  {
+    "name": "unified_marl-0.7.0.tar.gz",
+    "bytes": 545900,
+    "sha256": "c4319d229cb702b0fe9c8010158a6275497b8a74d77f8ce1d10570cd05aeea7e"
+  },
+  {
+    "name": "DELIVERY_MANIFEST.json",
+    "bytes": 2784,
+    "sha256": "a1f52b1ec0eeca4af5c6d7787b0762a6c135219a7589b14047e386440c0820cf"
+  },
+  {
+    "name": "archive-verification.json",
+    "bytes": 1088,
+    "sha256": "8df957aedfc63ea00f3d3d509dde5b1e01e97ceb039948ce4a9c5d451bd92204"
+  },
+  {
+    "name": "windows-verification.json",
+    "bytes": 1159,
+    "sha256": "0da3bc76c85ae1df82ed71c28f7d92cde313e84fe23a75eda9137e640371f55c"
+  },
+  {
+    "name": "INSTALL_GUIDE.zh-CN.md",
+    "bytes": 10015,
+    "sha256": "3fee2a4af045adf9e017c6ae89a849cf014bce8b5a9446fcb6b77e20ee3a8b2f"
+  },
+  {
+    "name": "SHA256SUMS.txt",
+    "bytes": 795,
+    "sha256": "02b92e7b1bc237c6733636a271d06fec1e9e74c4aff315eea49df51b258796bb"
+  }
+]

@@ -2,7 +2,22 @@
 
 日期：2026-10-21，用户时区 UTC+08:00。
 
-**当前交付版本 0.7.0，第 7 阶段支持子集的打包与验收结束，停止继续操作。未宣称所有原实验、真实环境、跨机、GPU 或策略效果完成。后续工作见 KNOWN_ISSUES；可选 Web/K8s 阶段尚未执行。**
+**当前核心版本 0.7.0；阶段 7 之后按用户授权新增 Windows x64 与 Linux x86_64 的内部 CPU / CPython 3.12 安装包。Windows 本机全新环境安装及短训练验收通过；Linux 按最新要求只准备文件、不执行 Linux 功能测试。未宣称所有原实验、真实环境、跨机、GPU 或策略效果完成。可选 Web/K8s 未执行。**
+
+## 内部分发补充交付
+
+### GitHub 后续发布准备
+
+用户另行授权将两版安装包及说明上传原私有仓库。中文 USER_GUIDE.md、首页入口和 `docs/releases/v0.7.0-internal.1.md` 发布说明已完成；两版 ZIP、核心 wheel/sdist、说明和验证材料共 9 个附件已核对哈希。GitHub 插件已恢复并核对 private/main，通过提交自动发布流程生成 `v0.7.0-internal.1` Release；流程及边界见 GITHUB_RELEASE.md。是否已发布以 Actions/Release 实际结果和后续回执为准，不把源码提交或发布材料准备冒充附件已上传。两份 ZIP 在本机仅重建文件后的哈希与交付原件完全一致，没有新增 Linux 运行测试。
+
+- `dist/internal/unified-marl-0.7.0-windows-x64-cpu-py312-offline.zip`：完整离线依赖，307,140,455 字节，77 个清单文件、36 个 wheel。接收方预装 CPython 3.12 x64，在解压目录运行 install.ps1，自动创建独立 venv。Windows 11 / Python 3.12.14 / torch 2.6.0+cpu 已实际全新安装，QMIX 两次更新、动作掩码、模型加载/评估、恢复至三次更新通过；重复安装、异目录 CLI、依赖导入和损坏检测通过。
+- Windows 中间过深目录曾触发 PyTorch 260 字符路径限制，失败日志保留。已补安装前清晰拒绝，最终在较短中文/空格目录通过；不修改系统长路径设置。显式 -X utf8 处理隔离启动下的编码。最终功能包验收后只更新两份跨平台说明，脚本、wheel、示例和运行文件与已验包逐字节相同，刷新证据见 INTERNAL_WINDOWS_REPORT.md。
+- `dist/internal/unified-marl-0.7.0-linux-x86_64-cpu-py312.zip`：混合依赖版，281,863,343 字节，65 个清单文件、35 个 wheel。已准备 Linux 平台依赖和安装/调用脚本，目标 x86_64 / CPython 3.12 / glibc >= 2.28 / CPU。唯一本机未下载项 hf-xet 按 requirements-network.txt 在接收方从 PyPI 补齐，不能称完整离线；不在本机绕过用户对其下载的拒绝。
+- Linux 遵从用户『准备好就行，不用测试』，未运行 Linux、仿真或训练测试；仅核对分发文件、目标 wheel 标签和元数据约束。安装脚本也不自动训练，接收方可手动运行 smoke_test.py。详见 INTERNAL_LINUX_REPORT.md。
+- 两版使用同一个原始 0.7.0 核心 wheel；354 个运行时源码/资源与当前 src 字节一致。Python 解释器、系统运行库、真实数据、模型、原始交付和本机 venv 不打入包。原 383 行迁移清单及全部算法限制不变，没有新增“算法迁移通过”项。
+- 使用说明为 INTERNAL_DISTRIBUTION.md。Windows 原始证据在 `.work/win-final/validation.json`，文件级汇总为 dist/internal/archive-verification.json、windows-verification.json 和 SHA256SUMS.txt；构建器与模板在 tools/build_*_internal_delivery.py 和 delivery。未上传本次新分发包至外部仓库。
+
+以下第 1—7 阶段记录保留为历史，不代表本次进行了相同训练重跑。
 
 ## 第 7 阶段交付结果
 

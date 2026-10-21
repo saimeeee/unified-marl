@@ -1,0 +1,32 @@
+name: Publish internal install bundles
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-internal.yml
+      - delivery/release/**
+      - tools/publish_internal_github.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: internal-release-v0.7.0-internal.1
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: windows-latest
+    timeout-minutes: 35
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+      PIP_CONFIG_FILE: NUL
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore accepted ZIP bytes and publish private Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -X utf8 tools/publish_internal_github.py --publish

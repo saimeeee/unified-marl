@@ -2,6 +2,7 @@ include README.md WORK_ORDER.md LICENSE NOTICE pyproject.toml
 recursive-include licenses *.txt
 recursive-include src *.py *.yaml *.json
 recursive-include examples *.py *.yaml *.md
+recursive-include delivery *.py *.ps1 *.sh *.md
 recursive-include tools *.py
 recursive-include tests *.py
 include docs/*.md docs/*.csv

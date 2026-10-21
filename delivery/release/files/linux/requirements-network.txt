@@ -1,0 +1,3 @@
+# Required by huggingface-hub 0.36.2 Linux x86_64 wheel metadata.
+# This one Linux-only dependency is resolved from PyPI by the recipient; it is not bundled or hash-locked.
+hf-xet>=1.1.3,<2.0.0

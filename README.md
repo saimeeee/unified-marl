@@ -1,8 +1,14 @@
 # unified-marl
 
+[中文使用说明书](docs/USER_GUIDE.md) · [下载安装包（Releases）](https://github.com/saimeeee/unified-marl/releases) · [支持范围](docs/SUPPORT_MATRIX.md) · [已知问题](docs/KNOWN_ISSUES.md)
+
+**给同事安装使用，请从 Releases 下载对应 Windows 或 Linux ZIP，按包内 README 安装。** GitHub 自动生成的源码 ZIP 不包含平台依赖。接收方需要预先安装 CPython 3.12；Windows 版依赖完整离线，Linux 版安装时联网补齐 hf-xet。两版均为 CPU 版本，Python 解释器、真实数据和仿真器另行提供。
+
 以 PyMARL 架构整合三份 MARL 交付的 Python 包。当前交付版本 **0.7.0**：原版 PyMARL 基线、王思哲角色与均场算法、寇谦离线/偏好策略和奖励模型，以及 SADMA 本地/ZMQ 训练。调用名称包含配置和实现变体，不代表独立算法数。真实数据更新与真实环境效果分别记录。
 
 使用前查阅 [中文示例](examples/README.md)、[支持清单](docs/SUPPORT_MATRIX.md)、[验收报告](docs/VALIDATION_REPORT.md) 和 [已知问题](docs/KNOWN_ISSUES.md)。全部 383 项迁移记录保留，包含未通过项；阶段结束不代表全部原实验、环境或平台服务已经迁移。
+
+内部发给同事安装使用，优先使用 `dist/internal` 中按系统区分的 CPU / CPython 3.12 ZIP：Windows 完整离线，Linux 在接收方安装时联网补齐 hf-xet。接收方先准备对应 Python，再解压运行安装脚本；无须原始交付目录或 GitHub。Python 解释器、真实数据和仿真器不随包提供。详见 [内部安装说明](docs/INTERNAL_DISTRIBUTION.md) 及每版 ZIP 内 README；Linux 按用户要求只准备文件，未运行 Linux 功能测试。
 
 ## 安装
 
