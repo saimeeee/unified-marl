@@ -1,3 +1,5 @@
+最新发布：0.8.0工程版已发布 https://github.com/saimeeee/unified-marl/releases/tag/v0.8.0-engineering.1，仓库保持private；9附件大小/SHA-256逐项一致，Actions 39569403057通过。运行时源码与wheel逐字节一致，具体回执见docs/releases/v0.8.0-engineering.1.verification.json。新能力未跑训练或环境实验。
+
 # 0.8.0 工程应用交付补充
 
 按用户最新授权实现 warehouse / traffic / powergrid 三个应用方向，新增统一API、业务决策映射、模板和中文说明；核心版本0.8.0。原383条记录保留并新增10条，共393条。新代码仅做静态/参数/构建检查，用户自行实验，未跑任何训练、仿真或真实场景验证。与0.7.0相比，新增库存环境和原生CityFlow适配，并以独立bounded_ppo补电网连续动作；不声称迁移前后算法等价或原动态实验已完成。

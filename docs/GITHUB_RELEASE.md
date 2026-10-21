@@ -1,3 +1,5 @@
+最新发布：0.8.0工程版已发布 https://github.com/saimeeee/unified-marl/releases/tag/v0.8.0-engineering.1，仓库保持private；9附件大小/SHA-256逐项一致，Actions 39569403057通过。运行时源码与wheel逐字节一致，具体回执见docs/releases/v0.8.0-engineering.1.verification.json。新能力未跑训练或环境实验。
+
 # GitHub 内部分发记录
 
 最新发布状态：已发布 [v0.7.0-internal.1](https://github.com/saimeeee/unified-marl/releases/tag/v0.7.0-internal.1)，仓库仍为 private。9 个附件的远端大小和 SHA-256 全部核对一致；[发布任务](https://github.com/saimeeee/unified-marl/actions/runs/39558172643) 通过。发布提交 a92d0bea9a6acb44e5576ab81d43ac152b6d2c3e，文档提交 21dcb4a8014351c4a18a92b0d0e10de1be67932c。下文准备/发布中的文字保留为过程记录；机器回执在 docs/releases/v0.7.0-internal.1.verification.json。
