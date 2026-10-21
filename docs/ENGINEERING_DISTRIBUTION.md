@@ -22,3 +22,11 @@ Linux 基础安装使用包内的精确依赖锁，不联网。可通过 `bash l
 该交付由 `tools/build_engineering_delivery.py` 从已存在的 `dist/internal` Windows/Linux 0.7.0 wheelhouse 重用依赖，并在本机从源码构造 0.8.0 通用 wheel；构建器不下载依赖。生成物位于 `dist/unified_marl-0.8.0-py3-none-any.whl` 和 `dist/internal/`。包内 `manifest.json` 对每个文件记录大小与 SHA-256，ZIP 旁的 `.zip.sha256` 校验归档本身。旧分发构建器保持独立。
 
 该说明描述分发格式和安装流程，不代表工程应用已经通过真实模拟器、真实数据或训练实验验收。工程版会包含应用指南与模板；运行前请按各自指南准备外部模拟器、依赖和输入数据。
+
+## 0.8.1 小型更新
+
+本地`dist/unified-marl-0.8.1-engineering-hotfix.zip`可在Windows/Linux原0.8.0已安装环境离线更新核心。使用目标venv运行install_patch.py；旧平台安装器会恢复0.8.0，添加功能应先运行旧安装器、再补丁。原始包manifest与锁文件不修改。参阅[热修复安装](ENGINEERING_HOTFIX_081.md)。GitHub未同步前不要从旧Release推定含本补丁。
+
+## 0.8.2安装更新
+
+使用完整小型补丁升级核心与原路径安装入口，备份及哈希追踪见[说明](ENGINEERING_HOTFIX_082.md)。新功能安装器过滤旧核心条目、保留已安装工具，以pip check和当前元数据检查兼容；有冲突则报错。上述0.8.1“加装后重打补丁”只适用于旧版，不适用于已完整升级的0.8.2。

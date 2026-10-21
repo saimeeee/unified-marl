@@ -1,0 +1,9 @@
+{
+  "kind": "user-provided evidence, not local reproduction",
+  "round2_reported_host": "Grok Bot box per submitted report",
+  "latest_user_step0": "User now reports their own Debian13 machine; local logs not provided here",
+  "files": {
+    "linux-round2-user-report.md": "6c74e6adcf0d5d657d89f3edc15b56df8f657f74c3bb7f0f12c1912ea7cce952",
+    "linux-round2-user-results.json": "a0a2180931d794bcee5d54defff2f525b053c7225b13f3cb9503b0ad53c6a5ac"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "evidence_kind": "Summary of user reports previously read in this conversation; original desktop files are no longer present. Not a byte-for-byte original or local reproduction.",
+  "environment": {
+    "machine": "grok-bot-vm-494846265 (Grok Bot box per report, not user server)",
+    "os": "Debian13 trixie x86_64",
+    "python": "3.12.15",
+    "torch": "2.6.0+cpu",
+    "pandapower": "2.14.11",
+    "unified_marl": "0.8.2",
+    "patch_zip_sha256": "7e44b40cc4db661a1fe1b0442bc2f44865c9e109cc37b14fa36db96b7bab7bd1",
+    "wheel_sha256": "951d22ed25500301c48991cb43ab589539316eadc683fafccdef30d44b4bd58d"
+  },
+  "reported_results": {
+    "F1": {
+      "status": "passed in user report",
+      "n_agents": 192,
+      "obs_shape": [
+        192,
+        1848
+      ],
+      "state_shape": [
+        2688
+      ],
+      "profile_length": 35040,
+      "pv_types": [
+        1,
+        5
+      ],
+      "net_electricity_consumption_enabled": true
+    },
+    "F2": {
+      "status": "passed in user report",
+      "limits_and_control_steps": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "initialization_steps": 1,
+      "transitions": 4,
+      "observations": 5,
+      "terminated": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "truncated": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "powergrid_update": {
+      "status": "passed in user report",
+      "updates": 1,
+      "env_steps": 4,
+      "parameter_delta_l2": 0.21556880693924824,
+      "critic_loss": 0.0024852,
+      "actor_loss": 1.589e-07
+    },
+    "powergrid_resume": {
+      "status": "passed in user report",
+      "updates": [
+        1,
+        2
+      ],
+      "env_steps": [
+        4,
+        8
+      ],
+      "actor_delta_l2": 0.03735,
+      "critic_delta_l2": 0.14525,
+      "evaluation_lengths": [
+        4
+      ],
+      "old_semantics_and_policy_resume_rejected": true
+    },
+    "N1": {
+      "status": "passed only for dependencies-already-installed",
+      "repeats": 2,
+      "core_versions": [
+        "0.8.2",
+        "0.8.2",
+        "0.8.2"
+      ],
+      "pip_check_passed": true,
+      "clean_linux_powergrid_install_tested": false
+    },
+    "warehouse": {
+      "status": "passed in user report",
+      "first_updates": 1,
+      "resumed_updates": 2,
+      "env_steps": [
+        4,
+        8
+      ],
+      "evaluation_lengths": [
+        4
+      ]
+    },
+    "traffic": {
+      "status": "passed in user report",
+      "updates": 1,
+      "env_steps": 16,
+      "evaluation_lengths": [
+        8
+      ],
+      "phase_ids": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "yellow_time": 0,
+      "full_resume_tested": false
+    }
+  },
+  "limits": {
+    "data": "Public CityLearn v1 Climate_Zone_1 replacement, not original SADMA assets",
+    "network": "case33bw",
+    "selected_buildings": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "excluded_buildings": [
+      3,
+      4
+    ],
+    "enabled_actions": [
+      "cooling_storage",
+      "dhw_storage",
+      "electrical_storage"
+    ],
+    "disabled_actions": [
+      "pv_curtail",
+      "pv_phi"
+    ],
+    "disabled_states": [
+      "daylight_savings_status",
+      "t_out_pred_12h/24h",
+      "rh_out and forecasts",
+      "diffuse_solar_rad and forecasts",
+      "direct_solar_rad forecasts",
+      "avg_unmet_setpoint",
+      "carbon_intensity"
+    ],
+    "policy_effect_verified": false
+  },
+  "open_observations": [
+    "Cross-process reset reproducibility not located; same saved input policy outputs agree",
+    "Clean Linux first dependency installation untested",
+    "Raw server logs, scripts, models and original asset paths not available here"
+  ]
+}

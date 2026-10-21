@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "version": "0.8.2",
+  "wheel_source_files_matched": 378,
+  "ast_files": 290,
+  "archive_manifest_verified": true,
+  "fixes": [
+    "F1",
+    "F2",
+    "N1"
+  ],
+  "installed_target_import": true,
+  "packaged_templates_checked": true,
+  "installer_bytes_match_integration_test": true,
+  "linux_runtime_test": false,
+  "environment_created": false,
+  "training_run": false,
+  "sha256": "7e44b40cc4db661a1fe1b0442bc2f44865c9e109cc37b14fa36db96b7bab7bd1",
+  "archive_bytes": 550100
+}

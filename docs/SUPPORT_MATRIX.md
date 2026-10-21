@@ -27,3 +27,15 @@
 ## 0.8.0 新增实现（待用户测试）
 
 以下仅记录新增实现，不并入上方0.7.0通过项：warehouse/inventory参数化补货及业务输出；traffic/cityflow_engine原生引擎封装和相位输出；powergrid/bounded_ppo连续动作策略、训练/评估/保存恢复与来源环境适配；统一应用CLI、参数模板及双平台工程包。本轮没有运行训练或仿真，因此不声明有效更新、策略效果、外部引擎或Linux运行通过。原动态HMF/RODE缺项仍保留。详见 ENGINEERING_REPORT.md。
+
+## 0.8.1 报告修复支持层次
+
+仓储MFVFD在Linux合成小样例的运行通过来自用户首轮报告；seed误判的修复和评估计数仅本机无环境单元测试通过。API/CLI恢复、旧0.8.0 checkpoint兼容由二测确认。交通/电网依赖和资产缺项保留；没有新增真实环境、真实数据或策略效果验收。
+
+## 0.8.2修复范围
+
+仓储/交通/电网二轮结果来自用户报告，未在此Windows电脑复现。F1数组公式、F2实际生产reset/step函数计数、N1备份及清单更新/重复执行/损坏拒绝有单元证据。无Linux新补丁训练、潮流或效果证据。旧电网回合语义兼容边界见ENGINEERING_HOTFIX_082。
+
+## 0.8.2第三轮报告接纳
+
+用户报告仓储、CityFlow单路口PPO、case33bw配公开CityLearn指定建筑/三类储能动作的最小链路通过。F1/F2、电网完整恢复和N1已齐依赖重复加装通过；细项见VALIDATION_REPORT_082。保持USER_REPORTED_SCOPED，与本机单元/Windows安装检查分开。干净Linux依赖、reset跨进程复现、交通安全过渡及其他动作建筑未验。

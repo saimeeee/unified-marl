@@ -218,3 +218,11 @@ env_steps 是已通过后续消息确认的物理转移，reset/未执行动作/
 ## 0.8.0 工程应用授权与接口
 
 用户后续授权 warehouse / traffic / powergrid 三个应用入口，完成打包后自行测试。本轮新增参数化库存模拟器、直接 CityFlow.Engine 适配、来源 GridEnv 包内适配与独立 bounded Gaussian PPO，并提供应用train/evaluate/load_policy、业务动作转换、模板、CLI与双平台包。不执行训练、真实/合成环境实验；仅静态、配置、导入、构建和归档检查。旧算法动态分组、扩角色和缺失来源项不会因本轮新增实现自动转为完成。完整接口与输入单位见 APPLICATIONS_GUIDE.md。
+
+## 0.8.1 恢复及评估契约补充
+
+core train恢复时，省略env_args字段沿用checkpoint默认值（包括训练时注入的seed），显式值必须与已保存值一致；应用层仍要求相同场景。显式改seed、场景或用推理checkpoint恢复仍拒绝。EvaluationResult新增episode_lengths与env_steps，计数Runner实际转移，不含bootstrap/reset/纯推理。PowerGrid独立评估接口未改变。
+
+## 0.8.2电网与分发契约
+
+PowerGrid episode_limit计外部控制transition，reset预热保留但不占控制预算；info明确control_steps、initialization_steps、episode_limit。checkpoint.env_info记录control_transitions_v2，旧语义恢复/环境评估拒绝，纯推理不依赖该环境计数。新加装入口不得请求旧核心条目或无意改写已装构建工具；升级校验原清单、备份原脚本和清单，并对更新登记精确SHA256，不通过刷新损坏文件哈希绕过验证。

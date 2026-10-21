@@ -54,3 +54,7 @@ print(decision["decisions"])  # agent_id,warehouse_id,sku_id,action_index,reques
 `encode(state)` 也可得到模型观测：库存/capacity、欠货/capacity、mean_demand/capacity、上期需求/capacity、period/horizon、按到货周期排列的在途量/capacity；在途桶数=max_lead_time+1。直接传观测数组时必须严格使用这一布局。没有商业状态时不要把决策数量当成已实际下单，业务系统仍应接收并执行返回结果。
 
 本版未执行上述命令、库存仿真或训练实验，由用户自行测试。
+
+## 0.8.1 恢复修复
+
+用户在Linux报告0.8.0合成链路可运行，但应用API/CLI恢复因自动seed字段误判失败。0.8.1修复该比较；使用`overrides={"training.max_updates":2}`或CLI `--set training.max_updates=2`指定目标总更新数。评估新增episode_lengths/env_steps。完整训练验证由用户按[二测提示词](LINUX_ROUND2_PROMPTS.md)执行。

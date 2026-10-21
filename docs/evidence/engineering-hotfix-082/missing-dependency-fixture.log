@@ -1,0 +1,1 @@
+{"status": "PASS", "platform": "win32", "missing_probe_wheel_installed": true, "repeat_run_no_missing_dependency": true, "core_version_preserved": "0.8.2", "scope": "synthetic installer branch fixture with read-only dependency reuse; not clean Linux PowerGrid installation", "linux_powergrid_clean_install_verified": false, "training_run": false, "simulation_run": false}

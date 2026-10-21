@@ -1,0 +1,23 @@
+Processing g:\ai\codex\多智能体代码整合\unified-marl\dist\unified_marl-0.8.1-py3-none-any.whl
+Installing collected packages: unified-marl
+  Attempting uninstall: unified-marl
+    Found existing installation: unified-marl 0.7.0
+    Not uninstalling unified-marl at g:\ai\codex\多智能体代码整合\unified-marl\.venv-release\lib\site-packages, outside environment G:\AI\Codex\多智能体代码整合\unified-marl\.work\082-install\bundle\.venv
+    Can't uninstall 'unified-marl'. No files were found to uninstall.
+Successfully installed unified-marl-0.8.1
+
+Updated core and feature installer to 0.8.2. Existing install.sh/install.ps1 now preserve the core version.
+Original installers and manifest are retained under .unified-marl-hotfix/backups/pre-0.8.2.
+No environment, training or simulation was started.
+
+{"status": "PASS", "files": 101, "edition": "windows-x64-cpu-py312-engineering"}
+
+{"core_version_preserved": "0.8.2", "feature": "core", "missing_local_requirements": [], "network_requirements": null, "status": "FEATURE_INSTALLED"}
+
+{"core_version_preserved": "0.8.2", "feature": "core", "missing_local_requirements": [], "network_requirements": null, "status": "FEATURE_INSTALLED"}
+
+Updated core and feature installer to 0.8.2. Existing install.sh/install.ps1 now preserve the core version.
+Original installers and manifest are retained under .unified-marl-hotfix/backups/pre-0.8.2.
+No environment, training or simulation was started.
+
+{"status": "PASS", "platform": "Windows", "dependency_mode": "read-only reuse from .venv-release site-packages, not a clean dependency test", "from_version": "0.8.1", "to_version": "0.8.2", "patch_applied": true, "base_manifest_verified": true, "original_installer_backed_up": true, "feature_core_repeated": 2, "patch_repeated": true, "core_downgrade": false, "base_bundle_installer_unchanged": true, "linux_runtime_test": false, "training_run": false, "simulation_run": false}

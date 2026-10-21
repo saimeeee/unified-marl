@@ -1,16 +1,20 @@
 # unified-marl
 
+**0.8.2 工程修复版**：[安装与升级](docs/ENGINEERING_RELEASE_082.md) · [三轮验收范围](docs/VALIDATION_REPORT_082.md) · [0.8.2发布入口（待远端确认）](https://github.com/saimeeee/unified-marl/releases/tag/v0.8.2-engineering.1)。首次安装复用0.8.0平台依赖包，再应用完整0.8.2补丁。
+
+
+
 [中文使用说明书](docs/USER_GUIDE.md) · [下载安装包（Releases）](https://github.com/saimeeee/unified-marl/releases/tag/v0.8.0-engineering.1) · [支持范围](docs/SUPPORT_MATRIX.md) · [已知问题](docs/KNOWN_ISSUES.md)
 
 **给同事安装使用，请从 Releases 下载对应 Windows 或 Linux ZIP，按包内 README 安装。** GitHub 自动生成的源码 ZIP 不包含平台依赖。接收方需要预先安装 CPython 3.12；两版核心依赖可离线安装；Linux 奖励模型功能另需联网补齐 hf-xet，电网扩展依赖和交通引擎按功能另装。两版均为 CPU 版本，Python 解释器、真实数据和仿真器另行提供。
 
-以 PyMARL 架构整合三份 MARL 交付的 Python 包。当前工程交付版本 **0.8.0**：重点整理角色与分层均场方法、离线／偏好训练、奖励建模，以及 SADMA 本地／ZMQ 执行系统；通用算法作为对比基线保留。调用名称包含配置和实现变体，不代表独立算法数。真实数据更新与真实环境效果分别记录。
+以 PyMARL 架构整合三份 MARL 交付的 Python 包。当前核心修复版本 **0.8.2**：重点整理角色与分层均场方法、离线／偏好训练、奖励建模，以及 SADMA 本地／ZMQ 执行系统；通用算法作为对比基线保留。调用名称包含配置和实现变体，不代表独立算法数。真实数据更新与真实环境效果分别记录。
 
-使用前查阅 [中文示例](examples/README.md)、[支持清单](docs/SUPPORT_MATRIX.md)、[验收报告](docs/VALIDATION_REPORT.md) 和 [已知问题](docs/KNOWN_ISSUES.md)。原 383 项迁移记录保留，另增 10 项工程应用记录，包含未通过项；阶段结束不代表全部原实验、环境或平台服务已经迁移。
+使用前查阅 [中文示例](examples/README.md)、[支持清单](docs/SUPPORT_MATRIX.md)、[验收报告](docs/VALIDATION_REPORT.md) 和 [已知问题](docs/KNOWN_ISSUES.md)。原 383 项迁移记录保留，另增 10 项工程应用与 5 项修复记录，包含未通过项；阶段结束不代表全部原实验、环境或平台服务已经迁移。
 
 本版工程安装包位于 Releases 的 `v0.8.0-engineering.1`：Windows 使用 `windows/install.ps1`，Linux 使用 `linux/install.sh`。先安装 CPython 3.12，再按功能选择依赖并填写真实场景参数；详见 [工程安装说明](docs/ENGINEERING_DISTRIBUTION.md)。原 0.7.0 安装包与历史验收记录继续保留。
 
-## 三个工程应用入口（0.8.0）
+## 三个工程应用入口
 
 [工程应用中文说明书](docs/APPLICATIONS_GUIDE.md) · [仓储库存补货](docs/WAREHOUSE_GUIDE.md) · [交通信号控制](docs/TRAFFIC_GUIDE.md) · [电网连续控制](docs/POWERGRID_GUIDE.md) · [Windows/Linux 安装](docs/ENGINEERING_DISTRIBUTION.md)
 
@@ -20,7 +24,7 @@
 | 交通控制 | CityFlow路网、车流、路口及相位映射 | 各路口信号相位 | 新增原生CityFlow.Engine适配，不必依赖缺失的cityflowenv封装 |
 | 电网控制 | 配电网/建筑/气候及设备配置数据 | 各建筑连续控制量 | 适配来源GridEnv，新增bounded Gaussian PPO训练、推理和保存恢复 |
 
-本轮按用户要求只实现、检查与打包，**没有运行训练、交通/电网仿真或真实场景实验**。新能力待使用方测试；旧版本证据不外推新版本。没有附行业预训练模型，准备真实数据后训练或加载自己匹配的模型。参数模板中的数字仅为格式示例。
+0.8.2第三轮用户报告中的仓储合成小样例、CityFlow官方单路口及case33bw配合公开CityLearn替代数据的最小链路通过。报告来自用户提供的Grok Bot盒子执行记录，不是本机复现；测试范围见[0.8.2验收说明](docs/VALIDATION_REPORT_082.md)。没有附行业预训练模型，准备真实数据后训练或加载自己匹配的模型。参数模板中的数字仅为格式示例。
 
 ```sh
 unified-marl-app init warehouse --directory ./my-warehouse
@@ -37,7 +41,7 @@ unified-marl-app act ./results/warehouse/policy.pt --input ./my-warehouse/wareho
 
 本节重点介绍三份交付中的方法扩展、训练流程和系统能力。条目采用“方法或系统名称（交付者）”；姓名用于定位交付来源。通用对比算法及内嵌第三方方法统一列在文末，不按交付者姓名单独宣传为原创算法。这里介绍的是源码中可追踪的实现工作，原创归属仍应以论文及来源说明为准。
 
-“本地可用”指限定配置下有效参数更新、保存加载等已通过。在线测试主要使用 toy，离线／偏好训练另有真实 3m 数据短更新；真实 SMAC、补货与 CityFlow 效果尚未验证。详见 [支持范围](docs/SUPPORT_MATRIX.md) 和 [未完成项](docs/KNOWN_ISSUES.md)。
+“本地可用”指限定配置下有效参数更新、保存加载等已通过。早期在线测试主要使用 toy，离线／偏好训练另有真实 3m 数据短更新；0.8.2另有用户报告中的仓储小样例、CityFlow官方单路口和指定电网场景短链路通过。真实 SMAC、原补货后端及上述应用的收敛与业务效果仍未验证。详见 [支持范围](docs/SUPPORT_MATRIX.md)、[0.8.2验收说明](docs/VALIDATION_REPORT_082.md) 和 [未完成项](docs/KNOWN_ISSUES.md)。
 
 ### RODE-HMF（王思哲）
 

@@ -93,3 +93,7 @@ decision = policy.act(observation, deterministic=True)
 除 `unified-marl` 的基础依赖外，PowerGrid 环境需要 `pandapower`、`gym==0.26.2`、`pandas`、`scikit-learn` 与 `scipy`；版本范围见仓库根目录 `requirements-powergrid.txt` 和 `pyproject.toml` 的 `powergrid` extra。pandapower / SciPy 范围按来源 API 约束收窄；本轮没有安装和验证依赖组合。建议在独立环境安装。引擎模块导入和 `policy.pt` 推理策略构建不导入 pandapower；训练、评估和原生环境初始化会懒加载环境依赖。
 
 本轮只进行代码语法/接口静态检查，没有运行训练、PowerGrid 仿真、评估、收敛或真实场景实验。外部资产、运行依赖完整性、潮流可行性和策略效果都需要接收方在提供数据的环境自行验证。
+
+## 0.8.2修复
+
+净用电量观测先转换数值数组再逐元素计算，不再列表重复；各序列必须等长且有限。初始化预热不计入策略控制步数，episode_limit=4对应4次外部step。info包含control_steps/initialization_steps和时间截断标志，评估新增env_steps。回合语义保存为control_transitions_v2，与旧电网checkpoint的恢复/环境评估不混用；第三轮启用该观测须新建模型。完整补丁也更新安装入口，加装功能不再恢复旧核心。见ENGINEERING_HOTFIX_082.md。

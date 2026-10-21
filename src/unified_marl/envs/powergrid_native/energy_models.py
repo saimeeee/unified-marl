@@ -675,11 +675,26 @@ class Building:
             if value == True:
                 if state_name == "net_electricity_consumption":
                     # lower and upper bounds of net electricity consumption are rough estimates and may not be completely accurate. Scaling this state-variable using these bounds may result in normalized values above 1 or below 0.
+                    profiles = {
+                        "non_shiftable_load": np.asarray(self.sim_results["non_shiftable_load"], dtype=np.float64),
+                        "solar_gen": np.asarray(self.weather.data["solar_gen"], dtype=np.float64),
+                        "dhw_demand": np.asarray(self.sim_results["dhw_demand"], dtype=np.float64),
+                        "cooling_demand": np.asarray(self.sim_results["cooling_demand"], dtype=np.float64),
+                    }
+                    expected_shape = profiles["non_shiftable_load"].shape
+                    if len(expected_shape) != 1 or expected_shape[0] == 0:
+                        raise ValueError("PowerGrid net electricity profiles must be nonempty one-dimensional arrays")
+                    for name, profile in profiles.items():
+                        if profile.shape != expected_shape or not np.isfinite(profile).all():
+                            raise ValueError(
+                                f"PowerGrid profile {name} must have shape {expected_shape} and finite values; "
+                                f"got {profile.shape}"
+                            )
                     self._net_elec_cons_upper_bound = max(
-                        np.array(self.sim_results["non_shiftable_load"])
-                        - np.array(self.pv_installed * self.weather.data["solar_gen"])
-                        + np.array(self.sim_results["dhw_demand"]) / 0.8
-                        + np.array(self.sim_results["cooling_demand"])
+                        profiles["non_shiftable_load"]
+                        - float(self.pv_installed) * profiles["solar_gen"]
+                        + profiles["dhw_demand"] / 0.8
+                        + profiles["cooling_demand"]
                         + self.dhw_storage.capacity / 0.8
                         + self.cooling_storage.capacity / 2
                     )
@@ -1081,8 +1096,8 @@ class Building:
             self.electric_consumption_appliances = np.array(
                 self.sim_results["non_shiftable_load"][: self.time_step]
             )
-            self.electric_generation = np.array(
-                self.pv_installed * self.weather.data["solar_gen"][: self.time_step]
+            self.electric_generation = float(self.pv_installed) * np.asarray(
+                self.weather.data["solar_gen"][: self.time_step], dtype=np.float64
             )
 
             elec_consumption_dhw = 0

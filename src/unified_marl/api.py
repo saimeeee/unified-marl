@@ -1,5 +1,5 @@
 """Training, evaluation and stateful policy inference for packaged baselines."""
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
 from types import SimpleNamespace
@@ -41,6 +41,8 @@ class EvaluationResult:
     returns: list
     return_mean: float
     return_std: float
+    episode_lengths: list = field(default_factory=list)
+    env_steps: int = 0
 
 
 def make_scheme(info, config=None):
@@ -163,7 +165,9 @@ def train(algorithm=None, env=None, env_args=None, *, execution="local", device=
             raise ValueError("Cannot change algorithm during resume")
         if env is not None and env != cfg["env_config"]:
             raise ValueError("Cannot change environment during resume")
-        if env_args is not None and env_args != cfg["env_args"]:
+        # Callers may omit defaults and the seed injected by train(). Restore
+        # those from the checkpoint; every explicitly supplied value must agree.
+        if env_args is not None and merge(cfg["env_args"], env_args) != cfg["env_args"]:
             raise ValueError("Cannot change environment arguments during resume")
         allowed = {"t_max", "max_updates", "log_interval", "runner_log_interval", "learner_log_interval", "test_nepisode", "test_interval", "device", "use_cuda", "worker_timeout"}
         for key in set(cfg) | set(payload["config"]):
@@ -339,11 +343,13 @@ def evaluate(checkpoint, *, env=None, env_args=None, episodes=20, device="cpu", 
             raise ValueError("Evaluation environment metadata differs from checkpoint")
         policy = Policy(payload, device)
         runner.setup(policy.scheme, policy.groups, policy.preprocess, policy.mac)
-        returns = []
+        returns, lengths = [], []
         for _ in range(episodes):
             runner.run(test_mode=True)
             returns.extend(runner.last_returns)
-        return EvaluationResult(episodes, returns, float(np.mean(returns)), float(np.std(returns)))
+            lengths.extend(int(length) for length in runner.last_lengths)
+        return EvaluationResult(episodes, returns, float(np.mean(returns)), float(np.std(returns)),
+                                lengths, sum(lengths))
     finally:
         if runner is not None:
             runner.close_env()

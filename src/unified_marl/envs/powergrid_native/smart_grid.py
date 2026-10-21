@@ -14,6 +14,8 @@ from .energy_models import Building, Weather
 
 
 class GridEnv(MultiAgentEnv):
+    episode_limit_semantics = "control_transitions_v2"
+
     def __init__(
         self,
         data_path="envs/powergrid/data/Climate_Zone_1",
@@ -105,6 +107,7 @@ class GridEnv(MultiAgentEnv):
             "agents_name": self.agents,
             "n_agents": self.n_agents,
             "episode_limit": self.episode_limit,
+            "episode_limit_semantics": self.episode_limit_semantics,
             "action_shape": tuple(self.buildings[self.agents[0]].action_space.shape),
         }
         return env_info
@@ -193,6 +196,7 @@ class GridEnv(MultiAgentEnv):
         rand_act = {k: v.sample() for k, v in self.aspace.items()}
         rand_act_array = np.array(list(rand_act.values()))
         self.steps = 0
+        self.initialization_steps = 0
         self.ts = self._select_timestamp(self.exipode)
         self.exipode += 100
         # print("self.ts", self.ts)
@@ -212,7 +216,8 @@ class GridEnv(MultiAgentEnv):
             count += 1
 
         self.ts += 1
-        self.steps += 1
+        # Keep the source warmup physics, but do not spend a policy transition.
+        self.initialization_steps += 1
 
         # update the grid based on updated buildings
         self._update_grid()
@@ -524,7 +529,11 @@ class GridEnv(MultiAgentEnv):
     def _get_done(self):
         return self.steps >= self.episode_limit
 
-    def _get_info(self, info={}):
+    def _get_info(self, info=None):
+        info = {} if info is None else info
+        info["episode_limit"] = self._get_done()
+        info["control_steps"] = self.steps
+        info["initialization_steps"] = getattr(self, "initialization_steps", 0)
         demandloss = 0
         v = self.net.res_bus["vm_pu"].sort_index().to_numpy()
 

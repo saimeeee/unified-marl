@@ -20,3 +20,8 @@ prune build
 global-exclude __pycache__ *.py[cod] *.pt *.th *.pth *.npy *.npz *.pkl *.pickle
 
 include requirements-powergrid.txt
+include docs/evidence/release-082/*.md docs/evidence/release-082/*.json
+include docs/evidence/engineering-hotfix-082/*.xml
+include docs/evidence/engineering-hotfix-082/package-checks.json
+include docs/evidence/engineering-hotfix-082/installer-integration.json
+include docs/evidence/engineering-hotfix-082/missing-dependency-fixture.json

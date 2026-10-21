@@ -394,6 +394,7 @@ def _build_env_contract(env: Any) -> dict[str, Any]:
         "agents_name": [str(agent_id) for agent_id in agent_ids],
         "n_agents": len(agent_ids),
         "episode_limit": int(env.episode_limit),
+        "episode_limit_semantics": getattr(env, "episode_limit_semantics", "legacy_reset_included"),
     }
 
 
@@ -773,6 +774,11 @@ def load_policy(checkpoint: str | os.PathLike[str], device: str = "cpu") -> Grid
 def _checkpoint_contract_matches(
     expected: dict[str, Any], observed: dict[str, Any]
 ) -> None:
+    if expected.get("episode_limit_semantics", "legacy_reset_included") != observed.get("episode_limit_semantics", "legacy_reset_included"):
+        raise ValueError(
+            "PowerGrid checkpoint uses different episode-limit semantics. "
+            "0.8.2 counts policy control transitions separately from reset warmup; start a new training run."
+        )
     for key in ("n_agents", "obs_shape", "state_shape", "n_actions"):
         if int(expected[key]) != int(observed[key]):
             raise ValueError(
@@ -1558,6 +1564,7 @@ def evaluate(
             "mean_length": float(np.mean(lengths)),
             "episode_returns": returns,
             "episode_lengths": lengths,
+            "env_steps": sum(lengths),
             "mean_final_info": _numeric_info_mean(all_info),
             "checkpoint": str(Path(checkpoint).expanduser().resolve()),
             "env_info": _plain(env_info),

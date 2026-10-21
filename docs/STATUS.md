@@ -1,3 +1,43 @@
+# 0.8.2 第三轮验收归档与发行准备
+
+用户第三轮报告中的七项最小链路通过。F1/F2、仓储恢复和评估计数、电网有效更新/完整恢复、N1依赖已齐时重复加装及交通回归接纳为“用户报告下的限定通过”，不是本机Linux或所有业务场景验收。此前已读MD/JSON的摘要及摘要哈希归档在docs/evidence/release-082（原桌面文件已不在，不声称原文件逐字节保存）；没有拿到服务端原始日志、准备脚本或数据。
+
+本次修改验收/支持说明，保留第三轮测过的0.8.2 wheel和补丁字节。新增可选跨进程seed诊断，明确完整随机源初始化与私有工厂调用的区别，不把未查明的reset差异宣布修复。新增缺失本地wheel安装分支的真实pip探针检查通过（独立venv，只读复用既有依赖，不属于干净Linux PowerGrid安装）。发布保护4项模拟API测试通过；未启动训练或仿真。
+
+发行准备目标v0.8.2-engineering.1，9个附件：已测补丁/校验/wheel、更新文档的源码包、安装指南、验收报告、补充证据与诊断ZIP、交付清单和SHA256SUMS。仓库当前已匿名核对public，后续仅保留可见性，不再改变。GitHub插件未连接、本机凭据助手无可用登录；发布材料、独立源码checkout及自动发行流程先完成，只有远端Release/附件校验后才记PUBLISHED。
+
+当前不需要完整第四轮；reset种子复现、干净Linux首次补依赖、交通安全过渡/多路口/恢复、更多建筑设备和真实业务效果仍保留。具体边界见docs/VALIDATION_REPORT_082.md。
+
+---
+
+# 0.8.2：第三轮前 F1/F2/N1 修复（2026-10-21）
+
+用户提供第二轮MD/JSON，报告仓储API/CLI/旧模型恢复通过、CityFlow官方单路口短链路通过、公开CityLearn替代数据下电网条件性短链路通过。F1净用电量观测失败、F2少一步、N1加装降级均保留。该报告注明Grok Bot盒子；用户最新step0另报告自己的Debian13电脑，不能混淆两次执行位置，也没有取得最新原始日志。
+
+0.8.2已实现：F1先数值化光伏序列再逐元素乘容量并检查各序列维度/有限性；F2保留预热物理过程，预热与策略控制计数分开，episode_limit表示外部控制次数，显式截断info和checkpoint语义标记control_transitions_v2；N1更新现有包安装入口，通过功能安装器保留核心与已装构建工具，原脚本/manifest备份并追踪哈希，损坏基础包拒绝更新。0.8.1旧电网checkpoint恢复/环境评估将因语义不同明确拒绝，纯模型推理加载保留；第三轮须新建电网模型。仓储0.8.1修复保持。
+
+实际单元命令：`.venv/Scripts/python.exe -X utf8 -B -m pytest tests/test_powergrid_hotfix_082.py tests/test_engineering_hotfix.py -q --junitxml=docs/evidence/engineering-hotfix-082/unit-tests.xml`，28通过。测试执行生产数值计算/实际reset-step函数的替身调用、清单更新/备份/重复执行/损坏拒绝事务，无真实环境、潮流或训练。已在Windows隔离venv执行真实补丁升级0.8.1→0.8.2、原路径core功能加装两次、重复补丁及完整性检查，均通过；仅复用release环境的只读依赖，不作为干净依赖环境或Linux验证。installer-integration.json/log保留具体范围。最终构建及归档记录在同证据目录，Linux/真实仿真验收仍等待用户第三轮。
+
+交付入口：docs/ENGINEERING_HOTFIX_082.md、docs/LINUX_ROUND3_PROMPTS.md；小包dist/unified-marl-0.8.2-engineering-hotfix.zip及.sha256。安装需完整执行install_patch.py，单独pip安装wheel不包含N1安装入口更新。原0.8.0平台包和0.8.1补丁不覆盖；准备交付到桌面供用户传Linux。未声称GitHub已有0.8.2发布。
+
+旧395条迁移记录全部保留，追加3条修复共398条（不是算法数量）。第二轮成果记录为外部报告，不伪装本机复现。仍关闭的状态/排除的建筑/仅三设备控制等限制保留，没有拓展为所有电网组合通过。
+
+---
+
+# 0.8.1 Linux 用户报告修复（2026-10-21）
+
+用户提供的第一轮报告来自Grok Bot盒子，Debian13/x86_64、Python3.12.15、torch2.6.0+cpu。用户报告0.8.0仓储合成更新/保存/推理/评估通过，应用恢复失败；未取得原始日志或访问该机器。外部报告原文和SHA256保存在evidence/engineering-hotfix。该报告不是本机、真实业务数据或策略效果验证。
+
+已修复core train恢复参数比较：补齐省略的已存默认值和自动seed，拒绝一切显式环境参数变更；应用层完整场景检查保留。评估新增episode_lengths和env_steps，排除bootstrap状态。版本0.8.1。新增用户显式执行的round2_warehouse.py，包含API/CLI恢复、旧0.8.0模型可选恢复、评估计数与非法恢复检查；本机未执行此训练脚本。
+
+实际执行：`.venv/Scripts/python.exe -X utf8 -B -m pytest tests/test_engineering_hotfix.py -q --junitxml=docs/evidence/engineering-hotfix/unit-tests.xml`，12通过；全部使用校验边界/替身，无环境、无采样、无优化器。`.venv-release/Scripts/python.exe -X utf8 -B tools/build_engineering_hotfix.py`构建wheel、源码包和小型补丁ZIP；目标目录安装及`.work/hotfix-081-verify.py`检查378份源码/资源与wheel一致、288份Python AST、模板及补丁manifest通过，保留来源旧字符串\A警告。没有Linux热修复运行或训练结果。
+
+Windows/Linux共用本地补丁：`dist/unified-marl-0.8.1-engineering-hotfix.zip`，依赖原0.8.0已安装功能。原安装器加装功能会重新安装0.8.0，需再应用补丁。交通仍缺CityFlow/路网，电网仍缺建筑气候资产；不能记录为已修复或验证。清单保留393旧行并追加2项，共395行（不是算法数）。
+
+本轮GitHub插件发现结果为installed=false，没有可调用GitHub工具；源码/补丁未同步远端，不修改旧发布回执或宣称已上传。当前交付以本地文件及LINUX_ROUND2_PROMPTS.md为准。
+
+---
+
 最新发布：0.8.0工程版已发布 https://github.com/saimeeee/unified-marl/releases/tag/v0.8.0-engineering.1，仓库保持private；9附件大小/SHA-256逐项一致，Actions 39569403057通过。运行时源码与wheel逐字节一致，具体回执见docs/releases/v0.8.0-engineering.1.verification.json。新能力未跑训练或环境实验。
 
 # 0.8.0 工程应用交付补充

@@ -1,0 +1,13 @@
+{
+  "version": "0.8.1",
+  "wheel_source_files_matched": 378,
+  "ast_files": 288,
+  "archive_manifest_verified": true,
+  "installed_target_import": true,
+  "packaged_templates_validated": true,
+  "linux_runtime_test": false,
+  "environment_created": false,
+  "training_run": false,
+  "round2_script_executed": false,
+  "sha256": "d239d1e3ce199392167c837b7c22d61ecafca94d71e907e35731c51b91743a9d"
+}

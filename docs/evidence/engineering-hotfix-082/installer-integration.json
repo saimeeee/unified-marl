@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "platform": "Windows",
+  "dependency_mode": "read-only reuse from .venv-release site-packages, not a clean dependency test",
+  "from_version": "0.8.1",
+  "to_version": "0.8.2",
+  "patch_applied": true,
+  "base_manifest_verified": true,
+  "original_installer_backed_up": true,
+  "feature_core_repeated": 2,
+  "patch_repeated": true,
+  "core_downgrade": false,
+  "base_bundle_installer_unchanged": true,
+  "linux_runtime_test": false,
+  "training_run": false,
+  "simulation_run": false
+}

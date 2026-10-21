@@ -1,0 +1,9 @@
+{
+  "source": "Conversation-read user report summaries; originals now absent; not a byte-preserved original or local reproduction",
+  "reported_host": "Grok Bot box per report",
+  "local_reproduction": false,
+  "files": {
+    "ROUND3_REPORT_SUMMARY.md": "e520e8db8f3f059362ae60b2107c220c4a82c2538078c5ff6c1225f8ef76076c",
+    "results-round3-summary.json": "b58ce9c5d1a703b098148a9d0a827e8e0e72485572e0c62a5b05bde1918c2e2d"
+  }
+}

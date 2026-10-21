@@ -28,3 +28,7 @@ GitHub 连接恢复后，先读取远端状态，保留其他已有修改；更�
 `.github/workflows/publish-internal.yml` 在 Windows runner 上运行 `tools/publish_internal_github.py`；仅下载精确版本/哈希的 wheel 和重建文件，不安装 Linux 包、不执行 Linux 脚本、不下载 hf-xet。原核心 wheel、源码包及仅有源包上游的 gym wheel 随发布输入保留，其他大依赖从官方 PyPI/PyTorch 索引按哈希取回。ZIP 大小及 SHA-256 必须与本地已交付产物逐字节一致，否则停止，不发布。
 
 流程使用 GitHub 为当前仓库任务提供的短期令牌，仅声明 contents: write，用于创建本仓库 Release；先核对仓库为 private，默认草稿，全部 9 个附件大小与 GitHub 摘要核对后才发布。已有不同附件或同名已发布版本会明确拒绝覆盖。不会创建用户 API key、改变权限/可见性或上传原始数据/模型/环境。
+
+## 0.8.2正式发行准备
+
+目标tag v0.8.2-engineering.1；新增publish-hotfix.yml及经测试的附件发布器。9个附件按固定哈希准备，保留用户测过的补丁和wheel。仓库当前public（匿名API核对），本次不改可见性。当前连接缺失，只有实际源码上传、Actions完成及远端附件SHA核对后才标为发布。
