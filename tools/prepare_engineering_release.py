@@ -459,6 +459,7 @@ def prepare(args: argparse.Namespace) -> dict:
     output.parent.mkdir(parents=True, exist_ok=True)
     temporary = Path(tempfile.mkdtemp(prefix=".engineering-release-prepare-", dir=delivery_dir))
     try:
+        (temporary / ".gitattributes").write_text("# Preserve exact release input bytes on checkout.\n* -text\n",encoding="utf-8",newline="\n")
         (temporary / "assets").mkdir()
         (temporary / "files").mkdir()
         (temporary / "vendor").mkdir()
