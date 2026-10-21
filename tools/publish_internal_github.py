@@ -23,7 +23,9 @@ def sha(path):
 
 
 def gh(*args, json_result=True):
-    result = subprocess.run(['gh', *args], cwd=ROOT, check=True, capture_output=True, text=True, encoding='utf-8')
+    result = subprocess.run(['gh', *args], cwd=ROOT, check=False, capture_output=True, text=True, encoding='utf-8')
+    if result.returncode:
+        raise RuntimeError('GitHub command failed: '+result.stderr.strip())
     return json.loads(result.stdout) if json_result and result.stdout.strip() else result.stdout
 
 
@@ -96,14 +98,20 @@ def publish(output, expected):
     if existing and not existing['draft']:
         raise RuntimeError('Published tag already exists; refusing to replace it')
     if existing:
-        tag = gh('api','repos/'+REPOSITORY+'/git/ref/tags/'+TAG)
-        if tag['object']['sha'] != commit:
-            raise RuntimeError('Existing release points at a different commit')
+        previous = existing['target_commitish']
+        if previous != commit:
+            comparison = gh('api','repos/'+REPOSITORY+'/compare/'+previous+'...'+commit)
+            if comparison['status'] not in {'ahead','identical'}:
+                raise RuntimeError('Existing draft is unrelated to this commit')
+        notes = (ROOT/'docs/releases/v0.7.0-internal.1.md').read_text(encoding='utf-8')
+        if (existing.get('body') or '').replace('\r\n','\n').strip() != notes.replace('\r\n','\n').strip():
+            raise RuntimeError('Existing draft notes differ; refusing replacement')
     else:
         gh('release','create',TAG,'--repo',REPOSITORY,'--target',commit,'--draft',
            '--title','unified-marl 0.7.0 — 内部 Windows / Linux 安装包',
            '--notes-file',str(ROOT/'docs/releases/v0.7.0-internal.1.md'),json_result=False)
-    remote = gh('api','repos/'+REPOSITORY+'/releases/tags/'+TAG)
+    drafts = gh('api','repos/'+REPOSITORY+'/releases?per_page=100')
+    remote = next(r for r in drafts if r['tag_name']==TAG)
     for item in expected:
         found = next((a for a in remote['assets'] if a['name']==item['name']), None)
         if found:
@@ -116,7 +124,8 @@ def publish(output, expected):
         found = next(a for a in remote['assets'] if a['name']==item['name'])
         if found['size'] != item['bytes'] or found.get('digest') != 'sha256:'+item['sha256']:
             raise RuntimeError('Uploaded asset verification failed: '+item['name'])
-    gh('release','edit',TAG,'--repo',REPOSITORY,'--draft=false','--latest',json_result=False)
+    gh('api','--method','PATCH','repos/'+REPOSITORY+'/releases/'+str(remote['id']),
+       '-f','target_commitish='+commit,'-F','draft=false','-f','make_latest=true')
     print(json.dumps({'status':'PUBLISHED','url':remote['html_url'],'assets':len(expected),'private':True}))
 
 
