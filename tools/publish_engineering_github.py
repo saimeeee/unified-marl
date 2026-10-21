@@ -107,11 +107,12 @@ def publish(output, expected):
         if (existing.get('body') or '').replace('\r\n','\n').strip() != notes.replace('\r\n','\n').strip():
             raise RuntimeError('Existing draft notes differ; refusing replacement')
     else:
-        gh('release','create',TAG,'--repo',REPOSITORY,'--target',commit,'--draft',
-           '--title','unified-marl 0.8.0 — 仓储 / 交通 / 电网工程安装包',
-           '--notes-file',str(ROOT/'docs/releases/v0.8.0-engineering.1.md'),json_result=False)
-    drafts = gh('api','repos/'+REPOSITORY+'/releases?per_page=100')
-    remote = next(r for r in drafts if r['tag_name']==TAG)
+        request = output / '.release-request.json'
+        request.write_text(json.dumps(dict(tag_name=TAG,target_commitish=commit,draft=True,
+            name='unified-marl 0.8.0 — 仓储 / 交通 / 电网工程安装包',
+            body=(ROOT/'docs/releases/v0.8.0-engineering.1.md').read_text(encoding='utf-8')),ensure_ascii=False),encoding='utf-8')
+        existing = gh('api','--method','POST','repos/'+REPOSITORY+'/releases','--input',str(request))
+    remote = existing
     for item in expected:
         found = next((a for a in remote['assets'] if a['name']==item['name']), None)
         if found:
@@ -119,11 +120,16 @@ def publish(output, expected):
                 raise RuntimeError('Different existing asset; refusing overwrite: '+item['name'])
         else:
             gh('release','upload',TAG,str(output/item['name']),'--repo',REPOSITORY,json_result=False)
-    remote = gh('api','repos/'+REPOSITORY+'/releases/'+str(remote['id']))
-    for item in expected:
-        found = next(a for a in remote['assets'] if a['name']==item['name'])
-        if found['size'] != item['bytes'] or found.get('digest') != 'sha256:'+item['sha256']:
-            raise RuntimeError('Uploaded asset verification failed: '+item['name'])
+    import time
+    for attempt in range(10):
+        remote = gh('api','repos/'+REPOSITORY+'/releases/'+str(remote['id']))
+        indexed = {a['name']:a for a in remote['assets']}
+        if all(item['name'] in indexed and indexed[item['name']]['size']==item['bytes']
+               and indexed[item['name']].get('digest')=='sha256:'+item['sha256'] for item in expected):
+            break
+        if attempt==9:
+            raise RuntimeError('Uploaded assets not confirmed after bounded consistency retries')
+        time.sleep(2)
     gh('api','--method','PATCH','repos/'+REPOSITORY+'/releases/'+str(remote['id']),
        '-f','target_commitish='+commit,'-F','draft=false','-f','make_latest=true')
     print(json.dumps({'status':'PUBLISHED','url':remote['html_url'],'assets':len(expected),'private':True}))
