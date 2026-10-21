@@ -119,7 +119,7 @@ def publish(output, expected):
                 raise RuntimeError('Different existing asset; refusing overwrite: '+item['name'])
         else:
             gh('release','upload',TAG,str(output/item['name']),'--repo',REPOSITORY,json_result=False)
-    remote = gh('api','repos/'+REPOSITORY+'/releases/tags/'+TAG)
+    remote = gh('api','repos/'+REPOSITORY+'/releases/'+str(remote['id']))
     for item in expected:
         found = next(a for a in remote['assets'] if a['name']==item['name'])
         if found['size'] != item['bytes'] or found.get('digest') != 'sha256:'+item['sha256']:
