@@ -1,14 +1,37 @@
 # unified-marl
 
-[中文使用说明书](docs/USER_GUIDE.md) · [下载安装包（Releases）](https://github.com/saimeeee/unified-marl/releases/tag/v0.7.0-internal.1) · [支持范围](docs/SUPPORT_MATRIX.md) · [已知问题](docs/KNOWN_ISSUES.md)
+[中文使用说明书](docs/USER_GUIDE.md) · [下载安装包（Releases）](https://github.com/saimeeee/unified-marl/releases/tag/v0.8.0-engineering.1) · [支持范围](docs/SUPPORT_MATRIX.md) · [已知问题](docs/KNOWN_ISSUES.md)
 
-**给同事安装使用，请从 Releases 下载对应 Windows 或 Linux ZIP，按包内 README 安装。** GitHub 自动生成的源码 ZIP 不包含平台依赖。接收方需要预先安装 CPython 3.12；Windows 版依赖完整离线，Linux 版安装时联网补齐 hf-xet。两版均为 CPU 版本，Python 解释器、真实数据和仿真器另行提供。
+**给同事安装使用，请从 Releases 下载对应 Windows 或 Linux ZIP，按包内 README 安装。** GitHub 自动生成的源码 ZIP 不包含平台依赖。接收方需要预先安装 CPython 3.12；两版核心依赖可离线安装；Linux 奖励模型功能另需联网补齐 hf-xet，电网扩展依赖和交通引擎按功能另装。两版均为 CPU 版本，Python 解释器、真实数据和仿真器另行提供。
 
-以 PyMARL 架构整合三份 MARL 交付的 Python 包。当前交付版本 **0.7.0**：重点整理角色与分层均场方法、离线／偏好训练、奖励建模，以及 SADMA 本地／ZMQ 执行系统；通用算法作为对比基线保留。调用名称包含配置和实现变体，不代表独立算法数。真实数据更新与真实环境效果分别记录。
+以 PyMARL 架构整合三份 MARL 交付的 Python 包。当前工程交付版本 **0.8.0**：重点整理角色与分层均场方法、离线／偏好训练、奖励建模，以及 SADMA 本地／ZMQ 执行系统；通用算法作为对比基线保留。调用名称包含配置和实现变体，不代表独立算法数。真实数据更新与真实环境效果分别记录。
 
-使用前查阅 [中文示例](examples/README.md)、[支持清单](docs/SUPPORT_MATRIX.md)、[验收报告](docs/VALIDATION_REPORT.md) 和 [已知问题](docs/KNOWN_ISSUES.md)。全部 383 项迁移记录保留，包含未通过项；阶段结束不代表全部原实验、环境或平台服务已经迁移。
+使用前查阅 [中文示例](examples/README.md)、[支持清单](docs/SUPPORT_MATRIX.md)、[验收报告](docs/VALIDATION_REPORT.md) 和 [已知问题](docs/KNOWN_ISSUES.md)。原 383 项迁移记录保留，另增 10 项工程应用记录，包含未通过项；阶段结束不代表全部原实验、环境或平台服务已经迁移。
 
-内部发给同事安装使用，优先使用 `dist/internal` 中按系统区分的 CPU / CPython 3.12 ZIP：Windows 完整离线，Linux 在接收方安装时联网补齐 hf-xet。接收方先准备对应 Python，再解压运行安装脚本；无须原始交付目录或 GitHub。Python 解释器、真实数据和仿真器不随包提供。详见 [内部安装说明](docs/INTERNAL_DISTRIBUTION.md) 及每版 ZIP 内 README；Linux 按用户要求只准备文件，未运行 Linux 功能测试。
+本版工程安装包位于 Releases 的 `v0.8.0-engineering.1`：Windows 使用 `windows/install.ps1`，Linux 使用 `linux/install.sh`。先安装 CPython 3.12，再按功能选择依赖并填写真实场景参数；详见 [工程安装说明](docs/ENGINEERING_DISTRIBUTION.md)。原 0.7.0 安装包与历史验收记录继续保留。
+
+## 三个工程应用入口（0.8.0）
+
+[工程应用中文说明书](docs/APPLICATIONS_GUIDE.md) · [仓储库存补货](docs/WAREHOUSE_GUIDE.md) · [交通信号控制](docs/TRAFFIC_GUIDE.md) · [电网连续控制](docs/POWERGRID_GUIDE.md) · [Windows/Linux 安装](docs/ENGINEERING_DISTRIBUTION.md)
+
+| 方向 | 输入 | 输出 | 实现方式 |
+|---|---|---|---|
+| 仓储补货 | 仓库/SKU、库存、需求、提前期、成本CSV | 各仓各商品补货数量 | 新增参数化库存环境，接入MFVFD/HMF等既有实现；原补货后端仍可选 |
+| 交通控制 | CityFlow路网、车流、路口及相位映射 | 各路口信号相位 | 新增原生CityFlow.Engine适配，不必依赖缺失的cityflowenv封装 |
+| 电网控制 | 配电网/建筑/气候及设备配置数据 | 各建筑连续控制量 | 适配来源GridEnv，新增bounded Gaussian PPO训练、推理和保存恢复 |
+
+本轮按用户要求只实现、检查与打包，**没有运行训练、交通/电网仿真或真实场景实验**。新能力待使用方测试；旧版本证据不外推新版本。没有附行业预训练模型，准备真实数据后训练或加载自己匹配的模型。参数模板中的数字仅为格式示例。
+
+```sh
+unified-marl-app init warehouse --directory ./my-warehouse
+unified-marl-app check --config ./my-warehouse/warehouse.yaml
+# 准备真实数据后自行执行训练：
+unified-marl-app train --config ./my-warehouse/warehouse.yaml --output-dir ./results/warehouse
+# 模型生成后，输入当前库存即可计算补货决策：
+unified-marl-app act ./results/warehouse/policy.pt --input ./my-warehouse/warehouse_state.json
+```
+
+同样通过 `init traffic` 或 `init powergrid` 获取另外两个方向的参数模板。Python 使用 `from unified_marl.applications import warehouse, traffic, powergrid`，三者均提供 train/evaluate/load_policy；具体数据字段和应用边界见各自指南。模型与 application.json 必须一同保留。
 
 ## 交付代码中的主要工作
 
@@ -97,15 +120,15 @@ python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/
 python -m pip install .
 ```
 
-开发安装使用 `pip install -e .`；发行包位于 dist。当前验证环境为 Windows / Python 3.12.14 / torch 2.6.0+cpu / NumPy 1.26.4 / PyYAML 6.0.2。其他版本未声称通过。
+开发安装使用 `pip install -e .`；发行包位于 dist。0.7.0 历史验证环境为 Windows / Python 3.12.14 / torch 2.6.0+cpu / NumPy 1.26.4 / PyYAML 6.0.2。其他版本未声称通过。
 
-直接安装交付包：
+以下原核心调用示例沿用 0.7.0 的接口；新版安装文件请将版本替换为 0.8.0。直接安装交付包：
 
 ```powershell
 python -m venv .venv
-.venv/Scripts/python.exe -m pip install ./dist/unified_marl-0.7.0-py3-none-any.whl
+.venv/Scripts/python.exe -m pip install ./dist/unified_marl-0.8.0-py3-none-any.whl
 # 按需要选择功能，避免修改全局环境：
-.venv/Scripts/python.exe -m pip install "./dist/unified_marl-0.7.0-py3-none-any.whl[role,hmf,reward,distributed]"
+.venv/Scripts/python.exe -m pip install "./dist/unified_marl-0.8.0-py3-none-any.whl[role,hmf,reward,distributed]"
 ```
 
 包的 Python/依赖元数据是安装约束，不代表已验兼容范围；已验版本以验收报告为准。wheel 不含数据、checkpoint、缓存和外部仿真器。源码包另含中文文档、示例与验证工具；原始源码对照测试需要用户保留的参考目录，正常包调用不需要它们。

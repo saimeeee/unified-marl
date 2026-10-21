@@ -1,5 +1,5 @@
 """Public API. Importing this package creates no environments or processes."""
-__version__ = "0.7.0"
+__version__ = "0.8.0"
 
 
 def train(*args, **kwargs):

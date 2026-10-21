@@ -1,0 +1,47 @@
+[
+  {
+    "name": "unified-marl-0.8.0-windows-x64-cpu-py312-engineering.zip",
+    "bytes": 306714441,
+    "sha256": "9019dc89968306b22d8ffba8cf8c71f9c52abceebb7f3373f05b5422d56b211b"
+  },
+  {
+    "name": "unified-marl-0.8.0-linux-x86_64-cpu-py312-engineering.zip",
+    "bytes": 281317969,
+    "sha256": "abd0c5ce38baec98e87e04e71dfd565e4c017c315463c231c926b6f56d97cb33"
+  },
+  {
+    "name": "unified_marl-0.8.0-py3-none-any.whl",
+    "bytes": 581348,
+    "sha256": "c9a978fbbd6972705b9c03903af2cc6c915c4b6ef1c8f8e25263e07c5e085b67"
+  },
+  {
+    "name": "unified_marl-0.8.0.tar.gz",
+    "bytes": 840189,
+    "sha256": "18db6229567dd7b69a364e76c6470ce3da6620826464af04e3332748fd3b1b4f"
+  },
+  {
+    "name": "APPLICATIONS_GUIDE.zh-CN.md",
+    "bytes": 4391,
+    "sha256": "279d0dd3331be494a05e753b42dcab48fd6cb6d953dfb1cf2e968efa06b46f8e"
+  },
+  {
+    "name": "engineering-templates-and-guides.zip",
+    "bytes": 31440,
+    "sha256": "ee7c4070376d110a8881d9c8d5d4aaad6e99d0f01be886fbe1b80e079c4a9a71"
+  },
+  {
+    "name": "ENGINEERING_REPORT.md",
+    "bytes": 1591,
+    "sha256": "34761cedfab14f99b2c3f3303eacf8e979903c13fda5605d0a1605417c576ffc"
+  },
+  {
+    "name": "DELIVERY_MANIFEST.json",
+    "bytes": 1976,
+    "sha256": "f6b3873bd68c217539990b6aa8cbaa69ff94c077b99e74c1fffedf1f4bfa0762"
+  },
+  {
+    "name": "SHA256SUMS.txt",
+    "bytes": 815,
+    "sha256": "b89ac122e13716f25022ff0fab3abbf78ee1d20ffede55f3b775d57c563b7940"
+  }
+]

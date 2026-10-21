@@ -51,10 +51,12 @@ def load_config(algorithm="pymarl/qmix", env="toy", config=None, overrides=None)
         if short not in {"ppo","qmix","vdn"}: raise ValueError("SADMA implements PPO and Qmix/VDN; MADDPG policy source is empty")
         if env=="powergrid": raise ValueError("SADMA powergrid needs continuous float actions [B,T,N,D], bounds and a Gaussian policy protocol; it is not mapped to discrete actions in this stage")
         env="sc2" if env=="smac" else env
-        if env not in {"toy","sc2","replenishment","cityflow"}: raise ValueError("Unsupported SADMA environment")
+        if env not in {"toy","sc2","replenishment","cityflow","inventory","traffic_engine"}: raise ValueError("Unsupported SADMA environment")
         result=merge(resource("default.yaml"),resource(f"sadma/{profile}/default.yaml"))
         result=merge(result,resource(f"sadma/{profile}/{'qmix' if short=='vdn' else short}.yaml"))
-        if env!="toy":
+        if env in {"inventory","traffic_engine"}:
+            result=merge(result,resource(f"envs/{env}.yaml"))
+        elif env!="toy":
             source_env=resource(f"sadma/{profile}/envs/{'smac' if env=='sc2' else env}.yaml")
             if env=="replenishment":
                 source_env["sadma_env_metadata"]={key:source_env["env_args"].pop(key) for key in ["key","map_name","reward"] if key in source_env["env_args"]}
@@ -87,7 +89,7 @@ def load_config(algorithm="pymarl/qmix", env="toy", config=None, overrides=None)
         validate(result)
         return result
     name = algorithm_config_name(algorithm)
-    if env not in {"toy", "sc2", "sc2_beta", "replenishment"}:
+    if env not in {"toy", "sc2", "sc2_beta", "replenishment", "inventory", "traffic_engine"}:
         raise ValueError(f"Unknown environment configuration {env!r}")
     user = read_yaml(config) if isinstance(config, (str, Path)) else config or {}
     if name.startswith("wang_hmf/"):
@@ -139,7 +141,7 @@ def validate(config):
             if sum(key in config["critic_inputs"] for key in ["central_obs","independent_obs"])!=1: raise ValueError("Specify exactly one critic observation layout")
             if not config.get("save_log_probs"): raise ValueError("PPO must retain behavior action_log_probs")
         if config.get("max_updates") is not None and (not isinstance(config["max_updates"],int) or config["max_updates"]<1): raise ValueError("max_updates must be positive")
-        if config["env"] not in {"toy","sc2","replenishment","cityflow"}: raise ValueError("Unsupported SADMA environment")
+        if config["env"] not in {"toy","sc2","replenishment","cityflow","inventory","traffic_engine"}: raise ValueError("Unsupported SADMA environment")
         return
     if config.get("algorithm", "").startswith(("kou/", "kou_old/")):
         if config["kou_family"] == "icq" and config["learner"] == "q_learner":
@@ -180,7 +182,7 @@ def validate(config):
         raise ValueError("buffer_size must be at least batch_size")
     if base == "coma" and config["batch_size"] != config["batch_size_run"]:
         raise ValueError("COMA uses fresh on-policy rollouts: batch_size must equal batch_size_run")
-    if config["env"] not in {"toy", "sc2", "replenishment"}:
+    if config["env"] not in {"toy", "sc2", "replenishment", "inventory", "traffic_engine"}:
         raise ValueError("Unknown environment registry key")
     if config["env"] == "toy":
         for key in ["n_agents", "episode_limit"]:

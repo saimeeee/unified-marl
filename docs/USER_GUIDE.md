@@ -164,3 +164,7 @@ Windows 安装包已完成本机全新环境安装、训练更新、保存加载
 ## 9. 后续更新
 
 新版本安装到新目录；保留自己的数据、配置和输出，按版本使用匹配的 checkpoint。发布记录、安装包和 SHA-256 放在 GitHub Release；源码、构建脚本、示例和文档放在仓库。来源说明和原许可文件随包保留。
+
+## 0.8.0 工程应用入口
+
+仓储补货、交通控制、电网连续控制从[工程应用说明](APPLICATIONS_GUIDE.md)进入，使用unified-marl-app及applications.warehouse/traffic/powergrid。新版本没有训练或场景实验，旧验证只适用于旧记录中的功能。Windows/Linux工程包见ENGINEERING_DISTRIBUTION.md。

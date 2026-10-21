@@ -22,7 +22,17 @@ def _cityflow(**kwargs):
     return CityFlowAdapter(**kwargs)
 
 
-REGISTRY = {"toy": _toy, "sc2": _sc2, "replenishment": _replenishment, "cityflow": _cityflow}
+def _inventory(**kwargs):
+    from .inventory import InventoryEnv
+    return InventoryEnv(**kwargs)
+
+
+def _traffic_engine(**kwargs):
+    from .traffic_engine import CityFlowEngineEnv
+    return CityFlowEngineEnv(**kwargs)
+
+
+REGISTRY = {"inventory": _inventory, "traffic_engine": _traffic_engine, "toy": _toy, "sc2": _sc2, "replenishment": _replenishment, "cityflow": _cityflow}
 
 
 def make_env(name, **kwargs):

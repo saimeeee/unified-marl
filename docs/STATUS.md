@@ -1,4 +1,20 @@
+# 0.8.0 工程应用交付补充
+
+按用户最新授权实现 warehouse / traffic / powergrid 三个应用方向，新增统一API、业务决策映射、模板和中文说明；核心版本0.8.0。原383条记录保留并新增10条，共393条。新代码仅做静态/参数/构建检查，用户自行实验，未跑任何训练、仿真或真实场景验证。与0.7.0相比，新增库存环境和原生CityFlow适配，并以独立bounded_ppo补电网连续动作；不声称迁移前后算法等价或原动态实验已完成。
+
+实际命令：`.venv-release/Scripts/python.exe -X utf8 -B tools/check_engineering_package.py`，退出0：287个Python源码AST、8个模板、应用导入、CLI帮助及新文档链接通过；记录保留来源旧字符串\A的SyntaxWarning。没有创建环境或训练。安装包构建/归档状态以dist/internal/engineering-delivery-build.json和发布回执为准；待完成构建和GitHub发布后补充实际结果。
+
+构建与归档已完成：Windows ZIP 306,714,441字节，Linux ZIP 281,317,969字节；wheel 581,348字节，sdist 840,189字节。`tools/build_engineering_delivery.py`、setuptools.build_meta.build_sdist、`tools/prepare_engineering_release.py` 与发布器 `--local-cache` 的9附件逐字节重建校验通过。源码目录外目标安装并导入0.8.0、导出4个仓储模板并检查参数通过；未运行平台安装脚本或训练。首次构建发现Windows platform_machine大小写标记错误，修正为CPython AMD64后成功；`python -m build`无可执行模块，改用已安装的setuptools后端构建，无需安装新工具。GitHub Release仍待远端发布确认。
+
+用户侧入口：[工程指南](APPLICATIONS_GUIDE.md)、[实现报告](ENGINEERING_REPORT.md)、[安装说明](ENGINEERING_DISTRIBUTION.md)。电网只覆盖来源case33bw，CityFlow/电网真实资产和行业预训练模型不随包提供。
+
+以下为0.7.0及以前的历史记录，测试通过状态不外推0.8.0新增能力。
+
+---
+
 # 项目进度与实际验证记录
+
+最新发布状态：已发布 [v0.7.0-internal.1](https://github.com/saimeeee/unified-marl/releases/tag/v0.7.0-internal.1)，仓库仍为 private。9 个附件的远端大小和 SHA-256 全部核对一致；[发布任务](https://github.com/saimeeee/unified-marl/actions/runs/39558172643) 通过。发布提交 a92d0bea9a6acb44e5576ab81d43ac152b6d2c3e，文档提交 21dcb4a8014351c4a18a92b0d0e10de1be67932c。下文准备/发布中的文字保留为过程记录；机器回执在 docs/releases/v0.7.0-internal.1.verification.json。
 
 日期：2026-10-21，用户时区 UTC+08:00。
 
@@ -227,8 +243,3 @@ nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader
 等待用户发送第 2 阶段。目标是先建立项目隔离环境，打通原版 QMIX 的小型确定性环境训练→参数更新→保存→加载→评估，再增加真实 SMAC 3m 验证。当前没有一条已通过的强化学习训练链路。
 
 迁移矩阵中所有条目保持 NOT_STARTED，实现/本地/真实环境验证列均为 NO；本阶段工具和原组件检查的成功不得传播为算法迁移完成。
-
-
-## GitHub 发布已完成
-
-2026-10-21，已通过 GitHub 插件提交并由仓库发布流程完成 [v0.7.0-internal.1](https://github.com/saimeeee/unified-marl/releases/tag/v0.7.0-internal.1)。仓库仍为 private，9 个附件的远端大小与 SHA-256 全部和本地原件一致；Windows/Linux ZIP 字节哈希均未改变。发布提交为 `a92d0bea9a6acb44e5576ab81d43ac152b6d2c3e`，[最终发布任务](https://github.com/saimeeee/unified-marl/actions/runs/39558172643) 通过。早期任务因换行和草稿查询失败，日志保留；最终结果以本回执为准。Linux 仅准备文件、没有安装/训练测试，hf-xet 仍由接收方联网补齐。机器回执为 `docs/releases/v0.7.0-internal.1.verification.json`。

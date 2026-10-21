@@ -214,3 +214,7 @@ env_steps 是已通过后续消息确认的物理转移，reset/未执行动作/
 6. ZMQ 可选 evaluation_interval_updates（默认 0）、evaluation_episodes（默认 2）、evaluation_timeout_s（默认 45）和 evaluation_device（默认 cpu）。不可变策略快照由一个独立 spawn 进程评估；最多一个 pending，忙时跳过并记录。错误/超时使任务失败，自有进程退出有界。这是周期能力替代，不复刻旧共享缓冲/vector/perpetual worker ABI。
 7. 发行包带资源和 PROVENANCE；源码包另带规格、追踪、中文示例、测试工具及紧凑证据，不带模型/数据/结果/缓存。许可证分别保留，未明权利继续标记。SMAC extra 采用交付 requirements 的官方 Git 地址，但没有测试该外部安装/运行版本。
 8. 已验平台仅 Windows 11 / Python 3.12.14 / torch 2.6.0+cpu；元数据约束不扩展已验范围。383 行矩阵不删除未通过项，阶段 7 结束后停止，全部未通过项见 KNOWN_ISSUES。
+
+## 0.8.0 工程应用授权与接口
+
+用户后续授权 warehouse / traffic / powergrid 三个应用入口，完成打包后自行测试。本轮新增参数化库存模拟器、直接 CityFlow.Engine 适配、来源 GridEnv 包内适配与独立 bounded Gaussian PPO，并提供应用train/evaluate/load_policy、业务动作转换、模板、CLI与双平台包。不执行训练、真实/合成环境实验；仅静态、配置、导入、构建和归档检查。旧算法动态分组、扩角色和缺失来源项不会因本轮新增实现自动转为完成。完整接口与输入单位见 APPLICATIONS_GUIDE.md。

@@ -1,0 +1,30 @@
+{
+  "status": "STATIC_AND_CONFIG_CHECKS_PASS",
+  "source_files": 287,
+  "template_files": 8,
+  "warehouse_parameters_checked": true,
+  "application_imports": true,
+  "cli_help": true,
+  "new_document_links": true,
+  "syntax_warnings": [
+    "invalid escape sequence '\\A'"
+  ],
+  "training_run": false,
+  "environment_created": false,
+  "linux_runtime_test": false,
+  "assets": {
+    "src\\unified_marl\\applications\\templates\\powergrid.yaml": "08f3501790710e0f5fa52a77e1ea6be9b2a99469f32e415c9265cd984778dc41",
+    "src\\unified_marl\\applications\\templates\\traffic.yaml": "5826538367994d24dd19a56bc063a1bb47e856bfe1b36b7c3e43d083aa9243fc",
+    "src\\unified_marl\\applications\\templates\\traffic_cityflow_config.json": "0c7ad80da1edb6983c1eb5df4bc9d7b829c57d24aaf019eb6823c31e4e698944",
+    "src\\unified_marl\\applications\\templates\\traffic_state.json": "7d3d37de8b9a3fa40d0faf144a992069af51312b619b764043e8a46123f3d1ae",
+    "src\\unified_marl\\applications\\templates\\warehouse.yaml": "93683d1cfdd73de8535a25b47d2bf47ea3543836981787e5dc9446761594837a",
+    "src\\unified_marl\\applications\\templates\\warehouse_agents.csv": "78b2b678311efd55beaec12977f21491e7cb3a556080c4b55248c037bba2599c",
+    "src\\unified_marl\\applications\\templates\\warehouse_demand.csv": "96e0b319728d627d7aa405b52ac72eed74a32766d256825e8f39215728c613c3",
+    "src\\unified_marl\\applications\\templates\\warehouse_state.json": "faa93aa05cb455f0d1e353712e681a2cbac5b7c950f4db7955775311cc173665"
+  },
+  "wheel_outside_source_import": true,
+  "installed_template_export": true,
+  "bundle_blueprint_reconstruction": true,
+  "platform_installers_executed": false,
+  "source_distribution_resources": true
+}

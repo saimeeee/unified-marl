@@ -141,3 +141,7 @@
 | M0359 | old_global | PARTIAL_GLOBAL_ONLY_VERIFIED | CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; individual/local reward methods not migrated |
 | M0360 | old_reward_global | PARTIAL_GLOBAL_ONLY_VERIFIED | CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; individual/local reward methods not migrated |
 | M0361 | MultiPrefTransformerDivide/diverse | PARTIAL_INITIAL_EPOCH_VERIFIED | Original global/between/in losses and KL curriculum integrated; first real epoch update passed; next synthetic epoch selects zero pairs and explicitly blocks |
+
+## 0.8.0 工程版补充
+
+新增应用代码按用户要求未跑训练与场景实验：交通仍需用户安装CityFlow并提供路网/车流，电网需安装pandapower等并提供建筑/天气/设备资产；仓储新增库存环境与原ReplenishmentEnv语义不同，公式见WAREHOUSE_GUIDE。连续动作由新的bounded_ppo实现，没有把原SADMA连续分支标成已验收。旧来源阻塞与动态调度缺项继续保留，新增接口不保证所有原算法组合可用。

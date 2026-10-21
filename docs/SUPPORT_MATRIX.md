@@ -23,3 +23,7 @@
 恢复训练范围：PyMARL、聚类前 RODE、上述固定 HMF、已验离线策略和 SADMA 本地，在 toy/固定数据的完成更新边界对照；ZMQ 保留 Learner/回放/计数/RNG，但重新启动的 worker RNG、异步调度及外部仿真器内部状态不保证逐步相同。奖励模型的高层 diverse 课程/采样池没有完整恢复声明。
 
 逐项细节见 MIGRATION_MATRIX.csv；源码文件到新文件的相对路径和 SHA-256 见 MIGRATION_TRACEABILITY.csv。未通过项完整保留在 KNOWN_ISSUES.md 与 evidence/stage7/migration-audit.json。
+
+## 0.8.0 新增实现（待用户测试）
+
+以下仅记录新增实现，不并入上方0.7.0通过项：warehouse/inventory参数化补货及业务输出；traffic/cityflow_engine原生引擎封装和相位输出；powergrid/bounded_ppo连续动作策略、训练/评估/保存恢复与来源环境适配；统一应用CLI、参数模板及双平台工程包。本轮没有运行训练或仿真，因此不声明有效更新、策略效果、外部引擎或Linux运行通过。原动态HMF/RODE缺项仍保留。详见 ENGINEERING_REPORT.md。

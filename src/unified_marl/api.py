@@ -320,7 +320,7 @@ def evaluate(checkpoint, *, env=None, env_args=None, episodes=20, device="cpu", 
         raise ValueError("seed must be an integer in [0, 2**32)")
     cfg = dict(payload["config"], device=check_device(device), batch_size_run=1, runner="episode", test_nepisode=episodes)
     if env is not None:
-        if env not in {"toy", "sc2", "replenishment", "cityflow"}:
+        if env not in {"toy", "sc2", "replenishment", "cityflow", "inventory", "traffic_engine"}:
             raise ValueError("Unknown evaluation environment")
         if env != cfg["env"]:
             preset = "sadma/wang/envs/cityflow.yaml" if env == "cityflow" else f"envs/{env}.yaml"
