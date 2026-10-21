@@ -1,0 +1,21 @@
+{
+  "version": "0.7.0",
+  "tests": 220,
+  "warnings": 14,
+  "base_runs": 12,
+  "full_runs": 28,
+  "matrix_rows": 383,
+  "review": {
+    "OPTIONAL_STAGE8_RETAINED_NOT_EXECUTED": 4,
+    "UNACCEPTED_RETAINED_WITH_BLOCKER": 78,
+    "ACCEPTED_ONLY_WITH_RECORDED_LIMITS": 301
+  },
+  "trace_records": 353,
+  "source_code_dependency": "No original code/config reads permitted in standalone validation; explicit real .th input allowed",
+  "real_data": "3m short updates only",
+  "real_environments_verified": false,
+  "cross_machine_verified": false,
+  "gpu_verified": false,
+  "policy_effect_verified": false,
+  "stage7_status": "DELIVERY_ACCEPTED_WITH_RETAINED_UNMET_ITEMS"
+}

@@ -1,0 +1,10 @@
+[
+  "q_lambda gather index receives explicit action dimension; target formula unchanged",
+  "PPO unnormalized values explicit fallback and state/states input typo; source GAE and entropy objective unchanged",
+  "PiMlp action mask reshapes to logits [B,N,A]; PiRnn remains same flattened shape",
+  "Q/PPO controllers skip None hidden-state entries returned by MLP agents",
+  "Source rewards/terminated arrival time ts-1 mapped once to canonical transition t; real individual rewards also written to t",
+  "PPO synchronous data lifecycle consumes fresh same-version rollouts, never historical replay; native mini_epochs and losses retained",
+  "Replenishment key/map_name/reward were unused source kwargs and are retained as explicit metadata; shared adapter horizon=None reads the SADMA backend horizon",
+  "Canonical environment closes on metadata failure and task exceptions; source runner does not initialize global multiprocessing mode or ZMQ in this path"
+]

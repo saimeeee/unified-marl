@@ -1,0 +1,137 @@
+{
+  "mode": "sync",
+  "job_id": "5fc35a97a1fc4ae3bf134f13dfdd055a",
+  "cross_machine_verified": false,
+  "platform": "Windows spawn tested; other platforms NOT VALIDATED",
+  "status": "PASS",
+  "error": null,
+  "trainer_endpoint": "tcp://127.0.0.1:54943",
+  "inference_endpoints": [
+    "tcp://127.0.0.1:54954"
+  ],
+  "counters": {
+    "env_steps": 16,
+    "episodes": 4,
+    "updates": 2,
+    "last_update_episode": 4,
+    "episodes_accepted": 4,
+    "episodes_dropped_stale": 0,
+    "completed_steps": 16,
+    "inference_calls": 20,
+    "snapshot_syncs": 3,
+    "mixed_version_episodes": 0
+  },
+  "sync_acknowledgements": [
+    {
+      "worker": 0,
+      "version": 0,
+      "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+    },
+    {
+      "worker": 0,
+      "version": 1,
+      "digest": "9c40feb0d24f2ce3ec38796d24155456fbb1e010ae69c68258b7fc51ba74524c"
+    },
+    {
+      "worker": 0,
+      "version": 2,
+      "digest": "fe3c96f0176bf3578f2fc13f99c5a766b5752465160012a656abdc17a41109f2"
+    }
+  ],
+  "lifecycle": {
+    "processes": [
+      {
+        "role": "infer-0",
+        "pid": 50728,
+        "exitcode": 0,
+        "alive": false
+      },
+      {
+        "role": "sampler-0",
+        "pid": 46124,
+        "exitcode": 0,
+        "alive": false
+      },
+      {
+        "role": "sampler-1",
+        "pid": 30548,
+        "exitcode": 0,
+        "alive": false
+      }
+    ],
+    "forced": [],
+    "events": [
+      {
+        "role": "sampler-1",
+        "kind": "PROCESS_STARTED",
+        "worker_id": 1
+      },
+      {
+        "role": "sampler-0",
+        "kind": "PROCESS_STARTED",
+        "worker_id": 0
+      },
+      {
+        "role": "sampler-1",
+        "kind": "STOPPED",
+        "worker_id": 1,
+        "env_closed": true,
+        "error": null
+      },
+      {
+        "role": "sampler-0",
+        "kind": "STOPPED",
+        "worker_id": 0,
+        "env_closed": true,
+        "error": null
+      }
+    ]
+  },
+  "evaluation": {
+    "records": [
+      {
+        "update": 1,
+        "policy_version": 1,
+        "checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_zmq_periodic_independent_0\\distributed\\evaluation-snapshot-1\\policy.pt",
+        "status": "PASS",
+        "evaluation": {
+          "episodes": 2,
+          "returns": [
+            2.0,
+            2.0
+          ],
+          "return_mean": 2.0,
+          "return_std": 0.0
+        }
+      }
+    ],
+    "skipped_busy_updates": [
+      2
+    ],
+    "forced": false
+  },
+  "partial_confirmed_steps": 0,
+  "samplers_closed": 2,
+  "inference_stop_reports": [
+    {
+      "kind": "STOPPED",
+      "calls": 20,
+      "syncs": [
+        {
+          "version": 0,
+          "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+        },
+        {
+          "version": 1,
+          "digest": "9c40feb0d24f2ce3ec38796d24155456fbb1e010ae69c68258b7fc51ba74524c"
+        },
+        {
+          "version": 2,
+          "digest": "fe3c96f0176bf3578f2fc13f99c5a766b5752465160012a656abdc17a41109f2"
+        }
+      ],
+      "sync_count": 3,
+      "request_id": 24
+    }
+  ]
+}

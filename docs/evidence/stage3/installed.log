@@ -1,0 +1,38 @@
+wang/rode_hmf PASS
+wang/rode PASS
+wang/qmix PASS
+wang/vdn PASS
+wang/iql PASS
+wang/coma PASS
+wang/qtran PASS
+wang/qmix_beta PASS
+wang/vdn_beta PASS
+wang/iql_beta PASS
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+wang_hmf/dqn PASS
+wang_hmf/vdn PASS
+wang_hmf/qmix PASS
+wang_hmf/mfq PASS
+wang_hmf/mfvfd PASS
+wang_hmf/hierarchical PASS
+wang_hmf/hierarchical_vdn PASS
+G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\torch\nn\modules\loss.py:610: UserWarning: Using a target size (torch.Size([8, 3])) that is different to the input size (torch.Size([8, 1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents_IPC.py:80: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  probs = F.softmax(pol_out)
+G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents_IPC.py:87: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  probs = F.softmax(pol_out)
+wang_hmf/hierarchical_vdn_IPC PASS
+wang_hmf/hierarchical_vdn_without_high_level PASS
+G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\algorithms\hmf\algorithms\maddpg.py:109: FutureWarning: `torch.nn.utils.clip_grad_norm` is now deprecated in favor of `torch.nn.utils.clip_grad_norm_`.
+  torch.nn.utils.clip_grad_norm(self.agent.critic.parameters(), 0.5)
+G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\algorithms\hmf\algorithms\maddpg.py:132: FutureWarning: `torch.nn.utils.clip_grad_norm` is now deprecated in favor of `torch.nn.utils.clip_grad_norm_`.
+  torch.nn.utils.clip_grad_norm(self.agent.policy.parameters(), 0.5)
+wang_hmf/maddpg PASS
+wang_hmf/hierarchical_vdn_copy_fixed PASS
+wang_hmf/hierarchical_vdn_meanq PASS
+wang_hmf/hierarchical_vdn_k_means_fixed PASS
+pymarl/qmix PASS

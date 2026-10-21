@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "tests": 59,
+  "matrix_rows": 350,
+  "source_hash_records_unchanged": 1228,
+  "runtime_source_wheel_installed_files_identical": 159,
+  "reference_python312_bytecode_files": 0,
+  "wheel_sha256": "ea3a58ffbec3ed1f101791224eae0ad44f1de15dd6489609b617dab1a9e22c74",
+  "wheel_bytes": 230096,
+  "real_simulators": "BLOCKED",
+  "stopped_after_stage": 3
+}

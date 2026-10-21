@@ -1,0 +1,1727 @@
+{
+  "sources": {
+    "wang": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\sadma",
+    "yi_open": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\论文\\SADMA\\sadma源代码开源版本",
+    "yi_closed": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\论文\\SADMA\\sadma源代码闭源版本",
+    "yi_zmq": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\基于ZMQ的分布式多智能体强化学习算法\\sadma源代码公开版本"
+  },
+  "file_counts": {
+    "wang": 46,
+    "yi_open": 48,
+    "yi_closed": 50,
+    "yi_zmq": 48
+  },
+  "compared_to_yi_open": {
+    "wang": [
+      {
+        "path": "config/alg_config/ppo.yaml",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -1,11 +1,11 @@\n\n-train_buffer_size: 32\n-train_batch_size: 32\n+train_buffer_size: 8\n+train_batch_size: 8\n update_rate: 8\n \n \n lr: 0.0005\n critic_coef: 0.5\n-entropy: 0.01\n+entropy: 0\n gae_lambda: 0.95\n mini_epochs: 4\n eps_clip: 0.2\n@@ -15,8 +15,8 @@\n\n \n agenet_type: rnn\n critic_type: rnn\n-agent_inputs: [\"obs\", \"agent_id\", \"last_action\"]\n-# [\"state\", \"independent_obs\", \"central_obs\" \"agent_id\", \"last_action\"]\n+agent_inputs: [\"obs\", \"last_action\"]\n+# [\"state\", \"independent_obs\", \"central_obs\", \"agent_id\", \"last_action\"]\n critic_inputs: [\"central_obs\"]\n \n use_layer_norm: True"
+      },
+      {
+        "path": "config/alg_config/qmix.yaml",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -2,14 +2,14 @@\n\n epsilon_finish: 0.05\n epsilon_anneal_time: 100000\n \n-train_buffer_size: 2000\n-train_batch_size: 64\n-update_rate: 8\n-target_update_interval: 100\n+train_buffer_size: 5000\n+train_batch_size: 8\n+update_rate: 1\n+target_update_interval: 200\n \n agenet_type: rnn\n agent_inputs: [\"obs\", \"agent_id\", \"last_action\"]\n-mixer: \"vdn_mixer\"\n+mixer: \"q_mixer\"\n mixing_embed_dim: 32\n hypernet_layers: 2\n hypernet_embed: 64"
+      },
+      {
+        "path": "config/config_utils.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -33,12 +33,14 @@\n\n         return copy.deepcopy(config)\n \n def update_args(args):\n-    # 将时间当前戳转换为自定义格式的字符串\n     formatted_time = time.strftime(\"%Y%m%d-%H:%M:%S\", time.localtime(time.time()))\n     args.unique_token = f\"seed{args.seed}_{formatted_time}\"\n     args.log_path = os.path.join(os.getcwd(), args.log_root_path, args.exp_name, args.algorithm, args.map_name, args.unique_token)\n     if args.save_log or args.use_tensorboard:\n         mkdir(args.log_path)\n+        if args.save_model_episode:\n+            args.model_path = os.path.join(args.log_path, \"model\")\n+            mkdir(args.model_path)\n     if args.env == \"cityflow\":\n         mkdir(args.log_path)\n         args.env_args[\"log_path\"] = args.log_path  # for cityflow to save replay file\n@@ -70,13 +72,13 @@\n\n     parser.add_argument(\"--exp_name\", type=str, default=\"test\", help=\"experiment name\")\n     parser.add_argument(\"--seed\", type=int, default=1, help=\"seed of the experiment\")\n     parser.add_argument(\"--alg\", type=str, default=\"ppo\", help=\"algorithm\")\n-    parser.add_argument(\"--env\", type=str, default=\"smac\", help=\"env type: smac cityflow powergrid\")\n-    parser.add_argument(\"--map_name\", type=str, default=\"3m\", help=\"map name. 3m cityflow:[jinan, hangzhou, newyork]\")\n+    parser.add_argument(\"--env\", type=str, default=\"smac\", help=\"env type: smac cityflow replenishment\")\n+    parser.add_argument(\"--map_name\", type=str, default=\"3m\", help=\"map name\")\n     parser.add_argument(\"--train_device\", type=str, default=\"cuda\", help=\"train device\")\n     parser.add_argument(\"--env_batch_size\", type=int, default=8, help=\"number of parallel env batch size\")\n \n     # distribute\n-    parser.add_argument(\"--async_train\", type=bool, default=False, help=\"if async train\")\n+    parser.add_argument(\"--async_train\", type=bool, default=True, help=\"if async train\")\n     parser.add_argument(\"--local\", type=bool, default=True, help=\"local or remote\")\n     parser.add_argument(\"--role\", type=str, default=\"train\", help=\"sample or train, when use remote\",)\n     parser.add_argument(\"--num_sample_worker\", type=int, default=1, help=\"number of sample worker\")"
+      },
+      {
+        "path": "config/default.yaml",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -3,7 +3,9 @@\n\n save_log: True\n use_tensorboard: True\n log_interval_step: 2000\n-log_interval_episode: 16\n+log_interval_episode: 100\n+save_model_episode: 0\n+checkpoint_path: \"\"\n \n # --- RL hyperparameters ---\n gamma: 0.99\n@@ -14,7 +16,7 @@\n\n \n # --- Agent parameters ---\n agent_type: rnn\n-hidden_dim: 64\n+hidden_dim: 128\n agent_inputs: [\"obs\", \"agent_id\", \"last_action\"]\n save_log_probs: False\n use_individual_rewards: False"
+      },
+      {
+        "path": "config/env_config/cityflow.yaml",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -3,7 +3,7 @@\n\n env_args:\n   interval: 1.0\n   yellow_time: 5\n-  thread_num: 1\n+  thread_num: 2\n   lane_change: True  \n   save_replay: False  \n   eight_phase: True  "
+      },
+      {
+        "path": "config/env_config/powergrid.yaml",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -1,7 +0,0 @@\n\n-env: powergrid\n-\n-env_args:\n-  climate_zone: \"Climate_Zone_1\"\n-\n-env_type: continuous\n-max_steps: 1000000"
+      },
+      {
+        "path": "config/env_config/replenishment.yaml",
+        "ast_equal": false,
+        "diff": ""
+      },
+      {
+        "path": "config/env_config/smac.yaml",
+        "ast_equal": false,
+        "diff": ""
+      },
+      {
+        "path": "entry.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -4,15 +4,14 @@\n\n from config.config_utils import get_all_config\n \n if __name__ == '__main__':\n-    torch.multiprocessing.set_start_method(\"spawn\")\n-    torch.set_num_threads(1)\n     args = get_all_config()\n-\n     np.random.seed(args.seed)\n     torch.manual_seed(args.seed)\n     args.env_args['seed'] = args.seed\n \n     if args.async_train:\n+        torch.multiprocessing.set_start_method(\"spawn\")\n+        torch.set_num_threads(1)\n         if args.role == \"train\":\n             runner_REGISTRY[\"train\"](args)\n         elif args.role == \"sample\":"
+      },
+      {
+        "path": "envs/__init__.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -2,7 +2,7 @@\n\n from envs.smac.smac_env import SMAC\n from envs.replenishment.replenishment_env import ReplenishmentEnv\n from envs.cityflow.cityflow_env import CityFlowEnv\n-from envs.powergrid.smart_grid import GridEnv\n+\n \n def env_fn(env, **kwargs):\n     return env(**kwargs)\n@@ -11,14 +11,13 @@\n\n env_REGISTRY[\"smac\"] = partial(env_fn, env=SMAC)\n env_REGISTRY[\"replenishment\"] = partial(env_fn, env=ReplenishmentEnv)\n env_REGISTRY[\"cityflow\"] = partial(env_fn, env=CityFlowEnv)\n-env_REGISTRY[\"powergrid\"] = partial(env_fn, env=GridEnv)\n+\n \n from envs.smac.smac_runner import SMACRunner\n from envs.replenishment.replenishment_runner import ReplenishmentRunner\n from envs.cityflow.cityflow_runner import CityFlowRunner\n-from envs.powergrid.powergrid_runner import PowerGridRunner\n+\n env_runner_REGISTRY = {}\n env_runner_REGISTRY[\"smac\"] = SMACRunner\n env_runner_REGISTRY[\"replenishment\"] = ReplenishmentRunner\n env_runner_REGISTRY[\"cityflow\"] = CityFlowRunner\n-env_runner_REGISTRY[\"powergrid\"] = PowerGridRunner"
+      },
+      {
+        "path": "envs/cityflow/cityflow_env.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "envs/cityflow/cityflow_runner.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "envs/powergrid/energy_models.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -1,1716 +0,0 @@\n\n-import json\n-import os\n-from collections import OrderedDict\n-\n-import numpy as np\n-import pandas as pd\n-from gym import spaces\n-from sklearn import preprocessing\n-\n-\n-def subhourly_lin_interp(hourly_data, subhourly_steps):\n-    \"\"\"Returns a linear interpolation of a data array as a list\"\"\"\n-    n = len(hourly_data)\n-    data = np.interp(np.linspace(0, n, n * subhourly_steps), np.arange(n), hourly_data)\n-    return list(data)\n-\n-\n-def subhourly_noisy_interp(hourly_data, subhourly_steps):\n-    \"\"\"Returns a noisy distribution of power consumption +/- 5% standard deviation of the original power draw.\"\"\"\n-    n = len(hourly_data)\n-    data = np.repeat(hourly_data, subhourly_steps)\n-    perturbation = np.random.normal(1.0, 0.05, n * subhourly_steps)\n-    data = np.multiply(data, perturbation)\n-    return list(data)\n-\n-\n-def subhourly_randomdraw_interp(hourly_data, subhourly_steps, dhw_pwr):\n-    \"\"\"Returns a randomized binary distribution where demand = power*time when water is drawn, 0 otherwise.\n-    Proportion of time with demand at full power corresponds to energy consumption at the hourly interval by E+\n-    \"\"\"\n-    data = []\n-    subhourly_dhw_energy = max(0.01, dhw_pwr / subhourly_steps)\n-    for hour in hourly_data:\n-        draw_times = np.random.choice(\n-            subhourly_steps, int(hour / subhourly_dhw_energy), replace=False\n-        )\n-        for i in range(subhourly_steps):\n-            if i in draw_times:\n-                data += [subhourly_dhw_energy]\n-            else:\n-                data += [0]\n-    return list(data)\n-\n-\n-class Weather:\n-    def __init__(self, weather_file, solar_file, hourly_timesteps):\n-        self.file = weather_file\n-        self.hourly_timesteps = hourly_timesteps\n-        with open(weather_file) as csv_file:\n-            weather_data = pd.read_csv(csv_file)\n-\n-        mapping_dict = {\n-            \"t_out\": \"Outdoor Drybulb Temperature [C]\",\n-            \"rh_out\": \"Outdoor Relative Humidity [%]\",\n-            \"diffuse_solar_rad\": \"Diffuse Solar Radiation [W/m2]\",\n-            \"direct_solar_rad\": \"Direct Solar Radiation [W/m2]\",\n-            \"t_out_pred_6h\": \"6h Prediction Outdoor Drybulb Temperature [C]\",\n-            \"t_out_pred_12h\": \"12h Prediction Outdoor Drybulb Temperature [C]\",\n-            \"t_out_pred_24h\": \"24h Prediction Outdoor Drybulb Temperature [C]\",\n-            \"rh_out_pred_6h\": \"6h Prediction Outdoor Relative Humidity [%]\",\n-            \"rh_out_pred_12h\": \"12h Prediction Outdoor Relative Humidity [%]\",\n-            \"rh_out_pred_24h\": \"24h Prediction Outdoor Relative Humidity [%]\",\n-            \"diffuse_solar_rad_pred_6h\": \"6h Prediction Diffuse Solar Radiation [W/m2]\",\n-            \"diffuse_solar_rad_pred_12h\": \"12h Prediction Direct Solar Radiation [W/m2]\",\n-            \"diffuse_solar_rad_pred_24h\": \"24h Prediction Direct Solar Radiation [W/m2]\",\n-            \"direct_solar_rad_pred_6h\": \"6h Prediction Diffuse Solar Radiation [W/m2]\",\n-            \"direct_solar_rad_pred_12h\": \"12h Prediction Diffuse Solar Radiation [W/m2]\",\n-            \"direct_solar_rad_pred_24h\": \"24h Prediction Diffuse Solar Radiation [W/m2]\",\n-        }\n-        res = {}\n-        for k, v in mapping_dict.items():\n-            if k in [\n-                \"direct_solar_rad\",\n-                \"t_out\",\n-                \"t_out_pred_6h\",\n-            ]:  # self.enabled_states[k]:\n-                res[k] = subhourly_lin_interp(weather_data[v], self.hourly_timesteps)\n-\n-        with open(solar_file) as csv_file:\n-            data = pd.read_csv(csv_file)\n-\n-        res[\"solar_gen\"] = subhourly_lin_interp(\n-            data[\"Hourly Data: AC inverter power (W)\"] / 1000, self.hourly_timesteps\n-        )\n-\n-        self.data = res\n-\n-\n-class Building:\n-    def __init__(\n-        self,\n-        data_path,\n-        climate_zone,\n-        buildings_states_actions_file,\n-        hourly_timesteps,\n-        uid,\n-        weather,\n-        BuildingId,\n-        save_memory=True,\n-    ):\n-        \"\"\"\n-        Args:\n-            buildingId (int)\n-            dhw_storage (EnergyStorage)\n-            cooling_storage (EnergyStorage)\n-            electrical_storage (Battery)\n-            dhw_heating_device (ElectricHeater or HeatPump)\n-            cooling_device (HeatPump)\n-        \"\"\"\n-        self.start_time = 0\n-        self.weather = weather\n-        self.hourly_timesteps = hourly_timesteps\n-\n-        # create a Unique Building ID\n-        self.buildingId = f\"{BuildingId:03}-\"\n-\n-        with open(buildings_states_actions_file) as json_file:\n-            buildings_states_actions = json.load(\n-                json_file, object_pairs_hook=OrderedDict\n-            )\n-\n-        self.uid = uid\n-\n-        # create all the systems that go in the house\n-        attributes_file = os.path.join(data_path, \"building_attributes.json\")\n-        attributes = self.set_attributes(attributes_file)\n-        self.pv_installed = attributes[\"Solar_Power_Installed(kW)\"]\n-\n-        self.save_memory = save_memory\n-        self.create_systems(attributes)\n-\n-        # get observation and action spaces for the RL agent\n-        tmp = buildings_states_actions[self.uid]\n-        self.enabled_states = tmp[\"states\"]\n-        self.enabled_actions = tmp[\"actions\"]\n-        # print(\"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\", self.enabled_actions)\n-\n-        # get e-plus load calcs\n-        sim_file = os.path.join(data_path, f\"Building_{self.building_type}.csv\")\n-        self.sim_results = self.load_sim_results(sim_file)\n-\n-        self.set_dhw_cop()\n-        self.set_cooling_cop()\n-        self.autosize_equipment()\n-        self.set_dhw_draws()\n-\n-        self.set_state_space()\n-        self.set_action_space()\n-        self.ts = 0\n-        self.time_step = self.start_time\n-        self.current_gross_electricity_demand = 0\n-        self.current_gross_generation = 0\n-        self.phi = 0\n-        self.year = 0\n-        self.rbc = False\n-        self.solar_generation = 0\n-        self.battery_action = 0\n-        self.action_log = []\n-        self.batt_soc = []\n-        self.hvac_soc = []\n-        self.dhw_soc = []\n-        self.all_rewards = []\n-        self.all_devs = []\n-        self.all_pwrs = []\n-        self.pv = []\n-        self.max_dev = None\n-        self.max_pwr = None\n-        self.pwr = 0\n-\n-    def assign_bus(self, bus):\n-        self.bus = bus\n-        self.buildingId += f\"{bus:03}\"\n-        return\n-\n-    def assign_cluster(self, cluster):\n-        self.buildingCluster = cluster\n-        return\n-\n-    def set_attributes(self, file):\n-        with open(file) as json_file:\n-            data = json.load(json_file, object_pairs_hook=OrderedDict)\n-        tmp = data[self.uid]\n-        self.building_type = tmp[\"Building_Type\"]\n-        self.climate_zone = tmp[\"Climate_Zone\"]\n-        return data[self.uid]\n-\n-    def create_systems(self, attributes):\n-        # create all the subcomponents of the building\n-        self.cooling_device = HeatPump(\n-            nominal_power=attributes[\"Heat_Pump\"][\"nominal_power\"],\n-            eta_tech=attributes[\"Heat_Pump\"][\"technical_efficiency\"],\n-            t_target_heating=attributes[\"Heat_Pump\"][\"t_target_heating\"],\n-            t_target_cooling=attributes[\"Heat_Pump\"][\"t_target_cooling\"],\n-            save_memory=self.save_memory,\n-        )\n-\n-        self.dhw_heating_device = ElectricHeater(\n-            nominal_power=attributes[\"Electric_Water_Heater\"][\"nominal_power\"],\n-            efficiency=attributes[\"Electric_Water_Heater\"][\"efficiency\"],\n-            save_memory=self.save_memory,\n-        )\n-\n-        self.cooling_storage = EnergyStorage(\n-            hourly_steps=self.hourly_timesteps,\n-            capacity=attributes[\"Chilled_Water_Tank\"][\"capacity\"],\n-            loss_coeff=attributes[\"Chilled_Water_Tank\"][\"loss_coefficient\"],\n-            save_memory=self.save_memory,\n-        )\n-\n-        self.dhw_storage = EnergyStorage(\n-            hourly_steps=self.hourly_timesteps,\n-            capacity=attributes[\"DHW_Tank\"][\"capacity\"],\n-            loss_coeff=attributes[\"DHW_Tank\"][\"loss_coefficient\"],\n-            save_memory=self.save_memory,\n-        )\n-\n-        self.electrical_storage = Battery(\n-            hourly_timesteps=self.hourly_timesteps,\n-            capacity=attributes[\"Battery\"][\"capacity\"],\n-            capacity_loss_coeff=attributes[\"Battery\"][\"capacity_loss_coefficient\"],\n-            loss_coeff=attributes[\"Battery\"][\"loss_coefficient\"],\n-            efficiency=attributes[\"Battery\"][\"efficiency\"],\n-            nominal_power=attributes[\"Battery\"][\"nominal_power\"],\n-            power_efficiency_curve=attributes[\"Battery\"][\"power_efficiency_curve\"],\n-            capacity_power_curve=attributes[\"Battery\"][\"capacity_power_curve\"],\n-            save_memory=self.save_memory,\n-        )\n-\n-        self.solar_power_capacity = attributes[\"Solar_Power_Installed(kW)\"]\n-        return\n-\n-    def load_sim_results(self, sim_file):\n-        with open(sim_file) as csv_file:\n-            data = pd.read_csv(csv_file)\n-\n-        res = {}\n-        res[\"cooling_demand\"] = subhourly_lin_interp(\n-            data[\"Cooling Load [kWh]\"], self.hourly_timesteps\n-        )\n-        res[\"dhw_demand\"] = list(data[\"DHW Heating [kWh]\"])\n-        res[\"non_shiftable_load\"] = subhourly_noisy_interp(\n-            data[\"Equipment Electric Power [kWh]\"], self.hourly_timesteps\n-        )\n-        res[\"month\"] = list(np.repeat(data[\"Month\"], self.hourly_timesteps))\n-        res[\"day\"] = list(np.repeat(data[\"Day Type\"], self.hourly_timesteps))\n-        res[\"hour\"] = list(np.repeat(data[\"Hour\"], self.hourly_timesteps))\n-        res[\"daylight_savings_status\"] = list(\n-            np.repeat(data[\"Daylight Savings Status\"], self.hourly_timesteps)\n-        )\n-        res[\"t_in\"] = subhourly_lin_interp(\n-            data[\"Indoor Temperature [C]\"], self.hourly_timesteps\n-        )\n-        res[\"avg_unmet_setpoint\"] = subhourly_lin_interp(\n-            data[\"Average Unmet Cooling Setpoint Difference [C]\"], self.hourly_timesteps\n-        )\n-        res[\"rh_in\"] = subhourly_lin_interp(\n-            data[\"Indoor Relative Humidity [%]\"], self.hourly_timesteps\n-        )\n-        return res\n-\n-    def assign_neighbors(self, net):\n-        my_x = net.bus_geodata.loc[self.bus][\"x\"]\n-        my_y = net.bus_geodata.loc[self.bus][\"y\"]\n-        net.bus_geodata[\"distance\"] = (net.bus_geodata[\"x\"] - my_x) ** 2 + (\n-            net.bus_geodata[\"y\"] - my_y\n-        ) ** 2\n-        self.neighbors = (\n-            net.bus_geodata.sort_values(\"distance\").drop(index=0).index[1:4]\n-        )\n-        return\n-\n-    def normalize(self, file=None):\n-        self.max_dev = max(self.all_devs)\n-        return\n-\n-    def get_devs(self, net):  # dummy cost function\n-        dev = net.res_bus.loc[self.bus][\"vm_pu\"] - 1\n-        if abs(dev) <= 0.045:\n-            reward = 0\n-        elif abs(dev) <= 0.05:\n-            reward = 40 * (abs(dev) - 0.045)\n-            # reward = 50 * (abs(dev) - 0.048)\n-            # reward = 10 * (abs(dev) - 0.048)\n-            reward = 30 * (abs(dev) - 0.045)\n-            reward = 30 * (abs(dev) - 0.045)\n-\n-        else:\n-            reward = 120 * (abs(dev) - 0.045)\n-            # reward = 90 * (abs(dev) - 0.048)\n-            reward = 180 * (abs(dev) - 0.045)\n-            reward = 200 * (abs(dev) - 0.045)\n-            # reward = 150 * (abs(dev) - 0.048)\n-            # reward = 30 * (abs(dev) - 0.048)\n-        return reward\n-\n-    def get_devx(self, net):  # dummy cost function\n-        dev = net.res_bus.loc[self.bus][\"vm_pu\"] - 1\n-        if abs(dev) <= 0.048:\n-            reward = 0\n-        elif abs(dev) <= 0.05:\n-            reward = 20 * (abs(dev) - 0.048)\n-        else:\n-            reward = 200 * (abs(dev) - 0.048)\n-        return reward\n-\n-    def get_reward(self, net):  # dummy cost function\n-        dev = net.res_bus.loc[self.bus][\"vm_pu\"] - 1\n-        pwr = (\n-            self.current_gross_electricity_demand - self.current_gross_generation\n-        ) ** 2\n-        loss = sum(net.res_bus[\"p_mw\"].iloc[1:]) - net.res_ext_grid[\"p_mw\"][0]\n-        loss_reward = 4 * loss + 1\n-        if self.max_dev and self.max_pwr:\n-            reward = -1 * (dev / self.max_dev) ** 2\n-        else:\n-            self.all_devs += [dev]\n-            reward = -1 * (10 * dev) ** 2\n-        return reward\n-\n-    def get_newreward(self, net):  # dummy cost function\n-        dev = net.res_bus.loc[self.bus][\"vm_pu\"] - 1\n-        if (self.current_gross_electricity_demand + self.current_gross_generation) > 0:\n-            pwr = (\n-                (self.current_gross_electricity_demand + self.current_gross_generation)\n-                / 50\n-            ) ** 4\n-        else:\n-            pwr = 0\n-        pl_loss = net.res_line[\"pl_mw\"][self.bus - 1]\n-\n-        self.all_devs += [dev]\n-        reward = -0.75 * (10 * dev) ** 2 - abs(5 * pl_loss) - 0.8 * pwr\n-        return reward\n-\n-    def get_doreward(self, net):  # dummy cost function\n-        dev = net.res_bus.loc[self.bus][\"vm_pu\"] - 1\n-        # print(self.bus)\n-        # print('**********',self.current_gross_electricity_demand , self.current_gross_generation)\n-        if (self.current_gross_electricity_demand + self.current_gross_generation) > 0:\n-            pwr = (\n-                (self.current_gross_electricity_demand + self.current_gross_generation)\n-                / 50\n-            ) ** 4\n-        else:\n-            pwr = 0\n-        loss = sum(net.res_bus[\"p_mw\"].iloc[1:]) - net.res_ext_grid[\"p_mw\"][0]\n-        loss_reward = 4 * loss + 1\n-        pl_loss = net.res_line[\"pl_mw\"][self.bus - 1]\n-        min_max_scaler = preprocessing.MinMaxScaler()\n-        if self.max_dev and self.max_pwr:\n-            reward = -1 * (dev / self.max_dev) ** 2 - abs(pl_loss / 32) - abs(loss / 16)\n-        else:\n-            self.all_devs += [dev]\n-            reward = -1 * (10 * dev) ** 2 - abs(5 * pl_loss) - pwr / 40000\n-            reward = -1 * (10 * dev) ** 2 - abs(5 * pl_loss) - pwr / 50000\n-            # #reward = -1 * (10 * dev) ** 2 - abs(loss/8)-pwr/40000\n-            # reward = -1 * (10 * dev) ** 2 - abs(loss/8)\n-            # #print(-1*(10*dev)**2,-abs(10*pl_loss),-pwr/5000)\n-            # reward = -0.75 * (10 * dev) ** 2 - abs(5 * pl_loss) - pwr / 40000\n-            reward = -0.75 * (10 * dev) ** 2 - abs(5 * pl_loss) - 0.8 * pwr\n-        return reward\n-\n-    def get_safereward(self, net):  # dummy cost function\n-        dev = net.res_bus.loc[self.bus][\"vm_pu\"] - 1\n-        # print(self.bus)\n-        if (self.current_gross_electricity_demand + self.current_gross_generation) > 0:\n-            pwr = (\n-                (self.current_gross_electricity_demand + self.current_gross_generation)\n-                / 50\n-            ) ** 4\n-        else:\n-            pwr = 0\n-        ramping_pwr = abs(\n-            (self.current_gross_electricity_demand - self.current_gross_generation) ** 2\n-            - self.pwr\n-        )\n-        self.pwr = pwr\n-        loss = sum(net.res_bus[\"p_mw\"].iloc[1:]) - net.res_ext_grid[\"p_mw\"][0]\n-        loss_reward = 4 * loss + 1\n-        pl_loss = net.res_line[\"pl_mw\"][self.bus - 1]\n-        min_max_scaler = preprocessing.MinMaxScaler()\n-        if self.max_dev and self.max_pwr:\n-            reward = -1 * (dev / self.max_dev) ** 2 - abs(pl_loss / 32) - abs(loss / 16)\n-        else:\n-            self.all_devs += [dev]\n-            reward = -1 * (10 * dev) ** 2 - abs(5 * pl_loss) - pwr / 40000\n-            reward = -1 * (10 * dev) ** 2 - abs(5 * pl_loss) - pwr / 50000\n-            # #reward = -1 * (10 * dev) ** 2 - abs(loss/8)-pwr/40000\n-            # reward = -1 * (10 * dev) ** 2 - abs(loss/8)\n-            # #print(-1*(10*dev)**2,-abs(10*pl_loss),-pwr/5000)\n-            reward = -0.75 * (10 * dev) ** 2 - abs(5 * pl_loss) - pwr / 40000\n-            reward = -0.75 * (10 * dev) ** 2 - abs(5 * pl_loss) - 0.8 * pwr\n-        return reward\n-\n-    def get_demandreward(self, net):  # dummy cost function\n-        dev = net.res_bus.loc[self.bus][\"vm_pu\"] - 1\n-        # print(self.bus)\n-        pwr = (\n-            (self.current_gross_electricity_demand + self.current_gross_generation) / 50\n-        ) ** 4\n-        loss = sum(net.res_bus[\"p_mw\"].iloc[1:]) - net.res_ext_grid[\"p_mw\"][0]\n-        loss_reward = 4 * loss + 1\n-        pl_loss = net.res_line[\"pl_mw\"][self.bus - 1]\n-        min_max_scaler = preprocessing.MinMaxScaler()\n-        if self.max_dev and self.max_pwr:\n-            reward = -1 * (dev / self.max_dev) ** 2 - abs(pl_loss / 32) - abs(loss / 16)\n-        else:\n-            self.all_devs += [dev]\n-            reward = -1 * (10 * dev) ** 2 - abs(5 * pl_loss) - pwr / 40000\n-            # #reward = -1 * (10 * dev) ** 2 - abs(loss/8)-pwr/40000\n-            # reward = -1 * (10 * dev) ** 2 - abs(loss/8)\n-            # #print(-1*(10*dev)**2,-abs(10*pl_loss),-pwr/5000)\n-        if (self.current_gross_electricity_demand + self.current_gross_generation) > 0:\n-            pwr = (\n-                (self.current_gross_electricity_demand + self.current_gross_generation)\n-                / 50\n-            ) ** 4\n-        else:\n-            pwr = 0\n-        return pwr\n-\n-    def get_vm_reward(self, net):  # dummy cost function\n-        dev = net.res_bus.loc[self.bus][\"vm_pu\"] - 1\n-        pwr = (\n-            self.current_gross_electricity_demand - self.current_gross_generation\n-        ) ** 2\n-        loss = sum(net.res_bus[\"p_mw\"].iloc[1:]) - net.res_ext_grid[\"p_mw\"][0]\n-        loss_reward = 4 * loss + 1\n-        if self.max_dev and self.max_pwr:\n-            reward = -1 * (dev / self.max_dev) ** 2\n-        else:\n-            self.all_devs += [dev]\n-            reward = -1 * (10 * dev) ** 2\n-        return dev\n-\n-    def get_state(self, net):\n-        s = []\n-        for state_name, value in self.enabled_states.items():\n-            # ('state_name:',state_name, value)\n-            if value == True:\n-                if state_name == \"net_electricity_consumption\":\n-                    s.append(self.current_gross_electricity_demand)\n-\n-                elif state_name == \"absolute_voltage\":\n-                    if self.time_step <= 1:\n-                        s.append(1.0)\n-                    else:\n-                        v = float(\n-                            net.res_bus[\"vm_pu\"][\n-                                net.load.loc[net.load[\"name\"] == self.buildingId].bus\n-                            ]\n-                        )\n-                        s.append(v)\n-\n-                elif state_name == \"relative_voltage\":\n-                    if self.time_step <= 1:\n-                        s.append(0.5)\n-                    else:\n-                        ranked_voltage = float(\n-                            net.res_bus[\"vm_pu\"].rank(pct=True)[\n-                                net.load.loc[net.load[\"name\"] == self.buildingId].bus\n-                            ]\n-                        )\n-                        s.append(ranked_voltage)\n-\n-                elif state_name == \"total_voltage_spread\":\n-                    if self.time_step <= 1:\n-                        s.append(0)\n-                    else:\n-                        voltage_spread = 0\n-                        for index, line in net.line.iterrows():\n-                            voltage_spread += abs(\n-                                net.res_bus.loc[line.to_bus].vm_pu\n-                                - net.res_bus.loc[line.from_bus].vm_pu\n-                            )\n-                        s.append(voltage_spread)\n-\n-                elif state_name == \"cooling_storage_soc\":\n-                    s.append(self.cooling_storage._soc / self.cooling_storage.capacity)\n-                elif state_name == \"dhw_storage_soc\":\n-                    s.append(self.dhw_storage._soc / self.dhw_storage.capacity)\n-                elif state_name == \"electrical_storage_soc\":\n-                    s.append(\n-                        self.electrical_storage._soc / self.electrical_storage.capacity\n-                    )\n-\n-                elif state_name in self.weather.data.keys():\n-                    if state_name == \"solar_gen\":\n-                        s.append(\n-                            self.pv_installed\n-                            * self.weather.data[state_name][self.time_step]\n-                        )\n-                    else:\n-                        s.append(self.weather.data[state_name][self.time_step])\n-                else:\n-                    if state_name == \"month\":\n-                        s.append(\n-                            np.sin(\n-                                self.sim_results[state_name][self.time_step] / 12 * 6.28\n-                            )\n-                        )\n-                    elif state_name == \"day\":\n-                        s.append(\n-                            np.sin(\n-                                self.sim_results[state_name][self.time_step] / 7 * 6.28\n-                            )\n-                        )\n-                    elif state_name == \"hour\":\n-                        s.append(\n-                            np.sin(\n-                                self.sim_results[state_name][self.time_step] / 24 * 6.28\n-                            )\n-                        )\n-                    else:\n-                        s.append(self.sim_results[state_name][self.time_step])\n-\n-        return np.divide(\n-            np.subtract(s, self.normalization_mid), self.normalization_range\n-        )\n-\n-    def close(self, folderName, write=False):\n-        if write:\n-            np.savetxt(\n-                f\"models/{folderName}/homes/{self.buildingId}{self.buildingCluster}_actions.csv\",\n-                np.array(self.action_log),\n-                delimiter=\",\",\n-                fmt=\"%s\",\n-            )\n-            np.savetxt(\n-                f\"models/{folderName}/homes/{self.buildingId}{self.buildingCluster}_rewards.csv\",\n-                np.array(self.all_rewards),\n-                delimiter=\",\",\n-                fmt=\"%s\",\n-            )\n-            np.savetxt(\n-                f\"models/{folderName}/homes/{self.buildingId}{self.buildingCluster}_battsoc.csv\",\n-                np.array(self.batt_soc),\n-                delimiter=\",\",\n-                fmt=\"%s\",\n-            )\n-            np.savetxt(\n-                f\"models/{folderName}/homes/{self.buildingId}{self.buildingCluster}_hvacsoc.csv\",\n-                np.array(self.hvac_soc),\n-                delimiter=\",\",\n-                fmt=\"%s\",\n-            )\n-            np.savetxt(\n-                f\"models/{folderName}/homes/{self.buildingId}{self.buildingCluster}_dhwsoc.csv\",\n-                np.array(self.dhw_soc),\n-                delimiter=\",\",\n-                fmt=\"%s\",\n-            )\n-            np.savetxt(\n-                f\"models/{folderName}/homes/{self.buildingId}{self.buildingCluster}_pv.csv\",\n-                np.array(self.pv),\n-                delimiter=\",\",\n-                fmt=\"%s\",\n-            )\n-        return\n-\n-    def step(self, a):\n-        self.action_log += [a]\n-\n-        if self.enabled_actions[\"cooling_storage\"]:\n-            _electric_demand_cooling = self.set_storage_cooling(a[0])\n-            a = a[1:]\n-        else:\n-            _electric_demand_cooling = self.set_storage_cooling()\n-\n-        if self.enabled_actions[\"dhw_storage\"]:\n-            _electric_demand_dhw = self.set_storage_heating(a[0])\n-            a = a[1:]\n-        else:\n-            _electric_demand_dhw = self.set_storage_heating()\n-\n-        if self.enabled_actions[\"pv_curtail\"]:\n-            self.solar_generation = self.get_solar_power(a[0])\n-            self.action_curtail = a[0]\n-            a = a[1:]\n-        else:\n-            self.solar_generation = self.get_solar_power()\n-\n-        if self.enabled_actions[\"pv_phi\"]:\n-            self.phi = self.set_phase_lag(a[0])\n-            a = a[1:]\n-        else:\n-            self.phi = self.set_phase_lag()\n-\n-        if self.enabled_actions[\"electrical_storage\"]:\n-            self.batt_power = self.set_storage_electrical(a[0])\n-            #            self.batt_power = self.set_storage_electrical(a[0]/2.5-1) # batt power is negative for discharge\n-            a = a[1:]\n-        else:\n-            self.batt_power = self.set_storage_electrical()\n-\n-        # Track soc of all energy storage devices\n-        self.hvac_soc += [self.cooling_storage._soc / self.cooling_storage.capacity]\n-        self.dhw_soc += [self.dhw_storage._soc / self.dhw_storage.capacity]\n-        self.batt_soc += [\n-            self.electrical_storage._soc / self.electrical_storage.capacity\n-        ]\n-        self.pv += [self.solar_generation]\n-        # Electrical appliances\n-        _non_shiftable_load = self.get_non_shiftable_load()\n-\n-        # Adding loads from appliances and subtracting solar generation to the net electrical load of each building\n-        self.current_gross_electricity_demand = round(\n-            _electric_demand_cooling\n-            + _electric_demand_dhw\n-            + _non_shiftable_load\n-            + max(self.batt_power, 0),\n-            4,\n-        )\n-        # print('&&&&&&&&&&',self.batt_power)\n-        self.current_gross_generation = round(\n-            -1 * self.solar_generation + min(0, self.batt_power), 4\n-        )\n-\n-        if self.time_step == self.hourly_timesteps * 8760:\n-            self.time_step = 0\n-        else:\n-            self.time_step += 1\n-        return\n-\n-    def set_dhw_draws(self):\n-        self.sim_results[\"dhw_demand\"] = subhourly_randomdraw_interp(\n-            self.sim_results[\"dhw_demand\"],\n-            self.hourly_timesteps,\n-            self.dhw_heating_device.nominal_power,\n-        )\n-\n-    def autosize_equipment(self):\n-        # Autosize guarantees that the DHW device is large enough to always satisfy the maximum DHW demand\n-        if self.dhw_heating_device.nominal_power == \"autosize\":\n-            # If the DHW device is a HeatPump\n-            if isinstance(self.dhw_heating_device, HeatPump):\n-                # We assume that the heat pump is always large enough to meet the highest heating or cooling demand of the building\n-                self.dhw_heating_device.nominal_power = np.array(\n-                    self.sim_results[\"dhw_demand\"] / self.dhw_heating_device.cop_heating\n-                ).max()\n-\n-                # If the device is an electric heater\n-            elif isinstance(self.dhw_heating_device, ElectricHeater):\n-                self.dhw_heating_device.nominal_power = (\n-                    np.array(self.sim_results[\"dhw_demand\"])\n-                    / self.dhw_heating_device.efficiency\n-                ).max()\n-\n-        # Autosize guarantees that the cooling device device is large enough to always satisfy the maximum DHW demand\n-        if self.cooling_device.nominal_power == \"autosize\":\n-            self.cooling_device.nominal_power = (\n-                np.array(self.sim_results[\"cooling_demand\"])\n-                / self.cooling_device.cop_cooling\n-            ).max()\n-\n-        # Defining the capacity of the storage devices as a number of times the maximum demand\n-        self.dhw_storage.capacity = (\n-            max(self.sim_results[\"dhw_demand\"]) * self.dhw_storage.capacity\n-        )\n-        self.cooling_storage.capacity = (\n-            max(self.sim_results[\"cooling_demand\"]) * self.cooling_storage.capacity\n-        )\n-\n-        # Done in order to avoid dividing by 0 if the capacity is 0\n-        if self.dhw_storage.capacity <= 0.00001:\n-            self.dhw_storage.capacity = 0.00001\n-        if self.cooling_storage.capacity <= 0.00001:\n-            self.cooling_storage.capacity = 0.00001\n-\n-    def set_state_space(self):\n-        # Finding the max and min possible values of all the states, which can then be used by the RL agent to scale the states and train any function approximators more effectively\n-        s_low, s_high = [], []\n-        #         s_low, s_high = [0]*32, [1]*32\n-        for state_name, value in self.enabled_states.items():\n-            if value == True:\n-                if state_name == \"net_electricity_consumption\":\n-                    # lower and upper bounds of net electricity consumption are rough estimates and may not be completely accurate. Scaling this state-variable using these bounds may result in normalized values above 1 or below 0.\n-                    self._net_elec_cons_upper_bound = max(\n-                        np.array(self.sim_results[\"non_shiftable_load\"])\n-                        - np.array(self.pv_installed * self.weather.data[\"solar_gen\"])\n-                        + np.array(self.sim_results[\"dhw_demand\"]) / 0.8\n-                        + np.array(self.sim_results[\"cooling_demand\"])\n-                        + self.dhw_storage.capacity / 0.8\n-                        + self.cooling_storage.capacity / 2\n-                    )\n-                    s_low.append(self.solar_power_capacity)\n-                    s_high.append(self._net_elec_cons_upper_bound)\n-                    self.net_elec_cons_range = self._net_elec_cons_upper_bound\n-                    self.net_elec_cons_mid = (\n-                        self.solar_power_capacity + 0.5 * self.net_elec_cons_range\n-                    )\n-\n-                elif state_name == \"absolute_voltage\":\n-                    s_low.append(0.90)\n-                    s_high.append(1.10)\n-\n-                elif state_name == \"relative_voltage\":\n-                    # added relative voltage to give homes their voltage ranked against the community max/min\n-                    s_low.append(\n-                        0.0\n-                    )  # the house is the lowest voltage in the community\n-                    s_high.append(1.0)\n-\n-                elif state_name == \"total_voltage_spread\":\n-                    s_low.append(0.0)\n-                    s_high.append(0.2)\n-\n-                elif state_name in [\n-                    \"cooling_storage_soc\",\n-                    \"dhw_storage_soc\",\n-                    \"electrical_storage_soc\",\n-                ]:\n-                    s_low.append(0.0)\n-                    s_high.append(1.0)\n-\n-                elif state_name in self.weather.data.keys():\n-                    s_low.append(min(self.weather.data[state_name]))\n-                    s_high.append(max(self.weather.data[state_name]))\n-\n-                else:\n-                    if state_name in [\"month\", \"day\", \"hour\"]:\n-                        s_low.append(-1)\n-                        s_high.append(1)\n-                    else:\n-                        s_low.append(min(self.sim_results[state_name]))\n-                        s_high.append(max(self.sim_results[state_name]))\n-\n-        self.normalization_range = np.array(s_high) - np.array(s_low)\n-        self.normalization_mid = np.array(s_low) + 0.5 * self.normalization_range\n-\n-        num_states = len(s_low)\n-        low = -1 * np.ones(num_states)\n-        high = np.ones(num_states)\n-\n-        self.observation_space = spaces.Box(low=low, high=high, dtype=np.float32)\n-        return\n-\n-    def set_action_space(self):\n-        # Setting the action space and the lower and upper bounds of each action-variable\n-        \"\"\"The energy storage (tank) capacity indicates how many times bigger the tank is compared to the maximum hourly energy demand of the building (cooling or DHW respectively), which sets a lower bound for the action of 1/tank_capacity, as the energy storage device can't provide the building with more energy than it will ever need for a given hour. The heat pump is sized using approximately the maximum hourly energy demand of the building (after accounting for the COP, see function autosize). Therefore, we make the fair assumption that the action also has an upper bound equal to 1/tank_capacity. This boundaries should speed up the learning process of the agents and make them more stable rather than if we just set them to -1 and 1. I.e. if Chilled_Water_Tank.Capacity is 3 (3 times the max. hourly demand of the building in the entire year), its actions will be bounded between -1/3 and 1/3\"\"\"\n-        a_low, a_high = [], []\n-        for action_name, value in self.enabled_actions.items():\n-            if value == True:\n-                if action_name == \"cooling_storage\":\n-                    a_low.append(-1.0)\n-                    a_high.append(1.0)\n-\n-                elif action_name == \"dhw_storage\":\n-                    a_low.append(-1.0)\n-                    a_high.append(1.0)\n-\n-                elif action_name == \"pv_curtail\":\n-                    # pv curtailment of apparent power, S\n-                    a_low.append(-1.0)\n-                    a_high.append(1.0)\n-\n-                elif action_name == \"pv_phi\":\n-                    a_low.append(-1.0)\n-                    a_high.append(1.0)\n-\n-                elif action_name == \"electrical_storage\":\n-                    a_low.append(-1.0)\n-                    a_high.append(1.0)\n-\n-        self.action_space = spaces.Box(\n-            low=np.array(a_low), high=np.array(a_high), dtype=np.float32\n-        )\n-        return\n-\n-    def set_storage_electrical(self, action=0):\n-        \"\"\"\n-        Args:\n-            action (float): Amount of heating energy stored (added) in that time-step as a ratio of the maximum capacity of the energy storage device.\n-            -1 =< action < 0 : Energy Storage Unit releases energy into the building and its State of Charge decreases\n-            0 < action <= 1 : Energy Storage Unit receives energy from the energy supply device and its State of Charge increases\n-            The actions are always subject to the constraints of the power capacity of the heating supply unit, the DHW demand of the\n-            building (which limits the maximum amount of DHW that the energy storage can provide to the building), and the state of charge of the\n-            energy storage unit itself\n-        Return:\n-            elec_demand_heating (float): electricity consumption needed for space heating and heating storage\n-        \"\"\"\n-\n-        electrical_energy_balance = self.electrical_storage.charge(\n-            action * self.electrical_storage.capacity\n-        )\n-\n-        if self.save_memory == False:\n-            self.electrical_storage_electric_consumption.append(\n-                electrical_energy_balance\n-            )\n-            self.electrical_storage_soc.append(self.electrical_storage._soc)\n-\n-        self.electrical_storage.time_step = self.time_step\n-\n-        return electrical_energy_balance\n-\n-    def set_storage_heating(self, action=0):\n-        \"\"\"\n-        Args:\n-            action (float): Amount of heating energy stored (added) in that time-step as a ratio of the maximum capacity of the energy storage device.\n-            -1 =< action < 0 : Energy Storage Unit releases energy into the building and its State of Charge decreases\n-            0 < action <= 1 : Energy Storage Unit receives energy from the energy supply device and its State of Charge increases\n-            The actions are always subject to the constraints of the power capacity of the heating supply unit, the DHW demand of the\n-            building (which limits the maximum amount of DHW that the energy storage can provide to the building), and the state of charge of the\n-            energy storage unit itself\n-        Return:\n-            elec_demand_heating (float): electricity consumption needed for space heating and heating storage\n-        \"\"\"\n-\n-        # Heating power that could be possible to supply to the storage device to increase its State of Charge once the heating demand of the building has been satisfied\n-        heat_power_avail = (\n-            self.dhw_heating_device.get_max_heating_power()\n-            - self.sim_results[\"dhw_demand\"][self.time_step]\n-        )\n-\n-        # The storage device is charged (action > 0) or discharged (action < 0) taking into account the max power available and that the storage device cannot be discharged by an amount of energy greater than the energy demand of the building.\n-        heating_energy_balance = self.dhw_storage.charge(\n-            max(\n-                -self.sim_results[\"dhw_demand\"][self.time_step],\n-                min(heat_power_avail, action * self.dhw_storage.capacity),\n-            )\n-        )\n-\n-        if self.save_memory == False:\n-            self.dhw_storage_action.append(action)\n-            self.dhw_heating_device_to_storage.append(max(0, heating_energy_balance))\n-            self.dhw_storage_to_building.append(-min(0, heating_energy_balance))\n-            self.dhw_heating_device_to_building.append(\n-                self.sim_results[\"dhw_demand\"][self.time_step]\n-                + min(0, heating_energy_balance)\n-            )\n-            self.dhw_storage_soc.append(self.dhw_storage._soc)\n-\n-        # The energy that the energy supply device must provide is the sum of the energy balance of the storage unit (how much net energy it will lose or get) plus the energy supplied to the building. A constraint is added to guarantee it's always positive.\n-        heating_energy_balance = max(\n-            0, heating_energy_balance + self.sim_results[\"dhw_demand\"][self.time_step]\n-        )\n-\n-        # Electricity consumed by the energy supply unit\n-        elec_demand_heating = (\n-            self.dhw_heating_device.set_total_electric_consumption_heating(\n-                heat_supply=heating_energy_balance\n-            )\n-        )\n-\n-        # Electricity consumption used (if +) or saved (if -) due to the change in the state of charge of the energy storage device\n-        self._electric_consumption_dhw_storage = (\n-            elec_demand_heating\n-            - self.dhw_heating_device.get_electric_consumption_heating(\n-                heat_supply=self.sim_results[\"dhw_demand\"][self.time_step]\n-            )\n-        )\n-\n-        if self.save_memory == False:\n-            self.electric_consumption_dhw.append(elec_demand_heating)\n-            self.electric_consumption_dhw_storage.append(\n-                self._electric_consumption_dhw_storage\n-            )\n-\n-        self.dhw_heating_device.time_step = self.time_step\n-\n-        return elec_demand_heating\n-\n-    def set_storage_cooling(self, action=0):\n-        \"\"\"\n-        Args:\n-            action (float): Amount of cooling energy stored (added) in that time-step as a ratio of the maximum capacity of the energy storage device.\n-            1 =< action < 0 : Energy Storage Unit releases energy into the building and its State of Charge decreases\n-            0 < action <= -1 : Energy Storage Unit receives energy from the energy supply device and its State of Charge increases\n-            The actions are always subject to the constraints of the power capacity of the cooling supply unit, the cooling demand of the\n-            building (which limits the maximum amount of cooling energy that the energy storage can provide to the building), and the state of charge of the energy storage unit itself\n-        Return:\n-            elec_demand_cooling (float): electricity consumption needed for space cooling and cooling storage\n-        \"\"\"\n-\n-        # Cooling power that could be possible to supply to the storage device to increase its State of Charge once the heating demand of the building has been satisfied\n-        cooling_power_avail = (\n-            self.cooling_device.get_max_cooling_power()\n-            - self.sim_results[\"cooling_demand\"][self.time_step]\n-        )\n-\n-        # The storage device is charged (action > 0) or discharged (action < 0) taking into account the max power available and that the storage device cannot be discharged by an amount of energy greater than the energy demand of the building.\n-        charge_arg = max(\n-            -self.sim_results[\"cooling_demand\"][self.time_step],\n-            min(cooling_power_avail, action * self.cooling_storage.capacity),\n-        )\n-        cooling_energy_balance = self.cooling_storage.charge(\n-            charge_arg / self.hourly_timesteps\n-        )\n-\n-        if self.save_memory == False:\n-            self.cooling_storage_action.append(action)\n-            self.cooling_device_to_storage.append(max(0, cooling_energy_balance))\n-            self.cooling_storage_to_building.append(-min(0, cooling_energy_balance))\n-            self.cooling_device_to_building.append(\n-                self.sim_results[\"cooling_demand\"][self.time_step]\n-                + min(0, cooling_energy_balance)\n-            )\n-            self.cooling_storage_soc.append(self.cooling_storage._soc)\n-\n-        # The energy that the energy supply device must provide is the sum of the energy balance of the storage unit (how much net energy it will lose or get) plus the energy supplied to the building. A constraint is added to guarantee it's always positive.\n-        cooling_energy_balance = max(\n-            0,\n-            cooling_energy_balance + self.sim_results[\"cooling_demand\"][self.time_step],\n-        )\n-\n-        # Electricity consumed by the energy supply unit\n-        elec_demand_cooling = (\n-            self.cooling_device.set_total_electric_consumption_cooling(\n-                cooling_supply=cooling_energy_balance\n-            )\n-        )\n-\n-        # Electricity consumption used (if +) or saved (if -) due to the change in the state of charge of the energy storage device\n-        self._electric_consumption_cooling_storage = (\n-            elec_demand_cooling\n-            - self.cooling_device.get_electric_consumption_cooling(\n-                cooling_supply=self.sim_results[\"cooling_demand\"][self.time_step]\n-            )\n-        )\n-\n-        if self.save_memory == False:\n-            self.electric_consumption_cooling.append(np.float32(elec_demand_cooling))\n-            self.electric_consumption_cooling_storage.append(\n-                np.float32(self._electric_consumption_cooling_storage)\n-            )\n-\n-        self.cooling_device.time_step = self.time_step\n-\n-        return elec_demand_cooling\n-\n-    def get_non_shiftable_load(self):\n-        return self.sim_results[\"non_shiftable_load\"][self.time_step]\n-\n-    def get_solar_power(self, curtailment=1):\n-        c = (\n-            0.5 - 0.5 * curtailment\n-        )  # maps curtailment -1 to 100% reduction and 1 to no curtailment\n-        self.solar_power = (\n-            (1 - c) * self.pv_installed * self.weather.data[\"solar_gen\"][self.time_step]\n-        )\n-        return self.solar_power\n-\n-    def set_phase_lag(self, phi=-1):\n-        # mapping to that -1 is 0 and 1 in np.pi/2\n-        phi = (phi + 1) * np.pi / 4\n-        self.v_lag = phi\n-        return self.v_lag\n-\n-    def set_dhw_cop(self):\n-        # If the DHW device is a HeatPump\n-        if isinstance(self.dhw_heating_device, HeatPump):\n-            # Calculating COPs of the heat pumps for every hour\n-            self.dhw_heating_device.cop_heating = (\n-                self.dhw_heating_device.eta_tech\n-                * (self.dhw_heating_device.t_target_heating + 273.15)\n-                / np.clip(\n-                    self.dhw_heating_device.t_target_heating\n-                    - self.weather.data[\"t_out\"],\n-                    a_min=0.1 * np.ones(len(self.weather.data[\"t_out\"])),\n-                    a_max=None,\n-                )\n-            )\n-            self.dhw_heating_device.cop_heating[\n-                self.dhw_heating_device.cop_heating < 0\n-            ] = 20.0\n-            self.dhw_heating_device.cop_heating[\n-                self.dhw_heating_device.cop_heating > 20\n-            ] = 20.0\n-            self.dhw_heating_device.cop_heating = (\n-                self.dhw_heating_device.cop_heating.to_numpy()\n-            )\n-\n-    def get_dhw_electric_demand(self):\n-        return self.dhw_heating_device._electrical_consumption_heating\n-\n-    def set_cooling_cop(self):\n-        self.cooling_device.cop_cooling = (\n-            self.cooling_device.eta_tech\n-            * (np.add(self.cooling_device.t_target_cooling, 273.15))\n-            / np.clip(\n-                np.subtract(\n-                    self.weather.data[\"t_out\"], self.cooling_device.t_target_cooling\n-                ),\n-                a_min=0.1 * np.ones(len(self.weather.data[\"t_out\"])),\n-                a_max=None,\n-            )\n-        )\n-        self.cooling_device.cop_cooling[self.cooling_device.cop_cooling < 0] = 20.0\n-        self.cooling_device.cop_cooling[self.cooling_device.cop_cooling > 20] = 20.0\n-\n-    def get_cooling_electric_demand(self):\n-        return self.cooling_device._electrical_consumption_cooling\n-\n-    def reset_timestep(self, net, reset_logs):\n-        self.time_step = self.start_time\n-        return self.reset(net, reset_logs)\n-\n-    def reset(self, net, reset_logs):\n-        self.current_gross_electricity_demand = self.sim_results[\"non_shiftable_load\"][\n-            self.time_step\n-        ]\n-        self.current_gross_generation = (\n-            self.pv_installed * self.weather.data[\"solar_gen\"][self.time_step]\n-        )\n-\n-        if self.dhw_storage is not None:\n-            self.dhw_storage.reset()\n-        if self.cooling_storage is not None:\n-            self.cooling_storage.reset()\n-        if self.electrical_storage is not None:\n-            self.electrical_storage.reset()\n-        if self.dhw_heating_device is not None:\n-            self.dhw_heating_device.reset()\n-            self.current_gross_electricity_demand += (\n-                self.dhw_heating_device.get_electric_consumption_heating(\n-                    self.sim_results[\"dhw_demand\"][self.time_step]\n-                )\n-            )\n-        if self.cooling_device is not None:\n-            self.cooling_device.reset()\n-            self.current_gross_electricity_demand += (\n-                self.cooling_device.get_electric_consumption_cooling(\n-                    self.sim_results[\"cooling_demand\"][self.time_step]\n-                )\n-            )\n-\n-        self._electric_consumption_cooling_storage = 0.0\n-        self._electric_consumption_dhw_storage = 0.0\n-\n-        if reset_logs:\n-            self.cooling_demand_building = []\n-            self.dhw_demand_building = []\n-            self.electric_consumption_appliances = []\n-            self.electric_generation = []\n-\n-            self.electric_consumption_cooling = []\n-            self.electric_consumption_cooling_storage = []\n-            self.electric_consumption_dhw = []\n-            self.electric_consumption_dhw_storage = []\n-\n-            self.net_electric_consumption = []\n-            self.net_electric_consumption_no_storage = []\n-            self.net_electric_consumption_no_pv_no_storage = []\n-\n-            self.cooling_storage_action = []\n-            self.cooling_device_to_building = []\n-            self.cooling_storage_to_building = []\n-            self.cooling_device_to_storage = []\n-            self.cooling_storage_soc = []\n-\n-            self.dhw_storage_action = []\n-            self.dhw_heating_device_to_building = []\n-            self.dhw_storage_to_building = []\n-            self.dhw_heating_device_to_storage = []\n-            self.dhw_storage_soc = []\n-\n-            self.electrical_storage_electric_consumption = []\n-            self.electrical_storage_soc = []\n-\n-            self.all_rewards = []\n-            self.action_log = []\n-            self.hvac_soc = []\n-            self.dhw_soc = []\n-            self.batt_soc = []\n-\n-        return self.get_state(net)\n-\n-    def terminate(self):\n-        if self.dhw_storage is not None:\n-            self.dhw_storage.terminate()\n-        if self.cooling_storage is not None:\n-            self.cooling_storage.terminate()\n-        if self.electrical_storage is not None:\n-            self.electrical_storage.terminate()\n-        if self.dhw_heating_device is not None:\n-            self.dhw_heating_device.terminate()\n-        if self.cooling_device is not None:\n-            self.cooling_device.terminate()\n-\n-        if self.save_memory == False:\n-            self.cooling_demand_building = np.array(\n-                self.sim_results[\"cooling_demand\"][: self.time_step]\n-            )\n-            self.dhw_demand_building = np.array(\n-                self.sim_results[\"dhw_demand\"][: self.time_step]\n-            )\n-            self.electric_consumption_appliances = np.array(\n-                self.sim_results[\"non_shiftable_load\"][: self.time_step]\n-            )\n-            self.electric_generation = np.array(\n-                self.pv_installed * self.weather.data[\"solar_gen\"][: self.time_step]\n-            )\n-\n-            elec_consumption_dhw = 0\n-            elec_consumption_dhw_storage = 0\n-            if (\n-                self.dhw_heating_device.time_step == self.time_step\n-                and self.dhw_heating_device is not None\n-            ):\n-                elec_consumption_dhw = np.array(self.electric_consumption_dhw)\n-                elec_consumption_dhw_storage = np.array(\n-                    self.electric_consumption_dhw_storage\n-                )\n-\n-            elec_consumption_cooling = 0\n-            elec_consumption_cooling_storage = 0\n-            if (\n-                self.cooling_device.time_step == self.time_step\n-                and self.cooling_device is not None\n-            ):\n-                elec_consumption_cooling = np.array(self.electric_consumption_cooling)\n-                elec_consumption_cooling_storage = np.array(\n-                    self.electric_consumption_cooling_storage\n-                )\n-\n-            self.net_electric_consumption = (\n-                np.array(self.electric_consumption_appliances)\n-                + elec_consumption_cooling\n-                + elec_consumption_dhw\n-                - np.array(self.electric_generation)\n-            )\n-            self.net_electric_consumption_no_storage = (\n-                np.array(self.electric_consumption_appliances)\n-                + (elec_consumption_cooling - elec_consumption_cooling_storage)\n-                + (elec_consumption_dhw - elec_consumption_dhw_storage)\n-                - np.array(self.electric_generation)\n-            )\n-            self.net_electric_consumption_no_pv_no_storage = np.array(\n-                self.net_electric_consumption_no_storage\n-            ) + np.array(self.electric_generation)\n-\n-            self.cooling_demand_building = np.array(self.cooling_demand_building)\n-            self.dhw_demand_building = np.array(self.dhw_demand_building)\n-            self.electric_consumption_appliances = np.array(\n-                self.electric_consumption_appliances\n-            )\n-            self.electric_generation = np.array(self.electric_generation)\n-\n-            self.electric_consumption_cooling = np.array(\n-                self.electric_consumption_cooling\n-            )\n-            self.electric_consumption_cooling_storage = np.array(\n-                self.electric_consumption_cooling_storage\n-            )\n-            self.electric_consumption_dhw = np.array(self.electric_consumption_dhw)\n-            self.electric_consumption_dhw_storage = np.array(\n-                self.electric_consumption_dhw_storage\n-            )\n-\n-            self.net_electric_consumption = np.array(self.net_electric_consumption)\n-            self.net_electric_consumption_no_storage = np.array(\n-                self.net_electric_consumption_no_storage\n-            )\n-            self.net_electric_consumption_no_pv_no_storage = np.array(\n-                self.net_electric_consumption_no_pv_no_storage\n-            )\n-\n-            self.cooling_device_to_building = np.array(self.cooling_device_to_building)\n-            self.cooling_storage_to_building = np.array(\n-                self.cooling_storage_to_building\n-            )\n-            self.cooling_device_to_storage = np.array(self.cooling_device_to_storage)\n-            self.cooling_storage_soc = np.array(self.cooling_storage_soc)\n-\n-            self.dhw_heating_device_to_building = np.array(\n-                self.dhw_heating_device_to_building\n-            )\n-            self.dhw_storage_to_building = np.array(self.dhw_storage_to_building)\n-            self.dhw_heating_device_to_storage = np.array(\n-                self.dhw_heating_device_to_storage\n-            )\n-            self.dhw_storage_soc = np.array(self.dhw_storage_soc)\n-\n-            self.electrical_storage_electric_consumption = np.array(\n-                self.electrical_storage_electric_consumption\n-            )\n-            self.electrical_storage_soc = np.array(self.electrical_storage_soc)\n-\n-\n-class HeatPump:\n-    def __init__(\n-        self,\n-        nominal_power=None,\n-        eta_tech=None,\n-        t_target_heating=None,\n-        t_target_cooling=None,\n-        save_memory=True,\n-    ):\n-        \"\"\"\n-        Args:\n-            nominal_power (float): Maximum amount of electric power that the heat pump can consume from the power grid (given by the nominal power of the compressor)\n-            eta_tech (float): Technical efficiency\n-            t_target_heating (float): Temperature at which the heating energy is released\n-            t_target_cooling (float): Temperature at which the cooling energy is released\n-        \"\"\"\n-        # Parameters\n-        self.nominal_power = nominal_power\n-        self.eta_tech = eta_tech\n-\n-        # Variables\n-        self.max_cooling = None\n-        self.max_heating = None\n-        self._cop_heating = None\n-        self._cop_cooling = None\n-        self.t_target_heating = t_target_heating\n-        self.t_target_cooling = t_target_cooling\n-        self.t_source_heating = None\n-        self.t_source_cooling = None\n-        self.cop_heating = []\n-        self.cop_cooling = []\n-        self.electrical_consumption_cooling = []\n-        self.electrical_consumption_heating = []\n-        self.heat_supply = []\n-        self.cooling_supply = []\n-        self.time_step = 0\n-        self.save_memory = save_memory\n-\n-    def get_max_cooling_power(self, max_electric_power=None):\n-        \"\"\"\n-        Args:\n-            max_electric_power (float): Maximum amount of electric power that the heat pump can consume from the power grid\n-\n-        Returns:\n-            max_cooling (float): maximum amount of cooling energy that the heatpump can provide\n-        \"\"\"\n-\n-        if max_electric_power is None:\n-            self.max_cooling = self.nominal_power * self.cop_cooling[self.time_step]\n-        else:\n-            self.max_cooling = (\n-                min(max_electric_power, self.nominal_power)\n-                * self.cop_cooling[self.time_step]\n-            )\n-        return self.max_cooling\n-\n-    def get_max_heating_power(self, max_electric_power=None):\n-        \"\"\"\n-        Method that calculates the heating COP and the maximum heating power available\n-        Args:\n-            max_electric_power (float): Maximum amount of electric power that the heat pump can consume from the power grid\n-\n-        Returns:\n-            max_heating (float): maximum amount of heating energy that the heatpump can provide\n-        \"\"\"\n-\n-        if max_electric_power is None:\n-            self.max_heating = self.nominal_power * self.cop_cooling[self.time_step]\n-        else:\n-            self.max_heating = (\n-                min(max_electric_power, self.nominal_power)\n-                * self.cop_cooling[self.time_step]\n-            )\n-\n-        return self.max_heating\n-\n-    def set_total_electric_consumption_cooling(self, cooling_supply=0):\n-        \"\"\"\n-        Method that calculates the total electricity consumption of the heat pump given an amount of cooling energy to be supplied to both the building and the storage unit\n-        Args:\n-            cooling_supply (float): Total amount of cooling energy that the heat pump is going to supply\n-\n-        Returns:\n-            _electrical_consumption_cooling (float): electricity consumption for cooling\n-        \"\"\"\n-\n-        self.cooling_supply.append(cooling_supply)\n-        self._electrical_consumption_cooling = (\n-            cooling_supply / self.cop_cooling[self.time_step]\n-        )\n-\n-        if self.save_memory == False:\n-            self.electrical_consumption_cooling.append(\n-                np.float32(self._electrical_consumption_cooling)\n-            )\n-\n-        return self._electrical_consumption_cooling\n-\n-    def get_electric_consumption_cooling(self, cooling_supply=0):\n-        \"\"\"\n-        Method that calculates the electricity consumption of the heat pump given an amount of cooling energy\n-        Args:\n-            cooling_supply (float): Amount of cooling energy\n-\n-        Returns:\n-            _electrical_consumption_cooling (float): electricity consumption for that amount of cooling\n-        \"\"\"\n-\n-        _elec_consumption_cooling = cooling_supply / self.cop_cooling[self.time_step]\n-        return _elec_consumption_cooling\n-\n-    def set_total_electric_consumption_heating(self, heat_supply=0):\n-        \"\"\"\n-        Method that calculates the electricity consumption of the heat pump given an amount of heating energy to be supplied\n-        Args:\n-            heat_supply (float): Amount of heating energy that the heat pump is going to supply\n-\n-        Returns:\n-            _elec_consumption_heating (float): electricity consumption for heating\n-        \"\"\"\n-\n-        self.heat_supply.append(heat_supply)\n-        self._electrical_consumption_heating = (\n-            heat_supply / self.cop_heating[self.time_step]\n-        )\n-\n-        if self.save_memory == False:\n-            self.electrical_consumption_heating.append(\n-                np.float32(self._electrical_consumption_heating)\n-            )\n-\n-        return self._electrical_consumption_heating\n-\n-    def get_electric_consumption_heating(self, heat_supply=0):\n-        \"\"\"\n-        Method that calculates the electricity consumption of the heat pump given an amount of heating energy to be supplied\n-        Args:\n-            heat_supply (float): Amount of heating energy that the heat pump is going to supply\n-\n-        Returns:\n-            _elec_consumption_heating (float): electricity consumption for heating\n-        \"\"\"\n-\n-        _elec_consumption_heating = heat_supply / self.cop_heating[self.time_step]\n-        return _elec_consumption_heating\n-\n-    def reset(self):\n-        self.t_source_heating = None\n-        self.t_source_cooling = None\n-        self.max_cooling = None\n-        self.max_heating = None\n-        self._cop_heating = None\n-        self._cop_cooling = None\n-        self._electrical_consumption_cooling = 0\n-        self._electrical_consumption_heating = 0\n-        self.electrical_consumption_cooling = []\n-        self.electrical_consumption_heating = []\n-        self.heat_supply = []\n-        self.cooling_supply = []\n-        # self.time_step = start_time\n-\n-    def terminate(self):\n-        if self.save_memory == False:\n-            self.cop_heating = self.cop_heating[: self.time_step]\n-            self.cop_cooling = self.cop_cooling[: self.time_step]\n-            self.electrical_consumption_cooling = np.array(\n-                self.electrical_consumption_cooling\n-            )\n-            self.electrical_consumption_heating = np.array(\n-                self.electrical_consumption_heating\n-            )\n-            self.heat_supply = np.array(self.heat_supply)\n-            self.cooling_supply = np.array(self.cooling_supply)\n-\n-\n-class ElectricHeater:\n-    def __init__(self, nominal_power=None, efficiency=None, save_memory=True):\n-        \"\"\"\n-        Args:\n-            nominal_power (float): Maximum amount of electric power that the electric heater can consume from the power grid\n-            efficiency (float): efficiency\n-        \"\"\"\n-\n-        # Parameters\n-        self.nominal_power = nominal_power\n-        self.efficiency = efficiency\n-\n-        # Variables\n-        self.max_heating = None\n-        self.electrical_consumption_heating = []\n-        self._electrical_consumption_heating = 0\n-        self.heat_supply = []\n-        self.time_step = 0\n-        self.save_memory = save_memory\n-\n-    def terminate(self):\n-        if self.save_memory == False:\n-            self.electrical_consumption_heating = np.array(\n-                self.electrical_consumption_heating\n-            )\n-            self.heat_supply = np.array(self.heat_supply)\n-\n-    def get_max_heating_power(\n-        self, max_electric_power=None, t_source_heating=None, t_target_heating=None\n-    ):\n-        \"\"\"Method that calculates the maximum heating power available\n-        Args:\n-            max_electric_power (float): Maximum amount of electric power that the electric heater can consume from the power grid\n-            t_source_heating (float): Not used by the electric heater\n-            t_target_heating (float): Not used by electric heater\n-\n-        Returns:\n-            max_heating (float): maximum amount of heating energy that the electric heater can provide\n-        \"\"\"\n-\n-        if max_electric_power is None:\n-            self.max_heating = self.nominal_power * self.efficiency\n-        else:\n-            self.max_heating = self.max_electric_power * self.efficiency\n-\n-        return self.max_heating\n-\n-    def set_total_electric_consumption_heating(self, heat_supply=0):\n-        \"\"\"\n-        Args:\n-            heat_supply (float): Amount of heating energy that the electric heater is going to supply\n-\n-        Returns:\n-            _electrical_consumption_heating (float): electricity consumption for heating\n-        \"\"\"\n-\n-        self.heat_supply.append(heat_supply)\n-        self._electrical_consumption_heating = heat_supply / self.efficiency\n-\n-        if self.save_memory == False:\n-            self.electrical_consumption_heating.append(\n-                np.float32(self._electrical_consumption_heating)\n-            )\n-\n-        return self._electrical_consumption_heating\n-\n-    def get_electric_consumption_heating(self, heat_supply=0):\n-        \"\"\"\n-        Args:\n-            heat_supply (float): Amount of heating energy that the electric heater is going to supply\n-\n-        Returns:\n-            _electrical_consumption_heating (float): electricity consumption for heating\n-        \"\"\"\n-\n-        _electrical_consumption_heating = heat_supply / self.efficiency\n-        return _electrical_consumption_heating\n-\n-    def reset(self):\n-        self.max_heating = None\n-        self.electrical_consumption_heating = []\n-        self.heat_supply = []\n-        # self.time_step = start_time\n-\n-\n-class EnergyStorage:\n-    def __init__(\n-        self,\n-        hourly_steps,\n-        capacity=None,\n-        max_power_output=None,\n-        max_power_charging=None,\n-        efficiency=1,\n-        loss_coeff=0,\n-        save_memory=True,\n-    ):\n-        \"\"\"\n-        Generic energy storage class. It can be used as a chilled water storage tank or a DHW storage tank\n-        Args:\n-            capacity (float): Maximum amount of energy that the storage unit is able to store (kWh)\n-            max_power_output (float): Maximum amount of power that the storage unit can output (kW)\n-            max_power_charging (float): Maximum amount of power that the storage unit can use to charge (kW)\n-            efficiency (float): Efficiency factor of charging and discharging the storage unit (from 0 to 1)\n-            loss_coeff (float): Loss coefficient used to calculate the amount of energy lost every hour (from 0 to 1)\n-        \"\"\"\n-\n-        self.capacity = capacity\n-        self.max_power_output = max_power_output\n-        self.max_power_charging = max_power_charging\n-        self.efficiency = efficiency**0.5\n-        self.loss_coeff = loss_coeff\n-        self.soc = []\n-        self._soc = np.random.uniform(\n-            0.2 * self.capacity, 0.8 * self.capacity\n-        )  # 0 # State of Charge\n-        self.energy_balance = []\n-        self._energy_balance = 0\n-        self.save_memory = save_memory\n-        self.hourly_steps = hourly_steps\n-\n-    def terminate(self):\n-        if self.save_memory == False:\n-            self.energy_balance = np.array(self.energy_balance)\n-            self.soc = np.array(self.soc)\n-\n-    def charge(self, energy):\n-        \"\"\"Method that controls both the energy CHARGE and DISCHARGE of the energy storage device\n-        energy < 0 -> Discharge\n-        energy > 0 -> Charge\n-        Args:\n-            energy (float): Amount of energy stored in that time-step (Wh)\n-        Return:\n-            energy_balance (float):\n-        \"\"\"\n-\n-        # The initial State Of Charge (SOC) is the previous SOC minus the energy losses\n-        soc_init = self._soc * (1 - self.loss_coeff)\n-\n-        # Charging\n-        if energy >= 0:\n-            if self.max_power_charging is not None:\n-                energy = min(energy, self.max_power_charging)\n-            self._soc = soc_init + energy * self.efficiency / self.hourly_steps\n-\n-        # Discharging\n-        else:\n-            if self.max_power_output is not None:\n-                energy = max(-max_power_output, energy)\n-            self._soc = max(0, soc_init + energy / self.efficiency / self.hourly_steps)\n-\n-        if self.capacity is not None:\n-            self._soc = min(self._soc, self.capacity)\n-\n-        # Calculating the energy balance with its external environmrnt (amount of energy taken from or relseased to the environment)\n-\n-        # Charging\n-        if energy >= 0:\n-            self._energy_balance = (self._soc - soc_init) / self.efficiency\n-\n-        # Discharging\n-        else:\n-            self._energy_balance = (self._soc - soc_init) * self.efficiency\n-\n-        if self.save_memory == False:\n-            self.energy_balance.append(np.float32(self._energy_balance))\n-            self.soc.append(np.float32(self._soc))\n-\n-        # print(energy, self._energy_balance)\n-        return self._energy_balance\n-\n-    def reset(self):\n-        self.soc = []\n-        self._soc = np.random.uniform(\n-            0.2 * self.capacity, 0.8 * self.capacity\n-        )  # 0 #State of charge\n-        self.energy_balance = []  # Positive for energy entering the storage\n-        self._energy_balance = 0\n-        # self.time_step = start_time\n-\n-\n-class Battery:\n-    def __init__(\n-        self,\n-        hourly_timesteps,\n-        capacity,\n-        nominal_power=None,\n-        capacity_loss_coeff=None,\n-        power_efficiency_curve=None,\n-        capacity_power_curve=None,\n-        efficiency=None,\n-        loss_coeff=0,\n-        save_memory=True,\n-    ):\n-        \"\"\"\n-        Generic energy storage class. It can be used as a chilled water storage tank or a DHW storage tank\n-        Args:\n-            capacity (float): Maximum amount of energy that the storage unit is able to store (kWh)\n-            max_power_charging (float): Maximum amount of power that the storage unit can use to charge (kW)\n-            efficiency (float): Efficiency factor of charging and discharging the storage unit (from 0 to 1)\n-            loss_coeff (float): Loss coefficient used to calculate the amount of energy lost every hour (from 0 to 1)\n-            power_efficiency_curve (float): Charging/Discharging efficiency as a function of the power released or consumed\n-            capacity_power_curve (float): Max. power of the battery as a function of its current state of charge\n-            capacity_loss_coeff (float): Battery degradation. Storage capacity lost in each charge and discharge cycle (as a fraction of the total capacity)\n-        \"\"\"\n-\n-        self.capacity = capacity\n-        self.c0 = capacity\n-        self.nominal_power = nominal_power\n-        self.capacity_loss_coeff = capacity_loss_coeff\n-\n-        if power_efficiency_curve is not None:\n-            self.power_efficiency_curve = np.array(power_efficiency_curve).T\n-        else:\n-            self.power_efficiency_curve = power_efficiency_curve\n-\n-        if capacity_power_curve is not None:\n-            self.capacity_power_curve = np.array(capacity_power_curve).T\n-        else:\n-            self.capacity_power_curve = capacity_power_curve\n-\n-        self.efficiency = efficiency**0.5\n-        self.loss_coeff = loss_coeff\n-        self.max_power = None\n-        self._eff = []\n-        self._energy = []\n-        self._max_power = []\n-        self.soc = []\n-        self._soc = np.random.uniform(\n-            0.2 * self.capacity, 0.8 * self.capacity\n-        )  # 0 # State of Charge\n-        self.energy_balance = []\n-        self._energy_balance = 0\n-        self.save_memory = save_memory\n-        self.time_step = 0\n-        self.hourly_timesteps = hourly_timesteps\n-\n-    def terminate(self):\n-        if self.save_memory == False:\n-            self.energy_balance = np.array(self.energy_balance)\n-            self.soc = np.array(self.soc)\n-\n-    def charge(self, energy):\n-        \"\"\"Method that controls both the energy CHARGE and DISCHARGE of the energy storage device\n-        energy < 0 -> Discharge\n-        energy > 0 -> Charge\n-        Args:\n-            energy (float): Amount of energy stored in that time-step (Wh)\n-        Return:\n-            energy_balance (float):\n-        \"\"\"\n-\n-        # The initial State Of Charge (SOC) is the previous SOC minus the energy losses\n-        soc_init = self._soc * (1 - self.loss_coeff)\n-        if self.capacity_power_curve is not None:\n-            soc_normalized = soc_init / self.capacity\n-            # Calculating the maximum power rate at which the battery can be charged or discharged\n-            idx = max(0, np.argmax(soc_normalized <= self.capacity_power_curve[0]) - 1)\n-\n-            self.max_power = self.nominal_power * (\n-                self.capacity_power_curve[1][idx]\n-                + (\n-                    self.capacity_power_curve[1][idx + 1]\n-                    - self.capacity_power_curve[1][idx]\n-                )\n-                * (soc_normalized - self.capacity_power_curve[0][idx])\n-                / (\n-                    self.capacity_power_curve[0][idx + 1]\n-                    - self.capacity_power_curve[0][idx]\n-                )\n-            )\n-\n-        else:\n-            self.max_power = self.nominal_power\n-\n-        # Charging\n-        if energy >= 0:\n-            if self.nominal_power is not None:\n-                energy = min(energy, self.max_power)\n-                if self.power_efficiency_curve is not None:\n-                    # Calculating the maximum power rate at which the battery can be charged or discharged\n-                    energy_normalized = np.abs(energy) / self.nominal_power\n-                    idx = max(\n-                        0,\n-                        np.argmax(energy_normalized <= self.power_efficiency_curve[0])\n-                        - 1,\n-                    )\n-                    self.efficiency = self.power_efficiency_curve[1][idx] + (\n-                        energy_normalized - self.power_efficiency_curve[0][idx]\n-                    ) * (\n-                        self.power_efficiency_curve[1][idx + 1]\n-                        - self.power_efficiency_curve[1][idx]\n-                    ) / (\n-                        self.power_efficiency_curve[0][idx + 1]\n-                        - self.power_efficiency_curve[0][idx]\n-                    )\n-                    self.efficiency = self.efficiency**0.5\n-\n-            self._soc = soc_init + energy * self.efficiency / self.hourly_timesteps\n-\n-        # Discharging\n-        else:\n-            if self.nominal_power is not None:\n-                energy = max(-self.max_power, energy)\n-\n-            if self.power_efficiency_curve is not None:\n-                # Calculating the maximum power rate at which the battery can be charged or discharged\n-                energy_normalized = np.abs(energy) / self.nominal_power\n-                idx = max(\n-                    0,\n-                    np.argmax(energy_normalized <= self.power_efficiency_curve[0]) - 1,\n-                )\n-                self.efficiency = self.power_efficiency_curve[1][idx] + (\n-                    energy_normalized - self.power_efficiency_curve[0][idx]\n-                ) * (\n-                    self.power_efficiency_curve[1][idx + 1]\n-                    - self.power_efficiency_curve[1][idx]\n-                ) / (\n-                    self.power_efficiency_curve[0][idx + 1]\n-                    - self.power_efficiency_curve[0][idx]\n-                )\n-                self.efficiency = self.efficiency**0.5\n-\n-            self._soc = max(\n-                0, soc_init + energy / self.efficiency / self.hourly_timesteps\n-            )\n-\n-        if self.capacity is not None:\n-            self._soc = min(self._soc, self.capacity)\n-\n-        # Calculating the energy balance with its external environment (amount of energy taken from or relseased to the environment)\n-\n-        # Charging\n-        if energy >= 0:\n-            self._energy_balance = (self._soc - soc_init) / self.efficiency\n-\n-        # Discharging\n-        else:\n-            self._energy_balance = (self._soc - soc_init) * self.efficiency\n-\n-        # Calculating the degradation of the battery: new max. capacity of the battery after charge/discharge\n-        self.capacity -= (\n-            self.capacity_loss_coeff\n-            * self.c0\n-            * np.abs(self._energy_balance)\n-            / (2 * self.capacity)\n-        )\n-\n-        if self.save_memory == False:\n-            self.energy_balance.append(np.float32(self._energy_balance))\n-            self.soc.append(np.float32(self._soc))\n-\n-        return self._energy_balance\n-\n-    def reset(self):\n-        self.soc = []\n-        self._soc = np.random.uniform(\n-            0.2 * self.capacity, 0.8 * self.capacity\n-        )  # State of charge\n-        self.energy_balance = []  # Positive for energy entering the storage\n-        self._energy_balance = 0\n-        # self.time_step = start_time"
+      },
+      {
+        "path": "envs/powergrid/powergrid_runner.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -1,233 +0,0 @@\n\n-import numpy as np\n-from functools import partial\n-from multiprocessing import Pipe, Process\n-from envs import env_REGISTRY\n-\n-def env_worker(remote, env_fn):\n-    env = env_fn.x()\n-    while True:\n-        cmd, data = remote.recv()\n-        if cmd == \"step\":\n-            actions = data\n-            reward, terminated, env_info = env.step(actions)\n-            state = env.get_state()\n-            avail_actions = env.get_avail_actions()\n-            obs = env.get_obs()\n-            remote.send({\n-                \"state\": state,\n-                \"available_action\": avail_actions,\n-                \"obs\": obs,\n-                \"reward\": reward,\n-                \"terminated\": terminated,\n-                \"info\": env_info\n-            })\n-        elif cmd == \"reset\":\n-            env.reset()\n-            remote.send({\n-                \"state\": env.get_state(),\n-                \"available_action\": env.get_avail_actions(),\n-                \"obs\": env.get_obs(),\n-            })\n-        elif cmd == \"close\":\n-            env.close()\n-            remote.close()\n-            break\n-        elif cmd == \"get_env_info\":\n-            remote.send(env.get_env_info())\n-        elif cmd == \"get_stats\":\n-            remote.send(env.get_stats())\n-        else:\n-            raise NotImplementedError\n-        \n-class CloudpickleWrapper():\n-\n-    def __init__(self, x):\n-        self.x = x\n-\n-    def __getstate__(self):\n-        import cloudpickle\n-        return cloudpickle.dumps(self.x)\n-\n-    def __setstate__(self, ob):\n-        import pickle\n-        self.x = pickle.loads(ob)\n-\n-class PowerGridRunner:\n-    def __init__(self, args, evaluate=False):\n-        self.args = args\n-        self.evaluate = evaluate\n-        if evaluate:\n-            self.env_batch_size = self.args.evaluate_batch_size\n-        else:\n-            self.env_batch_size = self.args.env_batch_size\n-        self._init_env()\n-\n-    def _init_env(self):\n-        self.parent_conns, self.worker_conns = zip(*[Pipe() for _ in range(self.env_batch_size)])\n-\n-        env_fn = env_REGISTRY[self.args.env]\n-        env_args = [self.args.env_args.copy() for _ in range(self.env_batch_size)]\n-        for i in range(self.env_batch_size):\n-            env_args[i][\"seed\"] += i\n-\n-        self.ps = [Process(target=env_worker, args=(worker_conn, CloudpickleWrapper(partial(env_fn, **env_arg))))\n-                   for env_arg, worker_conn in zip(env_args, self.worker_conns)]\n-\n-        for p in self.ps:\n-            p.daemon = True\n-            p.start()\n-        if self.args.asynchronous_env:\n-            self.step = self.async_step\n-        else:\n-            self.step = self.sync_step\n-\n-        self.env_total_steps = 0\n-        self.terminated = np.ones(self.env_batch_size, dtype=np.bool_)\n-        self.envs_step = np.zeros(self.env_batch_size, dtype=np.int32)\n-\n-        self.episode_returns = [0] * self.env_batch_size\n-        self.episode_lengths = [0] * self.env_batch_size\n-\n-    def reset_all_env(self):\n-        self.envs_step = np.zeros(self.env_batch_size, dtype=np.int32)\n-        self.terminated = np.ones(self.env_batch_size, dtype=np.bool_)\n-        self.live_env = self.env_batch_size\n-\n-    def sync_step(self, actions=None):\n-        terminated_env_info = []\n-        step_data = {\n-            \"states\": [],\n-            \"available_actions\": [],\n-            \"obs\": [],\n-            \"rewards\": [],\n-            \"terminated\": []\n-        }\n-        if np.all(self.terminated):\n-            self.envs_step[:] = 0\n-            for parent_conn in self.parent_conns:\n-                parent_conn.send((\"reset\", None))\n-\n-            for idx, parent_conn in enumerate(self.parent_conns):\n-                data = parent_conn.recv()\n-                step_data[\"rewards\"].append((0.,))\n-                step_data[\"terminated\"].append((False,))\n-                step_data[\"states\"].append(data[\"state\"])\n-                step_data[\"available_actions\"].append(data[\"available_action\"])\n-                step_data[\"obs\"].append(data[\"obs\"])\n-            self.terminated[:] = False\n-        else:\n-            for idx, parent_conn in enumerate(self.parent_conns):\n-                if not self.terminated[idx]:\n-                    parent_conn.send((\"step\", actions[idx]))\n-                    self.envs_step[idx] += 1\n-                    self.env_total_steps += 1\n-            for idx, parent_conn in enumerate(self.parent_conns):\n-                if not self.terminated[idx]:\n-                    data = parent_conn.recv()\n-                    step_data[\"rewards\"].append((data[\"reward\"],))\n-                    self.episode_returns[idx] += data[\"reward\"]\n-                    self.episode_lengths[idx] += 1\n-                    env_terminated = False\n-                    if data[\"terminated\"]:\n-                        terminated_env_info.append(self.get_terminated_env_info(idx, data[\"info\"]))\n-\n-                    if data[\"terminated\"] and not data[\"info\"].get(\"episode_limit\", False):\n-                        env_terminated = True\n-\n-                    self.terminated[idx] = env_terminated\n-\n-                    step_data[\"terminated\"].append((env_terminated,))\n-                    step_data[\"states\"].append(data[\"state\"])\n-                    step_data[\"available_actions\"].append(data[\"available_action\"])\n-                    step_data[\"obs\"].append(data[\"obs\"])\n-                else:\n-                    # add fake data\n-                    step_data[\"rewards\"].append((0.,))\n-                    step_data[\"terminated\"].append((False,))\n-                    step_data[\"states\"].append(np.zeros(self.args.state_shape))\n-                    step_data[\"available_actions\"].append(np.ones((self.args.n_agents, self.args.n_actions)))\n-                    step_data[\"obs\"].append(np.zeros((self.args.n_agents, self.args.obs_shape)))\n-                    self.envs_step[idx] = 0\n-\n-        for k, v in step_data.items():\n-            step_data[k] = np.array(v)\n-\n-        return step_data, terminated_env_info\n-\n-    def async_step(self, actions=None):\n-        terminated_env_info = []\n-\n-        step_data = {\n-            \"states\": [],\n-            \"available_actions\": [],\n-            \"obs\": [],\n-            \"rewards\": [],\n-            \"terminated\": []\n-        }\n-\n-        for idx, parent_conn in enumerate(self.parent_conns):\n-            if not self.terminated[idx]:\n-                parent_conn.send((\"step\", actions[idx]))\n-                self.envs_step[idx] += 1\n-            else:\n-                parent_conn.send((\"reset\", None))\n-                self.envs_step[idx] = 0\n-\n-        for idx, parent_conn in enumerate(self.parent_conns):\n-            data = parent_conn.recv()\n-            self.env_total_steps += 1\n-\n-            if not self.terminated[idx]:\n-                step_data[\"rewards\"].append((data[\"reward\"],))\n-                self.episode_returns[idx] += data[\"reward\"]\n-                self.episode_lengths[idx] += 1\n-\n-                env_terminated = False\n-\n-                if data[\"terminated\"]:\n-                    terminated_env_info.append(self.get_terminated_env_info(idx, data[\"info\"]))\n-\n-                if data[\"terminated\"] and not data[\"info\"].get(\"episode_limit\", False):\n-                    env_terminated = True\n-\n-                self.terminated[idx] = env_terminated\n-\n-                step_data[\"terminated\"].append((env_terminated,))\n-                step_data[\"states\"].append(data[\"state\"])\n-                step_data[\"available_actions\"].append(data[\"available_action\"])\n-                step_data[\"obs\"].append(data[\"obs\"])\n-            else:\n-                step_data[\"rewards\"].append((0.,))\n-                step_data[\"terminated\"].append((False,))\n-                step_data[\"states\"].append(data[\"state\"])\n-                step_data[\"available_actions\"].append(data[\"available_action\"])\n-                step_data[\"obs\"].append(data[\"obs\"])\n-                self.terminated[idx] = False\n-\n-        for k, v in step_data.items():\n-            step_data[k] = np.array(v)\n-\n-        return step_data, terminated_env_info\n-\n-    def alive_env(self):\n-        return int(np.sum(self.terminated == False))\n-\n-    def close_env(self):\n-        for parent_conn in self.parent_conns:\n-            parent_conn.send((\"close\", None))\n-\n-    def get_terminated_env_info(self, env_idx, env_info):\n-        terminated_env_info = {}\n-        terminated_env_info[\"episode_length\"] = self.episode_lengths[env_idx]\n-        terminated_env_info[\"episode_return\"] = self.episode_returns[env_idx]\n-        self.episode_lengths[env_idx] = 0\n-        self.episode_returns[env_idx] = 0\n-        terminated_env_info.update(\n-            {k: terminated_env_info.get(k, 0) + env_info.get(k, 0) for k in set(terminated_env_info) | set(env_info)})\n-        if self.evaluate:\n-            current_env_info = {}\n-            for k, v in terminated_env_info.items():\n-                new_k = \"test_\" + k\n-                current_env_info[new_k] = v\n-            return current_env_info\n-        return terminated_env_info"
+      },
+      {
+        "path": "envs/powergrid/smart_grid.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -1,523 +0,0 @@\n\n-import json\n-import os\n-import pickle\n-import warnings\n-\n-import numpy as np\n-import pandapower as pp\n-import pandapower.networks as networks\n-import yaml\n-from numpy.linalg import matrix_power\n-from pandapower import runpp\n-\n-from smac.env import MultiAgentEnv\n-\n-from .energy_models import Building, Weather\n-import time\n-\n-warnings.filterwarnings(\"ignore\")\n-\n-\n-class GridEnv(MultiAgentEnv):\n-    def __init__(\n-        self,\n-        data_path=\"envs/powergrid/data/Climate_Zone_1\",\n-        climate_zone=\"Climate_Zone_1\",\n-        buildings_states_actions_file=\"envs/powergrid/data/buildings_state_action_space.json\",\n-        hourly_timesteps=4,\n-        houses_per_node=6,\n-        cluster_adjacent_bus_num=6,\n-        save_memory=True,\n-        building_ids=None,\n-        nclusters=2,\n-        randomseed=2,\n-        max_num_houses=None,\n-        percent_rl=1,\n-        net_path=\"envs/powergrid/data/640_agents/case33.p\",\n-        agent_path=\"envs/powergrid/data/640_agents/agent_640_zone_1.pickle\",\n-        **kwargs,\n-    ):\n-        self.max_num_houses = max_num_houses\n-        #        self.nclusters = nclusters\n-        self.percent_rl = percent_rl\n-\n-        self.cluster_adjacent_bus_num = cluster_adjacent_bus_num\n-\n-        self.data_path = data_path\n-        self.climate_zone = climate_zone\n-        self.weather_file = os.path.join(self.data_path, \"weather_data.csv\")\n-        self.solar_file = os.path.join(self.data_path, \"solar_generation_1kW.csv\")\n-        self.weather = Weather(self.weather_file, self.solar_file, hourly_timesteps)\n-        self.buildings_states_actions_file = buildings_states_actions_file\n-        self.hourly_timesteps = hourly_timesteps\n-        self.save_memory = save_memory\n-        self.building_ids = building_ids\n-        self.exipode = 0\n-        bt = time.time()\n-        self.net = self._make_grid()\n-        # self.net = pp.from_pickle(net_path)\n-        self.buildings = self._add_houses(houses_per_node, 1)  # standard 6 buildings\n-        # with open(agent_path, \"rb\") as f:\n-        #     self.buildings = pickle.load(f)\n-        self.agents = list(self.buildings.keys())\n-        self.possible_agents = self.agents[:]\n-        self.rl_agents = self._set_rl_agents()\n-\n-        self.clusters = self._get_bus_clusters()\n-\n-        self.observation_spaces = {\n-            k: v.observation_space for k, v in self.buildings.items()\n-        }\n-        self.action_spaces = {k: v.action_space for k, v in self.buildings.items()}\n-\n-        self.metadata = {\"render.modes\": [], \"name\": \"gridlearn\"}\n-\n-        self.voltage_data = []\n-        self.load_data = []\n-        self.gen_data = []\n-        self.reward_data = []\n-        self.vm_reward_data = []\n-        self.all_rewards = []\n-\n-        self.aspace, self.ospace = self._get_spaces(self.agents)\n-        self.single_agent_obs_size = self.ospace[self.agents[0]].shape[0]\n-        self.obs_size = self._get_partial_obs_max_len()\n-        self.state_size = self.single_agent_obs_size * len(self.agents)\n-\n-        self.v_upper = 1.05\n-        self.v_lower = 0.95\n-\n-        self.n_agents = len(self.agents)\n-        # with open(\"./config.yaml\") as file:\n-        #     config = yaml.safe_load(file)\n-        # self.episode_limit = config[\"environment\"][\"max_cycles\"]  # 5 days\n-        self.episode_limit = 92  # 92\n-\n-    def get_env_info(self):\n-        env_info = {\n-            \"state_shape\": self.get_state_size(),\n-            \"obs_shape\": self.get_obs_size(),\n-            \"n_actions\": self.get_total_actions(),\n-            \"action_space\": self.buildings[self.agents[0]].action_space,\n-            \"agents_name\": self.agents,\n-            \"n_agents\": self.n_agents,\n-            \"episode_limit\": self.episode_limit,\n-            \"action_shape\": (4,),\n-        }\n-        return env_info\n-\n-    def set_reward_net(self, reward_net):\n-        self.reward_net = reward_net\n-\n-    def reset(self, reset_logs=True):\n-        # self.system_losses = []\n-        # self.voltage_dev = []\n-        # return {k:self.buildings[k].reset_timestep(self.net, reset_logs) for k in agents}\n-        rand_act = {k: v.sample() for k, v in self.aspace.items()}\n-        rand_act_array = np.array(list(rand_act.values()))\n-        self.steps = 0\n-        self.ts = self._select_timestamp(self.exipode)\n-        self.exipode += 100\n-        # print(\"self.ts\", self.ts)\n-        year_ts = self.ts % (8760 * self.hourly_timesteps)\n-        if year_ts > 90 * 96 and year_ts < 275 * 96:\n-            self.net.shunt.at[0, \"q_mvar\"] = -1.8\n-            self.net.shunt.at[1, \"q_mvar\"] = -0.6\n-            self.net.shunt.at[2, \"q_mvar\"] = -1.2\n-        else:\n-            self.net.shunt.at[0, \"q_mvar\"] = -1.2\n-            self.net.shunt.at[1, \"q_mvar\"] = -0.01\n-            self.net.shunt.at[2, \"q_mvar\"] = -0.01\n-\n-        count = 0\n-        for agent in self.agents:\n-            self.buildings[agent].step(rand_act_array[count])\n-            count += 1\n-\n-        self.ts += 1\n-        self.steps += 1\n-\n-        # update the grid based on updated buildings\n-        self._update_grid()\n-\n-        # run the grid power flow\n-        try:\n-            runpp(self.net, enforce_q_lims=True)\n-            # print(self.net.res_bus.p_mw.tolist())\n-        except:\n-            pp.diagnostic(self.net)\n-            quit()\n-            print(\"QUITTING!!!!\")\n-\n-        for agent in self.agents:\n-            self.buildings[agent].reset_timestep(self.net, reset_logs)\n-\n-        return self.get_obs(), self.get_state()\n-\n-    def step(self, actions):\n-        year_ts = self.ts % (8760 * self.hourly_timesteps)\n-        if year_ts > 90 * 96 and year_ts < 275 * 96:\n-            self.net.shunt.at[0, \"q_mvar\"] = -1.8\n-            self.net.shunt.at[1, \"q_mvar\"] = -0.6\n-            self.net.shunt.at[2, \"q_mvar\"] = -1.2\n-        else:\n-            self.net.shunt.at[0, \"q_mvar\"] = -1.2\n-            self.net.shunt.at[1, \"q_mvar\"] = -0.01\n-            self.net.shunt.at[2, \"q_mvar\"] = -0.01\n-\n-        count = 0\n-\n-        for agent in self.agents:\n-            self.buildings[agent].step(actions[count])\n-            count += 1\n-\n-        self.ts += 1\n-        self.steps += 1\n-\n-        # update the grid based on updated buildings\n-        self._update_grid()\n-\n-        # run the grid power flow\n-        try:\n-            runpp(self.net, enforce_q_lims=True)\n-            # print(self.net.res_bus.p_mw.tolist())\n-        except:\n-            pp.diagnostic(self.net)\n-            quit()\n-            print(\"QUITTING!!!!\")\n-        rl_agent_keys = self.agents\n-        #        obs = self.state(rl_agent_keys)\n-        self.voltage_data += [list(self.net.res_bus[\"vm_pu\"])]\n-\n-        self.load_data += [sum(list(self.net.load[\"p_mw\"]))]\n-        self.gen_data += [sum(list(self.net.sgen[\"p_mw\"]))]\n-        # reward返回的是真实reward, vm_reward返回的是逆强化学习得到的奖励方程的估计值\n-        rewards, vm_rewards = self._get_reward()\n-        return np.mean(rewards), self._get_done(), self._get_info()  # , vm_rewards\n-\n-    def get_rewardnet(self, action):\n-        observation_before = self.get_obs()\n-        observation_before = np.array(observation_before)\n-        net_reward = self.reward_net.compute_reward(\n-            np.concatenate([observation_before, np.clip(action, -1.0, 1.0)], axis=1)\n-        )\n-        # print('@@@@@@@@@@@@@@@@@@@', np.shape(np.concatenate([observation_before, np.clip(action, -1., 1.)], axis=1)))\n-        reward = net_reward  # - ctrl_cost\n-        return reward\n-\n-    def get_state(self):\n-        state = np.concatenate(\n-            [np.array(self.buildings[k].get_state(self.net)) for k in self.agents]\n-        )\n-        return state\n-\n-    def get_obs(self):\n-        all_state_dict = {\n-            k: np.array(self.buildings[k].get_state(self.net)) for k in self.agents\n-        }\n-        pad_obs_list = []\n-        for agent in self.rl_agents:\n-            agent_obs_array = np.concatenate(\n-                [all_state_dict[neighbor] for neighbor in self.clusters[agent]]\n-            )\n-            # print(\n-            #     \"#############neighbor:\", agent, self.obs_size, agent_obs_array.shape[0]\n-            # )\n-            pad_obs_list.append(\n-                np.concatenate(\n-                    [\n-                        agent_obs_array,\n-                        np.zeros(self.obs_size - agent_obs_array.shape[0]),\n-                    ]\n-                )\n-            )\n-        return np.array(pad_obs_list)\n-\n-    def get_obs_agent(self, agent_id):\n-        \"\"\"return observation for agent_id\"\"\"\n-        agents_obs = self.get_obs()\n-        return agents_obs[agent_id]\n-\n-    def get_obs_size(self):\n-        \"\"\"return the observation size\"\"\"\n-        return self.obs_size\n-\n-    def get_state_size(self):\n-        \"\"\"return the state size\"\"\"\n-        return self.state_size\n-\n-    def get_num_of_agents(self):\n-        return len(self.agents)\n-\n-    def get_total_actions(self):\n-        return self.aspace[self.agents[0]].shape[0]\n-\n-    def get_avail_actions(self):\n-        avail_actions = []\n-        for _ in range(len(self.agents)):\n-            avail_actions.append([1] * self.get_total_actions())\n-        return avail_actions\n-\n-    def _select_timestamp(self, exipode):\n-        data_len = len(self.weather.data[\"t_out\"])\n-        time_stamp = np.random.choice(data_len - self.episode_limit)\n-        time_stamp = 5087\n-        time_stamp = 192 + exipode\n-        return time_stamp\n-\n-    def _get_spaces(self, agents):\n-        actionspace = {k: self.buildings[k].action_space for k in agents}\n-        obsspace = {k: self.buildings[k].observation_space for k in agents}\n-        return actionspace, obsspace\n-\n-    def _set_rl_agents(self):\n-        num_rl_agents = int(self.percent_rl * len(self.net.load.name))\n-        rl_agents = np.random.choice(self.net.load.name, num_rl_agents).tolist()\n-        return rl_agents\n-\n-    def _make_grid(self):\n-        # make a grid that fits the buildings generated for CityLearn\n-        net = networks.case33bw()\n-\n-        # clear the grid of old load values\n-        load_nodes = net.load[\"bus\"]\n-        res_voltage_nodes = net.bus[\"name\"][net.bus[\"vn_kv\"] == 12.66]\n-        res_load_nodes = set(load_nodes) & set(res_voltage_nodes)\n-        net.bus[\"min_vm_pu\"] = 0.7\n-        net.bus[\"max_vm_pu\"] = 1.3\n-\n-        for node in res_load_nodes:\n-            # remove the existing arbitrary load\n-            net.load.drop(net.load[net.load.bus == node].index, inplace=True)\n-\n-        conns = [\n-            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],\n-            [18, 19, 20, 21],\n-            [25, 26, 27, 28, 29, 30, 31, 32],\n-            [22, 23, 24],\n-        ]\n-\n-        self.pv_buses = [item[-1] for item in conns]\n-        self.pv_buses += [item[-2] for item in conns]\n-\n-        mapping = {18: 1, 25: 5, 22: 2}\n-\n-        net.line.drop(index=net.line[net.line.in_service == False].index, inplace=True)\n-        net.bus_geodata.at[0, \"x\"] = 0\n-        net.bus_geodata.at[0, \"y\"] = 0\n-        sw = \"x\"\n-        st = \"y\"\n-        z = -1\n-        for c in conns:\n-            z += 1\n-            for i in range(len(c)):\n-                if i == 0:\n-                    if not c[i] == 0:\n-                        sw = \"y\"\n-                        st = \"x\"\n-                        net.bus_geodata.at[c[i], sw] = (\n-                            net.bus_geodata.at[mapping[c[i]], sw] + 0.2\n-                        )\n-                        net.bus_geodata.at[c[i], st] = net.bus_geodata.at[\n-                            mapping[c[i]], st\n-                        ]\n-                else:\n-                    net.bus_geodata.at[c[i], sw] = (\n-                        net.bus_geodata.at[c[i - 1], sw] + 0.2\n-                    )\n-                    net.bus_geodata.at[c[i], st] = net.bus_geodata.at[c[i - 1], st]\n-\n-        net.ext_grid.at[0, \"vm_pu\"] = 1.01\n-\n-        pp.create_shunt_as_capacitor(net, 14, 1.2, 0)\n-        pp.create_shunt_as_capacitor(net, 24, 0.6, 0)\n-        pp.create_shunt_as_capacitor(net, 30, 1.2, 0)\n-        return net\n-\n-    def _add_houses(self, n, pv_penetration):\n-        if self.max_num_houses:\n-            m = 1\n-        else:\n-            m = n  # + np.random.randint(-2,8)\n-        houses = []\n-        b = 0\n-        scaling_number = 6 / n\n-\n-        # find nodes in the network with residential voltage levels and load infrastructure\n-        # get the node indexes by their assigned names\n-        # load_nodes = self.net.load['bus']\n-        ext_grid_nodes = set(self.net.ext_grid[\"bus\"])\n-        res_voltage_nodes = set(self.net.bus[\"name\"][self.net.bus[\"vn_kv\"] == 12.66])\n-        res_load_nodes = res_voltage_nodes - ext_grid_nodes\n-\n-        buildings = {}\n-        for existing_node in list(res_load_nodes)[: self.max_num_houses]:\n-            # remove the existing arbitrary load\n-            self.net.load.drop(\n-                self.net.load[self.net.load.bus == existing_node].index, inplace=True\n-            )\n-\n-            # add n houses at each of these nodes\n-            BuildingId = 0\n-            for i in range(m):\n-                # bid = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))\n-                BuildingId += 1\n-                if not self.building_ids:\n-                    with open(self.buildings_states_actions_file) as file:\n-                        buildings_states_actions = json.load(file)\n-                    self.building_ids = list(buildings_states_actions.keys())\n-                    # print(self.building_ids)\n-                prob = np.ones(len(self.building_ids))\n-                prob[\n-                    [1, 4, 5, 6, 7, 8]\n-                ] = 10  # building at index 0, 2, 8 correspond to buildings with high energy use\n-                prob = prob / sum(prob)\n-                uid = np.random.choice(self.building_ids, p=prob)\n-                # print(uid)\n-                bldg = Building(\n-                    self.data_path,\n-                    self.climate_zone,\n-                    self.buildings_states_actions_file,\n-                    self.hourly_timesteps,\n-                    uid,\n-                    self.weather,\n-                    BuildingId,\n-                    save_memory=self.save_memory,\n-                )\n-                bldg.assign_bus(existing_node)\n-                bldg.load_index = pp.create_load(\n-                    self.net, bldg.bus, 0, name=bldg.buildingId, scaling=scaling_number\n-                )  # create a load at the existing bus\n-                if np.random.uniform() <= 2:  # equivalent to 100% PV penetration\n-                    bldg.gen_index = pp.create_sgen(\n-                        self.net,\n-                        bldg.bus,\n-                        0,\n-                        name=bldg.buildingId,\n-                        scaling=scaling_number,\n-                    )  # create a generator at the existing bus\n-                else:\n-                    bldg.gen_index = -1\n-\n-                buildings[bldg.buildingId] = bldg\n-                # bldg.assign_neighbors(self.net)\n-\n-        from collections import Counter\n-\n-        types = [v.building_type for v in buildings.values()]\n-        # print(Counter(types))\n-\n-        return buildings\n-\n-    def _update_grid(self):\n-        for agent, bldg in self.buildings.items():\n-            # Assign the load in MW (from KW in CityLearn)\n-            self.net.load.at[bldg.load_index, \"p_mw\"] = (\n-                0.95 * bldg.current_gross_electricity_demand * 0.001\n-            )\n-            self.net.load.at[bldg.load_index, \"sn_mva\"] = (\n-                bldg.current_gross_electricity_demand * 0.001\n-            )\n-\n-            if (\n-                bldg.gen_index > -1\n-            ):  # assume PV and battery are both behind the inverter\n-                self.net.sgen.at[bldg.gen_index, \"p_mw\"] = (\n-                    -1 * bldg.current_gross_generation * np.cos(bldg.phi) * 0.001\n-                )\n-                self.net.sgen.at[bldg.gen_index, \"q_mvar\"] = (\n-                    bldg.current_gross_generation * np.sin(bldg.phi) * 0.001\n-                )\n-\n-    def _get_reward(self):\n-        rewards = {k: self.buildings[k].get_reward(self.net) for k in self.agents}\n-        vm_rewards = {k: self.buildings[k].get_doreward(self.net) for k in self.agents}\n-        self.reward_data += [sum(rewards.values())]\n-        self.vm_reward_data += [sum(vm_rewards.values())]\n-        return list(rewards.values()), list(vm_rewards.values())\n-\n-    def _get_done(self):\n-        return self.steps >= self.episode_limit\n-\n-    def _get_info(self, info={}):\n-        demandloss = 0\n-        v = self.net.res_bus[\"vm_pu\"].sort_index().to_numpy()\n-\n-        # percentage of voltage out of control\n-        percent_of_v_out_of_control = (\n-            np.sum(v < self.v_lower) + np.sum(v > self.v_upper)\n-        ) / v.shape[0]\n-        info[\"percentage_of_v_out_of_control\"] = percent_of_v_out_of_control\n-\n-        # voltage violtation\n-        v_ref = 0.5 * (self.v_lower + self.v_upper)\n-        info[\"average_voltage_deviation\"] = np.mean(np.abs(v - v_ref))\n-        info[\"average_voltage\"] = np.mean(v)\n-        for k in self.agents:\n-            de = self.buildings[k].get_demandreward(self.net)\n-            demandloss += de\n-        info[\"demand_loss\"] = demandloss\n-\n-        # line loss\n-        line_loss = np.sum(self.net.res_line[\"pl_mw\"])\n-        avg_line_loss = np.mean(self.net.res_line[\"pl_mw\"])\n-        info[\"total_line_loss\"] = line_loss\n-\n-        # reactive power (q) loss\n-        q = self.net.res_sgen[\"q_mvar\"].sort_index().to_numpy(copy=True)\n-        q_loss = np.mean(np.abs(q))\n-        info[\"q_loss\"] = q_loss\n-\n-        return info\n-\n-    def _get_bus_clusters(self):\n-        # calc temp matrix that show adjacent bus\n-        G = np.eye(len(self.net.bus))\n-        id1 = self.net.line[\"from_bus\"].tolist()\n-        id2 = self.net.line[\"to_bus\"].tolist()\n-        G[id1, id2] = 1\n-        G[id2, id1] = 1\n-        temp = matrix_power(G, self.cluster_adjacent_bus_num)\n-\n-        # clusters: BuildingsID --> adjacent bus BuildingsID\n-        clusters = dict()\n-        for agent in self.net.load[\"name\"].tolist():\n-            agent_bus = self.net.load.loc[self.net.load[\"name\"] == agent, \"bus\"]\n-            adjacent_bus = np.where(temp[agent_bus].squeeze() > 0)[0]\n-            clusters[agent] = self.net.load.loc[\n-                self.net.load[\"bus\"].isin(adjacent_bus), \"name\"\n-            ].tolist()\n-\n-        return clusters\n-\n-    def _get_partial_obs_max_len(self):\n-        max_adjacent_agents = 0\n-        for adjacent_list in list(self.clusters.values()):\n-            if len(adjacent_list) > max_adjacent_agents:\n-                max_adjacent_agents = len(adjacent_list)\n-\n-        return max_adjacent_agents * self.single_agent_obs_size\n-\n-    def get_scheme(self):\n-        env_info = self.get_env_info()\n-        scheme = {\n-            \"states\": {\"vshape\": env_info[\"state_shape\"], \"dtype\": np.float32},\n-            \"obs\": {\n-                \"vshape\": env_info[\"obs_shape\"],\n-                \"dtype\": np.float32,\n-                \"group\": \"agents\",\n-            },\n-            \"actions\": {\"vshape\": (4,), \"group\": \"agents\", \"dtype\": np.float32},\n-            \"available_actions\": {\n-                \"vshape\": (4,),\n-                \"group\": \"agents\",\n-                \"dtype\": np.float32,\n-            },\n-            \"rewards\": {\"vshape\": (1,), \"dtype\": np.float32},\n-            \"terminated\": {\"vshape\": (1,), \"dtype\": np.int32},\n-        }\n-        groups = {\"agents\": env_info[\"n_agents\"]}\n-        return scheme, groups\n-\n-    def close(self):\n-        return True"
+      },
+      {
+        "path": "envs/replenishment/replenishment_env.py",
+        "ast_equal": true,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -167,12 +167,7 @@\n\n         stats = {\n             \"individual_rewards\": np.array(reward).astype(np.float32) / 1e4\n             if self.n_agents > 1\n-            else np.array(\n-                [\n-                    reward,\n-                ]\n-            ).astype(np.float32)\n-            / 1e4,\n+            else np.array([reward,]).astype(np.float32) / 1e4,\n             # \"cur_balance\": info['profit'],\n             \"max_in_stock_sum\": info[\"max_in_stock_sum\"],\n             \"mean_in_stock_sum\": info[\"mean_in_stock_sum\"],"
+      },
+      {
+        "path": "envs/replenishment/replenishment_runner.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -28,7 +28,7 @@\n\n             remote.send(\n                 {\n                     \"state\": env.get_state(),\n-                    \"avail_actions\": env.get_avail_actions(),\n+                    \"available_actions\": env.get_avail_actions(),\n                     \"obs\": env.get_obs(),\n                 }\n             )\n@@ -107,11 +107,15 @@\n\n \n         self.episode_returns = [0.] * self.env_batch_size\n         self.episode_lengths = [0] * self.env_batch_size\n+        self.episode_profits = [0.] * self.env_batch_size\n         \n     def reset_all_env(self):\n         self.envs_step = np.zeros(self.env_batch_size, dtype=np.int32)\n         self.terminated = np.ones(self.env_batch_size, dtype=np.bool_)\n         self.live_env = self.env_batch_size\n+        self.episode_returns = [0.] * self.env_batch_size\n+        self.episode_lengths = [0] * self.env_batch_size\n+        self.episode_profits = [0.] * self.env_batch_size\n         \n     def sync_step(self, actions=None):\n         terminated_env_info = []\n@@ -131,7 +135,7 @@\n\n             for idx, parent_conn in enumerate(self.parent_conns):\n                 data = parent_conn.recv()\n                 step_data[\"rewards\"].append((0.,))\n-                step_data[\"individual_rewardss\"].append(np.zeros((self.args.n_agents, 1)))\n+                step_data[\"individual_rewards\"].append(np.zeros((self.args.n_agents, 1)))\n                 step_data[\"terminated\"].append((False,))\n                 step_data[\"states\"].append(data[\"state\"])\n                 step_data[\"available_actions\"].append(data[\"avail_actions\"])\n@@ -147,12 +151,15 @@\n\n                 if not self.terminated[idx]:\n                     data = parent_conn.recv()\n                     step_data[\"rewards\"].append((data[\"reward\"],))\n-                    step_data[\"individual_rewardss\"].append(np.expand_dims(data[\"info\"].pop(\"individual_rewards\"), axis=-1))\n+                    step_data[\"individual_rewards\"].append(np.expand_dims(data[\"info\"].pop(\"individual_rewards\"), axis=-1))\n                     self.episode_lengths[idx] += 1\n                     self.episode_returns[idx] += data[\"reward\"]\n                     env_terminated = False\n \n                     if data[\"terminated\"]:\n+                        parent_conn.send((\"get_profit\", None))\n+                        episode_profit = parent_conn.recv()\n+                        self.episode_profits[idx] = episode_profit.sum(axis=-1)\n                         terminated_env_info.append(self.get_terminated_env_info(idx, data[\"info\"]))\n \n                     if data[\"terminated\"] and not data[\"info\"].get(\"episode_limit\", False):\n@@ -160,14 +167,14 @@\n\n                     self.terminated[idx] = env_terminated\n                     step_data[\"terminated\"].append((env_terminated,))\n                     step_data[\"states\"].append(data[\"state\"])\n-                    step_data[\"available_actions\"].append(data[\"avail_actions\"])\n+                    step_data[\"available_actions\"].append(data[\"available_actions\"])\n                     step_data[\"obs\"].append(data[\"obs\"])\n                 else:\n                     # add fake data\n-                    step_data[\"state\"].append(np.zeros(self.args.state_shape))\n-                    step_data[\"avail_actions\"].append(np.ones((self.args.n_agents, self.args.n_actions)))\n+                    step_data[\"states\"].append(np.zeros(self.args.state_shape))\n+                    step_data[\"available_actions\"].append(np.ones((self.args.n_agents, self.args.n_actions)))\n                     step_data[\"obs\"].append(np.zeros((self.args.n_agents, self.args.obs_shape)))\n-                    step_data[\"reward\"].append((0.,))\n+                    step_data[\"rewards\"].append((0.,))\n                     step_data[\"terminated\"].append((False,))\n                     step_data[\"individual_rewards\"].append(np.zeros((self.args.n_agents, 1)))\n                     self.envs_step[idx] = 0\n@@ -181,10 +188,10 @@\n\n         terminated_env_info = []\n \n         step_data = {\n-            \"state\": [],\n-            \"avail_actions\": [],\n+            \"states\": [],\n+            \"available_actions\": [],\n             \"obs\": [],\n-            \"reward\": [],\n+            \"rewards\": [],\n             \"terminated\": [],\n             \"individual_rewards\": [],\n         }\n@@ -202,28 +209,31 @@\n\n             self.env_total_steps += 1\n \n             if not self.terminated[idx]:\n-                step_data[\"reward\"].append((data[\"reward\"],))\n+                step_data[\"rewards\"].append((data[\"reward\"],))\n                 step_data[\"individual_rewards\"].append(np.expand_dims(data[\"info\"][\"individual_rewards\"], axis=-1))\n                 self.episode_lengths[idx] += 1\n                 self.episode_returns[idx] += data[\"reward\"]\n                 env_terminated = False\n \n                 if data[\"terminated\"]:\n+                    parent_conn.send((\"get_profit\", None))\n+                    episode_profit = parent_conn.recv()\n+                    self.episode_profits[idx] = episode_profit.sum(axis=-1)\n                     terminated_env_info.append(self.get_terminated_env_info(idx, data[\"info\"]))\n \n                 if data[\"terminated\"] and not data[\"info\"].get(\"episode_limit\", False):\n                     env_terminated = True\n                 self.terminated[idx] = env_terminated\n                 step_data[\"terminated\"].append((env_terminated,))\n-                step_data[\"state\"].append(data[\"state\"])\n-                step_data[\"avail_actions\"].append(data[\"avail_actions\"])\n+                step_data[\"states\"].append(data[\"state\"])\n+                step_data[\"available_actions\"].append(data[\"available_actions\"])\n                 step_data[\"obs\"].append(data[\"obs\"])\n             else:\n-                step_data[\"reward\"].append((0.,))\n+                step_data[\"rewards\"].append((0.,))\n                 step_data[\"terminated\"].append((False,))\n                 step_data[\"individual_rewards\"].append(np.zeros((self.args.n_agents, 1)))\n-                step_data[\"state\"].append(data[\"state\"])\n-                step_data[\"avail_actions\"].append(data[\"avail_actions\"])\n+                step_data[\"states\"].append(data[\"state\"])\n+                step_data[\"available_actions\"].append(data[\"available_actions\"])\n                 step_data[\"obs\"].append(data[\"obs\"])\n                 self.terminated[idx] = False\n \n@@ -243,8 +253,10 @@\n\n         terminated_env_info = {}\n         terminated_env_info[\"episode_length\"] = self.episode_lengths[env_idx]\n         terminated_env_info[\"episode_return\"] = self.episode_returns[env_idx]\n+        terminated_env_info[\"episode_profit\"] = self.episode_profits[env_idx]\n         self.episode_lengths[env_idx] = 0\n         self.episode_returns[env_idx] = 0\n+        self.episode_profits[env_idx] = 0\n         terminated_env_info.update(\n             {k: terminated_env_info.get(k, 0) + env_info.get(k, 0) for k in set(terminated_env_info) | set(env_info)})\n         if self.evaluate:"
+      },
+      {
+        "path": "envs/smac/smac_env.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "envs/smac/smac_runner.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/__init__.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/base/base_controller.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -20,6 +20,9 @@\n\n     @property\n     def agent_parameters(self):\n         return list(self.agent.parameters())\n+    \n+    def save_agent_state_dict(self, model_path):\n+        torch.save(self.agent.state_dict(), \"{}/agent.pth\".format(model_path))\n \n     def load_agent_state_dict(self, agent_state_dict):\n         self.agent.load_state_dict(agent_state_dict)"
+      },
+      {
+        "path": "policy/base/base_net.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/base/base_policy.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/maddpg/maddpg_controller.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/maddpg/maddpg_net.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/mappo/ppo_controller.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/mappo/ppo_net.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/mappo/ppo_policy.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -13,7 +13,6 @@\n\n         self.optimizer = Adam(params=self.params, lr=args.lr)\n         self.mac.to(self.device)\n         self.critic.to(self.device)\n-\n \n     def train(self, batch, episodes, steps):\n         self.lr = self.lr_decay(self.lr, steps)\n@@ -164,5 +163,14 @@\n\n         metrics[\"grad_norm\"] = grad_norm\n         metrics[\"critic_loss\"] = critic_loss.item()\n         metrics[\"target_mean\"] = (targets * mask_agent).sum().item() / mask_elems\n-\n         return metrics\n+    \n+    def save_models(self, model_path):\n+        self.mac.save_agent_state_dict(model_path)\n+        torch.save(self.critic.state_dict(), \"{}/critic.pth\".format(model_path))\n+        torch.save(self.optimizer.state_dict(), \"{}/opt.pth\".format(model_path))\n+        \n+    def load_models(self, model_path):\n+        self.mac.load_agent_state_dict(torch.load(\"{}/agent.pth\".format(model_path), map_location=lambda storage, loc: storage))\n+        self.critic.load_state_dict(torch.load(\"{}/critic.pth\".format(model_path), map_location=lambda storage, loc: storage))\n+        self.optimizer.load_state_dict(torch.load(\"{}/opt.pth\".format(model_path), map_location=lambda storage, loc: storage))"
+      },
+      {
+        "path": "policy/qmix/q_controller.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/qmix/q_net.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "policy/qmix/q_policy.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -115,3 +115,15 @@\n\n     def _update_targets(self):\n         self.target_mac.load_agent_state_dict(self.mac.agent_state_dict)\n         self.target_mixer.load_state_dict(self.mixer.state_dict())\n+\n+    def save_models(self, model_path):\n+        self.mac.save_agent_state_dict(model_path)\n+        torch.save(self.mixer.state_dict(), \"{}/mixer.pth\".format(model_path))\n+        torch.save(self.optimizer.state_dict(), \"{}/opt.pth\".format(model_path))\n+        \n+    def load_models(self, model_path):\n+        self.mac.load_agent_state_dict(torch.load(\"{}/agent.pth\".format(model_path), map_location=lambda storage, loc: storage))\n+        self.target_mac.load_agent_state_dict(torch.load(\"{}/agent.pth\".format(model_path), map_location=lambda storage, loc: storage))\n+        self.mixer.load_state_dict(torch.load(\"{}/mixer.pth\".format(model_path), map_location=lambda storage, loc: storage))\n+        self.target_mixer.load_state_dict(torch.load(\"{}/mixer.pth\".format(model_path), map_location=lambda storage, loc: storage))\n+        self.optimizer.load_state_dict(torch.load(\"{}/opt.pth\".format(model_path), map_location=lambda storage, loc: storage))"
+      },
+      {
+        "path": "runner/__init__.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "runner/async_runner/sample_runner.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "runner/async_runner/train_runner.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -12,6 +12,7 @@\n\n \n     last_log_T = 0\n     last_evaluate_T = 0\n+    last_save_episode = 0\n \n     workers = []\n \n@@ -62,7 +63,7 @@\n\n         if (current_step - last_log_T) >= args.log_interval_step:\n             logger.print_recent_stats(current_step, current_episode)\n             last_log_T = current_step\n-        if current_step - last_evaluate_T >= args.evaluate_interval and args.evaluate:\n+        if args.evaluate and current_step - last_evaluate_T >= args.evaluate_interval:\n             last_evaluate_T = current_step\n             queue_center.put(\"evaluate_request\", \"evaluate\")\n     for worker in workers:"
+      },
+      {
+        "path": "runner/sync_runner/sync_runner.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -13,14 +13,17 @@\n\n     mac = policy_REGISTRY[args.algorithm][\"mac\"](args)\n     mac.to(args.train_device)\n     policy = policy_REGISTRY[args.algorithm][\"policy\"](args, mac)\n+    if args.checkpoint_path:\n+        policy.load_models(args.checkpoint_path)\n+        print(f\"load model from {args.checkpoint_path}\")\n     episode_buffer = EpisodeBuffer(args, buffer_scheme)\n     replay_buffer = ReplayBuffer(args, buffer_scheme)\n     env_runner = env_runner_REGISTRY[args.env](args)\n     last_update_episode = 0\n-    last_log_T = 0\n+    last_log_episode = 0\n+    last_save_episode = 0\n     episodes = 0\n     steps = 0\n-\n     actions = None\n     bs = np.array(range(0, args.env_batch_size))\n     while steps < args.max_steps:\n@@ -40,14 +43,17 @@\n\n             num_episode = terminated_bs.size\n             replay_buffer.insert_episodes(num_episode, episode_data)\n             episodes += num_episode\n-            if episodes - last_update_episode >= args.update_rate and replay_buffer.can_sample():\n+            if replay_buffer.can_sample() and episodes - last_update_episode >= args.update_rate:\n                 last_update_episode = episodes\n                 train_data = replay_buffer.sample()\n                 train_metrics = policy.train(train_data, episodes, steps)\n                 logger.log_metrics(train_metrics, steps)\n         if np.all(env_runner.terminated):\n             episode_buffer.reset_data(bs)\n-        if (episodes - last_log_T) >= args.log_interval_episode:\n-            last_log_T = episodes\n+        if (episodes - last_log_episode) >= args.log_interval_episode:\n+            last_log_episode = episodes\n             logger.print_recent_stats(steps, episodes)\n+        if args.save_model_episode > 0 and (episodes - last_save_episode) >= args.save_model_episode:\n+            last_save_episode = episodes\n+            policy.save_models(args.model_path)\n     env_runner.close_env()"
+      },
+      {
+        "path": "scripts/kill_all.sh",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -0,0 +1,36 @@\n\n+#!/bin/bash\n+\n+# 递归函数，用于杀死进程及其所有子进程\n+kill_process_tree() {\n+    local pid=$1\n+    local children=$(pgrep -P \"$pid\")  # 获取指定PID的子进程PID\n+\n+    # 递归杀死子进程及其所有子进程\n+    for child in $children; do\n+        kill_process_tree \"$child\"\n+    done\n+\n+    # 杀死当前进程\n+    echo \"杀死进程 $pid\"\n+    kill -9 \"$pid\" >/dev/null 2>&1\n+}\n+\n+# 指定PID文件所在的文件夹\n+pid_folder=\"$1\"\n+\n+# 遍历文件夹中的PID文件\n+for pid_file in \"$pid_folder\"/*.pid; do\n+  if [ -f \"$pid_file\" ]; then\n+    # 从PID文件中读取PID值\n+    content=$(cat \"$pid_file\")\n+\n+    # 使用\":\"分割内容并获取PID\n+    IFS=':' read -ra parts <<< \"$content\"\n+    pid=\"${parts[1]}\"\n+    # 杀死对应的进程\n+    kill_process_tree \"$pid\"\n+    echo \"Killing all process with PID: $pid\" \n+    # 删除PID文件\n+    rm \"$pid_file\"\n+  fi\n+done"
+      },
+      {
+        "path": "scripts/start.sh",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -0,0 +1,34 @@\n\n+#!/bin/bash\n+cityflow_maps=(\n+    \"jinan\"\n+    \"hangzhou\"\n+)\n+smac_maps=(\n+    \"3m\"\n+    \"8m\"\n+)\n+\n+exp_name=\"smac_test\"\n+seeds=(1 10 100)\n+alg=\"ppo\"\n+env=\"smac\"\n+GPUs=(0 1)\n+\n+chosen_maps=\"${env}_maps[@]\"\n+chosen_maps=(\"${!chosen_maps}\")\n+gpus_num=${#GPUs[@]}\n+\n+time=$(date +\"%Y-%m-%d_%H:%M:%S\")\n+folder_name=./logdir/nohup_out/$exp_name/$time\n+mkdir -p $folder_name\n+\n+for index in \"${!chosen_maps[@]}\";do\n+    map=\"${chosen_maps[index]}\"\n+    gpu_idx=$((index % gpus_num))\n+    gpuid=${GPUs[gpu_idx]}\n+    export CUDA_VISIBLE_DEVICES=$gpuid\n+    for seed in \"${!seeds[@]}\";do\n+        nohup python3 entry.py --env $env --alg $alg --map_name $map  >$folder_name/${alg}_${map}_${seed}.log 2>&1 &\n+        echo \"PID: $!\" >$folder_name/${alg}_${map}_${seed}.pid\n+    done\n+done"
+      },
+      {
+        "path": "utils/buffer.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "utils/logger.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -7,6 +7,7 @@\n\n from torch.utils.tensorboard import SummaryWriter\n import numpy as np\n from utils.utils import mkdir\n+\n \n \n class Logger:\n@@ -65,17 +66,19 @@\n\n \n     def log_tensorboard(self, step):\n         for (k, v) in sorted(self.stats.items()):\n-            item = torch.mean(torch.tensor([float(x[1]) for x in self.stats[k]])).item()\n+            if k == \"episode\" or k == \"individual_rewards\":\n+                continue\n+            item = torch.mean(torch.tensor([float(x[1]) for x in v])).item()\n             self.tensor_logger.add_scalar(k, item, step)\n \n     def print_recent_stats(self, step, episode):\n         log_str = \"Recent Stats | t_env: {:>10} | Episode: {:>8}\\n\".format(step, episode)\n         i = 0\n         for k, v in sorted(self.stats.items()):\n-            if k == \"episode\":\n+            if k == \"episode\" or k == \"individual_rewards\":\n                 continue\n             i += 1\n-            item = \"{:.4f}\".format(torch.mean(torch.tensor([float(x[1]) for x in self.stats[k]])))\n+            item = \"{:.4f}\".format(torch.mean(torch.tensor([float(x[1]) for x in v])))\n             log_str += \"{:<25}{:>8}\".format(k + \":\", item)\n             log_str += \"\\n\" if i % 4 == 0 else \"\\t\"\n         self.log_info(log_str)"
+      },
+      {
+        "path": "utils/queue.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "utils/scheme.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "utils/utils.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "worker/__init__.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "worker/base_worker.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "worker/evaluate_worker.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "worker/infer_worker.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "worker/sample_worker.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "worker/train_worker.py",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ wang\n\n@@ -13,6 +13,9 @@\n\n         self.shared_buffer = shared_buffer\n         self.replay_buffer = ReplayBuffer(args, shared_buffer.scheme)\n         self.policy = policy(args, global_mac)\n+        if args.checkpoint_path:\n+            self.policy.load_models(args.checkpoint_path)\n+            print(f\"load model from {args.checkpoint_path}\")\n         self.episodes = episodes\n         self.steps = steps\n         self.job = Process(target=self.async_train)\n@@ -22,6 +25,7 @@\n\n         torch.set_num_threads(1)\n         self.queue_center.put(\"log\", {\"type\": \"info\", \"msg\": \"train worker start\"})\n         last_update_episode = 0\n+        last_save_episode = 0\n         while True:\n             episode_idx = self.queue_center.get(\"episode_idx\")\n             batch_size = len(episode_idx)\n@@ -29,8 +33,11 @@\n\n             self.replay_buffer.insert_episodes(batch_size, episode_data)\n             self.queue_center.put_many(\"shared_idx\", episode_idx)\n             self.episodes += batch_size\n-            if self.episodes.item() - last_update_episode >= self.args.update_rate and self.replay_buffer.can_sample():\n+            if self.replay_buffer.can_sample() and self.episodes.item() - last_update_episode >= self.args.update_rate:\n                 last_update_episode = self.episodes.item()\n                 train_data = self.replay_buffer.sample()\n                 metrics = self.policy.train(train_data, self.episodes.item(), self.steps.item())\n                 self.queue_center.put(\"log\", {\"type\": \"data\", \"msg\": [metrics]})\n+            if self.args.save_model_episode > 0 and (self.episodes.item() - last_save_episode) >= self.args.save_model_episode:\n+                last_save_episode = self.episodes.item()\n+                self.policy.save_models(self.args.model_path)"
+      },
+      {
+        "path": "worker/zmq_worker.py",
+        "ast_equal": true,
+        "diff": ""
+      }
+    ],
+    "yi_closed": [
+      {
+        "path": "config/alg_config/ppo.yaml",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ yi_closed\n\n@@ -1,5 +1,5 @@\n\n-train_buffer_size: 32\n-train_batch_size: 32\n+train_buffer_size: 8\n+train_batch_size: 8\n update_rate: 8\n \n \n@@ -7,7 +7,7 @@\n\n critic_coef: 0.5\n entropy: 0.01\n gae_lambda: 0.95\n-mini_epochs: 4\n+mini_epochs: 8\n eps_clip: 0.2\n save_log_probs: True\n dual_clip: 0\n@@ -16,7 +16,7 @@\n\n agenet_type: rnn\n critic_type: rnn\n agent_inputs: [\"obs\", \"agent_id\", \"last_action\"]\n-# [\"state\", \"independent_obs\", \"central_obs\" \"agent_id\", \"last_action\"]\n+# [\"state\", \"independent_obs\", \"central_obs\", \"agent_id\", \"last_action\"]\n critic_inputs: [\"central_obs\"]\n \n use_layer_norm: True"
+      },
+      {
+        "path": "config/alg_config/qmix.yaml",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ yi_closed\n\n@@ -2,14 +2,14 @@\n\n epsilon_finish: 0.05\n epsilon_anneal_time: 100000\n \n-train_buffer_size: 2000\n-train_batch_size: 64\n-update_rate: 8\n-target_update_interval: 100\n+train_buffer_size: 5000\n+train_batch_size: 8\n+update_rate: 1\n+target_update_interval: 200\n \n agenet_type: rnn\n agent_inputs: [\"obs\", \"agent_id\", \"last_action\"]\n-mixer: \"vdn_mixer\"\n+mixer: \"q_mixer\"\n mixing_embed_dim: 32\n hypernet_layers: 2\n hypernet_embed: 64"
+      },
+      {
+        "path": "config/env_config/cityflow.yaml",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ yi_closed\n\n@@ -3,7 +3,7 @@\n\n env_args:\n   interval: 1.0\n   yellow_time: 5\n-  thread_num: 1\n+  thread_num: 10\n   lane_change: True  \n   save_replay: False  \n   eight_phase: True  \n@@ -11,4 +11,4 @@\n\n   dic_reward_info: {\"queue_length\": -0.25}\n \n env_type: discrete\n-max_steps: 10000000\n+max_steps: 600000"
+      },
+      {
+        "path": "entry.py",
+        "ast_equal": true,
+        "diff": ""
+      },
+      {
+        "path": "scripts/kill_all.sh",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ yi_closed\n\n@@ -0,0 +1,36 @@\n\n+#!/bin/bash\n+\n+# 递归函数，用于杀死进程及其所有子进程\n+kill_process_tree() {\n+    local pid=$1\n+    local children=$(pgrep -P \"$pid\")  # 获取指定PID的子进程PID\n+\n+    # 递归杀死子进程及其所有子进程\n+    for child in $children; do\n+        kill_process_tree \"$child\"\n+    done\n+\n+    # 杀死当前进程\n+    echo \"杀死进程 $pid\"\n+    kill -9 \"$pid\" >/dev/null 2>&1\n+}\n+\n+# 指定PID文件所在的文件夹\n+pid_folder=\"$1\"\n+\n+# 遍历文件夹中的PID文件\n+for pid_file in \"$pid_folder\"/*.pid; do\n+  if [ -f \"$pid_file\" ]; then\n+    # 从PID文件中读取PID值\n+    content=$(cat \"$pid_file\")\n+\n+    # 使用\":\"分割内容并获取PID\n+    IFS=':' read -ra parts <<< \"$content\"\n+    pid=\"${parts[1]}\"\n+    # 杀死对应的进程\n+    kill_process_tree \"$pid\"\n+    echo \"Killing all process with PID: $pid\" \n+    # 删除PID文件\n+    rm \"$pid_file\"\n+  fi\n+done"
+      },
+      {
+        "path": "scripts/start.sh",
+        "ast_equal": false,
+        "diff": "--- yi_open\n\n+++ yi_closed\n\n@@ -0,0 +1,34 @@\n\n+#!/bin/bash\n+cityflow_maps=(\n+    \"jinan\"\n+    \"hangzhou\"\n+)\n+smac_maps=(\n+    \"3m\"\n+    \"8m\"\n+)\n+\n+exp_name=\"smac_test\"\n+seeds=(1 10 100)\n+alg=\"ppo\"\n+env=\"smac\"\n+GPUs=(0 1)\n+\n+chosen_maps=\"${env}_maps[@]\"\n+chosen_maps=(\"${!chosen_maps}\")\n+gpus_num=${#GPUs[@]}\n+\n+time=$(date +\"%Y-%m-%d_%H:%M:%S\")\n+folder_name=./logdir/nohup_out/$exp_name/$time\n+mkdir -p $folder_name\n+\n+for index in \"${!chosen_maps[@]}\";do\n+    map=\"${chosen_maps[index]}\"\n+    gpu_idx=$((index % gpus_num))\n+    gpuid=${GPUs[gpu_idx]}\n+    export CUDA_VISIBLE_DEVICES=$gpuid\n+    for seed in \"${!seeds[@]}\";do\n+        nohup python3 entry.py --env $env --alg $alg --map_name $map  >$folder_name/${alg}_${map}_${seed}.log 2>&1 &\n+        echo \"PID: $!\" >$folder_name/${alg}_${map}_${seed}.pid\n+    done\n+done"
+      }
+    ],
+    "yi_zmq": []
+  },
+  "primary": "wang",
+  "reason": "Same core learning formulas as Yi plus explicit policy save/load; Yi powergrid environment/config retained separately; distributed code deferred",
+  "source_hashes": [
+    {
+      "source": "marl平台代码/王思哲/code/sadma/entry.py",
+      "sha256": "bb0cc4b3c6cf73cadf469a7b26d8945a77a103d5c7d70487ab68bd34ecdb71f7"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/config/config_utils.py",
+      "sha256": "53645caa81614312da9c5b28c49cb85cb78d1bd5c501b7fa9916f3bfde4641ef"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/config/default.yaml",
+      "sha256": "1a7ca81a40c61383e8348f3804b4191827d4136fcb4da55602dfd1b6ffa403e1"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/envs/__init__.py",
+      "sha256": "356cfa853495f0e7b291fe0ae63e910df693d566ce683f5b10e72752ecd89d48"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/__init__.py",
+      "sha256": "e2fd4c3e3efb413893706dd49f62214e610be47adecce928aba77186113a0e21"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/runner/__init__.py",
+      "sha256": "afe4b5289e4188a4019ea04ae22f2be01b9ec77dd30fd85547f78803a195416c"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/scripts/kill_all.sh",
+      "sha256": "51eff2ea5fe1487e700da6cfc8e5daa743b79f90e892c2dee23a4c500fa6e0b6"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/scripts/start.sh",
+      "sha256": "cbda30c01fa11cf350e3ed94610e36ac2b66003fa5406054b9e345abb0e6be5d"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/utils/buffer.py",
+      "sha256": "b2afd67f40e681119fa1cc991840fd0ca97867547546d06888b06847e7561ebe"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/utils/logger.py",
+      "sha256": "7dc7bd918148e961905b8ebcba81473538759a338ea56dde021899c906daea61"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/utils/queue.py",
+      "sha256": "7762071144ddc0d56f5d4ca2f73f27b75ebfd36629dccf0f3d13436f0ae4fc17"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/utils/scheme.py",
+      "sha256": "331569db8ffbb1ff2a85bcd29b404da79747130918b5a5f59981b071716026d1"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/utils/utils.py",
+      "sha256": "550d75cc8e270049dff1142adacd04ad88d3983c6dc52f0027d3cc6339500452"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/worker/base_worker.py",
+      "sha256": "ede39c4cd49cff787151d1ddf9d8a7ff551d917ac0716ce27d425cfab1034c18"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/worker/evaluate_worker.py",
+      "sha256": "af1df6e34cbd27952b140e7ca63bfb2a4961276cdebc2492ab4e2b0c44d12c2b"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/worker/infer_worker.py",
+      "sha256": "3b2aaf410b27adfef26f398fc619ee680bd79ada53f9ce3207abe79e36f841c3"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/worker/sample_worker.py",
+      "sha256": "c1f1f0c09fe386bde8ee822157394f1b844541680f4aa2ec59874f292dbe29f5"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/worker/train_worker.py",
+      "sha256": "bf14c7aa19123fe28b9587dc97b69ea1a1f7587c3a0e76fc69165cc7d49bf6e9"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/worker/zmq_worker.py",
+      "sha256": "d7bc167481ba85b1d18cdcb8b8f75246f5572dcc2e762a30a3e3534c72e8aa90"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/worker/__init__.py",
+      "sha256": "71bdeae6db5ff6f7ea87135bd73e67f2d227b9c9523c51ff2bc09f5c25694beb"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/config/alg_config/ppo.yaml",
+      "sha256": "a19bb357e5e6c4d0b63113a2addabfe10677d657e655231b6b2b82737186df43"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/config/alg_config/qmix.yaml",
+      "sha256": "37c11ce4a65fc80ad37de1914bc177fc4f7eb6476afcfc379ac368e635469aff"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/config/env_config/cityflow.yaml",
+      "sha256": "737f02a06300cb5a8f4b7f5d1ea8ec9ac0f3ebf70dbb9677fc2065c6b49374ac"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/config/env_config/replenishment.yaml",
+      "sha256": "26cb5d7e6399ce52dda18958ded68b3405b7ac31ad4de7eb9833ccdf6f65527c"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/config/env_config/smac.yaml",
+      "sha256": "049a5cd2806f6a3d50ca88b283e9e18e85d4fd5b9d3a9db454354569b332fa09"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/envs/cityflow/cityflow_env.py",
+      "sha256": "57c1e84210bd5789e05674858a68ebe36407049dff61b7a1f1e8b4a9f32a8f3e"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/envs/cityflow/cityflow_runner.py",
+      "sha256": "b2a2c766cc57af391c382120a6b1b214a42ed9e00f9701ee37a4b0f6e811a8ff"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/envs/replenishment/replenishment_env.py",
+      "sha256": "1ba3d3eaaa2711b998eeefeed2297e9d890a07c6d6c302239cac60e407b8b340"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/envs/replenishment/replenishment_runner.py",
+      "sha256": "136148232ff237170217f73fd45656dcee883cdd00a9e02524e07bcdab1744cc"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/envs/smac/smac_env.py",
+      "sha256": "cd0df1cd3bdec6788a7458daad861c416873518421adf782d0ad1ad7a4f35eb5"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/envs/smac/smac_runner.py",
+      "sha256": "205942db85986b9edadac693095da16e43d3441475838c7e61b445f81b6950b3"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/base/base_controller.py",
+      "sha256": "d06fcaf49303006f1d1a0328b9d0ff125664b3557ef4d224313a5603990fc0d3"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/base/base_net.py",
+      "sha256": "763c2367ffbfe573f98441ff32606a7dadad164f2650c96715a3d0b214650dbb"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/base/base_policy.py",
+      "sha256": "5bdc1d3326060da62330789b85f8a96955bddb93bb07cec0ff2745ea4b672c09"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_controller.py",
+      "sha256": "14bd2c5167389dd4bd79303048e499c6409c9733c7c210a123d38c62f83a648f"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_net.py",
+      "sha256": "18db3350ab759932ba51d35926dba137ea72b3ff0588e625f9346267860b6a16"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_policy.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/mappo/ppo_controller.py",
+      "sha256": "059f415931bd0ef788ef8ef22da9f4bb9b023f0be651aa7a13f8b849e198227d"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/mappo/ppo_net.py",
+      "sha256": "f496dfcb6a80c29d4e20fc34f27224b2024ec0169a0eff9ecf27403583f7a282"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/mappo/ppo_policy.py",
+      "sha256": "da248c83363cbd8aee5fc5dfb39798bc605dd365635d7025c39ed8fa9a580abe"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/qmix/q_controller.py",
+      "sha256": "d03026b484c850fb55bc60565b8b23b18ef9b1251aef348ad734441170d0a28d"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/qmix/q_net.py",
+      "sha256": "93ca5983436c7e1d58d88923f989b8781afa0175a6df06b7ab08b20d26d938c7"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/policy/qmix/q_policy.py",
+      "sha256": "d5545c9456d6c6fd248caa5829ac6ef4c786214725d116bad9c83889c3f8f66c"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/runner/async_runner/sample_runner.py",
+      "sha256": "03c09b86912d59188720e8db686ba8ff398b9bbdef73959d0eb0f7f16de28348"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/runner/async_runner/train_runner.py",
+      "sha256": "535675650b994805d850721e71c71cfc10412a056c28f38c6315feed07a473f6"
+    },
+    {
+      "source": "marl平台代码/王思哲/code/sadma/runner/sync_runner/sync_runner.py",
+      "sha256": "70f8bd6d29efe9786dca9d74a12d56d8e0f2965b6f4ec008e91d538850aea4d0"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/entry.py",
+      "sha256": "c61a84446f222542bcb17fb463e572475bc4932d4378a63c5b9f31f19094fb84"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/config_utils.py",
+      "sha256": "d1e0545a351a4197ae6b960bc073fb981d0bef0b89ca8e7b973d4a370554ed7c"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/default.yaml",
+      "sha256": "7f7a4048ab1329c465aef16b3b5a48b2ca799957ed64d6acd511817233a04672"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+      "sha256": "588fd24e837215411e3534bacf6e7da6644f744f7531f00f2f6ba2797a7a5083"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/__init__.py",
+      "sha256": "af119d40b177e4ad64f93cd9524359915a241f99a9c65a19233206e5be45209d"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/runner/__init__.py",
+      "sha256": "e7f232f60e7d3586ccd1c8211ae853f489e835f5f3ff35da163add9d0e45e85d"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/utils/buffer.py",
+      "sha256": "7409dd6ae69b1470b18e511790d3b889001a5e91460e6f70837547621b36228e"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/utils/logger.py",
+      "sha256": "0c4a5e750b2eb5a347238f7cd7d9706d8547095fe7f7e6b497262081ec121b01"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/utils/queue.py",
+      "sha256": "faaebf71630c19bedb8b763294ab05a27ecc033ced569bb4b99bbdaeddc50912"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/utils/scheme.py",
+      "sha256": "0fa418f2183b237908908b0c3190903594b1fd8e36a1361eed595925f1098aa0"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/utils/utils.py",
+      "sha256": "7a3ebadac9b762b00a2473fda99562a2f62f1f803c06f610561dfc312ced571b"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/base_worker.py",
+      "sha256": "c7fa1ab892d38380d9d21a772af5f781e053573e0f2d23135ca3bf63be9c7623"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/evaluate_worker.py",
+      "sha256": "afda72edd5c80a17625b5b146f2db63eeafb9bf2f0a4f722761f6ae4003c41b5"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/infer_worker.py",
+      "sha256": "600c6874248407c28b23403d77382e98a7d3a2f4a382ab5f08fa4f8e532d2218"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/sample_worker.py",
+      "sha256": "479fd83fb1d08b41b5971fcf306e872e075702420426f94e7e14d50f1963cd6e"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/train_worker.py",
+      "sha256": "4cdda09b06b43abe9cf37fba075fcd45cd5f6bdb1ec8a76410f8f0343e2a45c2"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/zmq_worker.py",
+      "sha256": "48b7640558c7d3c5faff14fc7988359c5b45edfc8c831a9f9b00f0482ecfffb6"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/__init__.py",
+      "sha256": "a091c2d3e9def2b59c8100f940759a3c4fb6037754bb281a29c61b970739b5a8"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/alg_config/ppo.yaml",
+      "sha256": "706b425ddd5ce26317267bd99a1bd62857a3a0b929cf79f25be933f4960dccea"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/alg_config/qmix.yaml",
+      "sha256": "3a1b35ded3dd075311822696ce3de6502b09507f396ff4add368d781081c49ba"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/env_config/cityflow.yaml",
+      "sha256": "0257c18e6adc8ba09e43bde64338a677ec02b25f9f1dcfb408a96786751e9967"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/env_config/powergrid.yaml",
+      "sha256": "7866dfa833f744f6a1b486ffbc92d346bbfb0480e271bc6e16742ff9892305f8"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/env_config/replenishment.yaml",
+      "sha256": "d836cf24bf185db027bd036b23b85d460961113462ca2f49c17d79ad674b822b"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/env_config/smac.yaml",
+      "sha256": "f72b9816a7f078563ba5af80fd554b6913e1cb9b5e50943b41f45d502da80cee"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/cityflow/cityflow_env.py",
+      "sha256": "4f9f39ad9f61c0dd8fdaa3fa4648a392e444116a65522b56f984d7354a58a909"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/cityflow/cityflow_runner.py",
+      "sha256": "4e8cdbf36e0c6316a941c81394354a8da3ec03f836b6bbc4620f2d05329388bd"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/powergrid/energy_models.py",
+      "sha256": "c430583dca6a3d651a32dcf7f7242a3eafbbc5d5aaf92adf3e5e99e9b4be2048"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/powergrid/powergrid_runner.py",
+      "sha256": "c6d18cc6327c679f7aa11069427d058bf541f511955f5d5b86cbc46610a6fdba"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/powergrid/smart_grid.py",
+      "sha256": "22ba64004c9cc4337f435414cd46a97e7d08ba89da6303876b8a0f4cf6749e52"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/replenishment/replenishment_env.py",
+      "sha256": "9b5dac49d6e63d2d71d7257efffddd8b5816e28ff2d9cd547bfd08f7790dbc5a"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/replenishment/replenishment_runner.py",
+      "sha256": "ca48df4275f4d9b410c391c82fdfdb97106a127fa645d9f2ce56cece131889b4"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/smac/smac_env.py",
+      "sha256": "785b87ff7f5b015a8bb81f2cafe22312423ed173610abb40599eacd1d9cc4d7d"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/smac/smac_runner.py",
+      "sha256": "7ed4bfd0cf1c4caeb27b21e44a651038d3b9af4e04074a81271e44b190f8b54b"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/base/base_controller.py",
+      "sha256": "e4bde5aa45ab8955e16358daf8a52db21f42c7d54e972225d942d1ba563d438e"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/base/base_net.py",
+      "sha256": "7351d69aa9e65df3480138503a37d203de43195b00784b37a2a53e3dbc0ff9d8"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/base/base_policy.py",
+      "sha256": "ae005a5a4f324df7bc606cbbb8f6a7cbf72f7f7565bd6a425d58b41a73c27568"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_controller.py",
+      "sha256": "b684ab4d815da48ced921bc31f2491718d2a1466b51607f403e2ab7ef13d979a"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_net.py",
+      "sha256": "8eb402e7c20141646f95ffc38b8819efed85ad1613f7312e8c4e59fe703a95b9"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_policy.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/mappo/ppo_controller.py",
+      "sha256": "0d6a9618a53fbba294416d94abf0dd4f3248ec123978ebad0aa26a6478cd6ab1"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/mappo/ppo_net.py",
+      "sha256": "2374223aadf9b1933229af940301435f77862794a5449ab93a46797d03778a87"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/mappo/ppo_policy.py",
+      "sha256": "5b260bb0878ee7dc1b79782b0b625093025858a1f7d812bdbb0a68ba632e4afa"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/qmix/q_controller.py",
+      "sha256": "33c470c9bad4b6ef7c01aadc2417ef1e67e75d6abc71f58db5282d09f2c6f5c7"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/qmix/q_net.py",
+      "sha256": "5e2ca7aa40e387b601a4d3a92937d471f6a1a03d3f5409e9c97b87847716c3a5"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/qmix/q_policy.py",
+      "sha256": "0361363cded66564d31d50c661769de1b2116fd4c493313bfcd073e840b8c63f"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/runner/async_runner/sample_runner.py",
+      "sha256": "0fdecc0d60844dee1c98ac6afab601ce7c28c308f4b73f899064d7cae80037c1"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/runner/async_runner/train_runner.py",
+      "sha256": "3cd339f1e851a310751e0c55e1afe4b04febade41eb452cadb22e0febaec09fb"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/runner/sync_runner/sync_runner.py",
+      "sha256": "622baa7def2cc49c03ba0677613c150e4947600cfbff9ce81c378089e2e408a0"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/entry.py",
+      "sha256": "e48ef4e318e0099b5afe5fb5fd4c366badaa995a52c2157fb43c27ccb6f80018"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/config_utils.py",
+      "sha256": "d1e0545a351a4197ae6b960bc073fb981d0bef0b89ca8e7b973d4a370554ed7c"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/default.yaml",
+      "sha256": "7f7a4048ab1329c465aef16b3b5a48b2ca799957ed64d6acd511817233a04672"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+      "sha256": "588fd24e837215411e3534bacf6e7da6644f744f7531f00f2f6ba2797a7a5083"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/__init__.py",
+      "sha256": "af119d40b177e4ad64f93cd9524359915a241f99a9c65a19233206e5be45209d"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/runner/__init__.py",
+      "sha256": "e7f232f60e7d3586ccd1c8211ae853f489e835f5f3ff35da163add9d0e45e85d"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/scripts/kill_all.sh",
+      "sha256": "9bc07b110895d422f4a37c41d7510679207b048db3ab027311bff4c9845e52bb"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/scripts/start.sh",
+      "sha256": "cb6911c2ee83439df79dc71d163e95e0d9fa00c82ae2166effc90ae0d29d74b3"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/utils/buffer.py",
+      "sha256": "7409dd6ae69b1470b18e511790d3b889001a5e91460e6f70837547621b36228e"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/utils/logger.py",
+      "sha256": "0c4a5e750b2eb5a347238f7cd7d9706d8547095fe7f7e6b497262081ec121b01"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/utils/queue.py",
+      "sha256": "faaebf71630c19bedb8b763294ab05a27ecc033ced569bb4b99bbdaeddc50912"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/utils/scheme.py",
+      "sha256": "0fa418f2183b237908908b0c3190903594b1fd8e36a1361eed595925f1098aa0"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/utils/utils.py",
+      "sha256": "7a3ebadac9b762b00a2473fda99562a2f62f1f803c06f610561dfc312ced571b"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/base_worker.py",
+      "sha256": "c7fa1ab892d38380d9d21a772af5f781e053573e0f2d23135ca3bf63be9c7623"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/evaluate_worker.py",
+      "sha256": "afda72edd5c80a17625b5b146f2db63eeafb9bf2f0a4f722761f6ae4003c41b5"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/infer_worker.py",
+      "sha256": "600c6874248407c28b23403d77382e98a7d3a2f4a382ab5f08fa4f8e532d2218"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/sample_worker.py",
+      "sha256": "479fd83fb1d08b41b5971fcf306e872e075702420426f94e7e14d50f1963cd6e"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/train_worker.py",
+      "sha256": "4cdda09b06b43abe9cf37fba075fcd45cd5f6bdb1ec8a76410f8f0343e2a45c2"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/zmq_worker.py",
+      "sha256": "48b7640558c7d3c5faff14fc7988359c5b45edfc8c831a9f9b00f0482ecfffb6"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/__init__.py",
+      "sha256": "a091c2d3e9def2b59c8100f940759a3c4fb6037754bb281a29c61b970739b5a8"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/alg_config/ppo.yaml",
+      "sha256": "b615b0400931846f2e53f0ba3bf4cda675c09cb330d05dfc6d81cc36f964655a"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/alg_config/qmix.yaml",
+      "sha256": "8e221f5d8fdf612c1317661328c10795d5415426da0e32114fa256f93daa8195"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/env_config/cityflow.yaml",
+      "sha256": "68e090041a8a0e9c23d73b44353ceda8654e4019e03fabbef6b2dada08432130"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/env_config/powergrid.yaml",
+      "sha256": "7866dfa833f744f6a1b486ffbc92d346bbfb0480e271bc6e16742ff9892305f8"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/env_config/replenishment.yaml",
+      "sha256": "d836cf24bf185db027bd036b23b85d460961113462ca2f49c17d79ad674b822b"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/env_config/smac.yaml",
+      "sha256": "f72b9816a7f078563ba5af80fd554b6913e1cb9b5e50943b41f45d502da80cee"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/cityflow/cityflow_env.py",
+      "sha256": "4f9f39ad9f61c0dd8fdaa3fa4648a392e444116a65522b56f984d7354a58a909"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/cityflow/cityflow_runner.py",
+      "sha256": "4e8cdbf36e0c6316a941c81394354a8da3ec03f836b6bbc4620f2d05329388bd"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/powergrid/energy_models.py",
+      "sha256": "c430583dca6a3d651a32dcf7f7242a3eafbbc5d5aaf92adf3e5e99e9b4be2048"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/powergrid/powergrid_runner.py",
+      "sha256": "c6d18cc6327c679f7aa11069427d058bf541f511955f5d5b86cbc46610a6fdba"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/powergrid/smart_grid.py",
+      "sha256": "22ba64004c9cc4337f435414cd46a97e7d08ba89da6303876b8a0f4cf6749e52"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/replenishment/replenishment_env.py",
+      "sha256": "9b5dac49d6e63d2d71d7257efffddd8b5816e28ff2d9cd547bfd08f7790dbc5a"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/replenishment/replenishment_runner.py",
+      "sha256": "ca48df4275f4d9b410c391c82fdfdb97106a127fa645d9f2ce56cece131889b4"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/smac/smac_env.py",
+      "sha256": "785b87ff7f5b015a8bb81f2cafe22312423ed173610abb40599eacd1d9cc4d7d"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/smac/smac_runner.py",
+      "sha256": "7ed4bfd0cf1c4caeb27b21e44a651038d3b9af4e04074a81271e44b190f8b54b"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/base/base_controller.py",
+      "sha256": "e4bde5aa45ab8955e16358daf8a52db21f42c7d54e972225d942d1ba563d438e"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/base/base_net.py",
+      "sha256": "7351d69aa9e65df3480138503a37d203de43195b00784b37a2a53e3dbc0ff9d8"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/base/base_policy.py",
+      "sha256": "ae005a5a4f324df7bc606cbbb8f6a7cbf72f7f7565bd6a425d58b41a73c27568"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_controller.py",
+      "sha256": "b684ab4d815da48ced921bc31f2491718d2a1466b51607f403e2ab7ef13d979a"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_net.py",
+      "sha256": "8eb402e7c20141646f95ffc38b8819efed85ad1613f7312e8c4e59fe703a95b9"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_policy.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/mappo/ppo_controller.py",
+      "sha256": "0d6a9618a53fbba294416d94abf0dd4f3248ec123978ebad0aa26a6478cd6ab1"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/mappo/ppo_net.py",
+      "sha256": "2374223aadf9b1933229af940301435f77862794a5449ab93a46797d03778a87"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/mappo/ppo_policy.py",
+      "sha256": "5b260bb0878ee7dc1b79782b0b625093025858a1f7d812bdbb0a68ba632e4afa"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/qmix/q_controller.py",
+      "sha256": "33c470c9bad4b6ef7c01aadc2417ef1e67e75d6abc71f58db5282d09f2c6f5c7"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/qmix/q_net.py",
+      "sha256": "5e2ca7aa40e387b601a4d3a92937d471f6a1a03d3f5409e9c97b87847716c3a5"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/qmix/q_policy.py",
+      "sha256": "0361363cded66564d31d50c661769de1b2116fd4c493313bfcd073e840b8c63f"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/runner/async_runner/sample_runner.py",
+      "sha256": "0fdecc0d60844dee1c98ac6afab601ce7c28c308f4b73f899064d7cae80037c1"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/runner/async_runner/train_runner.py",
+      "sha256": "3cd339f1e851a310751e0c55e1afe4b04febade41eb452cadb22e0febaec09fb"
+    },
+    {
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/runner/sync_runner/sync_runner.py",
+      "sha256": "622baa7def2cc49c03ba0677613c150e4947600cfbff9ce81c378089e2e408a0"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/entry.py",
+      "sha256": "c61a84446f222542bcb17fb463e572475bc4932d4378a63c5b9f31f19094fb84"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/config_utils.py",
+      "sha256": "d1e0545a351a4197ae6b960bc073fb981d0bef0b89ca8e7b973d4a370554ed7c"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/default.yaml",
+      "sha256": "7f7a4048ab1329c465aef16b3b5a48b2ca799957ed64d6acd511817233a04672"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+      "sha256": "588fd24e837215411e3534bacf6e7da6644f744f7531f00f2f6ba2797a7a5083"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/__init__.py",
+      "sha256": "af119d40b177e4ad64f93cd9524359915a241f99a9c65a19233206e5be45209d"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/runner/__init__.py",
+      "sha256": "e7f232f60e7d3586ccd1c8211ae853f489e835f5f3ff35da163add9d0e45e85d"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/utils/buffer.py",
+      "sha256": "7409dd6ae69b1470b18e511790d3b889001a5e91460e6f70837547621b36228e"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/utils/logger.py",
+      "sha256": "0c4a5e750b2eb5a347238f7cd7d9706d8547095fe7f7e6b497262081ec121b01"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/utils/queue.py",
+      "sha256": "faaebf71630c19bedb8b763294ab05a27ecc033ced569bb4b99bbdaeddc50912"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/utils/scheme.py",
+      "sha256": "0fa418f2183b237908908b0c3190903594b1fd8e36a1361eed595925f1098aa0"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/utils/utils.py",
+      "sha256": "7a3ebadac9b762b00a2473fda99562a2f62f1f803c06f610561dfc312ced571b"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/base_worker.py",
+      "sha256": "c7fa1ab892d38380d9d21a772af5f781e053573e0f2d23135ca3bf63be9c7623"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/evaluate_worker.py",
+      "sha256": "afda72edd5c80a17625b5b146f2db63eeafb9bf2f0a4f722761f6ae4003c41b5"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/infer_worker.py",
+      "sha256": "600c6874248407c28b23403d77382e98a7d3a2f4a382ab5f08fa4f8e532d2218"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/sample_worker.py",
+      "sha256": "479fd83fb1d08b41b5971fcf306e872e075702420426f94e7e14d50f1963cd6e"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/train_worker.py",
+      "sha256": "4cdda09b06b43abe9cf37fba075fcd45cd5f6bdb1ec8a76410f8f0343e2a45c2"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/zmq_worker.py",
+      "sha256": "48b7640558c7d3c5faff14fc7988359c5b45edfc8c831a9f9b00f0482ecfffb6"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/__init__.py",
+      "sha256": "a091c2d3e9def2b59c8100f940759a3c4fb6037754bb281a29c61b970739b5a8"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/alg_config/ppo.yaml",
+      "sha256": "706b425ddd5ce26317267bd99a1bd62857a3a0b929cf79f25be933f4960dccea"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/alg_config/qmix.yaml",
+      "sha256": "3a1b35ded3dd075311822696ce3de6502b09507f396ff4add368d781081c49ba"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/env_config/cityflow.yaml",
+      "sha256": "0257c18e6adc8ba09e43bde64338a677ec02b25f9f1dcfb408a96786751e9967"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/env_config/powergrid.yaml",
+      "sha256": "7866dfa833f744f6a1b486ffbc92d346bbfb0480e271bc6e16742ff9892305f8"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/env_config/replenishment.yaml",
+      "sha256": "d836cf24bf185db027bd036b23b85d460961113462ca2f49c17d79ad674b822b"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/env_config/smac.yaml",
+      "sha256": "f72b9816a7f078563ba5af80fd554b6913e1cb9b5e50943b41f45d502da80cee"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/cityflow/cityflow_env.py",
+      "sha256": "4f9f39ad9f61c0dd8fdaa3fa4648a392e444116a65522b56f984d7354a58a909"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/cityflow/cityflow_runner.py",
+      "sha256": "4e8cdbf36e0c6316a941c81394354a8da3ec03f836b6bbc4620f2d05329388bd"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/powergrid/energy_models.py",
+      "sha256": "c430583dca6a3d651a32dcf7f7242a3eafbbc5d5aaf92adf3e5e99e9b4be2048"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/powergrid/powergrid_runner.py",
+      "sha256": "c6d18cc6327c679f7aa11069427d058bf541f511955f5d5b86cbc46610a6fdba"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/powergrid/smart_grid.py",
+      "sha256": "22ba64004c9cc4337f435414cd46a97e7d08ba89da6303876b8a0f4cf6749e52"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/replenishment/replenishment_env.py",
+      "sha256": "9b5dac49d6e63d2d71d7257efffddd8b5816e28ff2d9cd547bfd08f7790dbc5a"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/replenishment/replenishment_runner.py",
+      "sha256": "ca48df4275f4d9b410c391c82fdfdb97106a127fa645d9f2ce56cece131889b4"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/smac/smac_env.py",
+      "sha256": "785b87ff7f5b015a8bb81f2cafe22312423ed173610abb40599eacd1d9cc4d7d"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/smac/smac_runner.py",
+      "sha256": "7ed4bfd0cf1c4caeb27b21e44a651038d3b9af4e04074a81271e44b190f8b54b"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/base/base_controller.py",
+      "sha256": "e4bde5aa45ab8955e16358daf8a52db21f42c7d54e972225d942d1ba563d438e"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/base/base_net.py",
+      "sha256": "7351d69aa9e65df3480138503a37d203de43195b00784b37a2a53e3dbc0ff9d8"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/base/base_policy.py",
+      "sha256": "ae005a5a4f324df7bc606cbbb8f6a7cbf72f7f7565bd6a425d58b41a73c27568"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_controller.py",
+      "sha256": "b684ab4d815da48ced921bc31f2491718d2a1466b51607f403e2ab7ef13d979a"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_net.py",
+      "sha256": "8eb402e7c20141646f95ffc38b8819efed85ad1613f7312e8c4e59fe703a95b9"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_policy.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/mappo/ppo_controller.py",
+      "sha256": "0d6a9618a53fbba294416d94abf0dd4f3248ec123978ebad0aa26a6478cd6ab1"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/mappo/ppo_net.py",
+      "sha256": "2374223aadf9b1933229af940301435f77862794a5449ab93a46797d03778a87"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/mappo/ppo_policy.py",
+      "sha256": "5b260bb0878ee7dc1b79782b0b625093025858a1f7d812bdbb0a68ba632e4afa"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/qmix/q_controller.py",
+      "sha256": "33c470c9bad4b6ef7c01aadc2417ef1e67e75d6abc71f58db5282d09f2c6f5c7"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/qmix/q_net.py",
+      "sha256": "5e2ca7aa40e387b601a4d3a92937d471f6a1a03d3f5409e9c97b87847716c3a5"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/qmix/q_policy.py",
+      "sha256": "0361363cded66564d31d50c661769de1b2116fd4c493313bfcd073e840b8c63f"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/runner/async_runner/sample_runner.py",
+      "sha256": "0fdecc0d60844dee1c98ac6afab601ce7c28c308f4b73f899064d7cae80037c1"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/runner/async_runner/train_runner.py",
+      "sha256": "3cd339f1e851a310751e0c55e1afe4b04febade41eb452cadb22e0febaec09fb"
+    },
+    {
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/runner/sync_runner/sync_runner.py",
+      "sha256": "622baa7def2cc49c03ba0677613c150e4947600cfbff9ce81c378089e2e408a0"
+    }
+  ],
+  "configs": {
+    "wang": {
+      "config/default.yaml": {
+        "log_root_path": "logdir",
+        "save_log": true,
+        "use_tensorboard": true,
+        "log_interval_step": 2000,
+        "log_interval_episode": 100,
+        "save_model_episode": 0,
+        "checkpoint_path": "",
+        "gamma": 0.99,
+        "lr": 0.0005,
+        "optim_alpha": 0.99,
+        "optim_eps": 1e-05,
+        "grad_norm_clip": 10,
+        "agent_type": "rnn",
+        "hidden_dim": 128,
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "save_log_probs": false,
+        "use_individual_rewards": false,
+        "evaluate": false,
+        "evaluate_episodes": 32,
+        "evaluate_interval": 10000,
+        "evaluate_batch_size": 2,
+        "num_env_runner": 1,
+        "asynchronous_env": true,
+        "shared_buffer_size": 8,
+        "base_port": 16400,
+        "num_inference_worker": 1,
+        "infer_batch_size": 1,
+        "infer_device": "cuda"
+      },
+      "config/alg_config/ppo.yaml": {
+        "train_buffer_size": 8,
+        "train_batch_size": 8,
+        "update_rate": 8,
+        "lr": 0.0005,
+        "critic_coef": 0.5,
+        "entropy": 0,
+        "gae_lambda": 0.95,
+        "mini_epochs": 4,
+        "eps_clip": 0.2,
+        "save_log_probs": true,
+        "dual_clip": 0,
+        "use_vtrace": false,
+        "agenet_type": "rnn",
+        "critic_type": "rnn",
+        "agent_inputs": [
+          "obs",
+          "last_action"
+        ],
+        "critic_inputs": [
+          "central_obs"
+        ],
+        "use_layer_norm": true,
+        "use_orthogonal": true,
+        "use_value_norm": true,
+        "gain": 0.01
+      },
+      "config/alg_config/qmix.yaml": {
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 100000,
+        "train_buffer_size": 5000,
+        "train_batch_size": 8,
+        "update_rate": 1,
+        "target_update_interval": 200,
+        "agenet_type": "rnn",
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "mixer": "q_mixer",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "lr": 0.001,
+        "td_lambda": 0.6,
+        "q_lambda": false,
+        "use_orthogonal": true,
+        "use_layer_norm": false,
+        "gain": 0.01
+      },
+      "config/env_config/cityflow.yaml": {
+        "env": "cityflow",
+        "env_args": {
+          "interval": 1.0,
+          "yellow_time": 5,
+          "thread_num": 2,
+          "lane_change": true,
+          "save_replay": false,
+          "eight_phase": true,
+          "list_state_feature": [
+            "cur_phase",
+            "lane_queue_vehicle_in"
+          ],
+          "dic_reward_info": {
+            "queue_length": -0.25
+          }
+        },
+        "env_type": "discrete",
+        "max_steps": 10000000
+      },
+      "config/env_config/replenishment.yaml": {
+        "env": "replenishment",
+        "env_args": {
+          "key": "replenishment_efficient_env-v0",
+          "map_name": "sku1000.standard",
+          "n_agents": 1000,
+          "task_type": "sku1000.single_store.standard",
+          "mode": "train",
+          "time_limit": 21,
+          "reward": "reward2"
+        },
+        "max_steps": 2000000,
+        "env_type": "discrete"
+      },
+      "config/env_config/smac.yaml": {
+        "env": "smac",
+        "env_args": {
+          "continuing_episode": false,
+          "difficulty": "7",
+          "game_version": null,
+          "map_name": "3m",
+          "move_amount": 2,
+          "obs_all_health": true,
+          "obs_instead_of_state": false,
+          "obs_last_action": false,
+          "obs_own_health": true,
+          "obs_pathing_grid": false,
+          "obs_terrain_height": false,
+          "obs_timestep_number": false,
+          "reward_death_value": 10,
+          "reward_defeat": 0,
+          "reward_negative_scale": 0.5,
+          "reward_only_positive": true,
+          "reward_scale": true,
+          "reward_scale_rate": 20,
+          "reward_sparse": false,
+          "reward_win": 200,
+          "replay_dir": "",
+          "replay_prefix": "",
+          "state_last_action": true,
+          "state_timestep_number": false,
+          "step_mul": 8,
+          "seed": null,
+          "heuristic_ai": false,
+          "heuristic_rest": false,
+          "debug": false
+        },
+        "max_steps": 20050000,
+        "max_episodes": 10000000,
+        "env_type": "discrete"
+      }
+    },
+    "yi_open": {
+      "config/default.yaml": {
+        "log_root_path": "logdir",
+        "save_log": true,
+        "use_tensorboard": true,
+        "log_interval_step": 2000,
+        "log_interval_episode": 16,
+        "gamma": 0.99,
+        "lr": 0.0005,
+        "optim_alpha": 0.99,
+        "optim_eps": 1e-05,
+        "grad_norm_clip": 10,
+        "agent_type": "rnn",
+        "hidden_dim": 64,
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "save_log_probs": false,
+        "use_individual_rewards": false,
+        "evaluate": false,
+        "evaluate_episodes": 32,
+        "evaluate_interval": 10000,
+        "evaluate_batch_size": 2,
+        "num_env_runner": 1,
+        "asynchronous_env": true,
+        "shared_buffer_size": 8,
+        "base_port": 16400,
+        "num_inference_worker": 1,
+        "infer_batch_size": 1,
+        "infer_device": "cuda"
+      },
+      "config/alg_config/ppo.yaml": {
+        "train_buffer_size": 32,
+        "train_batch_size": 32,
+        "update_rate": 8,
+        "lr": 0.0005,
+        "critic_coef": 0.5,
+        "entropy": 0.01,
+        "gae_lambda": 0.95,
+        "mini_epochs": 4,
+        "eps_clip": 0.2,
+        "save_log_probs": true,
+        "dual_clip": 0,
+        "use_vtrace": false,
+        "agenet_type": "rnn",
+        "critic_type": "rnn",
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "critic_inputs": [
+          "central_obs"
+        ],
+        "use_layer_norm": true,
+        "use_orthogonal": true,
+        "use_value_norm": true,
+        "gain": 0.01
+      },
+      "config/alg_config/qmix.yaml": {
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 100000,
+        "train_buffer_size": 2000,
+        "train_batch_size": 64,
+        "update_rate": 8,
+        "target_update_interval": 100,
+        "agenet_type": "rnn",
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "mixer": "vdn_mixer",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "lr": 0.001,
+        "td_lambda": 0.6,
+        "q_lambda": false,
+        "use_orthogonal": true,
+        "use_layer_norm": false,
+        "gain": 0.01
+      },
+      "config/env_config/cityflow.yaml": {
+        "env": "cityflow",
+        "env_args": {
+          "interval": 1.0,
+          "yellow_time": 5,
+          "thread_num": 1,
+          "lane_change": true,
+          "save_replay": false,
+          "eight_phase": true,
+          "list_state_feature": [
+            "cur_phase",
+            "lane_queue_vehicle_in"
+          ],
+          "dic_reward_info": {
+            "queue_length": -0.25
+          }
+        },
+        "env_type": "discrete",
+        "max_steps": 10000000
+      },
+      "config/env_config/powergrid.yaml": {
+        "env": "powergrid",
+        "env_args": {
+          "climate_zone": "Climate_Zone_1"
+        },
+        "env_type": "continuous",
+        "max_steps": 1000000
+      },
+      "config/env_config/replenishment.yaml": {
+        "env": "replenishment",
+        "env_args": {
+          "key": "replenishment_efficient_env-v0",
+          "map_name": "sku1000.standard",
+          "n_agents": 1000,
+          "task_type": "sku1000.single_store.standard",
+          "mode": "train",
+          "time_limit": 21,
+          "reward": "reward2"
+        },
+        "max_steps": 2000000,
+        "env_type": "discrete"
+      },
+      "config/env_config/smac.yaml": {
+        "env": "smac",
+        "env_args": {
+          "continuing_episode": false,
+          "difficulty": "7",
+          "game_version": null,
+          "map_name": "3m",
+          "move_amount": 2,
+          "obs_all_health": true,
+          "obs_instead_of_state": false,
+          "obs_last_action": false,
+          "obs_own_health": true,
+          "obs_pathing_grid": false,
+          "obs_terrain_height": false,
+          "obs_timestep_number": false,
+          "reward_death_value": 10,
+          "reward_defeat": 0,
+          "reward_negative_scale": 0.5,
+          "reward_only_positive": true,
+          "reward_scale": true,
+          "reward_scale_rate": 20,
+          "reward_sparse": false,
+          "reward_win": 200,
+          "replay_dir": "",
+          "replay_prefix": "",
+          "state_last_action": true,
+          "state_timestep_number": false,
+          "step_mul": 8,
+          "seed": null,
+          "heuristic_ai": false,
+          "heuristic_rest": false,
+          "debug": false
+        },
+        "max_steps": 20050000,
+        "max_episodes": 10000000,
+        "env_type": "discrete"
+      }
+    },
+    "yi_closed": {
+      "config/default.yaml": {
+        "log_root_path": "logdir",
+        "save_log": true,
+        "use_tensorboard": true,
+        "log_interval_step": 2000,
+        "log_interval_episode": 16,
+        "gamma": 0.99,
+        "lr": 0.0005,
+        "optim_alpha": 0.99,
+        "optim_eps": 1e-05,
+        "grad_norm_clip": 10,
+        "agent_type": "rnn",
+        "hidden_dim": 64,
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "save_log_probs": false,
+        "use_individual_rewards": false,
+        "evaluate": false,
+        "evaluate_episodes": 32,
+        "evaluate_interval": 10000,
+        "evaluate_batch_size": 2,
+        "num_env_runner": 1,
+        "asynchronous_env": true,
+        "shared_buffer_size": 8,
+        "base_port": 16400,
+        "num_inference_worker": 1,
+        "infer_batch_size": 1,
+        "infer_device": "cuda"
+      },
+      "config/alg_config/ppo.yaml": {
+        "train_buffer_size": 8,
+        "train_batch_size": 8,
+        "update_rate": 8,
+        "lr": 0.0005,
+        "critic_coef": 0.5,
+        "entropy": 0.01,
+        "gae_lambda": 0.95,
+        "mini_epochs": 8,
+        "eps_clip": 0.2,
+        "save_log_probs": true,
+        "dual_clip": 0,
+        "use_vtrace": false,
+        "agenet_type": "rnn",
+        "critic_type": "rnn",
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "critic_inputs": [
+          "central_obs"
+        ],
+        "use_layer_norm": true,
+        "use_orthogonal": true,
+        "use_value_norm": true,
+        "gain": 0.01
+      },
+      "config/alg_config/qmix.yaml": {
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 100000,
+        "train_buffer_size": 5000,
+        "train_batch_size": 8,
+        "update_rate": 1,
+        "target_update_interval": 200,
+        "agenet_type": "rnn",
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "mixer": "q_mixer",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "lr": 0.001,
+        "td_lambda": 0.6,
+        "q_lambda": false,
+        "use_orthogonal": true,
+        "use_layer_norm": false,
+        "gain": 0.01
+      },
+      "config/env_config/cityflow.yaml": {
+        "env": "cityflow",
+        "env_args": {
+          "interval": 1.0,
+          "yellow_time": 5,
+          "thread_num": 10,
+          "lane_change": true,
+          "save_replay": false,
+          "eight_phase": true,
+          "list_state_feature": [
+            "cur_phase",
+            "lane_queue_vehicle_in"
+          ],
+          "dic_reward_info": {
+            "queue_length": -0.25
+          }
+        },
+        "env_type": "discrete",
+        "max_steps": 600000
+      },
+      "config/env_config/powergrid.yaml": {
+        "env": "powergrid",
+        "env_args": {
+          "climate_zone": "Climate_Zone_1"
+        },
+        "env_type": "continuous",
+        "max_steps": 1000000
+      },
+      "config/env_config/replenishment.yaml": {
+        "env": "replenishment",
+        "env_args": {
+          "key": "replenishment_efficient_env-v0",
+          "map_name": "sku1000.standard",
+          "n_agents": 1000,
+          "task_type": "sku1000.single_store.standard",
+          "mode": "train",
+          "time_limit": 21,
+          "reward": "reward2"
+        },
+        "max_steps": 2000000,
+        "env_type": "discrete"
+      },
+      "config/env_config/smac.yaml": {
+        "env": "smac",
+        "env_args": {
+          "continuing_episode": false,
+          "difficulty": "7",
+          "game_version": null,
+          "map_name": "3m",
+          "move_amount": 2,
+          "obs_all_health": true,
+          "obs_instead_of_state": false,
+          "obs_last_action": false,
+          "obs_own_health": true,
+          "obs_pathing_grid": false,
+          "obs_terrain_height": false,
+          "obs_timestep_number": false,
+          "reward_death_value": 10,
+          "reward_defeat": 0,
+          "reward_negative_scale": 0.5,
+          "reward_only_positive": true,
+          "reward_scale": true,
+          "reward_scale_rate": 20,
+          "reward_sparse": false,
+          "reward_win": 200,
+          "replay_dir": "",
+          "replay_prefix": "",
+          "state_last_action": true,
+          "state_timestep_number": false,
+          "step_mul": 8,
+          "seed": null,
+          "heuristic_ai": false,
+          "heuristic_rest": false,
+          "debug": false
+        },
+        "max_steps": 20050000,
+        "max_episodes": 10000000,
+        "env_type": "discrete"
+      }
+    },
+    "yi_zmq": {
+      "config/default.yaml": {
+        "log_root_path": "logdir",
+        "save_log": true,
+        "use_tensorboard": true,
+        "log_interval_step": 2000,
+        "log_interval_episode": 16,
+        "gamma": 0.99,
+        "lr": 0.0005,
+        "optim_alpha": 0.99,
+        "optim_eps": 1e-05,
+        "grad_norm_clip": 10,
+        "agent_type": "rnn",
+        "hidden_dim": 64,
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "save_log_probs": false,
+        "use_individual_rewards": false,
+        "evaluate": false,
+        "evaluate_episodes": 32,
+        "evaluate_interval": 10000,
+        "evaluate_batch_size": 2,
+        "num_env_runner": 1,
+        "asynchronous_env": true,
+        "shared_buffer_size": 8,
+        "base_port": 16400,
+        "num_inference_worker": 1,
+        "infer_batch_size": 1,
+        "infer_device": "cuda"
+      },
+      "config/alg_config/ppo.yaml": {
+        "train_buffer_size": 32,
+        "train_batch_size": 32,
+        "update_rate": 8,
+        "lr": 0.0005,
+        "critic_coef": 0.5,
+        "entropy": 0.01,
+        "gae_lambda": 0.95,
+        "mini_epochs": 4,
+        "eps_clip": 0.2,
+        "save_log_probs": true,
+        "dual_clip": 0,
+        "use_vtrace": false,
+        "agenet_type": "rnn",
+        "critic_type": "rnn",
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "critic_inputs": [
+          "central_obs"
+        ],
+        "use_layer_norm": true,
+        "use_orthogonal": true,
+        "use_value_norm": true,
+        "gain": 0.01
+      },
+      "config/alg_config/qmix.yaml": {
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 100000,
+        "train_buffer_size": 2000,
+        "train_batch_size": 64,
+        "update_rate": 8,
+        "target_update_interval": 100,
+        "agenet_type": "rnn",
+        "agent_inputs": [
+          "obs",
+          "agent_id",
+          "last_action"
+        ],
+        "mixer": "vdn_mixer",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "lr": 0.001,
+        "td_lambda": 0.6,
+        "q_lambda": false,
+        "use_orthogonal": true,
+        "use_layer_norm": false,
+        "gain": 0.01
+      },
+      "config/env_config/cityflow.yaml": {
+        "env": "cityflow",
+        "env_args": {
+          "interval": 1.0,
+          "yellow_time": 5,
+          "thread_num": 1,
+          "lane_change": true,
+          "save_replay": false,
+          "eight_phase": true,
+          "list_state_feature": [
+            "cur_phase",
+            "lane_queue_vehicle_in"
+          ],
+          "dic_reward_info": {
+            "queue_length": -0.25
+          }
+        },
+        "env_type": "discrete",
+        "max_steps": 10000000
+      },
+      "config/env_config/powergrid.yaml": {
+        "env": "powergrid",
+        "env_args": {
+          "climate_zone": "Climate_Zone_1"
+        },
+        "env_type": "continuous",
+        "max_steps": 1000000
+      },
+      "config/env_config/replenishment.yaml": {
+        "env": "replenishment",
+        "env_args": {
+          "key": "replenishment_efficient_env-v0",
+          "map_name": "sku1000.standard",
+          "n_agents": 1000,
+          "task_type": "sku1000.single_store.standard",
+          "mode": "train",
+          "time_limit": 21,
+          "reward": "reward2"
+        },
+        "max_steps": 2000000,
+        "env_type": "discrete"
+      },
+      "config/env_config/smac.yaml": {
+        "env": "smac",
+        "env_args": {
+          "continuing_episode": false,
+          "difficulty": "7",
+          "game_version": null,
+          "map_name": "3m",
+          "move_amount": 2,
+          "obs_all_health": true,
+          "obs_instead_of_state": false,
+          "obs_last_action": false,
+          "obs_own_health": true,
+          "obs_pathing_grid": false,
+          "obs_terrain_height": false,
+          "obs_timestep_number": false,
+          "reward_death_value": 10,
+          "reward_defeat": 0,
+          "reward_negative_scale": 0.5,
+          "reward_only_positive": true,
+          "reward_scale": true,
+          "reward_scale_rate": 20,
+          "reward_sparse": false,
+          "reward_win": 200,
+          "replay_dir": "",
+          "replay_prefix": "",
+          "state_last_action": true,
+          "state_timestep_number": false,
+          "step_mul": 8,
+          "seed": null,
+          "heuristic_ai": false,
+          "heuristic_rest": false,
+          "debug": false
+        },
+        "max_steps": 20050000,
+        "max_episodes": 10000000,
+        "env_type": "discrete"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+sadma/qmix PASS
+sadma/ppo PASS
+sadma/vdn PASS
+sadma_yi/qmix PASS
+sadma_yi/ppo PASS
+sadma_yi_closed/qmix PASS
+sadma_yi_closed/ppo PASS
+pymarl/qmix REGRESSION_PASS
+wang/rode_hmf REGRESSION_PASS
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+wang_hmf/mfq REGRESSION_PASS
+kou/bc REAL_DATA_REGRESSION_PASS
+kou/cpl REAL_DATA_REGRESSION_PASS
+Traceback (most recent call last):
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\tools\validate_stage5_installed.py", line 95, in <module>
+    if __name__=="__main__": main()
+                             ^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\tools\validate_stage5_installed.py", line 79, in main
+    result=train("sadma/ppo",env,output_dir=runs/("real-"+env),overrides=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\__init__.py", line 7, in train
+    return implementation(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\api.py", line 138, in train
+    return train_sadma(algorithm,env,env_args,device,seed,output_dir,config,overrides,resume)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\trainers\sadma.py", line 60, in train_sadma
+    runner=EpisodeRunner(SimpleNamespace(**cfg),logger)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\runners\episode_runner.py", line 13, in __init__
+    self.env = make_env(args.env, **args.env_args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\envs\__init__.py", line 33, in make_env
+    return factory(**kwargs)
+           ^^^^^^^^^^^^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\envs\__init__.py", line 17, in _replenishment
+    return ReplenishmentAdapter(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ReplenishmentAdapter.__init__() got an unexpected keyword argument 'key'

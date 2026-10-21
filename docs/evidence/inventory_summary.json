@@ -1,0 +1,50 @@
+{
+  "matrix_rows": 340,
+  "classifications": {
+    "ALGORITHM_COMPONENT": 96,
+    "ENVIRONMENT_ADAPTER": 37,
+    "ALGORITHM_IMPLEMENTATION": 43,
+    "TRAINING_EXECUTION": 61,
+    "DUPLICATE_IMPLEMENTATION": 3,
+    "CONFIG_VARIANT": 52,
+    "UNWIRED_EXPERIMENT": 15,
+    "SUPPORTING_LIBRARY": 8,
+    "DATA_PREPARATION": 2,
+    "EXTERNAL_SERVICE_CLIENT": 1,
+    "DATASET": 18,
+    "EXTERNAL_SERVICE": 4
+  },
+  "planned_stages": {
+    "2": 20,
+    "3": 49,
+    "5": 118,
+    "6": 37,
+    "4": 112,
+    "8": 4
+  },
+  "unregistered_config_learners": [
+    {
+      "project": "kou_icq",
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/hacpl_smac.yaml",
+      "learner": "hacpl_learner",
+      "line": 32,
+      "issue": "Configured learner is not registered"
+    },
+    {
+      "project": "kou_icq",
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/maicpl_smac.yaml",
+      "learner": "maicpl_learner",
+      "line": 32,
+      "issue": "Configured learner is not registered"
+    },
+    {
+      "project": "kou_icq",
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/maidpo_smac.yaml",
+      "learner": "maidpo_learner",
+      "line": 45,
+      "issue": "Configured learner is not registered"
+    }
+  ],
+  "local_import_findings": 43,
+  "scope": "Rows include configs, components and provenance duplicates; NOT independent algorithm count"
+}

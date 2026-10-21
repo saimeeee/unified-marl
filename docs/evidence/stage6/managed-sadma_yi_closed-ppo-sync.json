@@ -1,0 +1,127 @@
+{
+  "result": "PASS",
+  "train": {
+    "algorithm": "sadma_yi_closed/ppo",
+    "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an6",
+    "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an6\\policy.pt",
+    "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an6\\training.pt",
+    "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an6\\metrics.jsonl",
+    "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an6\\config.json",
+    "env_steps": 16,
+    "episodes": 4,
+    "updates": 2,
+    "parameter_delta_l2": 0.06325295723093738,
+    "metrics": {
+      "advantage_mean": 2.2351741790771484e-07,
+      "actor_loss": -0.00040018558502197266,
+      "entropy_loss": 0.8956939578056335,
+      "grad_norm": 1.584936261177063,
+      "critic_loss": 0.4734259247779846,
+      "target_mean": 0.7336715459823608,
+      "loss": 0.2263127714395523,
+      "policy_version": 4
+    }
+  },
+  "report": {
+    "mode": "sync",
+    "job_id": "6d91987bc8ec4bf5a4e4b77931485148",
+    "cross_machine_verified": false,
+    "platform": "Windows spawn tested; other platforms NOT VALIDATED",
+    "status": "PASS",
+    "error": null,
+    "trainer_endpoint": "tcp://127.0.0.1:62430",
+    "inference_endpoints": [
+      "tcp://127.0.0.1:62439"
+    ],
+    "counters": {
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "last_update_episode": 4,
+      "episodes_accepted": 4,
+      "episodes_dropped_stale": 0,
+      "completed_steps": 16,
+      "inference_calls": 20,
+      "snapshot_syncs": 3,
+      "mixed_version_episodes": 0
+    },
+    "sync_acknowledgements": [
+      {
+        "worker": 0,
+        "version": 0,
+        "digest": "0578318100dcd2a040e271e80b3469425faae2c3ab3452727f433d30e82f3a07"
+      },
+      {
+        "worker": 0,
+        "version": 2,
+        "digest": "0f798a982987babb29bcdc58d5aea03eabc3d75e91c9aef46c7971707d7750ee"
+      },
+      {
+        "worker": 0,
+        "version": 4,
+        "digest": "9957820e4d141f70f4b451bfb57a9ffd3c1e00ce9d86aa83c8446c6e05be2db0"
+      }
+    ],
+    "lifecycle": {
+      "processes": [
+        {
+          "role": "infer-0",
+          "pid": 40132,
+          "exitcode": 0,
+          "alive": false
+        },
+        {
+          "role": "sampler-0",
+          "pid": 53776,
+          "exitcode": 0,
+          "alive": false
+        }
+      ],
+      "forced": [],
+      "events": [
+        {
+          "role": "sampler-0",
+          "kind": "PROCESS_STARTED",
+          "worker_id": 0
+        },
+        {
+          "role": "sampler-0",
+          "kind": "STOPPED",
+          "worker_id": 0,
+          "env_closed": true,
+          "error": null
+        }
+      ]
+    },
+    "evaluation": {
+      "records": [],
+      "skipped_busy_updates": [],
+      "forced": false
+    },
+    "partial_confirmed_steps": 0,
+    "samplers_closed": 1,
+    "inference_stop_reports": [
+      {
+        "kind": "STOPPED",
+        "calls": 20,
+        "syncs": [
+          {
+            "version": 0,
+            "digest": "0578318100dcd2a040e271e80b3469425faae2c3ab3452727f433d30e82f3a07"
+          },
+          {
+            "version": 2,
+            "digest": "0f798a982987babb29bcdc58d5aea03eabc3d75e91c9aef46c7971707d7750ee"
+          },
+          {
+            "version": 4,
+            "digest": "9957820e4d141f70f4b451bfb57a9ffd3c1e00ce9d86aa83c8446c6e05be2db0"
+          }
+        ],
+        "sync_count": 3,
+        "request_id": 24
+      }
+    ]
+  },
+  "ports_rebound": true
+}

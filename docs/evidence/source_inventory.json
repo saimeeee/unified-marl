@@ -1,0 +1,198 @@
+[
+  {
+    "id": "pymarl",
+    "root": "pymarl-master/pymarl-master/src",
+    "exists": true,
+    "files": 44,
+    "extensions": {
+      "": 1,
+      ".py": 32,
+      ".yaml": 11
+    }
+  },
+  {
+    "id": "wang_rghmf",
+    "root": "marl平台代码/王思哲/code/large_scale/RGHMF",
+    "exists": true,
+    "files": 65,
+    "extensions": {
+      ".py": 51,
+      ".yaml": 14
+    }
+  },
+  {
+    "id": "wang_hmf",
+    "root": "marl平台代码/王思哲/code/large_scale/hmf_replenishment",
+    "exists": true,
+    "files": 55,
+    "extensions": {
+      ".py": 53,
+      ".sh": 2
+    }
+  },
+  {
+    "id": "wang_sadma",
+    "root": "marl平台代码/王思哲/code/sadma",
+    "exists": true,
+    "files": 47,
+    "extensions": {
+      ".md": 1,
+      ".py": 38,
+      ".yaml": 6,
+      ".sh": 2
+    }
+  },
+  {
+    "id": "yi_sadma_closed",
+    "root": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本",
+    "exists": true,
+    "files": 51,
+    "extensions": {
+      ".md": 1,
+      ".py": 41,
+      ".yaml": 7,
+      ".sh": 2
+    }
+  },
+  {
+    "id": "yi_sadma_open",
+    "root": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本",
+    "exists": true,
+    "files": 51,
+    "extensions": {
+      "": 1,
+      ".md": 1,
+      ".py": 41,
+      ".txt": 1,
+      ".yaml": 7
+    }
+  },
+  {
+    "id": "yi_sadma_zmq",
+    "root": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本",
+    "exists": true,
+    "files": 51,
+    "extensions": {
+      "": 1,
+      ".md": 1,
+      ".py": 41,
+      ".txt": 1,
+      ".yaml": 7
+    }
+  },
+  {
+    "id": "kou_old",
+    "root": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src",
+    "exists": true,
+    "files": 87,
+    "extensions": {
+      ".py": 69,
+      ".sh": 2,
+      ".yaml": 16
+    }
+  },
+  {
+    "id": "kou_icq",
+    "root": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src",
+    "exists": true,
+    "files": 938,
+    "extensions": {
+      ".py": 227,
+      ".log": 3,
+      ".md": 2,
+      ".sh": 12,
+      ".txt": 89,
+      ".json": 55,
+      ".urdf": 32,
+      ".html": 8,
+      ".jpg": 17,
+      ".png": 68,
+      ".ply": 12,
+      ".pts": 4,
+      ".mtl": 117,
+      ".obj": 137,
+      ".xml": 31,
+      ".stl": 31,
+      ".tet": 1,
+      ".dae": 15,
+      ".yaml": 75,
+      ".template": 2
+    }
+  },
+  {
+    "id": "wang_operator",
+    "root": "marl平台代码/王思哲/code/operator",
+    "exists": true,
+    "files": 42,
+    "extensions": {
+      "": 3,
+      ".md": 1,
+      ".mod": 1,
+      ".sum": 1,
+      ".go": 10,
+      ".yaml": 25,
+      ".txt": 1
+    }
+  },
+  {
+    "id": "yi_operator",
+    "root": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本",
+    "exists": true,
+    "files": 83,
+    "extensions": {
+      "": 3,
+      ".md": 17,
+      ".mod": 1,
+      ".sum": 1,
+      ".go": 26,
+      ".yaml": 28,
+      ".html": 1,
+      ".js": 4,
+      ".css": 1,
+      ".txt": 1
+    }
+  },
+  {
+    "id": "yi_backend",
+    "root": "marl平台代码/易才润/在线代码编辑调试微服务系统/tc-web-bf源代码闭源版/taichu-web-backend",
+    "exists": true,
+    "files": 46,
+    "extensions": {
+      "": 1,
+      ".md": 12,
+      ".py": 22,
+      ".ini": 1,
+      ".yml": 1,
+      ".txt": 1,
+      ".html": 1,
+      ".js": 4,
+      ".css": 1,
+      ".yaml": 2
+    }
+  },
+  {
+    "id": "yi_frontend",
+    "root": "marl平台代码/易才润/在线代码编辑调试微服务系统/tc-web-bf源代码闭源版/vue-element-plus-admin",
+    "exists": true,
+    "files": 264,
+    "extensions": {
+      "": 2,
+      ".md": 3,
+      ".js": 7,
+      ".html": 1,
+      ".conf": 1,
+      ".json": 2,
+      ".sh": 1,
+      ".ts": 132,
+      ".hbs": 3,
+      ".ico": 1,
+      ".png": 2,
+      ".vue": 88,
+      ".jpg": 1,
+      ".svg": 10,
+      ".tsx": 6,
+      ".less": 3,
+      ".css": 1
+    }
+  }
+]

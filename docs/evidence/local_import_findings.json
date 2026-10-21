@@ -1,0 +1,346 @@
+[
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/train.py",
+    "line": 13,
+    "module": "utils.config",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/train.py",
+    "line": 14,
+    "module": "utils.parse_task",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/train.py",
+    "line": 15,
+    "module": "utils.process_sarl",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/train.py",
+    "line": 16,
+    "module": "utils.process_marl",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/train.py",
+    "line": 17,
+    "module": "utils.process_mtrl",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/train.py",
+    "line": 18,
+    "module": "utils.process_metarl",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/franka_cabinet.py",
+    "line": 17,
+    "module": "utils.contact_buffer",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/humanoid.py",
+    "line": 36,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand.py",
+    "line": 38,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_block_stack.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_bottle_cap.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_abreast.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_overarm.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_underarm.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_door_close_inward.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_grasp_and_place.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_kettle.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_cup.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_overarm.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta_task_info.py",
+    "line": 7,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_over_overarm.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_pen.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_push_block.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_re_orientation.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_scissors.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_swing_cup.py",
+    "line": 16,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_switch.py",
+    "line": 15,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_test.py",
+    "line": 38,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_two_catch_abreast.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_two_catch_underarm.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_ml1.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_ml1_task_info.py",
+    "line": 7,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt1.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt1_task_info.py",
+    "line": 7,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt20.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt20_task_info.py",
+    "line": 7,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt5.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt5_door.py",
+    "line": 14,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt5_task_info.py",
+    "line": 7,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  },
+  {
+    "project": "kou_icq",
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_task_info.py",
+    "line": 7,
+    "module": "utils.torch_jit_utils",
+    "level": 0,
+    "interpretation": "Static resolution only; dynamic sys.path or external namespaces need review."
+  }
+]

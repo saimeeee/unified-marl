@@ -1,0 +1,484 @@
+{
+  "rghmf_vs_pymarl": {
+    "byte_identical": [
+      "__init__.py",
+      "components/__init__.py",
+      "components/episode_buffer.py",
+      "components/transforms.py",
+      "controllers/basic_controller.py",
+      "envs/multiagentenv.py",
+      "learners/coma_learner.py",
+      "learners/q_learner.py",
+      "learners/qtran_learner.py",
+      "modules/__init__.py",
+      "modules/agents/rnn_agent.py",
+      "modules/critics/__init__.py",
+      "modules/critics/coma.py",
+      "modules/mixers/__init__.py",
+      "modules/mixers/qmix.py",
+      "modules/mixers/qtran.py",
+      "modules/mixers/vdn.py",
+      "runners/__init__.py",
+      "utils/dict2namedtuple.py",
+      "utils/logging.py",
+      "utils/rl_utils.py",
+      "utils/timehelper.py"
+    ],
+    "different": [
+      "components/action_selectors.py",
+      "components/epsilon_schedules.py",
+      "controllers/__init__.py",
+      "envs/__init__.py",
+      "learners/__init__.py",
+      "main.py",
+      "modules/agents/__init__.py",
+      "run.py",
+      "runners/episode_runner.py",
+      "runners/parallel_runner.py"
+    ]
+  },
+  "hmf_algorithm_files": [
+    {
+      "file": "dqn.py",
+      "sha256": "773f99b531634329c4d6b0459f66cb372e05aeaabf529a1e69510fc3881b5577",
+      "classes": [
+        {
+          "name": "DQN",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical.py",
+      "sha256": "80175436ea52ad26153f9a642063b8a482a8957b88ff76f367337124896a674b",
+      "classes": [
+        {
+          "name": "Hierarchical",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_qmix.py",
+      "sha256": "e078de83de6530553ef8a09c11e957ebc100661c84d478db68870312180f486a",
+      "classes": [
+        {
+          "name": "Hierarchical_Qmix",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_vdac.py",
+      "sha256": "9f158d6028fcb6905f45b01652c4b851a1749b8012e1add81acbed2b8ae2ba41",
+      "classes": [
+        {
+          "name": "Hierarchical_VDN",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "_get_mf_info_use_attention",
+            "update_one_group",
+            "update",
+            "update_high_level",
+            "update_high_level02",
+            "update_high_level03",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_vdn copy.py",
+      "sha256": "2f3c66f84a1ea5ddb7d164af99a3fdbe0f07f969814d27bc6acb6eab843c6dcc",
+      "classes": [
+        {
+          "name": "Hierarchical_VDN",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update_dynamic_group",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_vdn.py",
+      "sha256": "ff5f9cd5022f845ae5596a611f53263f62e863b20330ec7429f65f48172ec7de",
+      "classes": [
+        {
+          "name": "Hierarchical_VDN",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update_dynamic_group",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_vdn_02_formulate_meanQ.py",
+      "sha256": "258e56c16ce2f0c4dac9e3d295b8b16b156c0564a45ede49a269c8f07e1d2d7f",
+      "classes": [
+        {
+          "name": "Hierarchical_VDN_02_Formulate_MeanQ",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_vdn_02_formulate_meanQ_IPC.py",
+      "sha256": "403bef6cc28c4f7a6dbaf51cc83c8e8950c8290d8f20a0e81a56bc5e7cb40778",
+      "classes": [
+        {
+          "name": "Hierarchical_VDN_02_Formulate_MeanQ_IPC",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_vdn_IPC.py",
+      "sha256": "b8d1c97a1fe5bb5e03825fe01246ad3ee3d818d6ca080a8b5afda8e6a0a13bf0",
+      "classes": [
+        {
+          "name": "Hierarchical_VDN",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update_dynamic_group",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_vdn_k_means.py",
+      "sha256": "e6f2b67437abfbc28b42922ca7b3ff7ae337da8ff048fdadfc811155fb4f9c71",
+      "classes": [
+        {
+          "name": "Hierarchical_VDN_K_Means",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update_dynamic_group",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_vdn_roma.py",
+      "sha256": "6292aed5929b75ac4ed404c4e0cb9d4014162a663028f673f07a7406aac33450",
+      "classes": [
+        {
+          "name": "Hierarchical_VDN_ROMA",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update_dynamic_group",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hierarchical_vdn_without_high_level.py",
+      "sha256": "b2e6571624e1b5c996e118d94f3376e04df0dd258f1a9e3a99817d5c48a6d74e",
+      "classes": [
+        {
+          "name": "Hierarchical_VDN_Without_High_Level",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update_dynamic_group",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "maddpg.py",
+      "sha256": "9cc52eaf08406fb9d92832ec9d035af8e8e3b8a31048dda168a176bf8fd4ba31",
+      "classes": [
+        {
+          "name": "MADDPG",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "mfac.py",
+      "sha256": "81c0d67aa84b1b168aa566deb02e2e4f346b67b0df410ea82acb9740f09760b4",
+      "classes": [
+        {
+          "name": "MFAC",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "compute_returns",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "mfq.py",
+      "sha256": "fd46c9885d252d40884998d3fbcca427264281c0a7a62ac348eaa35aca36f8a8",
+      "classes": [
+        {
+          "name": "MFQ",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "mfvfd.py",
+      "sha256": "10b7330757536ca80d4c509c899d4d55bbcece309ac5d59767b7870e5238da68",
+      "classes": [
+        {
+          "name": "MFVFD",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "_get_mf_info_use_attention",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "qmix.py",
+      "sha256": "cf864e6aba9300eccd3754bd038cb45bf43680b4b9b71162e9e50306493f3ff8",
+      "classes": [
+        {
+          "name": "QMIX",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "vdn.py",
+      "sha256": "671b1e0fc7fbde8d7f2dde5227407b07005de496b05103df0b02d38e408522f8",
+      "classes": [
+        {
+          "name": "VDN",
+          "methods": [
+            "__init__",
+            "scale_noise",
+            "reset_noise",
+            "step",
+            "update",
+            "update_all_targets",
+            "prep_training",
+            "prep_rollouts",
+            "save",
+            "init_from_env",
+            "init_from_save"
+          ]
+        }
+      ]
+    }
+  ],
+  "copy_vs_vdn": {
+    "byte_identical": false,
+    "equal_methods": [
+      "__init__",
+      "init_from_save",
+      "prep_rollouts",
+      "prep_training",
+      "reset_noise",
+      "save",
+      "scale_noise",
+      "step",
+      "update",
+      "update_all_targets"
+    ],
+    "different_methods": [
+      "init_from_env",
+      "update_dynamic_group"
+    ],
+    "only_main": [],
+    "only_copy": []
+  },
+  "source_basic_selectors": {
+    "epsilon_greedy": {
+      "status": "SOURCE_BLOCKED",
+      "type": "TypeError",
+      "message": "DecayThenFlatSchedule.__init__() missing 2 required positional arguments: 'time_length_exp' and 'role_action_spaces_update_start'"
+    },
+    "multinomial": {
+      "status": "SOURCE_BLOCKED",
+      "type": "TypeError",
+      "message": "DecayThenFlatSchedule.__init__() missing 2 required positional arguments: 'time_length_exp' and 'role_action_spaces_update_start'"
+    }
+  }
+}

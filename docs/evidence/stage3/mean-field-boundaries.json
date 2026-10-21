@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "valid_transitions": 8,
+  "bootstrap_slots_excluded": true,
+  "mean_field": "arithmetic mean across agents"
+}

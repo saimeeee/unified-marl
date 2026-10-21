@@ -1,0 +1,36 @@
+{
+  "stage": 6,
+  "version": "0.6.0",
+  "status": "WINDOWS_LOOPBACK_VERIFIED_REMOTE_AND_ENVIRONMENT_UNVERIFIED",
+  "tests": 196,
+  "failures": 0,
+  "installed_training_cases": 9,
+  "installed_policy_profiles_sync": 7,
+  "installed_async_cases": 2,
+  "cli_managed_cases": 2,
+  "independent_roles_loopback": true,
+  "failure_checks": [
+    "sampler_exception",
+    "sampler_stall",
+    "connection_timeout",
+    "inference_startup_bind_failure",
+    "context_permission_failure"
+  ],
+  "source_hash_records_unchanged": 1228,
+  "extra_communication_source_hashes_unchanged": 36,
+  "matrix_rows": 379,
+  "local_regressions": 6,
+  "cross_machine_verified": false,
+  "real_environment_verified": false,
+  "gpu_verified": false,
+  "policy_effectiveness": "NOT_VALIDATED",
+  "stopped_after_stage": 6,
+  "source_stage6_statuses": {
+    "ZMQ_LOOPBACK_ROLES_VERIFIED": 20,
+    "SEPARATE_ROLE_LOOPBACK_ONLY": 8,
+    "REPLACED_MANAGED_ZMQ_SAMPLER": 4,
+    "NOT_MIGRATED_CONTINUOUS_EVALUATE_WORKER": 4,
+    "PARTIAL_ZMQ_ROLES_LOOPBACK_VERIFIED": 1
+  },
+  "wheel": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\dist\\unified_marl-0.6.0-py3-none-any.whl"
+}

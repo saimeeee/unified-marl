@@ -1,0 +1,32 @@
+sadma/qmix sync PASS
+sadma/ppo sync PASS
+sadma/vdn sync PASS
+sadma_yi/qmix sync PASS
+sadma_yi/ppo sync PASS
+sadma_yi_closed/qmix sync PASS
+sadma_yi_closed/ppo sync PASS
+sadma/qmix async PASS
+sadma/ppo async PASS
+Process unified-marl-sampler-0:
+Traceback (most recent call last):
+  File "C:\Users\71919\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+  File "C:\Users\71919\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\execution\sampler.py", line 77, in sampler_worker
+    batch=runner.run()
+          ^^^^^^^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\runners\episode_runner.py", line 59, in run
+    chosen = self.mac.select_actions(batch, t_ep=t, t_env=self.t_env, bs=need_action, test_mode=test_mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\AI\Codex\多智能体代码整合\unified-marl\.venv-check\Lib\site-packages\unified_marl\execution\sampler.py", line 31, in select_actions
+    else: raise RuntimeError("Injected sampler failure for lifecycle validation")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Injected sampler failure for lifecycle validation
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.

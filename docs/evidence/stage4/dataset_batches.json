@@ -1,0 +1,530 @@
+[
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/3m/3m.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 3,
+      "n_actions": 9,
+      "obs_shape": 30,
+      "state_shape": 48,
+      "episode_limit": 60
+    },
+    "batch_shape": [
+      2,
+      12,
+      3,
+      30
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/8m/8m.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 8,
+      "n_actions": 14,
+      "obs_shape": 80,
+      "state_shape": 168,
+      "episode_limit": 120
+    },
+    "batch_shape": [
+      2,
+      12,
+      8,
+      80
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/10m_vs_11m/good_400episode_final/200_150labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 10,
+      "n_actions": 17,
+      "obs_shape": 105,
+      "state_shape": 243,
+      "episode_limit": 150
+    },
+    "batch_shape": [
+      2,
+      12,
+      10,
+      105
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/1c3s5z/good_400episode_final/200_180labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 9,
+      "n_actions": 15,
+      "obs_shape": 162,
+      "state_shape": 270,
+      "episode_limit": 180
+    },
+    "batch_shape": [
+      2,
+      12,
+      9,
+      162
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/3m/good_400episode_final/200_60labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 3,
+      "n_actions": 9,
+      "obs_shape": 30,
+      "state_shape": 48,
+      "episode_limit": 60
+    },
+    "batch_shape": [
+      2,
+      12,
+      3,
+      30
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/3s5z_vs_3s6z/good_400episode_final/200_170labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 8,
+      "n_actions": 15,
+      "obs_shape": 136,
+      "state_shape": 230,
+      "episode_limit": 170
+    },
+    "batch_shape": [
+      2,
+      12,
+      8,
+      136
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/3s_vs_5z/good_400episode_final/200_250labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 3,
+      "n_actions": 11,
+      "obs_shape": 48,
+      "state_shape": 68,
+      "episode_limit": 250
+    },
+    "batch_shape": [
+      2,
+      12,
+      3,
+      48
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/6h_vs_8z/good_400episode_final/200_150labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 6,
+      "n_actions": 14,
+      "obs_shape": 78,
+      "state_shape": 140,
+      "episode_limit": 150
+    },
+    "batch_shape": [
+      2,
+      12,
+      6,
+      78
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/8m/good_400episode_final/200_120labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 8,
+      "n_actions": 14,
+      "obs_shape": 80,
+      "state_shape": 168,
+      "episode_limit": 120
+    },
+    "batch_shape": [
+      2,
+      12,
+      8,
+      80
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/8m_vs_9m/good_400episode_final/200_120labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 8,
+      "n_actions": 15,
+      "obs_shape": 85,
+      "state_shape": 179,
+      "episode_limit": 120
+    },
+    "batch_shape": [
+      2,
+      12,
+      8,
+      85
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        1.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/corridor/good_400episode_final/200_400labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 6,
+      "n_actions": 30,
+      "obs_shape": 156,
+      "state_shape": 282,
+      "episode_limit": 400
+    },
+    "batch_shape": [
+      2,
+      12,
+      6,
+      156
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  },
+  {
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/MMM2/good_400episode_final/200_180labeled.th",
+    "status": "SMALL_BATCH_READ_PASS",
+    "env_info": {
+      "n_agents": 10,
+      "n_actions": 18,
+      "obs_shape": 176,
+      "state_shape": 322,
+      "episode_limit": 180
+    },
+    "batch_shape": [
+      2,
+      12,
+      10,
+      176
+    ],
+    "pair_indices": [
+      [
+        0,
+        1
+      ],
+      [
+        200,
+        201
+      ]
+    ],
+    "label_key": "labels",
+    "labels": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "lengths0": [
+      12,
+      12
+    ],
+    "lengths1": [
+      12,
+      12
+    ]
+  }
+]

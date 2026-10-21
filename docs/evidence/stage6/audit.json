@@ -1,0 +1,381 @@
+{
+  "sources": [
+    {
+      "family": "wang",
+      "source": "marl平台代码/王思哲/code/sadma/worker/zmq_worker.py",
+      "sha256": "d7bc167481ba85b1d18cdcb8b8f75246f5572dcc2e762a30a3e3534c72e8aa90",
+      "definitions": [
+        "InferClient",
+        "InferServer"
+      ],
+      "lines": 164
+    },
+    {
+      "family": "wang",
+      "source": "marl平台代码/王思哲/code/sadma/worker/infer_worker.py",
+      "sha256": "3b2aaf410b27adfef26f398fc619ee680bd79ada53f9ce3207abe79e36f841c3",
+      "definitions": [
+        "InferWorker"
+      ],
+      "lines": 67
+    },
+    {
+      "family": "wang",
+      "source": "marl平台代码/王思哲/code/sadma/worker/train_worker.py",
+      "sha256": "bf14c7aa19123fe28b9587dc97b69ea1a1f7587c3a0e76fc69165cc7d49bf6e9",
+      "definitions": [
+        "TrainWorker"
+      ],
+      "lines": 43
+    },
+    {
+      "family": "wang",
+      "source": "marl平台代码/王思哲/code/sadma/worker/sample_worker.py",
+      "sha256": "c1f1f0c09fe386bde8ee822157394f1b844541680f4aa2ec59874f292dbe29f5",
+      "definitions": [
+        "LocalSampleWorker",
+        "RemoteSampleWorker"
+      ],
+      "lines": 74
+    },
+    {
+      "family": "wang",
+      "source": "marl平台代码/王思哲/code/sadma/worker/evaluate_worker.py",
+      "sha256": "af1df6e34cbd27952b140e7ca63bfb2a4961276cdebc2492ab4e2b0c44d12c2b",
+      "definitions": [
+        "EvaluateWorker"
+      ],
+      "lines": 53
+    },
+    {
+      "family": "wang",
+      "source": "marl平台代码/王思哲/code/sadma/worker/base_worker.py",
+      "sha256": "ede39c4cd49cff787151d1ddf9d8a7ff551d917ac0716ce27d425cfab1034c18",
+      "definitions": [
+        "ProcessWorker"
+      ],
+      "lines": 28
+    },
+    {
+      "family": "wang",
+      "source": "marl平台代码/王思哲/code/sadma/runner/async_runner/train_runner.py",
+      "sha256": "535675650b994805d850721e71c71cfc10412a056c28f38c6315feed07a473f6",
+      "definitions": [
+        "train_run"
+      ],
+      "lines": 71
+    },
+    {
+      "family": "wang",
+      "source": "marl平台代码/王思哲/code/sadma/runner/async_runner/sample_runner.py",
+      "sha256": "03c09b86912d59188720e8db686ba8ff398b9bbdef73959d0eb0f7f16de28348",
+      "definitions": [
+        "sample_run"
+      ],
+      "lines": 11
+    },
+    {
+      "family": "wang",
+      "source": "marl平台代码/王思哲/code/sadma/utils/queue.py",
+      "sha256": "7762071144ddc0d56f5d4ca2f73f27b75ebfd36629dccf0f3d13436f0ae4fc17",
+      "definitions": [
+        "QueueCenter"
+      ],
+      "lines": 52
+    },
+    {
+      "family": "yi_open",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/zmq_worker.py",
+      "sha256": "48b7640558c7d3c5faff14fc7988359c5b45edfc8c831a9f9b00f0482ecfffb6",
+      "definitions": [
+        "InferClient",
+        "InferServer"
+      ],
+      "lines": 164
+    },
+    {
+      "family": "yi_open",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/infer_worker.py",
+      "sha256": "600c6874248407c28b23403d77382e98a7d3a2f4a382ab5f08fa4f8e532d2218",
+      "definitions": [
+        "InferWorker"
+      ],
+      "lines": 67
+    },
+    {
+      "family": "yi_open",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/train_worker.py",
+      "sha256": "4cdda09b06b43abe9cf37fba075fcd45cd5f6bdb1ec8a76410f8f0343e2a45c2",
+      "definitions": [
+        "TrainWorker"
+      ],
+      "lines": 36
+    },
+    {
+      "family": "yi_open",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/sample_worker.py",
+      "sha256": "479fd83fb1d08b41b5971fcf306e872e075702420426f94e7e14d50f1963cd6e",
+      "definitions": [
+        "LocalSampleWorker",
+        "RemoteSampleWorker"
+      ],
+      "lines": 74
+    },
+    {
+      "family": "yi_open",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/evaluate_worker.py",
+      "sha256": "afda72edd5c80a17625b5b146f2db63eeafb9bf2f0a4f722761f6ae4003c41b5",
+      "definitions": [
+        "EvaluateWorker"
+      ],
+      "lines": 53
+    },
+    {
+      "family": "yi_open",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/base_worker.py",
+      "sha256": "c7fa1ab892d38380d9d21a772af5f781e053573e0f2d23135ca3bf63be9c7623",
+      "definitions": [
+        "ProcessWorker"
+      ],
+      "lines": 28
+    },
+    {
+      "family": "yi_open",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/runner/async_runner/train_runner.py",
+      "sha256": "3cd339f1e851a310751e0c55e1afe4b04febade41eb452cadb22e0febaec09fb",
+      "definitions": [
+        "train_run"
+      ],
+      "lines": 70
+    },
+    {
+      "family": "yi_open",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/runner/async_runner/sample_runner.py",
+      "sha256": "0fdecc0d60844dee1c98ac6afab601ce7c28c308f4b73f899064d7cae80037c1",
+      "definitions": [
+        "sample_run"
+      ],
+      "lines": 11
+    },
+    {
+      "family": "yi_open",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/utils/queue.py",
+      "sha256": "faaebf71630c19bedb8b763294ab05a27ecc033ced569bb4b99bbdaeddc50912",
+      "definitions": [
+        "QueueCenter"
+      ],
+      "lines": 52
+    },
+    {
+      "family": "yi_closed",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/zmq_worker.py",
+      "sha256": "48b7640558c7d3c5faff14fc7988359c5b45edfc8c831a9f9b00f0482ecfffb6",
+      "definitions": [
+        "InferClient",
+        "InferServer"
+      ],
+      "lines": 164
+    },
+    {
+      "family": "yi_closed",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/infer_worker.py",
+      "sha256": "600c6874248407c28b23403d77382e98a7d3a2f4a382ab5f08fa4f8e532d2218",
+      "definitions": [
+        "InferWorker"
+      ],
+      "lines": 67
+    },
+    {
+      "family": "yi_closed",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/train_worker.py",
+      "sha256": "4cdda09b06b43abe9cf37fba075fcd45cd5f6bdb1ec8a76410f8f0343e2a45c2",
+      "definitions": [
+        "TrainWorker"
+      ],
+      "lines": 36
+    },
+    {
+      "family": "yi_closed",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/sample_worker.py",
+      "sha256": "479fd83fb1d08b41b5971fcf306e872e075702420426f94e7e14d50f1963cd6e",
+      "definitions": [
+        "LocalSampleWorker",
+        "RemoteSampleWorker"
+      ],
+      "lines": 74
+    },
+    {
+      "family": "yi_closed",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/evaluate_worker.py",
+      "sha256": "afda72edd5c80a17625b5b146f2db63eeafb9bf2f0a4f722761f6ae4003c41b5",
+      "definitions": [
+        "EvaluateWorker"
+      ],
+      "lines": 53
+    },
+    {
+      "family": "yi_closed",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/base_worker.py",
+      "sha256": "c7fa1ab892d38380d9d21a772af5f781e053573e0f2d23135ca3bf63be9c7623",
+      "definitions": [
+        "ProcessWorker"
+      ],
+      "lines": 28
+    },
+    {
+      "family": "yi_closed",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/runner/async_runner/train_runner.py",
+      "sha256": "3cd339f1e851a310751e0c55e1afe4b04febade41eb452cadb22e0febaec09fb",
+      "definitions": [
+        "train_run"
+      ],
+      "lines": 70
+    },
+    {
+      "family": "yi_closed",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/runner/async_runner/sample_runner.py",
+      "sha256": "0fdecc0d60844dee1c98ac6afab601ce7c28c308f4b73f899064d7cae80037c1",
+      "definitions": [
+        "sample_run"
+      ],
+      "lines": 11
+    },
+    {
+      "family": "yi_closed",
+      "source": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/utils/queue.py",
+      "sha256": "faaebf71630c19bedb8b763294ab05a27ecc033ced569bb4b99bbdaeddc50912",
+      "definitions": [
+        "QueueCenter"
+      ],
+      "lines": 52
+    },
+    {
+      "family": "yi_zmq",
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/zmq_worker.py",
+      "sha256": "48b7640558c7d3c5faff14fc7988359c5b45edfc8c831a9f9b00f0482ecfffb6",
+      "definitions": [
+        "InferClient",
+        "InferServer"
+      ],
+      "lines": 164
+    },
+    {
+      "family": "yi_zmq",
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/infer_worker.py",
+      "sha256": "600c6874248407c28b23403d77382e98a7d3a2f4a382ab5f08fa4f8e532d2218",
+      "definitions": [
+        "InferWorker"
+      ],
+      "lines": 67
+    },
+    {
+      "family": "yi_zmq",
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/train_worker.py",
+      "sha256": "4cdda09b06b43abe9cf37fba075fcd45cd5f6bdb1ec8a76410f8f0343e2a45c2",
+      "definitions": [
+        "TrainWorker"
+      ],
+      "lines": 36
+    },
+    {
+      "family": "yi_zmq",
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/sample_worker.py",
+      "sha256": "479fd83fb1d08b41b5971fcf306e872e075702420426f94e7e14d50f1963cd6e",
+      "definitions": [
+        "LocalSampleWorker",
+        "RemoteSampleWorker"
+      ],
+      "lines": 74
+    },
+    {
+      "family": "yi_zmq",
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/evaluate_worker.py",
+      "sha256": "afda72edd5c80a17625b5b146f2db63eeafb9bf2f0a4f722761f6ae4003c41b5",
+      "definitions": [
+        "EvaluateWorker"
+      ],
+      "lines": 53
+    },
+    {
+      "family": "yi_zmq",
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/base_worker.py",
+      "sha256": "c7fa1ab892d38380d9d21a772af5f781e053573e0f2d23135ca3bf63be9c7623",
+      "definitions": [
+        "ProcessWorker"
+      ],
+      "lines": 28
+    },
+    {
+      "family": "yi_zmq",
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/runner/async_runner/train_runner.py",
+      "sha256": "3cd339f1e851a310751e0c55e1afe4b04febade41eb452cadb22e0febaec09fb",
+      "definitions": [
+        "train_run"
+      ],
+      "lines": 70
+    },
+    {
+      "family": "yi_zmq",
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/runner/async_runner/sample_runner.py",
+      "sha256": "0fdecc0d60844dee1c98ac6afab601ce7c28c308f4b73f899064d7cae80037c1",
+      "definitions": [
+        "sample_run"
+      ],
+      "lines": 11
+    },
+    {
+      "family": "yi_zmq",
+      "source": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/utils/queue.py",
+      "sha256": "faaebf71630c19bedb8b763294ab05a27ecc033ced569bb4b99bbdaeddc50912",
+      "definitions": [
+        "QueueCenter"
+      ],
+      "lines": 52
+    }
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pyzmq": "25.1.2",
+  "libzmq": "4.3.4",
+  "source_behavior": {
+    "roles": [
+      "train",
+      "sample",
+      "inference",
+      "communication",
+      "evaluate"
+    ],
+    "transport": "REQ/REP structured native NumPy records + JSON info",
+    "version_in_action_message": false,
+    "old_log_probability_in_remote_reply": false,
+    "parameter_sync": "inference copies shared MAC if agent_version increases; no snapshot acknowledgement",
+    "shared_slots": "bounded shared_idx and episode_idx queues, but blocking Queue.get/put have no deadlines",
+    "socket_ownership": "InferServer receives/sends the same REP sockets from different threads",
+    "stop": "flags plus force kill; no systematic socket/context close, join or sentinel unblocking",
+    "client_poll_ms": 500000
+  },
+  "integration_decisions": {
+    "reuse": "Stage5 algorithm classes, EpisodeBatch, source ReplayBuffer, source PPO/vtrace losses",
+    "replace": "wire ABI, thread/socket ownership, shared queues and lifecycle with versioned bounded ZMQ execution",
+    "modes": {
+      "Qmix/VDN": [
+        "local",
+        "zmq sync",
+        "zmq async"
+      ],
+      "PPO": [
+        "local fresh synchronous",
+        "zmq sync"
+      ],
+      "PPO use_vtrace=true": [
+        "local",
+        "zmq sync",
+        "zmq async replay"
+      ]
+    },
+    "message_compatibility": "new protocol=1; not compatible with original InferClient binary records",
+    "platform": "Windows spawn; no sh/pgrep/kill script or fork requirement",
+    "cross_machine": "NOT_VALIDATED: no remote host supplied",
+    "distributed_evaluation": "Not migrated as a continuous worker; saved policy evaluate() remains available"
+  }
+}

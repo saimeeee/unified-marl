@@ -1,0 +1,17 @@
+Obtaining file:///G:/AI/Codex/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E4%BB%A3%E7%A0%81%E6%95%B4%E5%90%88/unified-marl
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: unified-marl
+  Building editable for unified-marl (pyproject.toml): started
+  Building editable for unified-marl (pyproject.toml): finished with status 'done'
+  Created wheel for unified-marl: filename=unified_marl-0.6.0-0.editable-py3-none-any.whl size=14595 sha256=fef7c2fe0cbe09dff54760ff44a730069b84c57f8ab1bd8d67ef81f5c19a65ef
+  Stored in directory: G:\AI\Codex\多智能体代码整合\unified-marl\.work\tmp\pip-ephem-wheel-cache-4buoogf4\wheels\ac\44\71\186c701bcb9433073c5bef7a2c153d6fbc6250ab4286680dcf
+Successfully built unified-marl
+Installing collected packages: unified-marl
+  Attempting uninstall: unified-marl
+    Found existing installation: unified-marl 0.2.0
+    Uninstalling unified-marl-0.2.0:
+      Successfully uninstalled unified-marl-0.2.0
+Successfully installed unified-marl-0.6.0

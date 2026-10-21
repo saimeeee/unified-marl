@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "steps": 12,
+  "updates": 2,
+  "update_step": 8,
+  "epsilon_at_third_rollout": 0.6
+}

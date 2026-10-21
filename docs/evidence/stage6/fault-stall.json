@@ -1,0 +1,98 @@
+{
+  "result": "PASS",
+  "elapsed_seconds": 10.562999999994645,
+  "report": {
+    "mode": "sync",
+    "job_id": "b5e8940f6d01409c879f78f2630e3ebb",
+    "cross_machine_verified": false,
+    "platform": "Windows spawn tested; other platforms NOT VALIDATED",
+    "status": "FAILED",
+    "error": {
+      "error": "TimeoutError: Sampler communication timeout; no progress within configured deadline",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\trainer.py\", line 239, in train_zmq\n    if startup_complete and now-last_activity>settings.timeout_ms/1000: raise TimeoutError(\"Sampler communication timeout; no progress within configured deadline\")\n                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: Sampler communication timeout; no progress within configured deadline\n"
+    },
+    "trainer_endpoint": "tcp://127.0.0.1:62794",
+    "inference_endpoints": [
+      "tcp://127.0.0.1:62804"
+    ],
+    "counters": {
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 0,
+      "last_update_episode": 0,
+      "episodes_accepted": 0,
+      "episodes_dropped_stale": 0,
+      "completed_steps": 0,
+      "inference_calls": 1,
+      "snapshot_syncs": 1,
+      "mixed_version_episodes": 0
+    },
+    "sync_acknowledgements": [
+      {
+        "worker": 0,
+        "version": 0,
+        "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+      }
+    ],
+    "lifecycle": {
+      "processes": [
+        {
+          "role": "infer-0",
+          "pid": 17476,
+          "exitcode": 0,
+          "alive": false
+        },
+        {
+          "role": "sampler-0",
+          "pid": 29044,
+          "exitcode": 1,
+          "alive": false
+        }
+      ],
+      "forced": [],
+      "events": [
+        {
+          "role": "sampler-0",
+          "kind": "PROCESS_STARTED",
+          "worker_id": 0
+        },
+        {
+          "role": "sampler-0",
+          "kind": "ERROR",
+          "error": "TimeoutError: Communication timeout (1200 ms): tcp://127.0.0.1:62794",
+          "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\sampler.py\", line 77, in sampler_worker\n    batch=runner.run()\n          ^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\runners\\episode_runner.py\", line 59, in run\n    chosen = self.mac.select_actions(batch, t_ep=t, t_env=self.t_env, bs=need_action, test_mode=test_mode)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 116, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\sampler.py\", line 37, in select_actions\n    reply=self.call(\"INFER\",session=self.session,t=t_ep,bootstrap=bootstrap,data=data,transition=transition)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\sampler.py\", line 16, in call\n    reply=self.client.call(dict(kind=kind,job_id=self.settings.job_id,schema_id=self.schema,worker_id=self.worker_id,**data))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\protocol.py\", line 108, in call\n    if not self.socket.poll(timeout,self.zmq.POLLIN): raise TimeoutError(f\"Communication timeout ({timeout} ms): {self.endpoint}\")\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: Communication timeout (1200 ms): tcp://127.0.0.1:62794\n",
+          "worker_id": 0
+        },
+        {
+          "role": "sampler-0",
+          "kind": "STOPPED",
+          "worker_id": 0,
+          "env_closed": true,
+          "error": "TimeoutError: Communication timeout (1200 ms): tcp://127.0.0.1:62794"
+        }
+      ]
+    },
+    "evaluation": {
+      "records": [],
+      "skipped_busy_updates": [],
+      "forced": false
+    },
+    "partial_confirmed_steps": 0,
+    "samplers_closed": 0,
+    "inference_stop_reports": [
+      {
+        "kind": "STOPPED",
+        "calls": 1,
+        "syncs": [
+          {
+            "version": 0,
+            "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+          }
+        ],
+        "sync_count": 1,
+        "request_id": 3
+      }
+    ]
+  },
+  "ports_rebound": true
+}

@@ -1,0 +1,42 @@
+{
+  "stage": 3,
+  "status": "LOCAL_INTEGRATIONS_PASSED_WITH_EXPLICIT_REMAINING_SOURCE_AND_ENV_BLOCKERS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.6.0+cpu",
+  "numpy": "1.26.4",
+  "tests": 59,
+  "failed": 0,
+  "source_parity_reports": 15,
+  "public_algorithms_and_configurations": 23,
+  "installed_algorithms_including_qmix_regression": 24,
+  "real_environments": [
+    {
+      "env": "sc2",
+      "status": "BLOCKED",
+      "exception": "ImportError",
+      "error": "SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\smac.py\", line 7, in make_smac\n    from smac.env import StarCraft2Env\nModuleNotFoundError: No module named 'smac'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\validate_stage3_installed.py\", line 45, in main\n    train(\"pymarl/qmix\", env, env_args, output_dir=root / (\"real-\" + env), overrides={\"t_max\": 16})\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\api.py\", line 166, in train\n    runner = RUNNERS[cfg[\"runner\"]](runner_args, logger)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\runners\\episode_runner.py\", line 13, in __init__\n    self.env = make_env(args.env, **args.env_args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 28, in make_env\n    return factory(**kwargs)\n           ^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 12, in _sc2\n    return make_smac(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\smac.py\", line 9, in make_smac\n    raise ImportError(\"SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.\") from exc\nImportError: SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.\n"
+    },
+    {
+      "env": "replenishment",
+      "status": "BLOCKED",
+      "exception": "ImportError",
+      "error": "ReplenishmentEnv simulator and its task/data assets are required; no simulator is bundled",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\replenishment.py\", line 10, in __init__\n    from ReplenishmentEnv import make_env\nModuleNotFoundError: No module named 'ReplenishmentEnv'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\validate_stage3_installed.py\", line 45, in main\n    train(\"pymarl/qmix\", env, env_args, output_dir=root / (\"real-\" + env), overrides={\"t_max\": 16})\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\api.py\", line 166, in train\n    runner = RUNNERS[cfg[\"runner\"]](runner_args, logger)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\runners\\episode_runner.py\", line 13, in __init__\n    self.env = make_env(args.env, **args.env_args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 28, in make_env\n    return factory(**kwargs)\n           ^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 17, in _replenishment\n    return ReplenishmentAdapter(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\replenishment.py\", line 12, in __init__\n    raise ImportError(\"ReplenishmentEnv simulator and its task/data assets are required; no simulator is bundled\") from exc\nImportError: ReplenishmentEnv simulator and its task/data assets are required; no simulator is bundled\n"
+    }
+  ],
+  "source_hash_records_unchanged": 1228,
+  "matrix_rows": 350,
+  "wang_statuses": {
+    "INTEGRATED_LOCAL": 34,
+    "IMPLEMENTED_ENV_BLOCKED": 2,
+    "PARTIAL_PRE_CLUSTERING_VALIDATED": 4,
+    "SOURCE_ONLY_UNVALIDATED": 2,
+    "NOT_STARTED": 39,
+    "BLOCKED_SOURCE_IMPLEMENTATION": 5,
+    "PARTIAL_FIXED_GROUP_VALIDATED": 2
+  },
+  "wheel": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\dist\\unified_marl-0.3.0-py3-none-any.whl",
+  "stopping_after_stage": 3
+}

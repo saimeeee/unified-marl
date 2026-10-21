@@ -1,0 +1,1 @@
+{"result": "PASS", "scope": "synthetic; original KL and threshold equations; initial epoch only", "history": [{"epoch": 0, "pair_ids": [0, 1, 2, 3], "thresholds": [1000.0, 1000.0, 1000.0]}], "second_epoch": "source filter selected zero pairs; explicit error, no fallback"}

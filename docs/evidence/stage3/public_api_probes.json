@@ -1,0 +1,700 @@
+[
+  {
+    "algorithm": "wang/rode_hmf",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/rode_hmf",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode_hmf",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode_hmf\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode_hmf\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode_hmf\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode_hmf\\config.json",
+      "env_steps": 8,
+      "episodes": 2,
+      "updates": 1,
+      "parameter_delta_l2": 0.31317773106999125,
+      "metrics": {
+        "loss": 5.050772190093994,
+        "role_loss": 0.6706266403198242,
+        "grad_norm": 28.984233856201172,
+        "encoder_loss": 6.503607749938965
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang/rode",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/rode",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-rode\\config.json",
+      "env_steps": 8,
+      "episodes": 2,
+      "updates": 1,
+      "parameter_delta_l2": 0.2866683463872176,
+      "metrics": {
+        "loss": 2.2157773971557617,
+        "role_loss": 0.9904645681381226,
+        "grad_norm": 28.72975730895996,
+        "encoder_loss": 8.080198287963867
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang/qmix",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix\\config.json",
+      "env_steps": 8,
+      "episodes": 2,
+      "updates": 1,
+      "parameter_delta_l2": 0.1689593536446247,
+      "metrics": {
+        "loss": 0.592680811882019,
+        "grad_norm": 5.634093761444092
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang/vdn",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/vdn",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn\\config.json",
+      "env_steps": 8,
+      "episodes": 2,
+      "updates": 1,
+      "parameter_delta_l2": 0.1755715133857477,
+      "metrics": {
+        "loss": 0.22429250180721283,
+        "grad_norm": 1.37295663356781
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang/iql",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/iql",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql\\config.json",
+      "env_steps": 8,
+      "episodes": 2,
+      "updates": 1,
+      "parameter_delta_l2": 0.16114173204306395,
+      "metrics": {
+        "loss": 0.20813199877738953,
+        "grad_norm": 0.6569172143936157
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang/coma",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/coma",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-coma",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-coma\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-coma\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-coma\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-coma\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.08327899377301896,
+      "metrics": {
+        "loss": -0.0009212695294991136,
+        "coma_loss": -0.0009212695294991136,
+        "critic_loss": 2.7569585740566254,
+        "grad_norm": 0.040788520127534866
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang/qtran",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/qtran",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qtran",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qtran\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qtran\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qtran\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qtran\\config.json",
+      "env_steps": 8,
+      "episodes": 2,
+      "updates": 1,
+      "parameter_delta_l2": 0.12262254608722994,
+      "metrics": {
+        "loss": 0.4401787519454956,
+        "grad_norm": 1.520276427268982,
+        "td_loss": 0.43607357144355774,
+        "opt_loss": 0.0022022484336048365,
+        "nopt_loss": 0.019029401242733
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang/qmix_beta",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/qmix_beta",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix_beta",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix_beta\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix_beta\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix_beta\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-qmix_beta\\config.json",
+      "env_steps": 8,
+      "episodes": 2,
+      "updates": 1,
+      "parameter_delta_l2": 0.19585965316733306,
+      "metrics": {
+        "loss": 1.06191086769104,
+        "grad_norm": 24.54654884338379
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang/vdn_beta",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/vdn_beta",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn_beta",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn_beta\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn_beta\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn_beta\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-vdn_beta\\config.json",
+      "env_steps": 8,
+      "episodes": 2,
+      "updates": 1,
+      "parameter_delta_l2": 0.1755715133857477,
+      "metrics": {
+        "loss": 0.22429250180721283,
+        "grad_norm": 1.37295663356781
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang/iql_beta",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang/iql_beta",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql_beta",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql_beta\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql_beta\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql_beta\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang-iql_beta\\config.json",
+      "env_steps": 8,
+      "episodes": 2,
+      "updates": 1,
+      "parameter_delta_l2": 0.16114173204306395,
+      "metrics": {
+        "loss": 0.20813199877738953,
+        "grad_norm": 0.6569172143936157
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/dqn",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/dqn",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-dqn",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-dqn\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-dqn\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-dqn\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-dqn\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.009656805833023438,
+      "metrics": {
+        "loss": 0.2329058051109314,
+        "total_vf_loss": 0.2329058051109314
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/vdn",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/vdn",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-vdn",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-vdn\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-vdn\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-vdn\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-vdn\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.00965678681469419,
+      "metrics": {
+        "loss": 0.6904678344726562,
+        "total_vf_loss": 0.6904678344726562
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/qmix",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-qmix",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-qmix\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-qmix\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-qmix\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-qmix\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.023783576836785017,
+      "metrics": {
+        "loss": 11.512245178222656,
+        "total_vf_loss": 11.512245178222656
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/mfq",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/mfq",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfq",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfq\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfq\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfq\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfq\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.010416672837765284,
+      "metrics": {
+        "loss": 0.2818125784397125,
+        "total_vf_loss": 0.2818125784397125
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/mfvfd",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/mfvfd",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfvfd",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfvfd\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfvfd\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfvfd\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-mfvfd\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.013293786113142733,
+      "metrics": {
+        "loss": 0.22137662768363953,
+        "total_vf_loss": 0.22137662768363953,
+        "mf_loss": 1.2836789210268762e-05
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/hierarchical",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.005744793337812528,
+      "metrics": {
+        "loss": 0.11837494373321533,
+        "total_vf_loss": 0.11837494373321533,
+        "local_vf_loss": 0.017140105366706848,
+        "mf_vf_loss": 0.0
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/hierarchical_vdn",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical_vdn",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.015960640263190107,
+      "metrics": {
+        "loss": 0.3781920075416565,
+        "total_vf_loss": 0.3781920075416565,
+        "local_vf_loss": 0.3475489318370819,
+        "mf_vf_loss": 0.13001415133476257,
+        "high_mf_critic_loss": 0.1376628875732422
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/hierarchical_vdn_IPC",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical_vdn_IPC",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_IPC",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_IPC\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_IPC\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_IPC\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_IPC\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.019234943652617822,
+      "metrics": {
+        "loss": 0.36318737268447876,
+        "total_vf_loss": 0.36318737268447876,
+        "local_vf_loss": 0.3499869704246521,
+        "mf_vf_loss": 0.1517733633518219,
+        "high_mf_critic_loss": 0.17118607461452484
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/hierarchical_vdn_without_high_level",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical_vdn_without_high_level",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_without_high_level",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_without_high_level\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_without_high_level\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_without_high_level\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_without_high_level\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.015960640263190107,
+      "metrics": {
+        "loss": 0.3781920075416565,
+        "total_vf_loss": 0.3781920075416565,
+        "local_vf_loss": 0.3475489318370819,
+        "mf_vf_loss": 0.13001415133476257,
+        "high_mf_critic_loss": 0.1376628875732422
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/maddpg",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/maddpg",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-maddpg",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-maddpg\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-maddpg\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-maddpg\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-maddpg\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.017121866625323053,
+      "metrics": {
+        "loss": -0.04375314712524414,
+        "evader%i/vf_loss": 0.04285268485546112,
+        "evader%i/pol_loss": -0.08660583198070526
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/hierarchical_vdn_copy_fixed",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical_vdn_copy_fixed",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_copy_fixed",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_copy_fixed\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_copy_fixed\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_copy_fixed\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_copy_fixed\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.015961304402481367,
+      "metrics": {
+        "loss": 0.3850751519203186,
+        "total_vf_loss": 0.3850751519203186,
+        "local_vf_loss": 0.3475489318370819,
+        "mf_vf_loss": 0.13001415133476257,
+        "high_mf_critic_loss": 0.1376628875732422
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/hierarchical_vdn_meanq",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical_vdn_meanq",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_meanq",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_meanq\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_meanq\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_meanq\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_meanq\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.01470552219830417,
+      "metrics": {
+        "loss": 0.4224104583263397,
+        "total_vf_loss": 0.4224104583263397,
+        "local_vf_loss": 0.35325711965560913,
+        "mf_vf_loss": 0.16546760499477386,
+        "high_mf_critic_loss": 0.19509422779083252
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "algorithm": "wang_hmf/hierarchical_vdn_k_means_fixed",
+    "status": "PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical_vdn_k_means_fixed",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_k_means_fixed",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_k_means_fixed\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_k_means_fixed\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_k_means_fixed\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage3-probes\\59a227ab\\wang_hmf-hierarchical_vdn_k_means_fixed\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.015961304402481367,
+      "metrics": {
+        "loss": 0.3850751519203186,
+        "total_vf_loss": 0.3850751519203186,
+        "local_vf_loss": 0.3475489318370819,
+        "mf_vf_loss": 0.13001415133476257,
+        "high_mf_critic_loss": 0.1376628875732422
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        0.0,
+        0.0
+      ],
+      "return_mean": 0.0,
+      "return_std": 0.0
+    }
+  }
+]

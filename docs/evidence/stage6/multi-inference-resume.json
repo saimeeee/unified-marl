@@ -1,0 +1,44 @@
+{
+  "result": "PASS",
+  "first": {
+    "algorithm": "sadma/qmix",
+    "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\first",
+    "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\first\\policy.pt",
+    "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\first\\training.pt",
+    "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\first\\metrics.jsonl",
+    "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\first\\config.json",
+    "env_steps": 16,
+    "episodes": 4,
+    "updates": 2,
+    "parameter_delta_l2": 0.07382532298180185,
+    "metrics": {
+      "loss_td": 0.5151456594467163,
+      "grad_norm": 5.136194705963135,
+      "td_error_abs": 0.5151456594467163,
+      "q_taken_mean": -0.08806273341178894,
+      "target_mean": 0.3495233952999115,
+      "loss": 0.5151456594467163
+    }
+  },
+  "continued": {
+    "algorithm": "sadma/qmix",
+    "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\continued",
+    "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\continued\\policy.pt",
+    "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\continued\\training.pt",
+    "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\continued\\metrics.jsonl",
+    "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_two_inference_workers_and0\\continued\\config.json",
+    "env_steps": 24,
+    "episodes": 6,
+    "updates": 3,
+    "parameter_delta_l2": 0.03036959263338007,
+    "metrics": {
+      "loss_td": 0.482422411441803,
+      "grad_norm": 5.071882724761963,
+      "td_error_abs": 0.482422411441803,
+      "q_taken_mean": -0.011748230084776878,
+      "target_mean": 0.4224568009376526,
+      "loss": 0.482422411441803
+    }
+  },
+  "all_snapshot_hashes_match": true
+}

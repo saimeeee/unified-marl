@@ -1,0 +1,7 @@
+Processing g:\ai\codex\多智能体代码整合\unified-marl\dist\unified_marl-0.6.0-py3-none-any.whl
+Installing collected packages: unified-marl
+  Attempting uninstall: unified-marl
+    Found existing installation: unified-marl 0.6.0
+    Uninstalling unified-marl-0.6.0:
+      Successfully uninstalled unified-marl-0.6.0
+Successfully installed unified-marl-0.6.0

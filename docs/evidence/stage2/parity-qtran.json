@@ -1,0 +1,11 @@
+{
+  "algorithm": "qtran",
+  "seed": 2026,
+  "network_max_abs_error": 0.0,
+  "loss_abs_error": 0.0,
+  "updated_parameter_max_abs_error": 0.0,
+  "atol": 1e-07,
+  "rtol": 1e-06,
+  "source": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\pymarl-master\\pymarl-master\\src",
+  "result": "PASS"
+}

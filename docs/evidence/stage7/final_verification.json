@@ -1,0 +1,33 @@
+{
+  "version": "0.7.0",
+  "matrix_rows": 383,
+  "previous_rows_retained": 379,
+  "source_hash_records_unchanged": 1228,
+  "reference_py312_bytecode_files": 0,
+  "tests_passed": 220,
+  "runtime_files_source_wheel_two_installs_equal": 354,
+  "sdist_entries": 546,
+  "wheel_entries": 363,
+  "status": "PASS",
+  "pip_check": {
+    ".venv": "No broken requirements found.",
+    ".venv-release": "No broken requirements found.",
+    ".venv-sdist": "No broken requirements found."
+  },
+  "artifacts": [
+    {
+      "file": "unified_marl-0.7.0-py3-none-any.whl",
+      "size": 516838,
+      "sha256": "ba6fec1d7eb805a86ef62ae61fa9e7a866bdbfc49ad6a1c8be1d3cbe27e445e7"
+    },
+    {
+      "file": "unified_marl-0.7.0.tar.gz",
+      "size": 545900,
+      "sha256": "c4319d229cb702b0fe9c8010158a6275497b8a74d77f8ce1d10570cd05aeea7e"
+    }
+  ],
+  "real_environments_verified": false,
+  "cross_machine_verified": false,
+  "gpu_verified": false,
+  "policy_effect_verified": false
+}

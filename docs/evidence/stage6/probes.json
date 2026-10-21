@@ -1,0 +1,509 @@
+[
+  {
+    "name": "sadma/qmix",
+    "mode": "sync",
+    "status": "PASS",
+    "result": {
+      "algorithm": "sadma/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\0",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\0\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\0\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\0\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\0\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.0729783590884229,
+      "metrics": {
+        "loss_td": 0.45976823568344116,
+        "grad_norm": 4.4948649406433105,
+        "td_error_abs": 0.45976823568344116,
+        "q_taken_mean": -0.0880419984459877,
+        "target_mean": 0.2941153347492218,
+        "loss": 0.45976823568344116
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    },
+    "execution": {
+      "mode": "sync",
+      "job_id": "f98b0fda344f4b9e8980441294c5e6dc",
+      "cross_machine_verified": false,
+      "platform": "Windows spawn tested; other hosts separately validated",
+      "status": "PASS",
+      "error": null,
+      "trainer_endpoint": "tcp://127.0.0.1:59103",
+      "inference_endpoints": [
+        "tcp://127.0.0.1:59116"
+      ],
+      "counters": {
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 2,
+        "last_update_episode": 4,
+        "episodes_accepted": 4,
+        "episodes_dropped_stale": 0,
+        "completed_steps": 16,
+        "inference_calls": 20,
+        "snapshot_syncs": 3,
+        "mixed_version_episodes": 0
+      },
+      "sync_acknowledgements": [
+        {
+          "worker": 0,
+          "version": 0,
+          "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+        },
+        {
+          "worker": 0,
+          "version": 1,
+          "digest": "9c40feb0d24f2ce3ec38796d24155456fbb1e010ae69c68258b7fc51ba74524c"
+        },
+        {
+          "worker": 0,
+          "version": 2,
+          "digest": "fe3c96f0176bf3578f2fc13f99c5a766b5752465160012a656abdc17a41109f2"
+        }
+      ],
+      "lifecycle": {
+        "processes": [
+          {
+            "role": "infer-0",
+            "pid": 29412,
+            "exitcode": 0,
+            "alive": false
+          },
+          {
+            "role": "sampler-0",
+            "pid": 33440,
+            "exitcode": 0,
+            "alive": false
+          },
+          {
+            "role": "sampler-1",
+            "pid": 54812,
+            "exitcode": 0,
+            "alive": false
+          }
+        ],
+        "forced": [],
+        "events": [
+          {
+            "role": "sampler-0",
+            "kind": "PROCESS_STARTED",
+            "worker_id": 0
+          },
+          {
+            "role": "sampler-1",
+            "kind": "PROCESS_STARTED",
+            "worker_id": 1
+          },
+          {
+            "role": "sampler-0",
+            "kind": "STOPPED",
+            "worker_id": 0,
+            "env_closed": true,
+            "error": null
+          },
+          {
+            "role": "sampler-1",
+            "kind": "STOPPED",
+            "worker_id": 1,
+            "env_closed": true,
+            "error": null
+          }
+        ]
+      },
+      "partial_confirmed_steps": 0,
+      "samplers_closed": 2
+    }
+  },
+  {
+    "name": "sadma/ppo",
+    "mode": "sync",
+    "status": "PASS",
+    "result": {
+      "algorithm": "sadma/ppo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\1",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\1\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\1\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\1\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\1\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.06969589590644991,
+      "metrics": {
+        "advantage_mean": 2.9802322387695312e-08,
+        "actor_loss": -0.0014664381742477417,
+        "entropy_loss": 0.8958069086074829,
+        "grad_norm": 1.1344660520553589,
+        "critic_loss": 0.19552364945411682,
+        "target_mean": 0.35271507501602173,
+        "loss": 0.09629538655281067,
+        "policy_version": 4
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    },
+    "execution": {
+      "mode": "sync",
+      "job_id": "1230f810bbf8489597ac26191a16d0b9",
+      "cross_machine_verified": false,
+      "platform": "Windows spawn tested; other hosts separately validated",
+      "status": "PASS",
+      "error": null,
+      "trainer_endpoint": "tcp://127.0.0.1:59152",
+      "inference_endpoints": [
+        "tcp://127.0.0.1:59161"
+      ],
+      "counters": {
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 2,
+        "last_update_episode": 4,
+        "episodes_accepted": 4,
+        "episodes_dropped_stale": 0,
+        "completed_steps": 16,
+        "inference_calls": 20,
+        "snapshot_syncs": 3,
+        "mixed_version_episodes": 0
+      },
+      "sync_acknowledgements": [
+        {
+          "worker": 0,
+          "version": 0,
+          "digest": "e8cb6993fe85cbc01fec2a7e66cf1d6714c72197174230abbf4d935170c63c5c"
+        },
+        {
+          "worker": 0,
+          "version": 2,
+          "digest": "a939462ee73a56925fb16e9208411e05d7d50499e2bad38da68bd5e1aa677e6a"
+        },
+        {
+          "worker": 0,
+          "version": 4,
+          "digest": "74973da3c9978bfdc917790385c67aabf5f2f74b2db364627e49a2beb8a0fe8f"
+        }
+      ],
+      "lifecycle": {
+        "processes": [
+          {
+            "role": "infer-0",
+            "pid": 25576,
+            "exitcode": 0,
+            "alive": false
+          },
+          {
+            "role": "sampler-0",
+            "pid": 21884,
+            "exitcode": 0,
+            "alive": false
+          },
+          {
+            "role": "sampler-1",
+            "pid": 12520,
+            "exitcode": 0,
+            "alive": false
+          }
+        ],
+        "forced": [],
+        "events": [
+          {
+            "role": "sampler-0",
+            "kind": "PROCESS_STARTED",
+            "worker_id": 0
+          },
+          {
+            "role": "sampler-1",
+            "kind": "PROCESS_STARTED",
+            "worker_id": 1
+          },
+          {
+            "role": "sampler-0",
+            "kind": "STOPPED",
+            "worker_id": 0,
+            "env_closed": true,
+            "error": null
+          },
+          {
+            "role": "sampler-1",
+            "kind": "STOPPED",
+            "worker_id": 1,
+            "env_closed": true,
+            "error": null
+          }
+        ]
+      },
+      "partial_confirmed_steps": 0,
+      "samplers_closed": 2
+    }
+  },
+  {
+    "name": "sadma/qmix",
+    "mode": "async",
+    "status": "PASS",
+    "result": {
+      "algorithm": "sadma/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\2",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\2\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\2\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\2\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\2\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.0729783590884229,
+      "metrics": {
+        "loss_td": 0.45976823568344116,
+        "grad_norm": 4.4948649406433105,
+        "td_error_abs": 0.45976823568344116,
+        "q_taken_mean": -0.0880419984459877,
+        "target_mean": 0.2941153347492218,
+        "loss": 0.45976823568344116
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    },
+    "execution": {
+      "mode": "async",
+      "job_id": "654210729fc744eaa7e0fa8c0128bbf2",
+      "cross_machine_verified": false,
+      "platform": "Windows spawn tested; other hosts separately validated",
+      "status": "PASS",
+      "error": null,
+      "trainer_endpoint": "tcp://127.0.0.1:59197",
+      "inference_endpoints": [
+        "tcp://127.0.0.1:59207"
+      ],
+      "counters": {
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 2,
+        "last_update_episode": 3,
+        "episodes_accepted": 4,
+        "episodes_dropped_stale": 0,
+        "completed_steps": 16,
+        "inference_calls": 20,
+        "snapshot_syncs": 3,
+        "mixed_version_episodes": 0
+      },
+      "sync_acknowledgements": [
+        {
+          "worker": 0,
+          "version": 0,
+          "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+        },
+        {
+          "worker": 0,
+          "version": 1,
+          "digest": "9c40feb0d24f2ce3ec38796d24155456fbb1e010ae69c68258b7fc51ba74524c"
+        },
+        {
+          "worker": 0,
+          "version": 2,
+          "digest": "fe3c96f0176bf3578f2fc13f99c5a766b5752465160012a656abdc17a41109f2"
+        }
+      ],
+      "lifecycle": {
+        "processes": [
+          {
+            "role": "infer-0",
+            "pid": 34452,
+            "exitcode": 0,
+            "alive": false
+          },
+          {
+            "role": "sampler-0",
+            "pid": 20660,
+            "exitcode": 0,
+            "alive": false
+          },
+          {
+            "role": "sampler-1",
+            "pid": 12728,
+            "exitcode": 0,
+            "alive": false
+          }
+        ],
+        "forced": [],
+        "events": [
+          {
+            "role": "sampler-1",
+            "kind": "PROCESS_STARTED",
+            "worker_id": 1
+          },
+          {
+            "role": "sampler-0",
+            "kind": "PROCESS_STARTED",
+            "worker_id": 0
+          },
+          {
+            "role": "sampler-0",
+            "kind": "STOPPED",
+            "worker_id": 0,
+            "env_closed": true,
+            "error": null
+          },
+          {
+            "role": "sampler-1",
+            "kind": "STOPPED",
+            "worker_id": 1,
+            "env_closed": true,
+            "error": null
+          }
+        ]
+      },
+      "partial_confirmed_steps": 0,
+      "samplers_closed": 2
+    }
+  },
+  {
+    "name": "sadma/ppo",
+    "mode": "async",
+    "status": "PASS",
+    "result": {
+      "algorithm": "sadma/ppo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\3",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\3\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\3\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\3\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage6-probes-1bec3aff\\3\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.07652508234578363,
+      "metrics": {
+        "advantage_mean": 8.195638656616211e-08,
+        "actor_loss": -0.005254924297332764,
+        "entropy_loss": 0.8958178162574768,
+        "grad_norm": 1.0537998676300049,
+        "critic_loss": 0.28145933151245117,
+        "target_mean": 0.37544116377830505,
+        "loss": 0.13547474145889282
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    },
+    "execution": {
+      "mode": "async",
+      "job_id": "949d3ba506cb4ebc9f652391344bcc73",
+      "cross_machine_verified": false,
+      "platform": "Windows spawn tested; other hosts separately validated",
+      "status": "PASS",
+      "error": null,
+      "trainer_endpoint": "tcp://127.0.0.1:59243",
+      "inference_endpoints": [
+        "tcp://127.0.0.1:59253"
+      ],
+      "counters": {
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 2,
+        "last_update_episode": 3,
+        "episodes_accepted": 4,
+        "episodes_dropped_stale": 0,
+        "completed_steps": 16,
+        "inference_calls": 20,
+        "snapshot_syncs": 3,
+        "mixed_version_episodes": 0
+      },
+      "sync_acknowledgements": [
+        {
+          "worker": 0,
+          "version": 0,
+          "digest": "e8cb6993fe85cbc01fec2a7e66cf1d6714c72197174230abbf4d935170c63c5c"
+        },
+        {
+          "worker": 0,
+          "version": 2,
+          "digest": "878d7b11add1e5c88061cec04248bf5f6d6738aaa21b0bdfcb618373484b6a3a"
+        },
+        {
+          "worker": 0,
+          "version": 4,
+          "digest": "10e92b9004017d2706fe46f0f8f6fb041c1b108668c43f4d43066815b65af6d8"
+        }
+      ],
+      "lifecycle": {
+        "processes": [
+          {
+            "role": "infer-0",
+            "pid": 51620,
+            "exitcode": 0,
+            "alive": false
+          },
+          {
+            "role": "sampler-0",
+            "pid": 20588,
+            "exitcode": 0,
+            "alive": false
+          },
+          {
+            "role": "sampler-1",
+            "pid": 34560,
+            "exitcode": 0,
+            "alive": false
+          }
+        ],
+        "forced": [],
+        "events": [
+          {
+            "role": "sampler-0",
+            "kind": "PROCESS_STARTED",
+            "worker_id": 0
+          },
+          {
+            "role": "sampler-1",
+            "kind": "PROCESS_STARTED",
+            "worker_id": 1
+          },
+          {
+            "role": "sampler-1",
+            "kind": "STOPPED",
+            "worker_id": 1,
+            "env_closed": true,
+            "error": null
+          },
+          {
+            "role": "sampler-0",
+            "kind": "STOPPED",
+            "worker_id": 0,
+            "env_closed": true,
+            "error": null
+          }
+        ]
+      },
+      "partial_confirmed_steps": 0,
+      "samplers_closed": 2
+    }
+  }
+]

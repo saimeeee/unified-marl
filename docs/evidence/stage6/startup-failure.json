@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "report": {
+    "mode": "sync",
+    "job_id": "39fda691dc0f4af8933be2eebc49fbe4",
+    "cross_machine_verified": false,
+    "platform": "Windows spawn tested; other platforms NOT VALIDATED",
+    "status": "FAILED",
+    "error": {
+      "error": "RuntimeError: infer-0 startup failed: {'kind': 'ERROR', 'error': \"Address in use (addr='tcp://127.0.0.1:62948')\", 'traceback': 'Traceback (most recent call last):\\n  File \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\unified-marl\\\\src\\\\unified_marl\\\\execution\\\\inference.py\", line 83, in inference_worker\\n    endpoint=bind(socket,endpoint)\\n             ^^^^^^^^^^^^^^^^^^^^^\\n  File \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\unified-marl\\\\src\\\\unified_marl\\\\execution\\\\protocol.py\", line 88, in bind\\n    else: socket.bind(endpoint)\\n          ^^^^^^^^^^^^^^^^^^^^^\\n  File \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\unified-marl\\\\.venv\\\\Lib\\\\site-packages\\\\zmq\\\\sugar\\\\socket.py\", line 302, in bind\\n    super().bind(addr)\\n  File \"zmq\\\\\\\\backend\\\\\\\\cython\\\\\\\\socket.pyx\", line 564, in zmq.backend.cython.socket.Socket.bind\\n  File \"zmq\\\\\\\\backend\\\\\\\\cython\\\\\\\\checkrc.pxd\", line 28, in zmq.backend.cython.checkrc._check_rc\\nzmq.error.ZMQError: Address in use (addr=\\'tcp://127.0.0.1:62948\\')\\n'}",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\trainer.py\", line 164, in train_zmq\n    address=cluster.startup(child)[\"endpoint\"]\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\trainer.py\", line 45, in startup\n    if event.get(\"kind\")!=\"READY\": raise RuntimeError(f\"{item['role']} startup failed: {event}\")\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: infer-0 startup failed: {'kind': 'ERROR', 'error': \"Address in use (addr='tcp://127.0.0.1:62948')\", 'traceback': 'Traceback (most recent call last):\\n  File \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\unified-marl\\\\src\\\\unified_marl\\\\execution\\\\inference.py\", line 83, in inference_worker\\n    endpoint=bind(socket,endpoint)\\n             ^^^^^^^^^^^^^^^^^^^^^\\n  File \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\unified-marl\\\\src\\\\unified_marl\\\\execution\\\\protocol.py\", line 88, in bind\\n    else: socket.bind(endpoint)\\n          ^^^^^^^^^^^^^^^^^^^^^\\n  File \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\unified-marl\\\\.venv\\\\Lib\\\\site-packages\\\\zmq\\\\sugar\\\\socket.py\", line 302, in bind\\n    super().bind(addr)\\n  File \"zmq\\\\\\\\backend\\\\\\\\cython\\\\\\\\socket.pyx\", line 564, in zmq.backend.cython.socket.Socket.bind\\n  File \"zmq\\\\\\\\backend\\\\\\\\cython\\\\\\\\checkrc.pxd\", line 28, in zmq.backend.cython.checkrc._check_rc\\nzmq.error.ZMQError: Address in use (addr=\\'tcp://127.0.0.1:62948\\')\\n'}\n"
+    },
+    "trainer_endpoint": "tcp://127.0.0.1:62957",
+    "inference_endpoints": [],
+    "counters": {
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 0,
+      "last_update_episode": 0,
+      "episodes_accepted": 0,
+      "episodes_dropped_stale": 0,
+      "completed_steps": 0,
+      "inference_calls": 0,
+      "snapshot_syncs": 0,
+      "mixed_version_episodes": 0
+    },
+    "sync_acknowledgements": [],
+    "lifecycle": {
+      "processes": [
+        {
+          "role": "infer-0",
+          "pid": 17904,
+          "exitcode": 1,
+          "alive": false
+        }
+      ],
+      "forced": [],
+      "events": []
+    },
+    "evaluation": {
+      "records": [],
+      "skipped_busy_updates": [],
+      "forced": false
+    },
+    "partial_confirmed_steps": 0,
+    "samplers_closed": 0,
+    "inference_stop_reports": []
+  }
+}

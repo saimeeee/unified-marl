@@ -1,0 +1,328 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing src\unified_marl.egg-info\PKG-INFO
+writing dependency_links to src\unified_marl.egg-info\dependency_links.txt
+writing entry points to src\unified_marl.egg-info\entry_points.txt
+writing requirements to src\unified_marl.egg-info\requires.txt
+writing top-level names to src\unified_marl.egg-info\top_level.txt
+reading manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src\unified_marl.egg-info\PKG-INFO
+writing dependency_links to src\unified_marl.egg-info\dependency_links.txt
+writing entry points to src\unified_marl.egg-info\entry_points.txt
+writing requirements to src\unified_marl.egg-info\requires.txt
+writing top-level names to src\unified_marl.egg-info\top_level.txt
+reading manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+running check
+creating unified_marl-0.2.0
+creating unified_marl-0.2.0\src\unified_marl
+creating unified_marl-0.2.0\src\unified_marl.egg-info
+creating unified_marl-0.2.0\src\unified_marl\components
+creating unified_marl-0.2.0\src\unified_marl\config
+creating unified_marl-0.2.0\src\unified_marl\config\algs
+creating unified_marl-0.2.0\src\unified_marl\config\envs
+creating unified_marl-0.2.0\src\unified_marl\controllers
+creating unified_marl-0.2.0\src\unified_marl\envs
+creating unified_marl-0.2.0\src\unified_marl\learners
+creating unified_marl-0.2.0\src\unified_marl\modules
+creating unified_marl-0.2.0\src\unified_marl\modules\agents
+creating unified_marl-0.2.0\src\unified_marl\modules\critics
+creating unified_marl-0.2.0\src\unified_marl\modules\mixers
+creating unified_marl-0.2.0\src\unified_marl\runners
+creating unified_marl-0.2.0\src\unified_marl\utils
+creating unified_marl-0.2.0\tests
+copying files to unified_marl-0.2.0...
+copying LICENSE -> unified_marl-0.2.0
+copying NOTICE -> unified_marl-0.2.0
+copying README.md -> unified_marl-0.2.0
+copying pyproject.toml -> unified_marl-0.2.0
+copying src\unified_marl\__init__.py -> unified_marl-0.2.0\src\unified_marl
+copying src\unified_marl\__main__.py -> unified_marl-0.2.0\src\unified_marl
+copying src\unified_marl\api.py -> unified_marl-0.2.0\src\unified_marl
+copying src\unified_marl\checkpoints.py -> unified_marl-0.2.0\src\unified_marl
+copying src\unified_marl\cli.py -> unified_marl-0.2.0\src\unified_marl
+copying src\unified_marl\registry.py -> unified_marl-0.2.0\src\unified_marl
+copying src\unified_marl.egg-info\PKG-INFO -> unified_marl-0.2.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\SOURCES.txt -> unified_marl-0.2.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\dependency_links.txt -> unified_marl-0.2.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\entry_points.txt -> unified_marl-0.2.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\requires.txt -> unified_marl-0.2.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\top_level.txt -> unified_marl-0.2.0\src\unified_marl.egg-info
+copying src\unified_marl\components\__init__.py -> unified_marl-0.2.0\src\unified_marl\components
+copying src\unified_marl\components\action_selectors.py -> unified_marl-0.2.0\src\unified_marl\components
+copying src\unified_marl\components\episode_buffer.py -> unified_marl-0.2.0\src\unified_marl\components
+copying src\unified_marl\components\epsilon_schedules.py -> unified_marl-0.2.0\src\unified_marl\components
+copying src\unified_marl\components\transforms.py -> unified_marl-0.2.0\src\unified_marl\components
+copying src\unified_marl\config\__init__.py -> unified_marl-0.2.0\src\unified_marl\config
+copying src\unified_marl\config\default.yaml -> unified_marl-0.2.0\src\unified_marl\config
+copying src\unified_marl\config\algs\coma.yaml -> unified_marl-0.2.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\iql.yaml -> unified_marl-0.2.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\iql_beta.yaml -> unified_marl-0.2.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\qmix.yaml -> unified_marl-0.2.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\qmix_beta.yaml -> unified_marl-0.2.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\qtran.yaml -> unified_marl-0.2.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\vdn.yaml -> unified_marl-0.2.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\vdn_beta.yaml -> unified_marl-0.2.0\src\unified_marl\config\algs
+copying src\unified_marl\config\envs\sc2.yaml -> unified_marl-0.2.0\src\unified_marl\config\envs
+copying src\unified_marl\config\envs\sc2_beta.yaml -> unified_marl-0.2.0\src\unified_marl\config\envs
+copying src\unified_marl\config\envs\toy.yaml -> unified_marl-0.2.0\src\unified_marl\config\envs
+copying src\unified_marl\controllers\__init__.py -> unified_marl-0.2.0\src\unified_marl\controllers
+copying src\unified_marl\controllers\basic_controller.py -> unified_marl-0.2.0\src\unified_marl\controllers
+copying src\unified_marl\envs\__init__.py -> unified_marl-0.2.0\src\unified_marl\envs
+copying src\unified_marl\envs\multiagentenv.py -> unified_marl-0.2.0\src\unified_marl\envs
+copying src\unified_marl\envs\smac.py -> unified_marl-0.2.0\src\unified_marl\envs
+copying src\unified_marl\envs\toy.py -> unified_marl-0.2.0\src\unified_marl\envs
+copying src\unified_marl\learners\__init__.py -> unified_marl-0.2.0\src\unified_marl\learners
+copying src\unified_marl\learners\base.py -> unified_marl-0.2.0\src\unified_marl\learners
+copying src\unified_marl\learners\coma_learner.py -> unified_marl-0.2.0\src\unified_marl\learners
+copying src\unified_marl\learners\q_learner.py -> unified_marl-0.2.0\src\unified_marl\learners
+copying src\unified_marl\learners\qtran_learner.py -> unified_marl-0.2.0\src\unified_marl\learners
+copying src\unified_marl\modules\__init__.py -> unified_marl-0.2.0\src\unified_marl\modules
+copying src\unified_marl\modules\agents\__init__.py -> unified_marl-0.2.0\src\unified_marl\modules\agents
+copying src\unified_marl\modules\agents\rnn_agent.py -> unified_marl-0.2.0\src\unified_marl\modules\agents
+copying src\unified_marl\modules\critics\__init__.py -> unified_marl-0.2.0\src\unified_marl\modules\critics
+copying src\unified_marl\modules\critics\coma.py -> unified_marl-0.2.0\src\unified_marl\modules\critics
+copying src\unified_marl\modules\mixers\__init__.py -> unified_marl-0.2.0\src\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\qmix.py -> unified_marl-0.2.0\src\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\qtran.py -> unified_marl-0.2.0\src\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\vdn.py -> unified_marl-0.2.0\src\unified_marl\modules\mixers
+copying src\unified_marl\runners\__init__.py -> unified_marl-0.2.0\src\unified_marl\runners
+copying src\unified_marl\runners\episode_runner.py -> unified_marl-0.2.0\src\unified_marl\runners
+copying src\unified_marl\runners\parallel_runner.py -> unified_marl-0.2.0\src\unified_marl\runners
+copying src\unified_marl\utils\__init__.py -> unified_marl-0.2.0\src\unified_marl\utils
+copying src\unified_marl\utils\logging.py -> unified_marl-0.2.0\src\unified_marl\utils
+copying src\unified_marl\utils\rl_utils.py -> unified_marl-0.2.0\src\unified_marl\utils
+copying tests\test_core.py -> unified_marl-0.2.0\tests
+Writing unified_marl-0.2.0\setup.cfg
+Creating tar archive
+removing 'unified_marl-0.2.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src\unified_marl.egg-info\PKG-INFO
+writing dependency_links to src\unified_marl.egg-info\dependency_links.txt
+writing entry points to src\unified_marl.egg-info\entry_points.txt
+writing requirements to src\unified_marl.egg-info\requires.txt
+writing top-level names to src\unified_marl.egg-info\top_level.txt
+reading manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\unified_marl
+copying src\unified_marl\api.py -> build\lib\unified_marl
+copying src\unified_marl\checkpoints.py -> build\lib\unified_marl
+copying src\unified_marl\cli.py -> build\lib\unified_marl
+copying src\unified_marl\registry.py -> build\lib\unified_marl
+copying src\unified_marl\__init__.py -> build\lib\unified_marl
+copying src\unified_marl\__main__.py -> build\lib\unified_marl
+creating build\lib\unified_marl\components
+copying src\unified_marl\components\action_selectors.py -> build\lib\unified_marl\components
+copying src\unified_marl\components\episode_buffer.py -> build\lib\unified_marl\components
+copying src\unified_marl\components\epsilon_schedules.py -> build\lib\unified_marl\components
+copying src\unified_marl\components\transforms.py -> build\lib\unified_marl\components
+copying src\unified_marl\components\__init__.py -> build\lib\unified_marl\components
+creating build\lib\unified_marl\config
+copying src\unified_marl\config\__init__.py -> build\lib\unified_marl\config
+creating build\lib\unified_marl\controllers
+copying src\unified_marl\controllers\basic_controller.py -> build\lib\unified_marl\controllers
+copying src\unified_marl\controllers\__init__.py -> build\lib\unified_marl\controllers
+creating build\lib\unified_marl\envs
+copying src\unified_marl\envs\multiagentenv.py -> build\lib\unified_marl\envs
+copying src\unified_marl\envs\smac.py -> build\lib\unified_marl\envs
+copying src\unified_marl\envs\toy.py -> build\lib\unified_marl\envs
+copying src\unified_marl\envs\__init__.py -> build\lib\unified_marl\envs
+creating build\lib\unified_marl\learners
+copying src\unified_marl\learners\base.py -> build\lib\unified_marl\learners
+copying src\unified_marl\learners\coma_learner.py -> build\lib\unified_marl\learners
+copying src\unified_marl\learners\qtran_learner.py -> build\lib\unified_marl\learners
+copying src\unified_marl\learners\q_learner.py -> build\lib\unified_marl\learners
+copying src\unified_marl\learners\__init__.py -> build\lib\unified_marl\learners
+creating build\lib\unified_marl\modules
+copying src\unified_marl\modules\__init__.py -> build\lib\unified_marl\modules
+creating build\lib\unified_marl\runners
+copying src\unified_marl\runners\episode_runner.py -> build\lib\unified_marl\runners
+copying src\unified_marl\runners\parallel_runner.py -> build\lib\unified_marl\runners
+copying src\unified_marl\runners\__init__.py -> build\lib\unified_marl\runners
+creating build\lib\unified_marl\utils
+copying src\unified_marl\utils\logging.py -> build\lib\unified_marl\utils
+copying src\unified_marl\utils\rl_utils.py -> build\lib\unified_marl\utils
+copying src\unified_marl\utils\__init__.py -> build\lib\unified_marl\utils
+creating build\lib\unified_marl\modules\agents
+copying src\unified_marl\modules\agents\rnn_agent.py -> build\lib\unified_marl\modules\agents
+copying src\unified_marl\modules\agents\__init__.py -> build\lib\unified_marl\modules\agents
+creating build\lib\unified_marl\modules\critics
+copying src\unified_marl\modules\critics\coma.py -> build\lib\unified_marl\modules\critics
+copying src\unified_marl\modules\critics\__init__.py -> build\lib\unified_marl\modules\critics
+creating build\lib\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\qmix.py -> build\lib\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\qtran.py -> build\lib\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\vdn.py -> build\lib\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\__init__.py -> build\lib\unified_marl\modules\mixers
+running egg_info
+writing src\unified_marl.egg-info\PKG-INFO
+writing dependency_links to src\unified_marl.egg-info\dependency_links.txt
+writing entry points to src\unified_marl.egg-info\entry_points.txt
+writing requirements to src\unified_marl.egg-info\requires.txt
+writing top-level names to src\unified_marl.egg-info\top_level.txt
+reading manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+copying src\unified_marl\config\default.yaml -> build\lib\unified_marl\config
+creating build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\coma.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\iql.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\iql_beta.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\qmix.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\qmix_beta.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\qtran.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\vdn.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\vdn_beta.yaml -> build\lib\unified_marl\config\algs
+creating build\lib\unified_marl\config\envs
+copying src\unified_marl\config\envs\sc2.yaml -> build\lib\unified_marl\config\envs
+copying src\unified_marl\config\envs\sc2_beta.yaml -> build\lib\unified_marl\config\envs
+copying src\unified_marl\config\envs\toy.yaml -> build\lib\unified_marl\config\envs
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\unified_marl
+copying build\lib\unified_marl\api.py -> build\bdist.win-amd64\wheel\.\unified_marl
+copying build\lib\unified_marl\checkpoints.py -> build\bdist.win-amd64\wheel\.\unified_marl
+copying build\lib\unified_marl\cli.py -> build\bdist.win-amd64\wheel\.\unified_marl
+creating build\bdist.win-amd64\wheel\unified_marl\components
+copying build\lib\unified_marl\components\action_selectors.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+copying build\lib\unified_marl\components\episode_buffer.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+copying build\lib\unified_marl\components\epsilon_schedules.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+copying build\lib\unified_marl\components\transforms.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+copying build\lib\unified_marl\components\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+creating build\bdist.win-amd64\wheel\unified_marl\config
+creating build\bdist.win-amd64\wheel\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\coma.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\iql.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\iql_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\qmix.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\qmix_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\qtran.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\vdn.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\vdn_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\default.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config
+creating build\bdist.win-amd64\wheel\unified_marl\config\envs
+copying build\lib\unified_marl\config\envs\sc2.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\envs
+copying build\lib\unified_marl\config\envs\sc2_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\envs
+copying build\lib\unified_marl\config\envs\toy.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\envs
+copying build\lib\unified_marl\config\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\config
+creating build\bdist.win-amd64\wheel\unified_marl\controllers
+copying build\lib\unified_marl\controllers\basic_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\controllers
+copying build\lib\unified_marl\controllers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\controllers
+creating build\bdist.win-amd64\wheel\unified_marl\envs
+copying build\lib\unified_marl\envs\multiagentenv.py -> build\bdist.win-amd64\wheel\.\unified_marl\envs
+copying build\lib\unified_marl\envs\smac.py -> build\bdist.win-amd64\wheel\.\unified_marl\envs
+copying build\lib\unified_marl\envs\toy.py -> build\bdist.win-amd64\wheel\.\unified_marl\envs
+copying build\lib\unified_marl\envs\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\envs
+creating build\bdist.win-amd64\wheel\unified_marl\learners
+copying build\lib\unified_marl\learners\base.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+copying build\lib\unified_marl\learners\coma_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+copying build\lib\unified_marl\learners\qtran_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+copying build\lib\unified_marl\learners\q_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+copying build\lib\unified_marl\learners\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+creating build\bdist.win-amd64\wheel\unified_marl\modules
+creating build\bdist.win-amd64\wheel\unified_marl\modules\agents
+copying build\lib\unified_marl\modules\agents\rnn_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\agents
+copying build\lib\unified_marl\modules\agents\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\agents
+creating build\bdist.win-amd64\wheel\unified_marl\modules\critics
+copying build\lib\unified_marl\modules\critics\coma.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\critics
+copying build\lib\unified_marl\modules\critics\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\critics
+creating build\bdist.win-amd64\wheel\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\mixers\qmix.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\mixers\qtran.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\mixers\vdn.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\mixers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules
+copying build\lib\unified_marl\registry.py -> build\bdist.win-amd64\wheel\.\unified_marl
+creating build\bdist.win-amd64\wheel\unified_marl\runners
+copying build\lib\unified_marl\runners\episode_runner.py -> build\bdist.win-amd64\wheel\.\unified_marl\runners
+copying build\lib\unified_marl\runners\parallel_runner.py -> build\bdist.win-amd64\wheel\.\unified_marl\runners
+copying build\lib\unified_marl\runners\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\runners
+creating build\bdist.win-amd64\wheel\unified_marl\utils
+copying build\lib\unified_marl\utils\logging.py -> build\bdist.win-amd64\wheel\.\unified_marl\utils
+copying build\lib\unified_marl\utils\rl_utils.py -> build\bdist.win-amd64\wheel\.\unified_marl\utils
+copying build\lib\unified_marl\utils\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\utils
+copying build\lib\unified_marl\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl
+copying build\lib\unified_marl\__main__.py -> build\bdist.win-amd64\wheel\.\unified_marl
+running install_egg_info
+Copying src\unified_marl.egg-info to build\bdist.win-amd64\wheel\.\unified_marl-0.2.0-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\unified_marl-0.2.0.dist-info\WHEEL
+creating 'G:\\AI\\Codex\\���������������\\unified-marl\\dist\\.tmp-6ycoy389\\unified_marl-0.2.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'unified_marl/__init__.py'
+adding 'unified_marl/__main__.py'
+adding 'unified_marl/api.py'
+adding 'unified_marl/checkpoints.py'
+adding 'unified_marl/cli.py'
+adding 'unified_marl/registry.py'
+adding 'unified_marl/components/__init__.py'
+adding 'unified_marl/components/action_selectors.py'
+adding 'unified_marl/components/episode_buffer.py'
+adding 'unified_marl/components/epsilon_schedules.py'
+adding 'unified_marl/components/transforms.py'
+adding 'unified_marl/config/__init__.py'
+adding 'unified_marl/config/default.yaml'
+adding 'unified_marl/config/algs/coma.yaml'
+adding 'unified_marl/config/algs/iql.yaml'
+adding 'unified_marl/config/algs/iql_beta.yaml'
+adding 'unified_marl/config/algs/qmix.yaml'
+adding 'unified_marl/config/algs/qmix_beta.yaml'
+adding 'unified_marl/config/algs/qtran.yaml'
+adding 'unified_marl/config/algs/vdn.yaml'
+adding 'unified_marl/config/algs/vdn_beta.yaml'
+adding 'unified_marl/config/envs/sc2.yaml'
+adding 'unified_marl/config/envs/sc2_beta.yaml'
+adding 'unified_marl/config/envs/toy.yaml'
+adding 'unified_marl/controllers/__init__.py'
+adding 'unified_marl/controllers/basic_controller.py'
+adding 'unified_marl/envs/__init__.py'
+adding 'unified_marl/envs/multiagentenv.py'
+adding 'unified_marl/envs/smac.py'
+adding 'unified_marl/envs/toy.py'
+adding 'unified_marl/learners/__init__.py'
+adding 'unified_marl/learners/base.py'
+adding 'unified_marl/learners/coma_learner.py'
+adding 'unified_marl/learners/q_learner.py'
+adding 'unified_marl/learners/qtran_learner.py'
+adding 'unified_marl/modules/__init__.py'
+adding 'unified_marl/modules/agents/__init__.py'
+adding 'unified_marl/modules/agents/rnn_agent.py'
+adding 'unified_marl/modules/critics/__init__.py'
+adding 'unified_marl/modules/critics/coma.py'
+adding 'unified_marl/modules/mixers/__init__.py'
+adding 'unified_marl/modules/mixers/qmix.py'
+adding 'unified_marl/modules/mixers/qtran.py'
+adding 'unified_marl/modules/mixers/vdn.py'
+adding 'unified_marl/runners/__init__.py'
+adding 'unified_marl/runners/episode_runner.py'
+adding 'unified_marl/runners/parallel_runner.py'
+adding 'unified_marl/utils/__init__.py'
+adding 'unified_marl/utils/logging.py'
+adding 'unified_marl/utils/rl_utils.py'
+adding 'unified_marl-0.2.0.dist-info/licenses/LICENSE'
+adding 'unified_marl-0.2.0.dist-info/licenses/NOTICE'
+adding 'unified_marl-0.2.0.dist-info/METADATA'
+adding 'unified_marl-0.2.0.dist-info/WHEEL'
+adding 'unified_marl-0.2.0.dist-info/entry_points.txt'
+adding 'unified_marl-0.2.0.dist-info/top_level.txt'
+adding 'unified_marl-0.2.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built unified_marl-0.2.0.tar.gz and unified_marl-0.2.0-py3-none-any.whl

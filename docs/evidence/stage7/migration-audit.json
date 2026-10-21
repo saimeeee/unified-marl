@@ -1,0 +1,848 @@
+{
+  "matrix_rows": 383,
+  "unique_ids": 383,
+  "source_paths_exist": true,
+  "retained_previous_rows": 379,
+  "original_rows_removed": 0,
+  "trace_records": 353,
+  "review_decisions": {
+    "OPTIONAL_STAGE8_RETAINED_NOT_EXECUTED": 4,
+    "UNACCEPTED_RETAINED_WITH_BLOCKER": 78,
+    "ACCEPTED_ONLY_WITH_RECORDED_LIMITS": 301
+  },
+  "unaccepted": [
+    {
+      "id": "M0027",
+      "source_project": "wang_rghmf",
+      "source_path": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/role_selectors/__init__.py",
+      "capability": "REGISTRY/q",
+      "migration_status": "SOURCE_ONLY_UNVALIDATED",
+      "blockers": "Alternative q role/selector has no delivered active configuration; selector hardcodes 3 roles while default is 2; post-clustering resizing/optimizer schedule unresolved"
+    },
+    {
+      "id": "M0029",
+      "source_project": "wang_rghmf",
+      "source_path": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/roles/__init__.py",
+      "capability": "REGISTRY/q",
+      "migration_status": "SOURCE_ONLY_UNVALIDATED",
+      "blockers": "Alternative q role/selector has no delivered active configuration; selector hardcodes 3 roles while default is 2; post-clustering resizing/optimizer schedule unresolved"
+    },
+    {
+      "id": "M0032",
+      "source_project": "wang_sadma",
+      "source_path": "marl平台代码/王思哲/code/sadma/envs/__init__.py",
+      "capability": "env_REGISTRY/smac",
+      "migration_status": "SHARED_ADAPTER_REAL_ENV_BLOCKED",
+      "blockers": "Optional shared SMAC factory implemented; no running SMAC/SC2/map validation; source scheme translated to canonical fields"
+    },
+    {
+      "id": "M0035",
+      "source_project": "wang_sadma",
+      "source_path": "marl平台代码/王思哲/code/sadma/envs/__init__.py",
+      "capability": "env_runner_REGISTRY/smac",
+      "migration_status": "SHARED_ADAPTER_REAL_ENV_BLOCKED",
+      "blockers": "Optional shared SMAC factory implemented; no running SMAC/SC2/map validation; source scheme translated to canonical fields"
+    },
+    {
+      "id": "M0040",
+      "source_project": "wang_sadma",
+      "source_path": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_net.py",
+      "capability": "agent_REGISTRY/ddpg_mlp",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0041",
+      "source_project": "wang_sadma",
+      "source_path": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_net.py",
+      "capability": "agent_REGISTRY/ddpg_rnn",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0042",
+      "source_project": "wang_sadma",
+      "source_path": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_net.py",
+      "capability": "critic_REGISTRY/mlp",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0043",
+      "source_project": "wang_sadma",
+      "source_path": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_net.py",
+      "capability": "critic_REGISTRY/rnn",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0065",
+      "source_project": "yi_sadma_closed",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+      "capability": "env_REGISTRY/smac",
+      "migration_status": "SHARED_ADAPTER_REAL_ENV_BLOCKED",
+      "blockers": "Optional shared SMAC factory implemented; no running SMAC/SC2/map validation; source scheme translated to canonical fields"
+    },
+    {
+      "id": "M0068",
+      "source_project": "yi_sadma_closed",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+      "capability": "env_REGISTRY/powergrid",
+      "migration_status": "BLOCKED_CONTINUOUS_ACTION_SCHEMA_AND_ASSETS",
+      "blockers": "Continuous [B,T,N,D] float actions, Gaussian log-prob semantics and bounds must extend canonical scheme/Policy/Runner; no discretization. pandapower/backend data absent in inspected setup"
+    },
+    {
+      "id": "M0069",
+      "source_project": "yi_sadma_closed",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+      "capability": "env_runner_REGISTRY/smac",
+      "migration_status": "SHARED_ADAPTER_REAL_ENV_BLOCKED",
+      "blockers": "Optional shared SMAC factory implemented; no running SMAC/SC2/map validation; source scheme translated to canonical fields"
+    },
+    {
+      "id": "M0072",
+      "source_project": "yi_sadma_closed",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+      "capability": "env_runner_REGISTRY/powergrid",
+      "migration_status": "BLOCKED_CONTINUOUS_ACTION_SCHEMA_AND_ASSETS",
+      "blockers": "Continuous [B,T,N,D] float actions, Gaussian log-prob semantics and bounds must extend canonical scheme/Policy/Runner; no discretization. pandapower/backend data absent in inspected setup"
+    },
+    {
+      "id": "M0075",
+      "source_project": "yi_sadma_closed",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_net.py",
+      "capability": "agent_REGISTRY/ddpg_mlp",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0076",
+      "source_project": "yi_sadma_closed",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_net.py",
+      "capability": "agent_REGISTRY/ddpg_rnn",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0077",
+      "source_project": "yi_sadma_closed",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_net.py",
+      "capability": "critic_REGISTRY/mlp",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0078",
+      "source_project": "yi_sadma_closed",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_net.py",
+      "capability": "critic_REGISTRY/rnn",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0100",
+      "source_project": "yi_sadma_open",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+      "capability": "env_REGISTRY/smac",
+      "migration_status": "SHARED_ADAPTER_REAL_ENV_BLOCKED",
+      "blockers": "Optional shared SMAC factory implemented; no running SMAC/SC2/map validation; source scheme translated to canonical fields"
+    },
+    {
+      "id": "M0103",
+      "source_project": "yi_sadma_open",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+      "capability": "env_REGISTRY/powergrid",
+      "migration_status": "BLOCKED_CONTINUOUS_ACTION_SCHEMA_AND_ASSETS",
+      "blockers": "Continuous [B,T,N,D] float actions, Gaussian log-prob semantics and bounds must extend canonical scheme/Policy/Runner; no discretization. pandapower/backend data absent in inspected setup"
+    },
+    {
+      "id": "M0104",
+      "source_project": "yi_sadma_open",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+      "capability": "env_runner_REGISTRY/smac",
+      "migration_status": "SHARED_ADAPTER_REAL_ENV_BLOCKED",
+      "blockers": "Optional shared SMAC factory implemented; no running SMAC/SC2/map validation; source scheme translated to canonical fields"
+    },
+    {
+      "id": "M0107",
+      "source_project": "yi_sadma_open",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+      "capability": "env_runner_REGISTRY/powergrid",
+      "migration_status": "BLOCKED_CONTINUOUS_ACTION_SCHEMA_AND_ASSETS",
+      "blockers": "Continuous [B,T,N,D] float actions, Gaussian log-prob semantics and bounds must extend canonical scheme/Policy/Runner; no discretization. pandapower/backend data absent in inspected setup"
+    },
+    {
+      "id": "M0110",
+      "source_project": "yi_sadma_open",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_net.py",
+      "capability": "agent_REGISTRY/ddpg_mlp",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0111",
+      "source_project": "yi_sadma_open",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_net.py",
+      "capability": "agent_REGISTRY/ddpg_rnn",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0112",
+      "source_project": "yi_sadma_open",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_net.py",
+      "capability": "critic_REGISTRY/mlp",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0113",
+      "source_project": "yi_sadma_open",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_net.py",
+      "capability": "critic_REGISTRY/rnn",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0135",
+      "source_project": "yi_sadma_zmq",
+      "source_path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+      "capability": "env_REGISTRY/smac",
+      "migration_status": "SHARED_ADAPTER_REAL_ENV_BLOCKED",
+      "blockers": "Optional shared SMAC factory implemented; no running SMAC/SC2/map validation; source scheme translated to canonical fields"
+    },
+    {
+      "id": "M0138",
+      "source_project": "yi_sadma_zmq",
+      "source_path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+      "capability": "env_REGISTRY/powergrid",
+      "migration_status": "BLOCKED_CONTINUOUS_ACTION_SCHEMA_AND_ASSETS",
+      "blockers": "Continuous [B,T,N,D] float actions, Gaussian log-prob semantics and bounds must extend canonical scheme/Policy/Runner; no discretization. pandapower/backend data absent in inspected setup"
+    },
+    {
+      "id": "M0139",
+      "source_project": "yi_sadma_zmq",
+      "source_path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+      "capability": "env_runner_REGISTRY/smac",
+      "migration_status": "SHARED_ADAPTER_REAL_ENV_BLOCKED",
+      "blockers": "Optional shared SMAC factory implemented; no running SMAC/SC2/map validation; source scheme translated to canonical fields"
+    },
+    {
+      "id": "M0142",
+      "source_project": "yi_sadma_zmq",
+      "source_path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+      "capability": "env_runner_REGISTRY/powergrid",
+      "migration_status": "BLOCKED_CONTINUOUS_ACTION_SCHEMA_AND_ASSETS",
+      "blockers": "Continuous [B,T,N,D] float actions, Gaussian log-prob semantics and bounds must extend canonical scheme/Policy/Runner; no discretization. pandapower/backend data absent in inspected setup"
+    },
+    {
+      "id": "M0145",
+      "source_project": "yi_sadma_zmq",
+      "source_path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_net.py",
+      "capability": "agent_REGISTRY/ddpg_mlp",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0146",
+      "source_project": "yi_sadma_zmq",
+      "source_path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_net.py",
+      "capability": "agent_REGISTRY/ddpg_rnn",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0147",
+      "source_project": "yi_sadma_zmq",
+      "source_path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_net.py",
+      "capability": "critic_REGISTRY/mlp",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0148",
+      "source_project": "yi_sadma_zmq",
+      "source_path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_net.py",
+      "capability": "critic_REGISTRY/rnn",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0174",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/controllers/__init__.py",
+      "capability": "REGISTRY/maddpg_mac",
+      "migration_status": "SOURCE_ONLY_COMPONENT_UNVALIDATED",
+      "blockers": "No verified delivered discrete offline bundle uses this component; GRNN additionally needs original SMAC feature metadata/communication settings"
+    },
+    {
+      "id": "M0177",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+      "capability": "REGISTRY/q_learner_new",
+      "migration_status": "BLOCKED_SOURCE_ASSETS_OR_PROTOCOL",
+      "blockers": "Missing actual reference policy, individual termination and/or agent-state reward protocol; source presence alone not counted integrated"
+    },
+    {
+      "id": "M0178",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+      "capability": "REGISTRY/qdiffer_learner",
+      "migration_status": "BLOCKED_SOURCE_ASSETS_OR_PROTOCOL",
+      "blockers": "Missing actual reference policy, individual termination and/or agent-state reward protocol; source presence alone not counted integrated"
+    },
+    {
+      "id": "M0179",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+      "capability": "REGISTRY/pref_qmix_learner",
+      "migration_status": "BLOCKED_SOURCE_ASSETS_OR_PROTOCOL",
+      "blockers": "Missing actual reference policy, individual termination and/or agent-state reward protocol; source presence alone not counted integrated"
+    },
+    {
+      "id": "M0185",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+      "capability": "REGISTRY/pref_qmix_learner_new",
+      "migration_status": "BLOCKED_SOURCE_ASSETS_OR_PROTOCOL",
+      "blockers": "Missing actual reference policy, individual termination and/or agent-state reward protocol; source presence alone not counted integrated"
+    },
+    {
+      "id": "M0190",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/critics/__init__.py",
+      "capability": "REGISTRY/coma_critic",
+      "migration_status": "SOURCE_ONLY_COMPONENT_UNVALIDATED",
+      "blockers": "No verified delivered discrete offline bundle uses this component; GRNN additionally needs original SMAC feature metadata/communication settings"
+    },
+    {
+      "id": "M0191",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/critics/__init__.py",
+      "capability": "REGISTRY/maddpg_critic_ns",
+      "migration_status": "SOURCE_ONLY_COMPONENT_UNVALIDATED",
+      "blockers": "No verified delivered discrete offline bundle uses this component; GRNN additionally needs original SMAC feature metadata/communication settings"
+    },
+    {
+      "id": "M0192",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+      "capability": "REGISTRY/episode",
+      "migration_status": "NOT_MIGRATED_SOURCE_ONLINE_EXECUTION",
+      "blockers": "Stage 4 uses an independent offline update trainer; historical online preference/collection runner lifecycle and its extra fields are not migrated"
+    },
+    {
+      "id": "M0193",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+      "capability": "REGISTRY/parallel",
+      "migration_status": "NOT_MIGRATED_SOURCE_ONLINE_EXECUTION",
+      "blockers": "Stage 4 uses an independent offline update trainer; historical online preference/collection runner lifecycle and its extra fields are not migrated"
+    },
+    {
+      "id": "M0194",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+      "capability": "REGISTRY/pref_episode",
+      "migration_status": "NOT_MIGRATED_SOURCE_ONLINE_EXECUTION",
+      "blockers": "Stage 4 uses an independent offline update trainer; historical online preference/collection runner lifecycle and its extra fields are not migrated"
+    },
+    {
+      "id": "M0195",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+      "capability": "REGISTRY/pref_episode_new",
+      "migration_status": "NOT_MIGRATED_SOURCE_ONLINE_EXECUTION",
+      "blockers": "Stage 4 uses an independent offline update trainer; historical online preference/collection runner lifecycle and its extra fields are not migrated"
+    },
+    {
+      "id": "M0196",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+      "capability": "REGISTRY/makedata_runner",
+      "migration_status": "NOT_MIGRATED_SOURCE_ONLINE_EXECUTION",
+      "blockers": "Stage 4 uses an independent offline update trainer; historical online preference/collection runner lifecycle and its extra fields are not migrated"
+    },
+    {
+      "id": "M0199",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/mujoco_multi.py",
+      "capability": "env_REGISTRY/manyagent_swimmer",
+      "migration_status": "OUTSIDE_REWARD_IMPORT_CLOSURE",
+      "blockers": "Embedded MuJoCo/swimmer environment is not a reward-model dependency and is not integrated by this stage"
+    },
+    {
+      "id": "M0200",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/random_mujoco_multi.py",
+      "capability": "env_REGISTRY/manyagent_swimmer",
+      "migration_status": "OUTSIDE_REWARD_IMPORT_CLOSURE",
+      "blockers": "Embedded MuJoCo/swimmer environment is not a reward-model dependency and is not integrated by this stage"
+    },
+    {
+      "id": "M0205",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+      "capability": "REGISTRY/q_learner",
+      "migration_status": "BLOCKED_INCOMPATIBLE_SOURCE_CONTROLLER",
+      "blockers": "BCQ-like triple-output contract mismatches all supplied active basic-controller configurations"
+    },
+    {
+      "id": "M0216",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/__init__.py",
+      "capability": "REGISTRY/grnn",
+      "migration_status": "SOURCE_ONLY_COMPONENT_UNVALIDATED",
+      "blockers": "No verified delivered discrete offline bundle uses this component; GRNN additionally needs original SMAC feature metadata/communication settings"
+    },
+    {
+      "id": "M0219",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/runners/__init__.py",
+      "capability": "REGISTRY/episode",
+      "migration_status": "NOT_MIGRATED_SOURCE_ONLINE_EXECUTION",
+      "blockers": "Stage 4 uses an independent offline update trainer; historical online preference/collection runner lifecycle and its extra fields are not migrated"
+    },
+    {
+      "id": "M0220",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/runners/__init__.py",
+      "capability": "REGISTRY/parallel",
+      "migration_status": "NOT_MIGRATED_SOURCE_ONLINE_EXECUTION",
+      "blockers": "Stage 4 uses an independent offline update trainer; historical online preference/collection runner lifecycle and its extra fields are not migrated"
+    },
+    {
+      "id": "M0251",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/pref_qmix.yaml",
+      "capability": "pref_qmix",
+      "migration_status": "BLOCKED_SOURCE_ASSETS_OR_PROTOCOL",
+      "blockers": "Requires actual reference policy checkpoint and per-agent termination/labels"
+    },
+    {
+      "id": "M0252",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/pref_qmix_new.yaml",
+      "capability": "pref_qmix_new",
+      "migration_status": "BLOCKED_SOURCE_ASSETS_OR_PROTOCOL",
+      "blockers": "Requires actual reference policy checkpoint, agent_state and compatible new local reward model"
+    },
+    {
+      "id": "M0254",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qmix_differ.yaml",
+      "capability": "qmix_differ",
+      "migration_status": "BLOCKED_SOURCE_ASSETS_OR_PROTOCOL",
+      "blockers": "Requires original per-agent indi_terminated; dataset only supplies team terminated"
+    },
+    {
+      "id": "M0255",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qmix_make_datasets.yaml",
+      "capability": "qmix_make_datasets",
+      "migration_status": "BLOCKED_SOURCE_ASSETS_OR_PROTOCOL",
+      "blockers": "Online source data-collection runner not migrated; real SMAC and author source .npy assets unavailable"
+    },
+    {
+      "id": "M0256",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qmix_new.yaml",
+      "capability": "qmix_new",
+      "migration_status": "BLOCKED_SOURCE_ASSETS_OR_PROTOCOL",
+      "blockers": "Requires the actual reference policy checkpoint, per-agent termination and reward-model integration"
+    },
+    {
+      "id": "M0260",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/acpl_smac.yaml",
+      "capability": "acpl_smac",
+      "migration_status": "BLOCKED_INCOMPLETE_SOURCE_CONFIG",
+      "blockers": "ACPL config lacks NLL_lamda/use_nll etc and selects Q outputs while bound CPL expects policy probabilities; original dispatcher has no ACPL branch"
+    },
+    {
+      "id": "M0266",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/hacpl_smac.yaml",
+      "capability": "hacpl_smac",
+      "migration_status": "BLOCKED_MISSING_SOURCE_LEARNER",
+      "blockers": "Configuration references absent/unregistered hacpl_learner"
+    },
+    {
+      "id": "M0270",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/maicpl_smac.yaml",
+      "capability": "maicpl_smac",
+      "migration_status": "BLOCKED_MISSING_SOURCE_LEARNER",
+      "blockers": "Configuration references absent/unregistered maicpl_learner"
+    },
+    {
+      "id": "M0271",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/maidpo_smac.yaml",
+      "capability": "maidpo_smac",
+      "migration_status": "BLOCKED_MISSING_SOURCE_LEARNER",
+      "blockers": "Configuration references absent/unregistered maidpo_learner"
+    },
+    {
+      "id": "M0273",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/qmix.yaml",
+      "capability": "qmix",
+      "migration_status": "BLOCKED_INCOMPATIBLE_SOURCE_CONTROLLER",
+      "blockers": "Delivered QLearner expects Q/imitator/auxiliary triple; registered BasicMAC returns one tensor. No matching imitation agent/controller supplied; not replaced by PyMARL QMIX"
+    },
+    {
+      "id": "M0274",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/qmix_smac.yaml",
+      "capability": "qmix_smac",
+      "migration_status": "BLOCKED_INCOMPATIBLE_SOURCE_CONTROLLER",
+      "blockers": "Delivered QLearner expects Q/imitator/auxiliary triple; registered BasicMAC returns one tensor. No matching imitation agent/controller supplied; not replaced by PyMARL QMIX"
+    },
+    {
+      "id": "M0275",
+      "source_project": "kou_icq",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/vdn_smac.yaml",
+      "capability": "vdn_smac",
+      "migration_status": "BLOCKED_INCOMPATIBLE_SOURCE_CONTROLLER",
+      "blockers": "Delivered QLearner expects Q/imitator/auxiliary triple; registered BasicMAC returns one tensor. No matching imitation agent/controller supplied; not replaced by PyMARL QMIX"
+    },
+    {
+      "id": "M0278",
+      "source_project": "wang_hmf",
+      "source_path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_qmix.py",
+      "capability": "Hierarchical_Qmix",
+      "migration_status": "BLOCKED_SOURCE_IMPLEMENTATION",
+      "blockers": "QMixNet.__init__() got an unexpected keyword argument 'input_dim'; no confirmed full training schedule; source namespaced only, not counted migrated"
+    },
+    {
+      "id": "M0284",
+      "source_project": "wang_hmf",
+      "source_path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_IPC.py",
+      "capability": "Hierarchical_VDN",
+      "migration_status": "BLOCKED_SOURCE_IMPLEMENTATION",
+      "blockers": "running_mean should contain 6 elements not 5; no confirmed full training schedule; source namespaced only, not counted migrated"
+    },
+    {
+      "id": "M0286",
+      "source_project": "wang_hmf",
+      "source_path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_roma.py",
+      "capability": "Hierarchical_VDN_ROMA",
+      "migration_status": "BLOCKED_SOURCE_IMPLEMENTATION",
+      "blockers": "cannot access local variable 'NN_HIDDEN_SIZE' where it is not associated with a value; no confirmed full training schedule; source namespaced only, not counted migrated"
+    },
+    {
+      "id": "M0289",
+      "source_project": "wang_hmf",
+      "source_path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/mfac.py",
+      "capability": "MFAC",
+      "migration_status": "BLOCKED_SOURCE_IMPLEMENTATION",
+      "blockers": "MFAC.init_from_env() missing 1 required positional argument: 'num_evaders'; no confirmed full training schedule; source namespaced only, not counted migrated; deeper source inspection: update needs next_state/rews/log_probs/values/entropy/done, calls missing Agent.critic/eval_optimizer and misspelled adv.detacj(); supplying num_evaders alone cannot restore the actor-critic protocol"
+    },
+    {
+      "id": "M0294",
+      "source_project": "wang_sadma",
+      "source_path": "marl平台代码/王思哲/code/sadma/policy/maddpg",
+      "capability": "MADDPG source without policy registration",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0295",
+      "source_project": "yi_sadma_closed",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg",
+      "capability": "MADDPG source without policy registration",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0296",
+      "source_project": "yi_sadma_open",
+      "source_path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg",
+      "capability": "MADDPG source without policy registration",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0297",
+      "source_project": "yi_sadma_zmq",
+      "source_path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg",
+      "capability": "MADDPG source without policy registration",
+      "migration_status": "BLOCKED_EMPTY_SOURCE_POLICY",
+      "blockers": "All four delivered maddpg_policy.py files are empty and policy_REGISTRY has no MADDPG entry; actor/critic networks alone are not a training algorithm"
+    },
+    {
+      "id": "M0301",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/run_pref_new.py",
+      "capability": "active preference training entry",
+      "migration_status": "BLOCKED_REFERENCE_POLICY_OR_AGENT_FIELDS",
+      "blockers": "Active old_src workflow preserved in audit; actual reference policy checkpoint plus agent_state/indi_terminated and original local-label protocol are missing"
+    },
+    {
+      "id": "M0302",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/run_pref.py",
+      "capability": "alternate preference implementation (not current main import)",
+      "migration_status": "BLOCKED_REFERENCE_POLICY_OR_AGENT_FIELDS",
+      "blockers": "Active old_src workflow preserved in audit; actual reference policy checkpoint plus agent_state/indi_terminated and original local-label protocol are missing"
+    },
+    {
+      "id": "M0306",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/components/reward_model_new.py",
+      "capability": "reward model variant",
+      "migration_status": "BLOCKED_REFERENCE_POLICY_OR_AGENT_FIELDS",
+      "blockers": "Active old_src workflow preserved in audit; actual reference policy checkpoint plus agent_state/indi_terminated and original local-label protocol are missing"
+    },
+    {
+      "id": "M0307",
+      "source_project": "kou_old",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/components/preference.py",
+      "capability": "preference construction",
+      "migration_status": "BLOCKED_REFERENCE_POLICY_OR_AGENT_FIELDS",
+      "blockers": "Active old_src workflow preserved in audit; actual reference policy checkpoint plus agent_state/indi_terminated and original local-label protocol are missing"
+    },
+    {
+      "id": "M0318",
+      "source_project": "kou_tools",
+      "source_path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/use_llm.py",
+      "capability": "use_llm",
+      "migration_status": "EXTERNAL_SERVICE_NOT_EXECUTED",
+      "blockers": "LLM client is an external-service boundary; no new-label generation/API calls requested or executed; existing labels are read explicitly"
+    },
+    {
+      "id": "M0337",
+      "source_project": "wang_operator",
+      "source_path": "marl平台代码/王思哲/code/operator",
+      "capability": "TCJob operator (Go 1.19)",
+      "migration_status": "NOT_STARTED",
+      "blockers": "Outside core Python package; no service/cluster/database baseline verified"
+    },
+    {
+      "id": "M0338",
+      "source_project": "yi_operator",
+      "source_path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本",
+      "capability": "TCJob operator + scheduling extensions",
+      "migration_status": "NOT_STARTED",
+      "blockers": "Outside core Python package; no service/cluster/database baseline verified"
+    },
+    {
+      "id": "M0339",
+      "source_project": "yi_backend",
+      "source_path": "marl平台代码/易才润/在线代码编辑调试微服务系统/tc-web-bf源代码闭源版/taichu-web-backend",
+      "capability": "FastAPI task/code/tensorboard backend",
+      "migration_status": "NOT_STARTED",
+      "blockers": "Outside core Python package; no service/cluster/database baseline verified"
+    },
+    {
+      "id": "M0340",
+      "source_project": "yi_frontend",
+      "source_path": "marl平台代码/易才润/在线代码编辑调试微服务系统/tc-web-bf源代码闭源版/vue-element-plus-admin",
+      "capability": "Vue3/ElementPlus/Vite frontend",
+      "migration_status": "NOT_STARTED",
+      "blockers": "Outside core Python package; no service/cluster/database baseline verified"
+    },
+    {
+      "id": "M0349",
+      "source_project": "integration",
+      "source_path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/main_replenishment_IPC.py",
+      "capability": "dynamic IPC/K-means grouping collection and high-level scheduling",
+      "migration_status": "NOT_MIGRATED",
+      "blockers": "Source dynamic-group sample includes agents_group/next_agents_group; fixed-group registration does not implement this collection/update schedule"
+    },
+    {
+      "id": "M0350",
+      "source_project": "integration",
+      "source_path": "marl平台代码/王思哲/code/large_scale/RGHMF/controllers/rode_controller.py",
+      "capability": "post-clustering role expansion training",
+      "migration_status": "SOURCE_LIMITATION",
+      "blockers": "New role parameters missing from source optimizer; RODE-HMF n_groups fixed; standalone clustering parity does not validate post-expansion updates"
+    },
+    {
+      "id": "M0367",
+      "source_project": "integration",
+      "source_path": "unified-marl/docs/INTEGRATION_SPEC.md",
+      "capability": "Continuous action schema extension design",
+      "migration_status": "BLOCKED_CONTINUOUS_ACTION_IMPLEMENTATION",
+      "blockers": "Design and explicit rejection only; no Gaussian float-action Runner/Policy/checkpoint integration or real grid assets validation"
+    }
+  ],
+  "partial": [
+    {
+      "id": "M0021",
+      "capability": "REGISTRY/rode_learner",
+      "migration_status": "PARTIAL_PRE_CLUSTERING_VALIDATED",
+      "blockers": "CPU deterministic toy only; real SMAC/ReplenishmentEnv/data and CUDA training not validated; dynamic role expansion training/resume not validated; source optimizer omissions and grouping indices preserved (STAGE3_REPORT.md)"
+    },
+    {
+      "id": "M0022",
+      "capability": "REGISTRY/rode_hmf_learner",
+      "migration_status": "PARTIAL_PRE_CLUSTERING_VALIDATED",
+      "blockers": "CPU deterministic toy only; real SMAC/ReplenishmentEnv/data and CUDA training not validated; dynamic role expansion training/resume not validated; source optimizer omissions and grouping indices preserved (STAGE3_REPORT.md)"
+    },
+    {
+      "id": "M0062",
+      "capability": "worker_REGISTRY/evaluate_worker",
+      "migration_status": "PARTIAL_PERIODIC_EVALUATION_REPLACEMENT_VERIFIED",
+      "blockers": "Bounded spawn policy-snapshot evaluator integrated and tested locally, with update-based trigger, one pending task, timeout/error propagation and cleanup. Original perpetual EvaluateWorker/shared-buffer trigger, vector evaluation and remote evaluation not reproduced; real simulator unavailable."
+    },
+    {
+      "id": "M0097",
+      "capability": "worker_REGISTRY/evaluate_worker",
+      "migration_status": "PARTIAL_PERIODIC_EVALUATION_REPLACEMENT_VERIFIED",
+      "blockers": "Bounded spawn policy-snapshot evaluator integrated and tested locally, with update-based trigger, one pending task, timeout/error propagation and cleanup. Original perpetual EvaluateWorker/shared-buffer trigger, vector evaluation and remote evaluation not reproduced; real simulator unavailable."
+    },
+    {
+      "id": "M0132",
+      "capability": "worker_REGISTRY/evaluate_worker",
+      "migration_status": "PARTIAL_PERIODIC_EVALUATION_REPLACEMENT_VERIFIED",
+      "blockers": "Bounded spawn policy-snapshot evaluator integrated and tested locally, with update-based trigger, one pending task, timeout/error propagation and cleanup. Original perpetual EvaluateWorker/shared-buffer trigger, vector evaluation and remote evaluation not reproduced; real simulator unavailable."
+    },
+    {
+      "id": "M0167",
+      "capability": "worker_REGISTRY/evaluate_worker",
+      "migration_status": "PARTIAL_PERIODIC_EVALUATION_REPLACEMENT_VERIFIED",
+      "blockers": "Bounded spawn policy-snapshot evaluator integrated and tested locally, with update-based trigger, one pending task, timeout/error propagation and cleanup. Original perpetual EvaluateWorker/shared-buffer trigger, vector evaluation and remote evaluation not reproduced; real simulator unavailable."
+    },
+    {
+      "id": "M0184",
+      "capability": "REGISTRY/max_q_learner_w_globalRM",
+      "migration_status": "PARTIAL_BASE_TD_METHOD_VERIFIED",
+      "blockers": "CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; source online reward/unsupervised methods remain unconnected"
+    },
+    {
+      "id": "M0235",
+      "capability": "rode",
+      "migration_status": "PARTIAL_PRE_CLUSTERING_VALIDATED",
+      "blockers": "CPU deterministic toy only; real SMAC/ReplenishmentEnv/data and CUDA training not validated; dynamic role expansion training/resume not validated; source optimizer omissions and grouping indices preserved (STAGE3_REPORT.md)"
+    },
+    {
+      "id": "M0236",
+      "capability": "rode_hmf",
+      "migration_status": "PARTIAL_PRE_CLUSTERING_VALIDATED",
+      "blockers": "CPU deterministic toy only; real SMAC/ReplenishmentEnv/data and CUDA training not validated; dynamic role expansion training/resume not validated; source optimizer omissions and grouping indices preserved (STAGE3_REPORT.md)"
+    },
+    {
+      "id": "M0248",
+      "capability": "cw_qmix_w_globalRM",
+      "migration_status": "PARTIAL_BASE_TD_METHOD_VERIFIED",
+      "blockers": "CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; source train() uses original team reward; full online unsupervised/relabel/train_reward schedule is not migrated"
+    },
+    {
+      "id": "M0250",
+      "capability": "ow_qmix_w_globalRM",
+      "migration_status": "PARTIAL_BASE_TD_METHOD_VERIFIED",
+      "blockers": "CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; source train() uses original team reward; full online unsupervised/relabel/train_reward schedule is not migrated"
+    },
+    {
+      "id": "M0279",
+      "capability": "Hierarchical_VDN",
+      "migration_status": "PARTIAL_FIXED_CRITIC_UPDATE_VERIFIED",
+      "blockers": "Only fixed-group update() and existing local/mf critic targets integrated as wang_hmf/hierarchical_vdac_fixed; source Agent has no mf_policy/target_mf_policy, while update_high_level/prep_* reference them. Full VDAC/actor and alternate schedule remain unimplemented; no real replenishment backend/assets."
+    },
+    {
+      "id": "M0280",
+      "capability": "Hierarchical_VDN",
+      "migration_status": "PARTIAL_FIXED_GROUP_VALIDATED",
+      "blockers": "CPU deterministic toy only; real SMAC/ReplenishmentEnv/data and CUDA training not validated; default fixed-group update only; update_dynamic_group and clustering schedule not migrated"
+    },
+    {
+      "id": "M0285",
+      "capability": "Hierarchical_VDN_K_Means",
+      "migration_status": "PARTIAL_FIXED_GROUP_VALIDATED",
+      "blockers": "CPU deterministic toy only; real SMAC/ReplenishmentEnv/data and CUDA training not validated; default fixed-group update only; update_dynamic_group and clustering schedule not migrated"
+    },
+    {
+      "id": "M0300",
+      "capability": "run/globalRM/pref/dataset dispatch",
+      "migration_status": "PARTIAL_OFFLINE_COMPONENTS_ONLY",
+      "blockers": "Offline model/pairing components are integrated; original interactive feedback, unsupervised reset, online collection and hand-filtered .npy pipeline are not executed"
+    },
+    {
+      "id": "M0303",
+      "capability": "global reward model training",
+      "migration_status": "PARTIAL_OFFLINE_COMPONENTS_ONLY",
+      "blockers": "Offline model/pairing components are integrated; original interactive feedback, unsupervised reset, online collection and hand-filtered .npy pipeline are not executed"
+    },
+    {
+      "id": "M0304",
+      "capability": "offline dataset generation",
+      "migration_status": "PARTIAL_OFFLINE_COMPONENTS_ONLY",
+      "blockers": "Offline model/pairing components are integrated; original interactive feedback, unsupervised reset, online collection and hand-filtered .npy pipeline are not executed"
+    },
+    {
+      "id": "M0305",
+      "capability": "reward model",
+      "migration_status": "PARTIAL_GLOBAL_MODELS_VERIFIED",
+      "blockers": "CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; local/individual reward training and policy-oracle label generation require missing masks/reference assets"
+    },
+    {
+      "id": "M0308",
+      "capability": "offline/preference dispatch and evaluation",
+      "migration_status": "PARTIAL_OFFLINE_DISPATCH_REPLACED",
+      "blockers": "CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; e2e, predictor calibration, behavior pretraining/moderate CQL and PER are explicitly rejected rather than silently ignored"
+    },
+    {
+      "id": "M0309",
+      "capability": "MR/NMR/PrefTransformer/MultiPrefTransformerDivide",
+      "migration_status": "PARTIAL_REWARD_MODELS_AND_DIVERSE_CURRICULUM",
+      "blockers": "CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; source NMR reuses left prediction; PrefTransformer unregistered blocks/optimizer omission preserved; calibration train_predicter/e2e not integrated; diverse filter can select zero pairs"
+    },
+    {
+      "id": "M0310",
+      "capability": "embedded MAPT library incl unrelated environment assets",
+      "migration_status": "PARTIAL_REWARD_IMPORT_CLOSURE_ONLY",
+      "blockers": "Only actual reward-model Python dependency closure is bundled; embedded simulators, other MAPT policy algorithms and unused JAX helpers are not integrated"
+    },
+    {
+      "id": "M0311",
+      "capability": "shared/episode/replay buffers",
+      "migration_status": "PARTIAL_LOCAL_BUFFER_AND_SCHEMA_VERIFIED",
+      "blockers": "CPU toy short updates only; no real simulator, GPU or policy effectiveness validation; source PPO GAE/entropy/LR quirks retained; native ReplayBuffer and arrival-time EpisodeBuffer equivalence verified; IPC SharedBuffer and distributed transition framing not executed"
+    },
+    {
+      "id": "M0312",
+      "capability": "transition/episode/buffer schemes",
+      "migration_status": "PARTIAL_LOCAL_BUFFER_AND_SCHEMA_VERIFIED",
+      "blockers": "CPU toy short updates only; no real simulator, GPU or policy effectiveness validation; source PPO GAE/entropy/LR quirks retained; native ReplayBuffer and arrival-time EpisodeBuffer equivalence verified; IPC SharedBuffer and distributed transition framing not executed"
+    },
+    {
+      "id": "M0313",
+      "capability": "ZMQ workers and parameter exchange",
+      "migration_status": "PARTIAL_ZMQ_ROLES_LOOPBACK_VERIFIED",
+      "blockers": "Windows loopback TCP only; cross-machine, real simulators, GPU and policy effects NOT verified; new protocol=1 replaces original binary ABI; persistent evaluator and original shared-memory queue path remain unintegrated"
+    },
+    {
+      "id": "M0317",
+      "capability": "make_diverse_preference",
+      "migration_status": "PARTIAL_PURE_SEGMENT_HELPER",
+      "blockers": "Only pure clip_to_segment_length is migrated and source-compared; LLM label generation/retries and automatic file rewriting are not executed"
+    },
+    {
+      "id": "M0359",
+      "capability": "old_global",
+      "migration_status": "PARTIAL_GLOBAL_ONLY_VERIFIED",
+      "blockers": "CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; individual/local reward methods not migrated"
+    },
+    {
+      "id": "M0360",
+      "capability": "old_reward_global",
+      "migration_status": "PARTIAL_GLOBAL_ONLY_VERIFIED",
+      "blockers": "CPU short updates only; real SMAC evaluation blocked; no policy effectiveness/convergence claim; individual/local reward methods not migrated"
+    },
+    {
+      "id": "M0361",
+      "capability": "MultiPrefTransformerDivide/diverse",
+      "migration_status": "PARTIAL_INITIAL_EPOCH_VERIFIED",
+      "blockers": "Original global/between/in losses and KL curriculum integrated; first real epoch update passed; next synthetic epoch selects zero pairs and explicitly blocks"
+    }
+  ],
+  "licenses": {
+    "pymarl": "Apache-2.0; preserved",
+    "yi_open_and_zmq": "MIT XJTU 2024; preserved",
+    "wang": "No overall grant found; confirmation required",
+    "kou": "No overall grant found; confirmation required",
+    "yi_closed": "No grant inferred from open distribution; confirmation required"
+  }
+}

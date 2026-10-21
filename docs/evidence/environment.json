@@ -1,0 +1,99 @@
+{
+  "time": "2026-10-20T19:31:26.807363+08:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "modules": {
+    "numpy": {
+      "find_spec": true,
+      "distribution_version": "2.3.5"
+    },
+    "torch": {
+      "find_spec": false
+    },
+    "yaml": {
+      "find_spec": false
+    },
+    "sacred": {
+      "find_spec": false
+    },
+    "smac": {
+      "find_spec": false
+    },
+    "pysc2": {
+      "find_spec": false
+    },
+    "zmq": {
+      "find_spec": false
+    },
+    "gym": {
+      "find_spec": false
+    },
+    "gymnasium": {
+      "find_spec": false
+    },
+    "cityflow": {
+      "find_spec": false
+    },
+    "ReplenishmentEnv": {
+      "find_spec": false
+    },
+    "pandapower": {
+      "find_spec": false
+    },
+    "wandb": {
+      "find_spec": false
+    },
+    "h5py": {
+      "find_spec": false
+    },
+    "sklearn": {
+      "find_spec": false
+    },
+    "tensorboard_logger": {
+      "find_spec": false
+    },
+    "kubernetes": {
+      "find_spec": false
+    },
+    "fastapi": {
+      "find_spec": false
+    },
+    "cityflowenv": {
+      "find_spec": false
+    },
+    "tensorboard": {
+      "find_spec": false
+    },
+    "cloudpickle": {
+      "find_spec": false
+    },
+    "transformers": {
+      "find_spec": false
+    },
+    "einops": {
+      "find_spec": false
+    },
+    "ml_collections": {
+      "find_spec": false
+    },
+    "pandas": {
+      "find_spec": true,
+      "distribution_version": "3.0.1"
+    },
+    "scipy": {
+      "find_spec": false
+    }
+  },
+  "env_paths": {
+    "SC2PATH": null,
+    "CUDA_PATH": null,
+    "CONDA_PREFIX": null,
+    "VIRTUAL_ENV": null
+  },
+  "nvidia_smi": {
+    "returncode": 0,
+    "stdout": "Tue Oct 20 19:31:28 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 592.82                 Driver Version: 592.82         CUDA Version: 13.1     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3070 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |\n| N/A   61C    P0             40W /  110W |       0MiB /   8192MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  }
+}

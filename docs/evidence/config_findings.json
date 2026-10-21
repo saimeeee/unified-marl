@@ -1,0 +1,23 @@
+[
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/hacpl_smac.yaml",
+    "learner": "hacpl_learner",
+    "line": 32,
+    "issue": "Configured learner is not registered"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/maicpl_smac.yaml",
+    "learner": "maicpl_learner",
+    "line": 32,
+    "issue": "Configured learner is not registered"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/maidpo_smac.yaml",
+    "learner": "maidpo_learner",
+    "line": 45,
+    "issue": "Configured learner is not registered"
+  }
+]

@@ -1,0 +1,75 @@
+..........................F...                                           [100%]
+================================== FAILURES ===================================
+___________ test_periodic_evaluation_requires_explicit_environment ____________
+
+self = <torch.serialization._open_zipfile_writer_file object at 0x00000214226805C0>
+name = WindowsPath('G:/AI/Codex/多智能体代码整合/unified-marl/.work/tmp/pytest-of-71919/pytest-8/test_periodic_evaluation_requi0/evaluated/update-1/policy.pt.tmp')
+
+    def __init__(self, name) -> None:
+        self.file_stream = None
+        self.name = str(name)
+        try:
+>           self.name.encode("ascii")
+E           UnicodeEncodeError: 'ascii' codec can't encode characters in position 12-19: ordinal not in range(128)
+
+.venv\Lib\site-packages\torch\serialization.py:771: UnicodeEncodeError
+
+During handling of the above exception, another exception occurred:
+
+raw_data = {'obs': tensor([[[[ 1.4464e+00, -8.9398e-01, -1.0582e+00, -1.0550e+00,  7.9435e-01],
+          [ 7.9852e-01, -4.9800e-...    [1, 1, 1, 1]],
+
+         [[1, 1, 1, 1],
+          [1, 1, 1, 1],
+          [1, 1, 1, 1]]]], dtype=torch.int32), ...}
+tmp_path = WindowsPath('G:/AI/Codex/多智能体代码整合/unified-marl/.work/tmp/pytest-of-71919/pytest-8/test_periodic_evaluation_requi0')
+
+    def test_periodic_evaluation_requires_explicit_environment(raw_data,tmp_path):
+        with pytest.raises(ValueError,match="explicit env"):
+            train("kou/bc",dataset=EpisodeDataset(raw_data),output_dir=tmp_path/"missing",overrides={"training_updates":1,"off_batch_size":4,"eval_interval_updates":1})
+>       result=train("kou/bc",env="toy",env_args={"n_agents":3,"episode_limit":5},dataset=EpisodeDataset(raw_data),output_dir=tmp_path/"evaluated",
+            overrides={"training_updates":1,"off_batch_size":4,"eval_interval_updates":1,"rnn_hidden_dim":16})
+
+tests\test_offline.py:234: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\unified_marl\__init__.py:7: in train
+    return implementation(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\unified_marl\api.py:127: in train
+    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,
+src\unified_marl\trainers\offline.py:92: in train_offline
+    checkpoint, _ = save_checkpoints(directory / f"update-{update+1}",cfg,data.env_info,learner,None,progress)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\unified_marl\checkpoints.py:104: in save_checkpoints
+    policy = atomic_save(dict(base, kind="policy"), directory / "policy.pt")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\unified_marl\checkpoints.py:27: in atomic_save
+    torch.save(value, temporary)
+.venv\Lib\site-packages\torch\serialization.py:943: in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+.venv\Lib\site-packages\torch\serialization.py:810: in _open_zipfile_writer
+    return container(name_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <torch.serialization._open_zipfile_writer_file object at 0x00000214226805C0>
+name = WindowsPath('G:/AI/Codex/多智能体代码整合/unified-marl/.work/tmp/pytest-of-71919/pytest-8/test_periodic_evaluation_requi0/evaluated/update-1/policy.pt.tmp')
+
+    def __init__(self, name) -> None:
+        self.file_stream = None
+        self.name = str(name)
+        try:
+            self.name.encode("ascii")
+        except UnicodeEncodeError:
+            # PyTorchFileWriter only supports ascii filename.
+            # For filenames with non-ascii characters, we rely on Python
+            # for writing out the file.
+>           self.file_stream = io.FileIO(self.name, mode="w")
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           FileNotFoundError: [Errno 2] No such file or directory: 'G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-8\\test_periodic_evaluation_requi0\\evaluated\\update-1\\policy.pt.tmp'
+
+.venv\Lib\site-packages\torch\serialization.py:776: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_offline.py::test_periodic_evaluation_requires_explicit_environment
+1 failed, 29 passed in 10.71s

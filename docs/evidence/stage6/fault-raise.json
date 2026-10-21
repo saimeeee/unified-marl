@@ -1,0 +1,98 @@
+{
+  "result": "PASS",
+  "elapsed_seconds": 5.39100000000326,
+  "report": {
+    "mode": "sync",
+    "job_id": "380c542d239c42b3b9e9ec7441475392",
+    "cross_machine_verified": false,
+    "platform": "Windows spawn tested; other platforms NOT VALIDATED",
+    "status": "FAILED",
+    "error": {
+      "error": "RuntimeError: Sampler 0 failed: RuntimeError: Injected sampler failure for lifecycle validation",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\trainer.py\", line 335, in train_zmq\n    if request.get(\"error\"): raise RuntimeError(f\"Sampler {worker['id']} failed: {request['error']}\")\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Sampler 0 failed: RuntimeError: Injected sampler failure for lifecycle validation\n"
+    },
+    "trainer_endpoint": "tcp://127.0.0.1:62744",
+    "inference_endpoints": [
+      "tcp://127.0.0.1:62755"
+    ],
+    "counters": {
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 0,
+      "last_update_episode": 0,
+      "episodes_accepted": 0,
+      "episodes_dropped_stale": 0,
+      "completed_steps": 0,
+      "inference_calls": 1,
+      "snapshot_syncs": 1,
+      "mixed_version_episodes": 0
+    },
+    "sync_acknowledgements": [
+      {
+        "worker": 0,
+        "version": 0,
+        "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+      }
+    ],
+    "lifecycle": {
+      "processes": [
+        {
+          "role": "infer-0",
+          "pid": 13432,
+          "exitcode": 0,
+          "alive": false
+        },
+        {
+          "role": "sampler-0",
+          "pid": 47708,
+          "exitcode": 1,
+          "alive": false
+        }
+      ],
+      "forced": [],
+      "events": [
+        {
+          "role": "sampler-0",
+          "kind": "PROCESS_STARTED",
+          "worker_id": 0
+        },
+        {
+          "role": "sampler-0",
+          "kind": "ERROR",
+          "error": "RuntimeError: Injected sampler failure for lifecycle validation",
+          "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\sampler.py\", line 77, in sampler_worker\n    batch=runner.run()\n          ^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\runners\\episode_runner.py\", line 59, in run\n    chosen = self.mac.select_actions(batch, t_ep=t, t_env=self.t_env, bs=need_action, test_mode=test_mode)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 116, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\execution\\sampler.py\", line 31, in select_actions\n    else: raise RuntimeError(\"Injected sampler failure for lifecycle validation\")\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Injected sampler failure for lifecycle validation\n",
+          "worker_id": 0
+        },
+        {
+          "role": "sampler-0",
+          "kind": "STOPPED",
+          "worker_id": 0,
+          "env_closed": true,
+          "error": "RuntimeError: Injected sampler failure for lifecycle validation"
+        }
+      ]
+    },
+    "evaluation": {
+      "records": [],
+      "skipped_busy_updates": [],
+      "forced": false
+    },
+    "partial_confirmed_steps": 0,
+    "samplers_closed": 0,
+    "inference_stop_reports": [
+      {
+        "kind": "STOPPED",
+        "calls": 1,
+        "syncs": [
+          {
+            "version": 0,
+            "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+          }
+        ],
+        "sync_count": 1,
+        "request_id": 3
+      }
+    ]
+  },
+  "ports_rebound": true
+}

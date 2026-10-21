@@ -1,0 +1,5 @@
+{
+  "result": "PASS",
+  "scope": "fake backend contract only; real simulator NOT validated",
+  "reward": 3.0
+}

@@ -1,0 +1,1 @@
+{"result": "PASS", "real_data": "3m", "source_feature_functions": 3, "explicit_template_read": true, "segment_sampling": "same RNG gives exact tensors", "remote_llm_calls": 0}

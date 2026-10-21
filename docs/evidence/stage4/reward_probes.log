@@ -1,0 +1,8 @@
+MR PASS 
+NMR PASS 
+PrefTransformer PASS 
+MultiPrefTransformerDivide PASS 
+old_global PASS 
+old_reward_global PASS 
+old_new_global BLOCKED The delivered new reward constructor unconditionally loads its reference policy; that checkpoint and agent-state labeling integration are unavailable, so no reference policy is substituted
+diverse PASS 

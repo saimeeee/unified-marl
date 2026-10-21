@@ -1,0 +1,454 @@
+[
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/bcmapt_learner.py",
+    "source_sha256": "f17a409fb1e093f851088ff9ae7d46e67fc9bec50563247278a121ced1f9a692",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/bcmapt_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/bc_learner.py",
+    "source_sha256": "4612cb7589dc9702dd545ef13db36a8b019cae75c10341088cf7b2e45db0f66e",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/bc_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/cpl_learner.py",
+    "source_sha256": "bffb8bc292172de0f48c763f0eca4808f6dc54374c1266da96e9e14528b3dacf",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/cpl_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/cql_learner.py",
+    "source_sha256": "fe6bd39616792db3df2d7bc915656316e75cb43a628026f87f1aa6c61f141430",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/cql_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/dppo_learner.py",
+    "source_sha256": "32fe491bb3663f9128b6ab3b18d9bde30a0f995f80f49609dc77ef15084c6350",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/dppo_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/iql_learner.py",
+    "source_sha256": "d0bc29142a7d3077e3861bd2c40c9d84a0aa4386e40263aeefe96fc123824519",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/iql_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/madpo_aux_learner.py",
+    "source_sha256": "83e29a192fb4f0d75a1f9c5d3d4ee56178d0d6b0d6411f2c37b630637757c2ff",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/madpo_aux_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/madpo_learner.py",
+    "source_sha256": "17f6602159c3f43d3c0e41d3df8762df6af792ab6a97033628b248727e9d049c",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/madpo_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/offpg_learner.py",
+    "source_sha256": "a730f60f0f3a4cb6ce8adfd24c946714a873a8b2c40aadcabcb1e7663dd30bf8",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/offpg_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/q_learner.py",
+    "source_sha256": "dd72947c46956b9ac73eea3b654be5004faf92b0bc651d81f1a989243b1ac6f4",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/q_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "source_sha256": "d6bf04abbb9700cd1d7e304f96733da3816270ebd4a27e0bd13f76184058ce4b",
+    "target": "src/unified_marl/algorithms/kou/icq/learners/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/controllers/basic_controller.py",
+    "source_sha256": "4e45de616c2c34227ce5a428e054425e780ac8eefcdec0ac10f6cf160b1984e9",
+    "target": "src/unified_marl/algorithms/kou/icq/controllers/basic_controller.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/controllers/cql_basic_controller.py",
+    "source_sha256": "7da6b6ea1a79f7969106d3aeb1cb8c9f441cded5e440b88d58c22fd3039fa817",
+    "target": "src/unified_marl/algorithms/kou/icq/controllers/cql_basic_controller.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/controllers/n_controller.py",
+    "source_sha256": "f6227bad8ce1f76187928054748ca00bfa84278148337a81ac506938b1771ae3",
+    "target": "src/unified_marl/algorithms/kou/icq/controllers/n_controller.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/controllers/__init__.py",
+    "source_sha256": "80939f43b1c2a0e747ee6cadce226b89a2b1e7d9ffd0516d1c8c4167059fce75",
+    "target": "src/unified_marl/algorithms/kou/icq/controllers/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/grnn_agent.py",
+    "source_sha256": "15bed7af14a9cb16edb338773c3126e99a548f29f34634925ce90268f35856fb",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/agents/grnn_agent.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/n_rnn_agent.py",
+    "source_sha256": "6387c16475d32ce06e2d04ec8d3943ddd0a1e916b3396cadd0e17b077c34d7bc",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/agents/n_rnn_agent.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/rnn_agent.py",
+    "source_sha256": "28eb201f2994b6b45e977b65bd2caa560ee406a0fa5d76b8c1869a98a98c32c2",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/agents/rnn_agent.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/rnn_ns_agent.py",
+    "source_sha256": "2e477a2471efc14f4f5a50cf17d6d522d23f9e9b394dfe20ff777c008a6eb07c",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/agents/rnn_ns_agent.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/__init__.py",
+    "source_sha256": "352d31268ebd3275584c50adf63e265fbe689529e5dd03902730f7121e41824d",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/agents/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/critics/coma.py",
+    "source_sha256": "5a8f502cacea8d58f907bfd84ae62f79424f994afaae1e784dcb57835278be0e",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/critics/coma.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/critics/doubleqv.py",
+    "source_sha256": "3efbb11a3b88c95ccfaa1e1a9ef89ce2a12a6196b960b750bea50494f6bee834",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/critics/doubleqv.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/critics/offpg.py",
+    "source_sha256": "40c3dd4648c1011121aba54ecf5433f8fa253b3679effe95f1baabefbe9c4875",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/critics/offpg.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/mixers/nmix.py",
+    "source_sha256": "fd90fcb83c89958254591a45ffb11fa0f896afdf428cf334921f9b031f0839d5",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/mixers/nmix.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/mixers/qatten.py",
+    "source_sha256": "33bc8e2985fc8ef265c1d0d09fe1615d4f083da83bdb62ca48fcb0f81db29d06",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/mixers/qatten.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/mixers/qmix.py",
+    "source_sha256": "509a7e9e38df84e9f310389b1fa8e2f3e7c96ed1ed82d13e2e2127b92a3b6c46",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/mixers/qmix.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/mixers/time_atten.py",
+    "source_sha256": "b9be424a10162cda5392ea6883125722ede52f662ef353822a16a811962536a6",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/mixers/time_atten.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/mixers/vdn.py",
+    "source_sha256": "1681c32585cda8065fc82e66cb0670282334067eeb4f2162f28f39d7876b813a",
+    "target": "src/unified_marl/algorithms/kou/icq/modules/mixers/vdn.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/action_selectors.py",
+    "source_sha256": "044f6834ad6888e79034f9f3383d031e65a217eb238bd07b765403253a099b1d",
+    "target": "src/unified_marl/algorithms/kou/icq/components/action_selectors.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/epsilon_schedules.py",
+    "source_sha256": "42bc0b063e1619f57b022b7fdf8bf007394fd63a78f2375a579372eb0a6abb93",
+    "target": "src/unified_marl/algorithms/kou/icq/components/epsilon_schedules.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/reward_model.py",
+    "source_sha256": "3931687eacd0874464d348307824ed79d55580797007918c9f10660e3085446a",
+    "target": "src/unified_marl/algorithms/kou/icq/components/reward_model.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/utils/dict2namedtuple.py",
+    "source_sha256": "6f0ebf7235eaeadb95cdb100bbd3d67c93d421395ec7881e8f167b4056158364",
+    "target": "src/unified_marl/algorithms/kou/icq/utils/dict2namedtuple.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/utils/offpg_utils.py",
+    "source_sha256": "cb35d3d5c5e519360c26340762e06281fc136977855aa98e76937b423b17d7dc",
+    "target": "src/unified_marl/algorithms/kou/icq/utils/offpg_utils.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/utils/rl_utils.py",
+    "source_sha256": "f899d7d3a7276b016568a0e57c1890a6e2f0b4387c6ee948581744c06d195b7d",
+    "target": "src/unified_marl/algorithms/kou/icq/utils/rl_utils.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/utils/th_utils.py",
+    "source_sha256": "aedd65d2fb12d581f49e4e35673022df3f8d00e1ae4828f6d047f00328229f80",
+    "target": "src/unified_marl/algorithms/kou/icq/utils/th_utils.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/dmaq_qatten_learner.py",
+    "source_sha256": "f4091bbec2095d3742a6d5ac0ab64a51f2b2b601727012b7fea81d61e9496ed8",
+    "target": "src/unified_marl/algorithms/kou/old/learners/dmaq_qatten_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/dmaq_qatten_learner_globalRM.py",
+    "source_sha256": "3513269408d39b794029e5a106e1cb3e8eb8989b7ee9bb654c49d402a51beef5",
+    "target": "src/unified_marl/algorithms/kou/old/learners/dmaq_qatten_learner_globalRM.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/max_q_learner.py",
+    "source_sha256": "f723f89f43174af7c70a12af6c59a348c773a623a6bab66baed4d744dd0cff6e",
+    "target": "src/unified_marl/algorithms/kou/old/learners/max_q_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/max_q_learner_globalRM.py",
+    "source_sha256": "83032322b3d4b752f765fbcb519a85abd96e79439bf6363e9a6817b01c58777d",
+    "target": "src/unified_marl/algorithms/kou/old/learners/max_q_learner_globalRM.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/pref_qmix_learner.py",
+    "source_sha256": "79269670c2e4ad8d5eb815477d3a40f49d3daafe1b5c4b48dbde958285c051b0",
+    "target": "src/unified_marl/algorithms/kou/old/learners/pref_qmix_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/pref_qmix_learner_new.py",
+    "source_sha256": "5f1559ae0149415e9f799d4140b5967500565c941f1ba13c96d9574621832ddf",
+    "target": "src/unified_marl/algorithms/kou/old/learners/pref_qmix_learner_new.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/q_learner.py",
+    "source_sha256": "a0460ea83a51a95526a66127b871f9eefc7167375117c2500f5631b4c817e892",
+    "target": "src/unified_marl/algorithms/kou/old/learners/q_learner.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/q_learner_differ.py",
+    "source_sha256": "ccfa2d81628816a122fb9700161a39c8b99b45557ead315cb30f9ca189fa1797",
+    "target": "src/unified_marl/algorithms/kou/old/learners/q_learner_differ.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/q_learner_globalRM.py",
+    "source_sha256": "c6f5a19f6ca4014a75f9b923d119083a41b0ba7ae6081c78bcde4b3e1b9ee638",
+    "target": "src/unified_marl/algorithms/kou/old/learners/q_learner_globalRM.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/q_learner_new.py",
+    "source_sha256": "19f4168fc4caf042d0351a559b831993d4cb559184a416907444e88daf09e5a2",
+    "target": "src/unified_marl/algorithms/kou/old/learners/q_learner_new.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "source_sha256": "fa3e3f8ba3d7f10562188c02aa937c72a486949d153eacce176f32d9e3930ac5",
+    "target": "src/unified_marl/algorithms/kou/old/learners/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/controllers/basic_controller.py",
+    "source_sha256": "857cd8462f02406c7a0104ba75159916d70f116fc20b2e6aa55a6fc880ecf052",
+    "target": "src/unified_marl/algorithms/kou/old/controllers/basic_controller.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/controllers/central_basic_controller.py",
+    "source_sha256": "7b22ce44d25cf27fcca242a1ac4c5a030081854aec4bc2c04658ef6734263c01",
+    "target": "src/unified_marl/algorithms/kou/old/controllers/central_basic_controller.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/controllers/maddpg_controller.py",
+    "source_sha256": "2e6629fd12b227ec77e5ebbbe982d392eb2cd5633c8968c08c3ae6c84d3a1c5e",
+    "target": "src/unified_marl/algorithms/kou/old/controllers/maddpg_controller.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/controllers/__init__.py",
+    "source_sha256": "7153f5391b9bf17055b430f06df2102e6c692a652f5527067aec2272253e3e2b",
+    "target": "src/unified_marl/algorithms/kou/old/controllers/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/algorithms/kou/old/modules/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/agents/central_rnn_agent.py",
+    "source_sha256": "d38df46e702e8a40b004b2171748630a43b16d05c1ca23a8e99ab585418de84c",
+    "target": "src/unified_marl/algorithms/kou/old/modules/agents/central_rnn_agent.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/agents/mlp_agent.py",
+    "source_sha256": "b88405d729d113d6e0367fbecb5b7039b1d86361480f43078d6fb19091ff8976",
+    "target": "src/unified_marl/algorithms/kou/old/modules/agents/mlp_agent.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/agents/mlp_ns_agent.py",
+    "source_sha256": "f9cd7671c8a24ed8235e3c054382d82660362e592dacd355c593d8dc35a83d57",
+    "target": "src/unified_marl/algorithms/kou/old/modules/agents/mlp_ns_agent.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/agents/rnn_agent.py",
+    "source_sha256": "c14fc450038da2446642cb0575b480f21b5c53faca72f7640faff788a6b80ec9",
+    "target": "src/unified_marl/algorithms/kou/old/modules/agents/rnn_agent.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/agents/__init__.py",
+    "source_sha256": "3b68cad382ee10906ce73323963a73db00809c946b166d65375b53ef658d1171",
+    "target": "src/unified_marl/algorithms/kou/old/modules/agents/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/critics/coma.py",
+    "source_sha256": "5a8f502cacea8d58f907bfd84ae62f79424f994afaae1e784dcb57835278be0e",
+    "target": "src/unified_marl/algorithms/kou/old/modules/critics/coma.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/critics/maddpg_ns.py",
+    "source_sha256": "1323bb1f51ccf93d825230c5344784fb5f518d1dde5eec549f91991b71e69842",
+    "target": "src/unified_marl/algorithms/kou/old/modules/critics/maddpg_ns.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/critics/__init__.py",
+    "source_sha256": "4389435828054806768083638d0e814796bc11522d1582bf128d0efe4b1b07a8",
+    "target": "src/unified_marl/algorithms/kou/old/modules/critics/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/dmaq_general.py",
+    "source_sha256": "dbd7fb7c37a05abd82155b10197069ca1c42dc5259717f8102f1a0b814cb3ec2",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/dmaq_general.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/dmaq_qatten.py",
+    "source_sha256": "fae873edc85cb682dd2575b86cdf20eac9a76921f9fc952ac7abca2504ea5758",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/dmaq_qatten.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/dmaq_qatten_weight.py",
+    "source_sha256": "e095872b93ab0d94edd415d9a981123834356ac0c1bb5867401c18d578373c80",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/dmaq_qatten_weight.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/dmaq_si_weight.py",
+    "source_sha256": "2a4dbc53a0f72620c8ccaf600157cf1cc6060e857409ed8c330ec9bf088a3d5c",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/dmaq_si_weight.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/qmix.py",
+    "source_sha256": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/qmix.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/qmix_central_attention.py",
+    "source_sha256": "12d14ad749a2af82afee83b76d29a33f0f78d69f30a7e12b2f47a839a3893e82",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/qmix_central_attention.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/qmix_central_no_hyper.py",
+    "source_sha256": "e656d5a1830696f319c104c7609778b375470e7302890329c9bc31b8edd60866",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/qmix_central_no_hyper.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/qtran.py",
+    "source_sha256": "b67b60eb5c39908aa6c9d8ecf5b67ef2a7da0ef0472b10cdf1eaa71674cb4a29",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/qtran.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/vdn.py",
+    "source_sha256": "1681c32585cda8065fc82e66cb0670282334067eeb4f2162f28f39d7876b813a",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/vdn.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/mixers/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/algorithms/kou/old/modules/mixers/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/components/action_selectors.py",
+    "source_sha256": "a01546960ec0cece63e047dac129cb5a594ad9a8ce494588021d7da70b08b383",
+    "target": "src/unified_marl/algorithms/kou/old/components/action_selectors.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/components/epsilon_schedules.py",
+    "source_sha256": "42bc0b063e1619f57b022b7fdf8bf007394fd63a78f2375a579372eb0a6abb93",
+    "target": "src/unified_marl/algorithms/kou/old/components/epsilon_schedules.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/components/preference.py",
+    "source_sha256": "eb597c55bf2c4abc958f03127ee7d0d4ce7b23a8428124ba3221240fb1c24abc",
+    "target": "src/unified_marl/algorithms/kou/old/components/preference.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/components/reward_model.py",
+    "source_sha256": "c9012e95a189ee0a4c44ec33bbe084fe7a5b1509f6c4afdcfd972d1b5b8afbbb",
+    "target": "src/unified_marl/algorithms/kou/old/components/reward_model.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/components/reward_model_new.py",
+    "source_sha256": "066d48711d4d1dbed2d58ce1be40b2ffcdf5a4466ad92549dc14f3576364e5a6",
+    "target": "src/unified_marl/algorithms/kou/old/components/reward_model_new.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/utils/dict2namedtuple.py",
+    "source_sha256": "6f0ebf7235eaeadb95cdb100bbd3d67c93d421395ec7881e8f167b4056158364",
+    "target": "src/unified_marl/algorithms/kou/old/utils/dict2namedtuple.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/utils/model.py",
+    "source_sha256": "9f81afba7042348bee563c53dc98f9cca9432d1d7ad81ac85829223babcf347f",
+    "target": "src/unified_marl/algorithms/kou/old/utils/model.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/utils/rl_utils.py",
+    "source_sha256": "f675e6e831b28a022f61a9cd54a468e0e947d90cdbc4b0dc4a0b5c84e92d9715",
+    "target": "src/unified_marl/algorithms/kou/old/utils/rl_utils.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/utils/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/algorithms/kou/old/utils/__init__.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/encoder_decoder_divide.py",
+    "source_sha256": "66b70d7b6893f30a939336eea3a9b23f80d556e30cbd4ec018fecce141bd1d47",
+    "target": "src/unified_marl/algorithms/kou/reward_models/encoder_decoder_divide.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/lstm.py",
+    "source_sha256": "00e968e246e176d6a7af199db0fdb4905b8ad56a38440085529f754552395f28",
+    "target": "src/unified_marl/algorithms/kou/reward_models/lstm.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/MR.py",
+    "source_sha256": "953d4955ff354dc32528ef1f70ef2121279be42905cb4785dc8f8fd06149ea2b",
+    "target": "src/unified_marl/algorithms/kou/reward_models/MR.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/MultiPrefTransformer.py",
+    "source_sha256": "d74f9cd6322fcf7aa1f5fcacf5da7313db596bb1e673e0199d4a5bf5ee77bb4d",
+    "target": "src/unified_marl/algorithms/kou/reward_models/MultiPrefTransformer.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/NMR.py",
+    "source_sha256": "5cae24acc2ef054956af8c4b1e3916c851a104213fe0c57ba86cd4623ed186be",
+    "target": "src/unified_marl/algorithms/kou/reward_models/NMR.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/ops.py",
+    "source_sha256": "0451aa84eaac27f5dc0b48dc93e090f248dcd3b4e98486c505f181f2234dbf37",
+    "target": "src/unified_marl/algorithms/kou/reward_models/ops.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/PrefTransformer.py",
+    "source_sha256": "92de00ac294a009ab08baad151c42a45a8d4964ad5e31aa3c8300d480961a3c6",
+    "target": "src/unified_marl/algorithms/kou/reward_models/PrefTransformer.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/q_function.py",
+    "source_sha256": "75859808e7453890ba34acab94df15d74e98151ef816a7fa2b606a0dd49bf8f0",
+    "target": "src/unified_marl/algorithms/kou/reward_models/q_function.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/torch_utils.py",
+    "source_sha256": "91cdab0130587d2c52d79b9cad11e7b7368fdcd0963684d20d11fca7790dfdc9",
+    "target": "src/unified_marl/algorithms/kou/reward_models/torch_utils.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/algorithms/reward_model/models/trajectory_gpt2.py",
+    "source_sha256": "bc9a4fe68a04006935a767fa93673037953c5a76f67d76039f645ddc4ad8a24b",
+    "target": "src/unified_marl/algorithms/kou/reward_models/trajectory_gpt2.py"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/get_preferences.py",
+    "source_sha256": "eae121653ac80667ec54fc8fc6760f585b6e51b65aca0a38ce14bef8260405d4",
+    "target": "src/unified_marl/datasets/prompts.py",
+    "scope": "pure placeholders and explicit template path only"
+  },
+  {
+    "source": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/make_diverse_preference.py",
+    "source_sha256": "e8ccb37fc7de12ff5752f327094b6c7492c0d0b0553fa4900dd9ce2eee848390",
+    "target": "src/unified_marl/datasets/segments.py",
+    "scope": "clip_to_segment_length only; remote label generation excluded"
+  }
+]

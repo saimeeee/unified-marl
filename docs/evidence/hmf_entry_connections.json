@@ -1,0 +1,92 @@
+[
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/dqn.py",
+    "class": "DQN",
+    "direct_main_dispatch": true
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical.py",
+    "class": "Hierarchical",
+    "direct_main_dispatch": true
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_qmix.py",
+    "class": "Hierarchical_Qmix",
+    "direct_main_dispatch": false
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdac.py",
+    "class": "Hierarchical_VDN",
+    "direct_main_dispatch": false
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn copy.py",
+    "class": "Hierarchical_VDN",
+    "direct_main_dispatch": false
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn.py",
+    "class": "Hierarchical_VDN",
+    "direct_main_dispatch": true
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_02_formulate_meanQ.py",
+    "class": "Hierarchical_VDN_02_Formulate_MeanQ",
+    "direct_main_dispatch": false
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_02_formulate_meanQ_IPC.py",
+    "class": "Hierarchical_VDN_02_Formulate_MeanQ_IPC",
+    "direct_main_dispatch": true
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_IPC.py",
+    "class": "Hierarchical_VDN",
+    "direct_main_dispatch": false
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_k_means.py",
+    "class": "Hierarchical_VDN_K_Means",
+    "direct_main_dispatch": false
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_roma.py",
+    "class": "Hierarchical_VDN_ROMA",
+    "direct_main_dispatch": false
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_without_high_level.py",
+    "class": "Hierarchical_VDN_Without_High_Level",
+    "direct_main_dispatch": true
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/maddpg.py",
+    "class": "MADDPG",
+    "direct_main_dispatch": true
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/mfac.py",
+    "class": "MFAC",
+    "direct_main_dispatch": false
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/mfq.py",
+    "class": "MFQ",
+    "direct_main_dispatch": true
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/mfvfd.py",
+    "class": "MFVFD",
+    "direct_main_dispatch": true
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/qmix.py",
+    "class": "QMIX",
+    "direct_main_dispatch": true
+  },
+  {
+    "path": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/vdn.py",
+    "class": "VDN",
+    "direct_main_dispatch": true
+  }
+]

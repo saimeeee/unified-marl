@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "scope": "deterministic toy, episode boundary, pre-clustering",
+  "progress": {
+    "env_steps": 12,
+    "episodes": 3,
+    "updates": 2
+  },
+  "training_checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_wang_train_resume_policy_0\\resumed\\training.pt"
+}

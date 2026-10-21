@@ -1,0 +1,600 @@
+{
+  "version": "0.5.0",
+  "package": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py",
+  "python": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Scripts\\python.exe",
+  "cwd": "G:\\AI\\Codex\\多智能体代码整合",
+  "algorithms": [
+    {
+      "name": "sadma/qmix",
+      "result": {
+        "algorithm": "sadma/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.07353066266779257,
+        "metrics": {
+          "loss_td": 0.1202375516295433,
+          "grad_norm": 2.3154354095458984,
+          "td_error_abs": 0.1202375516295433,
+          "q_taken_mean": -0.08745378255844116,
+          "target_mean": 0.10346934199333191,
+          "loss": 0.1202375516295433
+        }
+      },
+      "resume": {
+        "algorithm": "sadma/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-qmix-resumed\\config.json",
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 3,
+        "parameter_delta_l2": 0.028449468655111047,
+        "metrics": {
+          "loss_td": 0.1274358481168747,
+          "grad_norm": 2.1805660724639893,
+          "td_error_abs": 0.1274358481168747,
+          "q_taken_mean": -0.019002456218004227,
+          "target_mean": 0.15222962200641632,
+          "loss": 0.1274358481168747
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.5,
+          2.5
+        ],
+        "return_mean": 2.5,
+        "return_std": 0.0
+      }
+    },
+    {
+      "name": "sadma/ppo",
+      "result": {
+        "algorithm": "sadma/ppo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo\\config.json",
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 2,
+        "parameter_delta_l2": 0.06262203934102427,
+        "metrics": {
+          "advantage_mean": -4.470348358154297e-08,
+          "actor_loss": -0.0013493448495864868,
+          "entropy_loss": 0.8958041071891785,
+          "grad_norm": 1.774914026260376,
+          "critic_loss": 0.5978763699531555,
+          "target_mean": 0.7748743295669556,
+          "loss": 0.2975888252258301,
+          "policy_version": 4
+        }
+      },
+      "resume": {
+        "algorithm": "sadma/ppo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-ppo-resumed\\config.json",
+        "env_steps": 24,
+        "episodes": 6,
+        "updates": 3,
+        "parameter_delta_l2": 0.025563119987820633,
+        "metrics": {
+          "advantage_mean": 1.4901161193847656e-08,
+          "actor_loss": -0.001719847321510315,
+          "entropy_loss": 0.8958134651184082,
+          "grad_norm": 0.9585415124893188,
+          "critic_loss": 0.08599302172660828,
+          "target_mean": 0.17529082298278809,
+          "loss": 0.04127666354179382,
+          "policy_version": 6
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.5,
+          2.5
+        ],
+        "return_mean": 2.5,
+        "return_std": 0.0
+      }
+    },
+    {
+      "name": "sadma/vdn",
+      "result": {
+        "algorithm": "sadma/vdn",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.07436584224082848,
+        "metrics": {
+          "loss_td": 0.4388306736946106,
+          "grad_norm": 1.513981580734253,
+          "td_error_abs": 0.4388306736946106,
+          "q_taken_mean": 0.002582043642178178,
+          "target_mean": 0.4374151825904846,
+          "loss": 0.4388306736946106
+        }
+      },
+      "resume": {
+        "algorithm": "sadma/vdn",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma-vdn-resumed\\config.json",
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 3,
+        "parameter_delta_l2": 0.030845005623465146,
+        "metrics": {
+          "loss_td": 0.37625837326049805,
+          "grad_norm": 1.526489019393921,
+          "td_error_abs": 0.37625837326049805,
+          "q_taken_mean": 0.00640936940908432,
+          "target_mean": 0.41063207387924194,
+          "loss": 0.37625837326049805
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "name": "sadma_yi/qmix",
+      "result": {
+        "algorithm": "sadma_yi/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.07436584224082848,
+        "metrics": {
+          "loss_td": 0.4388306736946106,
+          "grad_norm": 1.513981580734253,
+          "td_error_abs": 0.4388306736946106,
+          "q_taken_mean": 0.002582043642178178,
+          "target_mean": 0.4374151825904846,
+          "loss": 0.4388306736946106
+        }
+      },
+      "resume": {
+        "algorithm": "sadma_yi/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-qmix-resumed\\config.json",
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 3,
+        "parameter_delta_l2": 0.030845005623465146,
+        "metrics": {
+          "loss_td": 0.37625837326049805,
+          "grad_norm": 1.526489019393921,
+          "td_error_abs": 0.37625837326049805,
+          "q_taken_mean": 0.00640936940908432,
+          "target_mean": 0.41063207387924194,
+          "loss": 0.37625837326049805
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "name": "sadma_yi/ppo",
+      "result": {
+        "algorithm": "sadma_yi/ppo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo\\config.json",
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 2,
+        "parameter_delta_l2": 0.05721662305848937,
+        "metrics": {
+          "advantage_mean": 1.043081283569336e-07,
+          "actor_loss": 0.00018333643674850464,
+          "entropy_loss": 0.8957890272140503,
+          "grad_norm": 1.2337597608566284,
+          "critic_loss": 0.724307656288147,
+          "target_mean": 0.4503542184829712,
+          "loss": 0.35233718156814575,
+          "policy_version": 4
+        }
+      },
+      "resume": {
+        "algorithm": "sadma_yi/ppo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi-ppo-resumed\\config.json",
+        "env_steps": 24,
+        "episodes": 6,
+        "updates": 3,
+        "parameter_delta_l2": 0.020167431373403995,
+        "metrics": {
+          "advantage_mean": 1.4901161193847656e-07,
+          "actor_loss": 0.00014927983283996582,
+          "entropy_loss": 0.8957488536834717,
+          "grad_norm": 1.2643433809280396,
+          "critic_loss": 0.3965476155281067,
+          "target_mean": 0.6394628286361694,
+          "loss": 0.18842308223247528,
+          "policy_version": 6
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "name": "sadma_yi_closed/qmix",
+      "result": {
+        "algorithm": "sadma_yi_closed/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.07353066266779257,
+        "metrics": {
+          "loss_td": 0.1202375516295433,
+          "grad_norm": 2.3154354095458984,
+          "td_error_abs": 0.1202375516295433,
+          "q_taken_mean": -0.08745378255844116,
+          "target_mean": 0.10346934199333191,
+          "loss": 0.1202375516295433
+        }
+      },
+      "resume": {
+        "algorithm": "sadma_yi_closed/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-qmix-resumed\\config.json",
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 3,
+        "parameter_delta_l2": 0.028449468655111047,
+        "metrics": {
+          "loss_td": 0.1274358481168747,
+          "grad_norm": 2.1805660724639893,
+          "td_error_abs": 0.1274358481168747,
+          "q_taken_mean": -0.019002456218004227,
+          "target_mean": 0.15222962200641632,
+          "loss": 0.1274358481168747
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.5,
+          2.5
+        ],
+        "return_mean": 2.5,
+        "return_std": 0.0
+      }
+    },
+    {
+      "name": "sadma_yi_closed/ppo",
+      "result": {
+        "algorithm": "sadma_yi_closed/ppo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo\\config.json",
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 2,
+        "parameter_delta_l2": 0.05721662305848937,
+        "metrics": {
+          "advantage_mean": 1.043081283569336e-07,
+          "actor_loss": 0.00018333643674850464,
+          "entropy_loss": 0.8957890272140503,
+          "grad_norm": 1.2337597608566284,
+          "critic_loss": 0.724307656288147,
+          "target_mean": 0.4503542184829712,
+          "loss": 0.35233718156814575,
+          "policy_version": 4
+        }
+      },
+      "resume": {
+        "algorithm": "sadma_yi_closed/ppo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\sadma_yi_closed-ppo-resumed\\config.json",
+        "env_steps": 24,
+        "episodes": 6,
+        "updates": 3,
+        "parameter_delta_l2": 0.020167431373403995,
+        "metrics": {
+          "advantage_mean": 1.4901161193847656e-07,
+          "actor_loss": 0.00014927983283996582,
+          "entropy_loss": 0.8957488536834717,
+          "grad_norm": 1.2643433809280396,
+          "critic_loss": 0.3965476155281067,
+          "target_mean": 0.6394628286361694,
+          "loss": 0.18842308223247528,
+          "policy_version": 6
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    }
+  ],
+  "cli": [
+    {
+      "algorithm": "sadma/qmix",
+      "argv": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Scripts\\unified-marl.exe",
+        "train",
+        "--algorithm",
+        "sadma/qmix",
+        "--env",
+        "toy",
+        "--output-dir",
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\cli-sadma-qmix",
+        "--set",
+        "train_batch_size=2",
+        "--set",
+        "train_buffer_size=8",
+        "--set",
+        "update_rate=1",
+        "--set",
+        "hidden_dim=16",
+        "--set",
+        "mini_epochs=2",
+        "--set",
+        "t_max=40",
+        "--set",
+        "max_updates=2"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"algorithm\": \"sadma/qmix\",\n  \"output_dir\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-qmix\",\n  \"checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-qmix\\\\policy.pt\",\n  \"training_checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-qmix\\\\training.pt\",\n  \"metrics_path\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-qmix\\\\metrics.jsonl\",\n  \"config_path\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-qmix\\\\config.json\",\n  \"env_steps\": 12,\n  \"episodes\": 3,\n  \"updates\": 2,\n  \"parameter_delta_l2\": 0.07353066266779257,\n  \"metrics\": {\n    \"loss_td\": 0.1202375516295433,\n    \"grad_norm\": 2.3154354095458984,\n    \"td_error_abs\": 0.1202375516295433,\n    \"q_taken_mean\": -0.08745378255844116,\n    \"target_mean\": 0.10346934199333191,\n    \"loss\": 0.1202375516295433\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "algorithm": "sadma/ppo",
+      "argv": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Scripts\\unified-marl.exe",
+        "train",
+        "--algorithm",
+        "sadma/ppo",
+        "--env",
+        "toy",
+        "--output-dir",
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\cli-sadma-ppo",
+        "--set",
+        "train_batch_size=2",
+        "--set",
+        "train_buffer_size=8",
+        "--set",
+        "update_rate=1",
+        "--set",
+        "hidden_dim=16",
+        "--set",
+        "mini_epochs=2",
+        "--set",
+        "t_max=40",
+        "--set",
+        "max_updates=2"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"algorithm\": \"sadma/ppo\",\n  \"output_dir\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-ppo\",\n  \"checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-ppo\\\\policy.pt\",\n  \"training_checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-ppo\\\\training.pt\",\n  \"metrics_path\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-ppo\\\\metrics.jsonl\",\n  \"config_path\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage5\\\\installed-runs-8da751da\\\\cli-sadma-ppo\\\\config.json\",\n  \"env_steps\": 16,\n  \"episodes\": 4,\n  \"updates\": 2,\n  \"parameter_delta_l2\": 0.06262203934102427,\n  \"metrics\": {\n    \"advantage_mean\": -4.470348358154297e-08,\n    \"actor_loss\": -0.0013493448495864868,\n    \"entropy_loss\": 0.8958041071891785,\n    \"grad_norm\": 1.774914026260376,\n    \"critic_loss\": 0.5978763699531555,\n    \"target_mean\": 0.7748743295669556,\n    \"loss\": 0.2975888252258301,\n    \"policy_version\": 4\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "regressions": [
+    {
+      "name": "pymarl/qmix",
+      "result": {
+        "algorithm": "pymarl/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-pymarl-qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-pymarl-qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-pymarl-qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-pymarl-qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-pymarl-qmix\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.5269016045677161,
+        "metrics": {
+          "loss": 0.35638558864593506,
+          "grad_norm": 4.917663097381592
+        }
+      }
+    },
+    {
+      "name": "wang/rode_hmf",
+      "result": {
+        "algorithm": "wang/rode_hmf",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang-rode_hmf",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang-rode_hmf\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang-rode_hmf\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang-rode_hmf\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang-rode_hmf\\config.json",
+        "env_steps": 32,
+        "episodes": 8,
+        "updates": 1,
+        "parameter_delta_l2": 0.8739318278855124,
+        "metrics": {
+          "loss": 1.3547086715698242,
+          "role_loss": 0.5581793785095215,
+          "grad_norm": 35.42567443847656,
+          "encoder_loss": 3.0404748916625977
+        }
+      }
+    },
+    {
+      "name": "wang_hmf/mfq",
+      "result": {
+        "algorithm": "wang_hmf/mfq",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang_hmf-mfq",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang_hmf-mfq\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang_hmf-mfq\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang_hmf-mfq\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-wang_hmf-mfq\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.017924525417024353,
+        "metrics": {
+          "loss": 0.2572910785675049,
+          "total_vf_loss": 0.2572910785675049
+        }
+      }
+    },
+    {
+      "name": "kou/bc",
+      "result": {
+        "algorithm": "kou/bc",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-bc",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-bc\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-bc\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-bc\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-bc\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.24685697075682414,
+        "metrics": {
+          "loss": 1.5473659038543701,
+          "grad_norm": 0.25113850831985474,
+          "agent_grad_norm": 0.25113850831985474
+        }
+      }
+    },
+    {
+      "name": "kou/cpl",
+      "result": {
+        "algorithm": "kou/cpl",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-cpl",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-cpl\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-cpl\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-cpl\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage5\\installed-runs-8da751da\\regression-kou-cpl\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.18738087192052016,
+        "metrics": {
+          "loss": 1.731657862663269,
+          "cpl_loss": 1.731657862663269,
+          "nll_loss": 0.0,
+          "prefer_p_log": 0.18818020820617676,
+          "prefer_p_real": 0.20260700583457947,
+          "unprefer_p_log": 0.2149086445569992,
+          "unprefer_p_real": 0.2155933678150177,
+          "agent_grad_norm": 0.13597585260868073
+        }
+      }
+    }
+  ],
+  "real_environments": [
+    {
+      "env": "sc2",
+      "status": "BLOCKED",
+      "error": "SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\smac.py\", line 7, in make_smac\n    from smac.env import StarCraft2Env\nModuleNotFoundError: No module named 'smac'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\validate_stage5_installed.py\", line 79, in main\n    result=train(\"sadma/ppo\",env,output_dir=runs/(\"real-\"+env),overrides=options)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\api.py\", line 138, in train\n    return train_sadma(algorithm,env,env_args,device,seed,output_dir,config,overrides,resume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\trainers\\sadma.py\", line 60, in train_sadma\n    runner=EpisodeRunner(SimpleNamespace(**cfg),logger)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\runners\\episode_runner.py\", line 13, in __init__\n    self.env = make_env(args.env, **args.env_args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 33, in make_env\n    return factory(**kwargs)\n           ^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 12, in _sc2\n    return make_smac(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\smac.py\", line 9, in make_smac\n    raise ImportError(\"SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.\") from exc\nImportError: SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.\n"
+    },
+    {
+      "env": "replenishment",
+      "status": "BLOCKED",
+      "error": "ReplenishmentEnv simulator and its task/data assets are required; no simulator is bundled",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\replenishment.py\", line 10, in __init__\n    from ReplenishmentEnv import make_env\nModuleNotFoundError: No module named 'ReplenishmentEnv'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\validate_stage5_installed.py\", line 79, in main\n    result=train(\"sadma/ppo\",env,output_dir=runs/(\"real-\"+env),overrides=options)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\api.py\", line 138, in train\n    return train_sadma(algorithm,env,env_args,device,seed,output_dir,config,overrides,resume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\trainers\\sadma.py\", line 60, in train_sadma\n    runner=EpisodeRunner(SimpleNamespace(**cfg),logger)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\runners\\episode_runner.py\", line 13, in __init__\n    self.env = make_env(args.env, **args.env_args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 33, in make_env\n    return factory(**kwargs)\n           ^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 17, in _replenishment\n    return ReplenishmentAdapter(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\replenishment.py\", line 12, in __init__\n    raise ImportError(\"ReplenishmentEnv simulator and its task/data assets are required; no simulator is bundled\") from exc\nImportError: ReplenishmentEnv simulator and its task/data assets are required; no simulator is bundled\n"
+    },
+    {
+      "env": "cityflow",
+      "status": "BLOCKED",
+      "error": "SADMA CityFlow needs cityflowenv.env.CityflowEnv, the CityFlow engine, traffic maps and flows; none are bundled",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\cityflow.py\", line 8, in __init__\n    from cityflowenv.env import CityflowEnv\nModuleNotFoundError: No module named 'cityflowenv'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\validate_stage5_installed.py\", line 79, in main\n    result=train(\"sadma/ppo\",env,output_dir=runs/(\"real-\"+env),overrides=options)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\api.py\", line 138, in train\n    return train_sadma(algorithm,env,env_args,device,seed,output_dir,config,overrides,resume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\trainers\\sadma.py\", line 60, in train_sadma\n    runner=EpisodeRunner(SimpleNamespace(**cfg),logger)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\runners\\episode_runner.py\", line 13, in __init__\n    self.env = make_env(args.env, **args.env_args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 33, in make_env\n    return factory(**kwargs)\n           ^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 22, in _cityflow\n    return CityFlowAdapter(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\cityflow.py\", line 10, in __init__\n    raise ImportError(\"SADMA CityFlow needs cityflowenv.env.CityflowEnv, the CityFlow engine, traffic maps and flows; none are bundled\") from exc\nImportError: SADMA CityFlow needs cityflowenv.env.CityflowEnv, the CityFlow engine, traffic maps and flows; none are bundled\n"
+    },
+    {
+      "env": "powergrid",
+      "status": "BLOCKED",
+      "error": "SADMA powergrid needs continuous float actions [B,T,N,D], bounds and a Gaussian policy protocol; it is not mapped to discrete actions in this stage",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\validate_stage5_installed.py\", line 79, in main\n    result=train(\"sadma/ppo\",env,output_dir=runs/(\"real-\"+env),overrides=options)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\api.py\", line 138, in train\n    return train_sadma(algorithm,env,env_args,device,seed,output_dir,config,overrides,resume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\trainers\\sadma.py\", line 42, in train_sadma\n    cfg=load_config(algorithm,env or \"toy\",config,overrides)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\config\\__init__.py\", line 48, in load_config\n    if env==\"powergrid\": raise ValueError(\"SADMA powergrid needs continuous float actions [B,T,N,D], bounds and a Gaussian policy protocol; it is not mapped to discrete actions in this stage\")\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: SADMA powergrid needs continuous float actions [B,T,N,D], bounds and a Gaussian policy protocol; it is not mapped to discrete actions in this stage\n"
+    }
+  ],
+  "optional_dependencies": {
+    "zmq": false,
+    "smac": false,
+    "cityflowenv": false,
+    "ReplenishmentEnv": false,
+    "pandapower": false,
+    "pandas": false
+  },
+  "lifecycle": {
+    "sequential_tasks": 7,
+    "closed_envs": 21,
+    "all_closed": true,
+    "children_before": 0,
+    "children_after": 0
+  },
+  "continuous_grid_assets": {
+    "directory": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\论文\\SADMA\\sadma源代码开源版本\\envs\\powergrid\\data",
+    "exists": false,
+    "files": 0
+  },
+  "policy_effectiveness": "NOT_VALIDATED",
+  "distributed_execution": "NOT_IMPLEMENTED_STAGE6"
+}

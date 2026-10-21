@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "scope": "QMIX deterministic toy, episode boundary, exact network states",
+  "progress": {
+    "env_steps": 24,
+    "episodes": 6,
+    "updates": 5
+  }
+}

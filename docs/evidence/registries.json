@@ -1,0 +1,1762 @@
+[
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/components/action_selectors.py",
+    "line": 32,
+    "registry": "REGISTRY",
+    "key": "multinomial",
+    "value": "MultinomialActionSelector"
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/components/action_selectors.py",
+    "line": 65,
+    "registry": "REGISTRY",
+    "key": "epsilon_greedy",
+    "value": "EpsilonGreedyActionSelector"
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/controllers/__init__.py",
+    "line": 5,
+    "registry": "REGISTRY",
+    "key": "basic_mac",
+    "value": "BasicMAC"
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/envs/__init__.py",
+    "line": 10,
+    "registry": "REGISTRY",
+    "key": "sc2",
+    "value": "partial(env_fn, env=StarCraft2Env)"
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/learners/__init__.py",
+    "line": 7,
+    "registry": "REGISTRY",
+    "key": "q_learner",
+    "value": "QLearner"
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/learners/__init__.py",
+    "line": 8,
+    "registry": "REGISTRY",
+    "key": "coma_learner",
+    "value": "COMALearner"
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/learners/__init__.py",
+    "line": 9,
+    "registry": "REGISTRY",
+    "key": "qtran_learner",
+    "value": "QTranLearner"
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/modules/agents/__init__.py",
+    "line": 4,
+    "registry": "REGISTRY",
+    "key": "rnn",
+    "value": "RNNAgent"
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/runners/__init__.py",
+    "line": 4,
+    "registry": "REGISTRY",
+    "key": "episode",
+    "value": "EpisodeRunner"
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/runners/__init__.py",
+    "line": 7,
+    "registry": "REGISTRY",
+    "key": "parallel",
+    "value": "ParallelRunner"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/components/action_selectors.py",
+    "line": 32,
+    "registry": "REGISTRY",
+    "key": "multinomial",
+    "value": "MultinomialActionSelector"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/components/action_selectors.py",
+    "line": 65,
+    "registry": "REGISTRY",
+    "key": "epsilon_greedy",
+    "value": "EpsilonGreedyActionSelector"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/components/action_selectors.py",
+    "line": 106,
+    "registry": "REGISTRY",
+    "key": "soft_epsilon_greedy",
+    "value": "SoftEpsilonGreedyActionSelector"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/controllers/__init__.py",
+    "line": 6,
+    "registry": "REGISTRY",
+    "key": "basic_mac",
+    "value": "BasicMAC"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/controllers/__init__.py",
+    "line": 7,
+    "registry": "REGISTRY",
+    "key": "rode_mac",
+    "value": "RODEMAC"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/envs/__init__.py",
+    "line": 14,
+    "registry": "REGISTRY",
+    "key": "sc2",
+    "value": "partial(env_fn, env=StarCraft2Env)"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/envs/__init__.py",
+    "line": 15,
+    "registry": "REGISTRY",
+    "key": "replenishment",
+    "value": "partial(env_fn, env=ReplenishmentEnv)"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/__init__.py",
+    "line": 9,
+    "registry": "REGISTRY",
+    "key": "q_learner",
+    "value": "QLearner"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/__init__.py",
+    "line": 10,
+    "registry": "REGISTRY",
+    "key": "coma_learner",
+    "value": "COMALearner"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/__init__.py",
+    "line": 11,
+    "registry": "REGISTRY",
+    "key": "qtran_learner",
+    "value": "QTranLearner"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/__init__.py",
+    "line": 12,
+    "registry": "REGISTRY",
+    "key": "rode_learner",
+    "value": "RODELearner"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/__init__.py",
+    "line": 13,
+    "registry": "REGISTRY",
+    "key": "rode_hmf_learner",
+    "value": "RODEHMFLearner"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/action_encoders/__init__.py",
+    "line": 5,
+    "registry": "REGISTRY",
+    "key": "obs_reward",
+    "value": "ObsRewardEncoder"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/agents/__init__.py",
+    "line": 5,
+    "registry": "REGISTRY",
+    "key": "rnn",
+    "value": "RNNAgent"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/agents/__init__.py",
+    "line": 6,
+    "registry": "REGISTRY",
+    "key": "rode",
+    "value": "RODEAgent"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/role_selectors/__init__.py",
+    "line": 6,
+    "registry": "REGISTRY",
+    "key": "dot",
+    "value": "DotSelector"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/role_selectors/__init__.py",
+    "line": 7,
+    "registry": "REGISTRY",
+    "key": "q",
+    "value": "QSelector"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/roles/__init__.py",
+    "line": 5,
+    "registry": "REGISTRY",
+    "key": "dot",
+    "value": "DotRole"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/roles/__init__.py",
+    "line": 6,
+    "registry": "REGISTRY",
+    "key": "q",
+    "value": "QRole"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/runners/__init__.py",
+    "line": 4,
+    "registry": "REGISTRY",
+    "key": "episode",
+    "value": "EpisodeRunner"
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/runners/__init__.py",
+    "line": 7,
+    "registry": "REGISTRY",
+    "key": "parallel",
+    "value": "ParallelRunner"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/envs/__init__.py",
+    "line": 11,
+    "registry": "env_REGISTRY",
+    "key": "smac",
+    "value": "partial(env_fn, env=SMAC)"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/envs/__init__.py",
+    "line": 12,
+    "registry": "env_REGISTRY",
+    "key": "replenishment",
+    "value": "partial(env_fn, env=ReplenishmentEnv)"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/envs/__init__.py",
+    "line": 13,
+    "registry": "env_REGISTRY",
+    "key": "cityflow",
+    "value": "partial(env_fn, env=CityFlowEnv)"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/envs/__init__.py",
+    "line": 21,
+    "registry": "env_runner_REGISTRY",
+    "key": "smac",
+    "value": "SMACRunner"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/envs/__init__.py",
+    "line": 22,
+    "registry": "env_runner_REGISTRY",
+    "key": "replenishment",
+    "value": "ReplenishmentRunner"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/envs/__init__.py",
+    "line": 23,
+    "registry": "env_runner_REGISTRY",
+    "key": "cityflow",
+    "value": "CityFlowRunner"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/__init__.py",
+    "line": 7,
+    "registry": "policy_REGISTRY",
+    "key": "ppo",
+    "value": "{'mac': PPOController, 'policy': PPOPolicy}"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/__init__.py",
+    "line": 8,
+    "registry": "policy_REGISTRY",
+    "key": "qmix",
+    "value": "{'mac': QController, 'policy': Qpolicy}"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_net.py",
+    "line": 55,
+    "registry": "agent_REGISTRY",
+    "key": "ddpg_mlp",
+    "value": "DDPGMlpAgent"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_net.py",
+    "line": 56,
+    "registry": "agent_REGISTRY",
+    "key": "ddpg_rnn",
+    "value": "DDPGRnnAgent"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_net.py",
+    "line": 127,
+    "registry": "critic_REGISTRY",
+    "key": "mlp",
+    "value": "MlpCritic"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/maddpg/maddpg_net.py",
+    "line": 128,
+    "registry": "critic_REGISTRY",
+    "key": "rnn",
+    "value": "RnnCritic"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/mappo/ppo_net.py",
+    "line": 77,
+    "registry": "agent_REGISTRY",
+    "key": "pi_mlp",
+    "value": "PiMlpAgent"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/mappo/ppo_net.py",
+    "line": 78,
+    "registry": "agent_REGISTRY",
+    "key": "pi_rnn",
+    "value": "PiRnnAgent"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/mappo/ppo_net.py",
+    "line": 176,
+    "registry": "critic_REGISTRY",
+    "key": "mlp",
+    "value": "MlpCritic"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/mappo/ppo_net.py",
+    "line": 177,
+    "registry": "critic_REGISTRY",
+    "key": "rnn",
+    "value": "RnnCritic"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/qmix/q_net.py",
+    "line": 59,
+    "registry": "agent_REGISTRY",
+    "key": "q_mlp",
+    "value": "QMlpAgent"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/qmix/q_net.py",
+    "line": 60,
+    "registry": "agent_REGISTRY",
+    "key": "q_rnn",
+    "value": "QRnnAgent"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/qmix/q_net.py",
+    "line": 122,
+    "registry": "mixer_REGISTRY",
+    "key": "vdn_mixer",
+    "value": "VDNMixer"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/policy/qmix/q_net.py",
+    "line": 123,
+    "registry": "mixer_REGISTRY",
+    "key": "q_mixer",
+    "value": "Qmixer"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/runner/__init__.py",
+    "line": 6,
+    "registry": "runner_REGISTRY",
+    "key": "train",
+    "value": "train_run"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/runner/__init__.py",
+    "line": 7,
+    "registry": "runner_REGISTRY",
+    "key": "sample",
+    "value": "sample_run"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/runner/__init__.py",
+    "line": 8,
+    "registry": "runner_REGISTRY",
+    "key": "sync",
+    "value": "sync_run"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/utils/scheme.py",
+    "line": 61,
+    "registry": "scheme_REGISTRY",
+    "key": "buffer",
+    "value": "make_buffer_scheme"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/utils/scheme.py",
+    "line": 62,
+    "registry": "scheme_REGISTRY",
+    "key": "episode",
+    "value": "make_episode_scheme"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/utils/scheme.py",
+    "line": 63,
+    "registry": "scheme_REGISTRY",
+    "key": "transition",
+    "value": "make_transition_scheme"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/worker/__init__.py",
+    "line": 8,
+    "registry": "worker_REGISTRY",
+    "key": "local_sample_worker",
+    "value": "LocalSampleWorker"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/worker/__init__.py",
+    "line": 9,
+    "registry": "worker_REGISTRY",
+    "key": "remote_sample_worker",
+    "value": "RemoteSampleWorker"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/worker/__init__.py",
+    "line": 10,
+    "registry": "worker_REGISTRY",
+    "key": "infer_worker",
+    "value": "InferWorker"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/worker/__init__.py",
+    "line": 11,
+    "registry": "worker_REGISTRY",
+    "key": "train_worker",
+    "value": "TrainWorker"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/worker/__init__.py",
+    "line": 12,
+    "registry": "worker_REGISTRY",
+    "key": "evaluate_worker",
+    "value": "EvaluateWorker"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/worker/__init__.py",
+    "line": 13,
+    "registry": "worker_REGISTRY",
+    "key": "infer_client",
+    "value": "InferClient"
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/worker/__init__.py",
+    "line": 14,
+    "registry": "worker_REGISTRY",
+    "key": "infer_server",
+    "value": "InferServer"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+    "line": 11,
+    "registry": "env_REGISTRY",
+    "key": "smac",
+    "value": "partial(env_fn, env=SMAC)"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+    "line": 12,
+    "registry": "env_REGISTRY",
+    "key": "replenishment",
+    "value": "partial(env_fn, env=ReplenishmentEnv)"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+    "line": 13,
+    "registry": "env_REGISTRY",
+    "key": "cityflow",
+    "value": "partial(env_fn, env=CityFlowEnv)"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+    "line": 14,
+    "registry": "env_REGISTRY",
+    "key": "powergrid",
+    "value": "partial(env_fn, env=GridEnv)"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+    "line": 21,
+    "registry": "env_runner_REGISTRY",
+    "key": "smac",
+    "value": "SMACRunner"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+    "line": 22,
+    "registry": "env_runner_REGISTRY",
+    "key": "replenishment",
+    "value": "ReplenishmentRunner"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+    "line": 23,
+    "registry": "env_runner_REGISTRY",
+    "key": "cityflow",
+    "value": "CityFlowRunner"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/envs/__init__.py",
+    "line": 24,
+    "registry": "env_runner_REGISTRY",
+    "key": "powergrid",
+    "value": "PowerGridRunner"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/__init__.py",
+    "line": 7,
+    "registry": "policy_REGISTRY",
+    "key": "ppo",
+    "value": "{'mac': PPOController, 'policy': PPOPolicy}"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/__init__.py",
+    "line": 8,
+    "registry": "policy_REGISTRY",
+    "key": "qmix",
+    "value": "{'mac': QController, 'policy': Qpolicy}"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_net.py",
+    "line": 55,
+    "registry": "agent_REGISTRY",
+    "key": "ddpg_mlp",
+    "value": "DDPGMlpAgent"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_net.py",
+    "line": 56,
+    "registry": "agent_REGISTRY",
+    "key": "ddpg_rnn",
+    "value": "DDPGRnnAgent"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_net.py",
+    "line": 127,
+    "registry": "critic_REGISTRY",
+    "key": "mlp",
+    "value": "MlpCritic"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/maddpg/maddpg_net.py",
+    "line": 128,
+    "registry": "critic_REGISTRY",
+    "key": "rnn",
+    "value": "RnnCritic"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/mappo/ppo_net.py",
+    "line": 77,
+    "registry": "agent_REGISTRY",
+    "key": "pi_mlp",
+    "value": "PiMlpAgent"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/mappo/ppo_net.py",
+    "line": 78,
+    "registry": "agent_REGISTRY",
+    "key": "pi_rnn",
+    "value": "PiRnnAgent"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/mappo/ppo_net.py",
+    "line": 176,
+    "registry": "critic_REGISTRY",
+    "key": "mlp",
+    "value": "MlpCritic"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/mappo/ppo_net.py",
+    "line": 177,
+    "registry": "critic_REGISTRY",
+    "key": "rnn",
+    "value": "RnnCritic"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/qmix/q_net.py",
+    "line": 59,
+    "registry": "agent_REGISTRY",
+    "key": "q_mlp",
+    "value": "QMlpAgent"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/qmix/q_net.py",
+    "line": 60,
+    "registry": "agent_REGISTRY",
+    "key": "q_rnn",
+    "value": "QRnnAgent"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/qmix/q_net.py",
+    "line": 122,
+    "registry": "mixer_REGISTRY",
+    "key": "vdn_mixer",
+    "value": "VDNMixer"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/policy/qmix/q_net.py",
+    "line": 123,
+    "registry": "mixer_REGISTRY",
+    "key": "q_mixer",
+    "value": "Qmixer"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/runner/__init__.py",
+    "line": 6,
+    "registry": "runner_REGISTRY",
+    "key": "train",
+    "value": "train_run"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/runner/__init__.py",
+    "line": 7,
+    "registry": "runner_REGISTRY",
+    "key": "sample",
+    "value": "sample_run"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/runner/__init__.py",
+    "line": 8,
+    "registry": "runner_REGISTRY",
+    "key": "sync",
+    "value": "sync_run"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/utils/scheme.py",
+    "line": 61,
+    "registry": "scheme_REGISTRY",
+    "key": "buffer",
+    "value": "make_buffer_scheme"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/utils/scheme.py",
+    "line": 62,
+    "registry": "scheme_REGISTRY",
+    "key": "episode",
+    "value": "make_episode_scheme"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/utils/scheme.py",
+    "line": 63,
+    "registry": "scheme_REGISTRY",
+    "key": "transition",
+    "value": "make_transition_scheme"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/__init__.py",
+    "line": 8,
+    "registry": "worker_REGISTRY",
+    "key": "local_sample_worker",
+    "value": "LocalSampleWorker"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/__init__.py",
+    "line": 9,
+    "registry": "worker_REGISTRY",
+    "key": "remote_sample_worker",
+    "value": "RemoteSampleWorker"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/__init__.py",
+    "line": 10,
+    "registry": "worker_REGISTRY",
+    "key": "infer_worker",
+    "value": "InferWorker"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/__init__.py",
+    "line": 11,
+    "registry": "worker_REGISTRY",
+    "key": "train_worker",
+    "value": "TrainWorker"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/__init__.py",
+    "line": 12,
+    "registry": "worker_REGISTRY",
+    "key": "evaluate_worker",
+    "value": "EvaluateWorker"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/__init__.py",
+    "line": 13,
+    "registry": "worker_REGISTRY",
+    "key": "infer_client",
+    "value": "InferClient"
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/worker/__init__.py",
+    "line": 14,
+    "registry": "worker_REGISTRY",
+    "key": "infer_server",
+    "value": "InferServer"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+    "line": 11,
+    "registry": "env_REGISTRY",
+    "key": "smac",
+    "value": "partial(env_fn, env=SMAC)"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+    "line": 12,
+    "registry": "env_REGISTRY",
+    "key": "replenishment",
+    "value": "partial(env_fn, env=ReplenishmentEnv)"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+    "line": 13,
+    "registry": "env_REGISTRY",
+    "key": "cityflow",
+    "value": "partial(env_fn, env=CityFlowEnv)"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+    "line": 14,
+    "registry": "env_REGISTRY",
+    "key": "powergrid",
+    "value": "partial(env_fn, env=GridEnv)"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+    "line": 21,
+    "registry": "env_runner_REGISTRY",
+    "key": "smac",
+    "value": "SMACRunner"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+    "line": 22,
+    "registry": "env_runner_REGISTRY",
+    "key": "replenishment",
+    "value": "ReplenishmentRunner"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+    "line": 23,
+    "registry": "env_runner_REGISTRY",
+    "key": "cityflow",
+    "value": "CityFlowRunner"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/envs/__init__.py",
+    "line": 24,
+    "registry": "env_runner_REGISTRY",
+    "key": "powergrid",
+    "value": "PowerGridRunner"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/__init__.py",
+    "line": 7,
+    "registry": "policy_REGISTRY",
+    "key": "ppo",
+    "value": "{'mac': PPOController, 'policy': PPOPolicy}"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/__init__.py",
+    "line": 8,
+    "registry": "policy_REGISTRY",
+    "key": "qmix",
+    "value": "{'mac': QController, 'policy': Qpolicy}"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_net.py",
+    "line": 55,
+    "registry": "agent_REGISTRY",
+    "key": "ddpg_mlp",
+    "value": "DDPGMlpAgent"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_net.py",
+    "line": 56,
+    "registry": "agent_REGISTRY",
+    "key": "ddpg_rnn",
+    "value": "DDPGRnnAgent"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_net.py",
+    "line": 127,
+    "registry": "critic_REGISTRY",
+    "key": "mlp",
+    "value": "MlpCritic"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/maddpg/maddpg_net.py",
+    "line": 128,
+    "registry": "critic_REGISTRY",
+    "key": "rnn",
+    "value": "RnnCritic"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/mappo/ppo_net.py",
+    "line": 77,
+    "registry": "agent_REGISTRY",
+    "key": "pi_mlp",
+    "value": "PiMlpAgent"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/mappo/ppo_net.py",
+    "line": 78,
+    "registry": "agent_REGISTRY",
+    "key": "pi_rnn",
+    "value": "PiRnnAgent"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/mappo/ppo_net.py",
+    "line": 176,
+    "registry": "critic_REGISTRY",
+    "key": "mlp",
+    "value": "MlpCritic"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/mappo/ppo_net.py",
+    "line": 177,
+    "registry": "critic_REGISTRY",
+    "key": "rnn",
+    "value": "RnnCritic"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/qmix/q_net.py",
+    "line": 59,
+    "registry": "agent_REGISTRY",
+    "key": "q_mlp",
+    "value": "QMlpAgent"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/qmix/q_net.py",
+    "line": 60,
+    "registry": "agent_REGISTRY",
+    "key": "q_rnn",
+    "value": "QRnnAgent"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/qmix/q_net.py",
+    "line": 122,
+    "registry": "mixer_REGISTRY",
+    "key": "vdn_mixer",
+    "value": "VDNMixer"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/policy/qmix/q_net.py",
+    "line": 123,
+    "registry": "mixer_REGISTRY",
+    "key": "q_mixer",
+    "value": "Qmixer"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/runner/__init__.py",
+    "line": 6,
+    "registry": "runner_REGISTRY",
+    "key": "train",
+    "value": "train_run"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/runner/__init__.py",
+    "line": 7,
+    "registry": "runner_REGISTRY",
+    "key": "sample",
+    "value": "sample_run"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/runner/__init__.py",
+    "line": 8,
+    "registry": "runner_REGISTRY",
+    "key": "sync",
+    "value": "sync_run"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/utils/scheme.py",
+    "line": 61,
+    "registry": "scheme_REGISTRY",
+    "key": "buffer",
+    "value": "make_buffer_scheme"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/utils/scheme.py",
+    "line": 62,
+    "registry": "scheme_REGISTRY",
+    "key": "episode",
+    "value": "make_episode_scheme"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/utils/scheme.py",
+    "line": 63,
+    "registry": "scheme_REGISTRY",
+    "key": "transition",
+    "value": "make_transition_scheme"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/__init__.py",
+    "line": 8,
+    "registry": "worker_REGISTRY",
+    "key": "local_sample_worker",
+    "value": "LocalSampleWorker"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/__init__.py",
+    "line": 9,
+    "registry": "worker_REGISTRY",
+    "key": "remote_sample_worker",
+    "value": "RemoteSampleWorker"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/__init__.py",
+    "line": 10,
+    "registry": "worker_REGISTRY",
+    "key": "infer_worker",
+    "value": "InferWorker"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/__init__.py",
+    "line": 11,
+    "registry": "worker_REGISTRY",
+    "key": "train_worker",
+    "value": "TrainWorker"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/__init__.py",
+    "line": 12,
+    "registry": "worker_REGISTRY",
+    "key": "evaluate_worker",
+    "value": "EvaluateWorker"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/__init__.py",
+    "line": 13,
+    "registry": "worker_REGISTRY",
+    "key": "infer_client",
+    "value": "InferClient"
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/worker/__init__.py",
+    "line": 14,
+    "registry": "worker_REGISTRY",
+    "key": "infer_server",
+    "value": "InferServer"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+    "line": 11,
+    "registry": "env_REGISTRY",
+    "key": "smac",
+    "value": "partial(env_fn, env=SMAC)"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+    "line": 12,
+    "registry": "env_REGISTRY",
+    "key": "replenishment",
+    "value": "partial(env_fn, env=ReplenishmentEnv)"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+    "line": 13,
+    "registry": "env_REGISTRY",
+    "key": "cityflow",
+    "value": "partial(env_fn, env=CityFlowEnv)"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+    "line": 14,
+    "registry": "env_REGISTRY",
+    "key": "powergrid",
+    "value": "partial(env_fn, env=GridEnv)"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+    "line": 21,
+    "registry": "env_runner_REGISTRY",
+    "key": "smac",
+    "value": "SMACRunner"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+    "line": 22,
+    "registry": "env_runner_REGISTRY",
+    "key": "replenishment",
+    "value": "ReplenishmentRunner"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+    "line": 23,
+    "registry": "env_runner_REGISTRY",
+    "key": "cityflow",
+    "value": "CityFlowRunner"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/envs/__init__.py",
+    "line": 24,
+    "registry": "env_runner_REGISTRY",
+    "key": "powergrid",
+    "value": "PowerGridRunner"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/__init__.py",
+    "line": 7,
+    "registry": "policy_REGISTRY",
+    "key": "ppo",
+    "value": "{'mac': PPOController, 'policy': PPOPolicy}"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/__init__.py",
+    "line": 8,
+    "registry": "policy_REGISTRY",
+    "key": "qmix",
+    "value": "{'mac': QController, 'policy': Qpolicy}"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_net.py",
+    "line": 55,
+    "registry": "agent_REGISTRY",
+    "key": "ddpg_mlp",
+    "value": "DDPGMlpAgent"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_net.py",
+    "line": 56,
+    "registry": "agent_REGISTRY",
+    "key": "ddpg_rnn",
+    "value": "DDPGRnnAgent"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_net.py",
+    "line": 127,
+    "registry": "critic_REGISTRY",
+    "key": "mlp",
+    "value": "MlpCritic"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/maddpg/maddpg_net.py",
+    "line": 128,
+    "registry": "critic_REGISTRY",
+    "key": "rnn",
+    "value": "RnnCritic"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/mappo/ppo_net.py",
+    "line": 77,
+    "registry": "agent_REGISTRY",
+    "key": "pi_mlp",
+    "value": "PiMlpAgent"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/mappo/ppo_net.py",
+    "line": 78,
+    "registry": "agent_REGISTRY",
+    "key": "pi_rnn",
+    "value": "PiRnnAgent"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/mappo/ppo_net.py",
+    "line": 176,
+    "registry": "critic_REGISTRY",
+    "key": "mlp",
+    "value": "MlpCritic"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/mappo/ppo_net.py",
+    "line": 177,
+    "registry": "critic_REGISTRY",
+    "key": "rnn",
+    "value": "RnnCritic"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/qmix/q_net.py",
+    "line": 59,
+    "registry": "agent_REGISTRY",
+    "key": "q_mlp",
+    "value": "QMlpAgent"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/qmix/q_net.py",
+    "line": 60,
+    "registry": "agent_REGISTRY",
+    "key": "q_rnn",
+    "value": "QRnnAgent"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/qmix/q_net.py",
+    "line": 122,
+    "registry": "mixer_REGISTRY",
+    "key": "vdn_mixer",
+    "value": "VDNMixer"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/policy/qmix/q_net.py",
+    "line": 123,
+    "registry": "mixer_REGISTRY",
+    "key": "q_mixer",
+    "value": "Qmixer"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/runner/__init__.py",
+    "line": 6,
+    "registry": "runner_REGISTRY",
+    "key": "train",
+    "value": "train_run"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/runner/__init__.py",
+    "line": 7,
+    "registry": "runner_REGISTRY",
+    "key": "sample",
+    "value": "sample_run"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/runner/__init__.py",
+    "line": 8,
+    "registry": "runner_REGISTRY",
+    "key": "sync",
+    "value": "sync_run"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/utils/scheme.py",
+    "line": 61,
+    "registry": "scheme_REGISTRY",
+    "key": "buffer",
+    "value": "make_buffer_scheme"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/utils/scheme.py",
+    "line": 62,
+    "registry": "scheme_REGISTRY",
+    "key": "episode",
+    "value": "make_episode_scheme"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/utils/scheme.py",
+    "line": 63,
+    "registry": "scheme_REGISTRY",
+    "key": "transition",
+    "value": "make_transition_scheme"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/__init__.py",
+    "line": 8,
+    "registry": "worker_REGISTRY",
+    "key": "local_sample_worker",
+    "value": "LocalSampleWorker"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/__init__.py",
+    "line": 9,
+    "registry": "worker_REGISTRY",
+    "key": "remote_sample_worker",
+    "value": "RemoteSampleWorker"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/__init__.py",
+    "line": 10,
+    "registry": "worker_REGISTRY",
+    "key": "infer_worker",
+    "value": "InferWorker"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/__init__.py",
+    "line": 11,
+    "registry": "worker_REGISTRY",
+    "key": "train_worker",
+    "value": "TrainWorker"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/__init__.py",
+    "line": 12,
+    "registry": "worker_REGISTRY",
+    "key": "evaluate_worker",
+    "value": "EvaluateWorker"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/__init__.py",
+    "line": 13,
+    "registry": "worker_REGISTRY",
+    "key": "infer_client",
+    "value": "InferClient"
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/worker/__init__.py",
+    "line": 14,
+    "registry": "worker_REGISTRY",
+    "key": "infer_server",
+    "value": "InferServer"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/components/action_selectors.py",
+    "line": 32,
+    "registry": "REGISTRY",
+    "key": "multinomial",
+    "value": "MultinomialActionSelector"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/components/action_selectors.py",
+    "line": 69,
+    "registry": "REGISTRY",
+    "key": "epsilon_greedy",
+    "value": "EpsilonGreedyActionSelector"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/controllers/__init__.py",
+    "line": 7,
+    "registry": "REGISTRY",
+    "key": "basic_mac",
+    "value": "BasicMAC"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/controllers/__init__.py",
+    "line": 8,
+    "registry": "REGISTRY",
+    "key": "basic_central_mac",
+    "value": "CentralBasicMAC"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/controllers/__init__.py",
+    "line": 9,
+    "registry": "REGISTRY",
+    "key": "maddpg_mac",
+    "value": "MADDPGMAC"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/envs/__init__.py",
+    "line": 12,
+    "registry": "REGISTRY",
+    "key": "sc2",
+    "value": "partial(env_fn, env=StarCraft2Env)"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 14,
+    "registry": "REGISTRY",
+    "key": "q_learner",
+    "value": "QLearner"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 15,
+    "registry": "REGISTRY",
+    "key": "q_learner_new",
+    "value": "QLearnerNew"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 16,
+    "registry": "REGISTRY",
+    "key": "qdiffer_learner",
+    "value": "QLearner_differ"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 17,
+    "registry": "REGISTRY",
+    "key": "pref_qmix_learner",
+    "value": "Pref_QMIX_learner"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 18,
+    "registry": "REGISTRY",
+    "key": "q_learner_w_globalRM",
+    "value": "QLearnerGlobalRM"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 19,
+    "registry": "REGISTRY",
+    "key": "dmaq_qatten_learner",
+    "value": "DMAQ_qattenLearner"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 20,
+    "registry": "REGISTRY",
+    "key": "max_q_learner",
+    "value": "MAXQLearner"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 21,
+    "registry": "REGISTRY",
+    "key": "dmaq_qatten_learner_w_globalRM",
+    "value": "DMAQ_qattenLearnerGlobalRM"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 22,
+    "registry": "REGISTRY",
+    "key": "max_q_learner_w_globalRM",
+    "value": "MAXQLearnerGlobalRM"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/learners/__init__.py",
+    "line": 23,
+    "registry": "REGISTRY",
+    "key": "pref_qmix_learner_new",
+    "value": "Pref_QMIX_learner_new"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/agents/__init__.py",
+    "line": 8,
+    "registry": "REGISTRY",
+    "key": "rnn",
+    "value": "RNNAgent"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/agents/__init__.py",
+    "line": 9,
+    "registry": "REGISTRY",
+    "key": "central_rnn",
+    "value": "CentralRNNAgent"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/agents/__init__.py",
+    "line": 10,
+    "registry": "REGISTRY",
+    "key": "mlp",
+    "value": "MLPAgent"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/agents/__init__.py",
+    "line": 11,
+    "registry": "REGISTRY",
+    "key": "mlp_ns",
+    "value": "MLPNSAgent"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/critics/__init__.py",
+    "line": 5,
+    "registry": "REGISTRY",
+    "key": "coma_critic",
+    "value": "COMACritic"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/modules/critics/__init__.py",
+    "line": 6,
+    "registry": "REGISTRY",
+    "key": "maddpg_critic_ns",
+    "value": "MADDPGCriticNS"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+    "line": 4,
+    "registry": "REGISTRY",
+    "key": "episode",
+    "value": "EpisodeRunner"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+    "line": 7,
+    "registry": "REGISTRY",
+    "key": "parallel",
+    "value": "ParallelRunner"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+    "line": 10,
+    "registry": "REGISTRY",
+    "key": "pref_episode",
+    "value": "PrefEpisodeRunner"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+    "line": 13,
+    "registry": "REGISTRY",
+    "key": "pref_episode_new",
+    "value": "PrefEpisodeRunnerNew"
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/runners/__init__.py",
+    "line": 16,
+    "registry": "REGISTRY",
+    "key": "makedata_runner",
+    "value": "EpisodeRunnerMD"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/action_selectors.py",
+    "line": 40,
+    "registry": "REGISTRY",
+    "key": "multinomial",
+    "value": "MultinomialActionSelector"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/action_selectors.py",
+    "line": 82,
+    "registry": "REGISTRY",
+    "key": "epsilon_greedy",
+    "value": "EpsilonGreedyActionSelector"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/mujoco_multi.py",
+    "line": 17,
+    "registry": "env_REGISTRY",
+    "key": "manyagent_swimmer",
+    "value": "partial(env_fn, env=ManyAgentSwimmerEnv)"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/random_mujoco_multi.py",
+    "line": 17,
+    "registry": "env_REGISTRY",
+    "key": "manyagent_swimmer",
+    "value": "partial(env_fn, env=ManyAgentSwimmerEnv)"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/controllers/__init__.py",
+    "line": 7,
+    "registry": "REGISTRY",
+    "key": "basic_mac",
+    "value": "BasicMAC"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/controllers/__init__.py",
+    "line": 8,
+    "registry": "REGISTRY",
+    "key": "cql_basic_mac",
+    "value": "CQLBasicMAC"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/controllers/__init__.py",
+    "line": 9,
+    "registry": "REGISTRY",
+    "key": "n_mac",
+    "value": "NMAC"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/envs/__init__.py",
+    "line": 11,
+    "registry": "REGISTRY",
+    "key": "sc2",
+    "value": "partial(env_fn, env=StarCraft2Env)"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 15,
+    "registry": "REGISTRY",
+    "key": "q_learner",
+    "value": "QLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 16,
+    "registry": "REGISTRY",
+    "key": "offpg_learner",
+    "value": "OffPGLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 17,
+    "registry": "REGISTRY",
+    "key": "bc_learner",
+    "value": "BCLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 18,
+    "registry": "REGISTRY",
+    "key": "bcmapt_learner",
+    "value": "BCMAPTLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 19,
+    "registry": "REGISTRY",
+    "key": "cpl_learner",
+    "value": "CPLLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 20,
+    "registry": "REGISTRY",
+    "key": "dppo_learner",
+    "value": "DPPOLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 21,
+    "registry": "REGISTRY",
+    "key": "madpo_learner",
+    "value": "MADPOLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 22,
+    "registry": "REGISTRY",
+    "key": "madpo_aux_learner",
+    "value": "MADPOauxLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 23,
+    "registry": "REGISTRY",
+    "key": "cql_learner",
+    "value": "CQLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/learners/__init__.py",
+    "line": 24,
+    "registry": "REGISTRY",
+    "key": "iql_learner",
+    "value": "IQLLearner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/__init__.py",
+    "line": 8,
+    "registry": "REGISTRY",
+    "key": "rnn",
+    "value": "RNNAgent"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/__init__.py",
+    "line": 9,
+    "registry": "REGISTRY",
+    "key": "grnn",
+    "value": "GRNNAgent"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/__init__.py",
+    "line": 10,
+    "registry": "REGISTRY",
+    "key": "rnn_ns",
+    "value": "RNNNSAgent"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/modules/agents/__init__.py",
+    "line": 11,
+    "registry": "REGISTRY",
+    "key": "n_rnn",
+    "value": "NRNNAgent"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/runners/__init__.py",
+    "line": 4,
+    "registry": "REGISTRY",
+    "key": "episode",
+    "value": "EpisodeRunner"
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/runners/__init__.py",
+    "line": 7,
+    "registry": "REGISTRY",
+    "key": "parallel",
+    "value": "ParallelRunner"
+  }
+]

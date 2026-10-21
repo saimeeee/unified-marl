@@ -1,0 +1,732 @@
+{
+  "version": "0.3.0",
+  "python": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Scripts\\python.exe",
+  "cwd": "G:\\AI\\Codex\\多智能体代码整合",
+  "package": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py",
+  "algorithms": [
+    {
+      "algorithm": "wang/rode_hmf",
+      "train": {
+        "algorithm": "wang/rode_hmf",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode_hmf",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode_hmf\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode_hmf\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode_hmf\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode_hmf\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.29603802112355765,
+        "metrics": {
+          "loss": 3.2893879413604736,
+          "role_loss": 0.2503356635570526,
+          "grad_norm": 56.96059036254883,
+          "encoder_loss": 3.73052978515625
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang/rode",
+      "train": {
+        "algorithm": "wang/rode",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-rode\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.2645515512306302,
+        "metrics": {
+          "loss": 6.654294013977051,
+          "role_loss": 5.628910064697266,
+          "grad_norm": 111.19649505615234,
+          "encoder_loss": 4.333883762359619
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang/qmix",
+      "train": {
+        "algorithm": "wang/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.27856709815344266,
+        "metrics": {
+          "loss": 0.34916186332702637,
+          "grad_norm": 4.0731353759765625
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang/vdn",
+      "train": {
+        "algorithm": "wang/vdn",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.2851773455386481,
+        "metrics": {
+          "loss": 0.19313639402389526,
+          "grad_norm": 1.3517259359359741
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang/iql",
+      "train": {
+        "algorithm": "wang/iql",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.27737669994061265,
+        "metrics": {
+          "loss": 0.22042953968048096,
+          "grad_norm": 0.7557536959648132
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang/coma",
+      "train": {
+        "algorithm": "wang/coma",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-coma",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-coma\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-coma\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-coma\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-coma\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.1487328080847602,
+        "metrics": {
+          "loss": 0.010054275393486023,
+          "coma_loss": 0.010054275393486023,
+          "critic_loss": 0.3792910063639283,
+          "grad_norm": 0.08207385987043381
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang/qtran",
+      "train": {
+        "algorithm": "wang/qtran",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qtran",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qtran\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qtran\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qtran\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qtran\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.20598072106781265,
+        "metrics": {
+          "loss": 0.24794913828372955,
+          "grad_norm": 0.9469569325447083,
+          "td_loss": 0.23872815072536469,
+          "opt_loss": 0.0048230113461613655,
+          "nopt_loss": 0.04397973418235779
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang/qmix_beta",
+      "train": {
+        "algorithm": "wang/qmix_beta",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix_beta",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix_beta\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix_beta\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix_beta\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-qmix_beta\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.1541839967486891,
+        "metrics": {
+          "loss": 0.2728414237499237,
+          "grad_norm": 8.650956153869629
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang/vdn_beta",
+      "train": {
+        "algorithm": "wang/vdn_beta",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn_beta",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn_beta\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn_beta\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn_beta\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-vdn_beta\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.2851773455386481,
+        "metrics": {
+          "loss": 0.19313639402389526,
+          "grad_norm": 1.3517259359359741
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang/iql_beta",
+      "train": {
+        "algorithm": "wang/iql_beta",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql_beta",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql_beta\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql_beta\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql_beta\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang-iql_beta\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.27737669994061265,
+        "metrics": {
+          "loss": 0.22042953968048096,
+          "grad_norm": 0.7557536959648132
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/dqn",
+      "train": {
+        "algorithm": "wang_hmf/dqn",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-dqn",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-dqn\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-dqn\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-dqn\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-dqn\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.017467706983201277,
+        "metrics": {
+          "loss": 0.22085323929786682,
+          "total_vf_loss": 0.22085323929786682
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/vdn",
+      "train": {
+        "algorithm": "wang_hmf/vdn",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-vdn",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-vdn\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-vdn\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-vdn\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-vdn\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.016663793140469913,
+        "metrics": {
+          "loss": 0.5753337144851685,
+          "total_vf_loss": 0.5753337144851685
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/qmix",
+      "train": {
+        "algorithm": "wang_hmf/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-qmix\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.0426720724670484,
+        "metrics": {
+          "loss": 7.721510410308838,
+          "total_vf_loss": 7.721510410308838
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/mfq",
+      "train": {
+        "algorithm": "wang_hmf/mfq",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfq",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfq\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfq\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfq\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfq\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.017924525417024353,
+        "metrics": {
+          "loss": 0.2572910785675049,
+          "total_vf_loss": 0.2572910785675049
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/mfvfd",
+      "train": {
+        "algorithm": "wang_hmf/mfvfd",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfvfd",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfvfd\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfvfd\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfvfd\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-mfvfd\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.023189261010856537,
+        "metrics": {
+          "loss": 0.19447138905525208,
+          "total_vf_loss": 0.19447138905525208,
+          "mf_loss": 1.045286626322195e-05
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/hierarchical",
+      "train": {
+        "algorithm": "wang_hmf/hierarchical",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.011073608182666238,
+        "metrics": {
+          "loss": 0.11657194793224335,
+          "total_vf_loss": 0.11657194793224335,
+          "local_vf_loss": 0.02668474055826664,
+          "mf_vf_loss": 3.835111783700995e-06
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/hierarchical_vdn",
+      "train": {
+        "algorithm": "wang_hmf/hierarchical_vdn",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.02788118174793808,
+        "metrics": {
+          "loss": 0.3979363441467285,
+          "total_vf_loss": 0.3979363441467285,
+          "local_vf_loss": 0.3213076591491699,
+          "mf_vf_loss": 0.14623315632343292,
+          "high_mf_critic_loss": 0.1767059564590454
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/hierarchical_vdn_IPC",
+      "train": {
+        "algorithm": "wang_hmf/hierarchical_vdn_IPC",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_IPC",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_IPC\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_IPC\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_IPC\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_IPC\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.034516984593833414,
+        "metrics": {
+          "loss": 0.42355501651763916,
+          "total_vf_loss": 0.42355501651763916,
+          "local_vf_loss": 0.3232578635215759,
+          "mf_vf_loss": 0.1719692051410675,
+          "high_mf_critic_loss": 0.20795108377933502
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/hierarchical_vdn_without_high_level",
+      "train": {
+        "algorithm": "wang_hmf/hierarchical_vdn_without_high_level",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_without_high_level",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_without_high_level\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_without_high_level\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_without_high_level\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_without_high_level\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.02788118174793808,
+        "metrics": {
+          "loss": 0.3979363441467285,
+          "total_vf_loss": 0.3979363441467285,
+          "local_vf_loss": 0.3213076591491699,
+          "mf_vf_loss": 0.14623315632343292,
+          "high_mf_critic_loss": 0.1767059564590454
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/maddpg",
+      "train": {
+        "algorithm": "wang_hmf/maddpg",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-maddpg",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-maddpg\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-maddpg\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-maddpg\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-maddpg\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.028491193194515763,
+        "metrics": {
+          "loss": 0.06671420484781265,
+          "evader%i/vf_loss": 0.1370188295841217,
+          "evader%i/pol_loss": -0.07030462473630905
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/hierarchical_vdn_copy_fixed",
+      "train": {
+        "algorithm": "wang_hmf/hierarchical_vdn_copy_fixed",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_copy_fixed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_copy_fixed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_copy_fixed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_copy_fixed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_copy_fixed\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.02780842166002732,
+        "metrics": {
+          "loss": 0.4067624509334564,
+          "total_vf_loss": 0.4067624509334564,
+          "local_vf_loss": 0.32130903005599976,
+          "mf_vf_loss": 0.14622749388217926,
+          "high_mf_critic_loss": 0.17669729888439178
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/hierarchical_vdn_meanq",
+      "train": {
+        "algorithm": "wang_hmf/hierarchical_vdn_meanq",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_meanq",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_meanq\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_meanq\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_meanq\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_meanq\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.02673920556331079,
+        "metrics": {
+          "loss": 0.3907262980937958,
+          "total_vf_loss": 0.3907262980937958,
+          "local_vf_loss": 0.3239145874977112,
+          "mf_vf_loss": 0.1625525951385498,
+          "high_mf_critic_loss": 0.1918848305940628
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "wang_hmf/hierarchical_vdn_k_means_fixed",
+      "train": {
+        "algorithm": "wang_hmf/hierarchical_vdn_k_means_fixed",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_k_means_fixed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_k_means_fixed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_k_means_fixed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_k_means_fixed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\wang_hmf-hierarchical_vdn_k_means_fixed\\config.json",
+        "env_steps": 8,
+        "episodes": 2,
+        "updates": 2,
+        "parameter_delta_l2": 0.02780842166002732,
+        "metrics": {
+          "loss": 0.4067624509334564,
+          "total_vf_loss": 0.4067624509334564,
+          "local_vf_loss": 0.32130903005599976,
+          "mf_vf_loss": 0.14622749388217926,
+          "high_mf_critic_loss": 0.17669729888439178
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    {
+      "algorithm": "pymarl/qmix",
+      "train": {
+        "algorithm": "pymarl/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\pymarl-qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\pymarl-qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\pymarl-qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\pymarl-qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage3\\installed-runs-e40bb46b\\pymarl-qmix\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.27856709815344266,
+        "metrics": {
+          "loss": 0.34916186332702637,
+          "grad_norm": 4.0731353759765625
+        }
+      },
+      "evaluation": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    }
+  ],
+  "real_environments": [
+    {
+      "env": "sc2",
+      "status": "BLOCKED",
+      "exception": "ImportError",
+      "error": "SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\smac.py\", line 7, in make_smac\n    from smac.env import StarCraft2Env\nModuleNotFoundError: No module named 'smac'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\validate_stage3_installed.py\", line 45, in main\n    train(\"pymarl/qmix\", env, env_args, output_dir=root / (\"real-\" + env), overrides={\"t_max\": 16})\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\api.py\", line 166, in train\n    runner = RUNNERS[cfg[\"runner\"]](runner_args, logger)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\runners\\episode_runner.py\", line 13, in __init__\n    self.env = make_env(args.env, **args.env_args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 28, in make_env\n    return factory(**kwargs)\n           ^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 12, in _sc2\n    return make_smac(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\smac.py\", line 9, in make_smac\n    raise ImportError(\"SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.\") from exc\nImportError: SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.\n"
+    },
+    {
+      "env": "replenishment",
+      "status": "BLOCKED",
+      "exception": "ImportError",
+      "error": "ReplenishmentEnv simulator and its task/data assets are required; no simulator is bundled",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\replenishment.py\", line 10, in __init__\n    from ReplenishmentEnv import make_env\nModuleNotFoundError: No module named 'ReplenishmentEnv'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\validate_stage3_installed.py\", line 45, in main\n    train(\"pymarl/qmix\", env, env_args, output_dir=root / (\"real-\" + env), overrides={\"t_max\": 16})\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\api.py\", line 166, in train\n    runner = RUNNERS[cfg[\"runner\"]](runner_args, logger)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\runners\\episode_runner.py\", line 13, in __init__\n    self.env = make_env(args.env, **args.env_args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 28, in make_env\n    return factory(**kwargs)\n           ^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 17, in _replenishment\n    return ReplenishmentAdapter(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\replenishment.py\", line 12, in __init__\n    raise ImportError(\"ReplenishmentEnv simulator and its task/data assets are required; no simulator is bundled\") from exc\nImportError: ReplenishmentEnv simulator and its task/data assets are required; no simulator is bundled\n"
+    }
+  ],
+  "cli": {
+    "returncode": 0,
+    "stdout": "{\n  \"algorithm\": \"wang/rode\",\n  \"output_dir\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage3\\\\installed-runs-e40bb46b\\\\cli-rode\",\n  \"checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage3\\\\installed-runs-e40bb46b\\\\cli-rode\\\\policy.pt\",\n  \"training_checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage3\\\\installed-runs-e40bb46b\\\\cli-rode\\\\training.pt\",\n  \"metrics_path\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage3\\\\installed-runs-e40bb46b\\\\cli-rode\\\\metrics.jsonl\",\n  \"config_path\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage3\\\\installed-runs-e40bb46b\\\\cli-rode\\\\config.json\",\n  \"env_steps\": 8,\n  \"episodes\": 2,\n  \"updates\": 1,\n  \"parameter_delta_l2\": 0.7480823825739317,\n  \"metrics\": {\n    \"loss\": 3.8889551162719727,\n    \"role_loss\": 3.5479836463928223,\n    \"grad_norm\": 41.97813034057617,\n    \"encoder_loss\": 4.721283912658691\n  }\n}\n",
+    "stderr": ""
+  }
+}

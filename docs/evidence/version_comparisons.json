@@ -1,0 +1,6473 @@
+[
+  {
+    "left": "wang_sadma",
+    "right": "yi_sadma_closed",
+    "summary": {
+      "different": 46,
+      "only_right": 4,
+      "identical": 1
+    },
+    "python_summary": {
+      "different": 37,
+      "only_right": 3,
+      "identical": 1
+    },
+    "ast_equal_python_files": 27,
+    "files": [
+      {
+        "relative_path": "README.md",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/alg_config/ppo.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/alg_config/qmix.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/config_utils.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "config/default.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/cityflow.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/powergrid.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/replenishment.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/smac.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "entry.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "envs/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "envs/cityflow/cityflow_env.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/cityflow/cityflow_runner.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/powergrid/energy_models.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/powergrid/powergrid_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/powergrid/smart_grid.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/replenishment/replenishment_env.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/replenishment/replenishment_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "envs/smac/smac_env.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/smac/smac_runner.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/__init__.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_controller.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "policy/base/base_net.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_policy.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_controller.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_net.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_controller.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_net.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_policy.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "policy/qmix/q_controller.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_net.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_policy.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runner/__init__.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/async_runner/sample_runner.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/async_runner/train_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runner/sync_runner/sync_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "scripts/kill_all.sh",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scripts/start.sh",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/buffer.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/logger.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "utils/queue.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/scheme.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/utils.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/__init__.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/base_worker.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/evaluate_worker.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/infer_worker.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/sample_worker.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/train_worker.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "worker/zmq_worker.py",
+        "status": "different",
+        "ast_equal": true
+      }
+    ]
+  },
+  {
+    "left": "yi_sadma_open",
+    "right": "yi_sadma_zmq",
+    "summary": {
+      "identical": 51
+    },
+    "python_summary": {
+      "identical": 41
+    },
+    "ast_equal_python_files": 41,
+    "files": [
+      {
+        "relative_path": "LICENSE",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "README.md",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/alg_config/ppo.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/alg_config/qmix.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/config_utils.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "config/default.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/cityflow.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/powergrid.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/replenishment.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/smac.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "entry.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/cityflow/cityflow_env.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/cityflow/cityflow_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/powergrid/energy_models.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/powergrid/powergrid_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/powergrid/smart_grid.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/replenishment/replenishment_env.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/replenishment/replenishment_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/smac/smac_env.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/smac/smac_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_controller.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_net.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_controller.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_net.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_controller.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_net.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_controller.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_net.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "requirement.txt",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "runner/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/async_runner/sample_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/async_runner/train_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/sync_runner/sync_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/buffer.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/logger.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/queue.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/scheme.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/utils.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/base_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/evaluate_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/infer_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/sample_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/train_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/zmq_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      }
+    ]
+  },
+  {
+    "left": "yi_sadma_closed",
+    "right": "yi_sadma_open",
+    "summary": {
+      "only_right": 2,
+      "identical": 45,
+      "different": 4,
+      "only_left": 2
+    },
+    "python_summary": {
+      "identical": 40,
+      "different": 1
+    },
+    "ast_equal_python_files": 41,
+    "files": [
+      {
+        "relative_path": "LICENSE",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "README.md",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/alg_config/ppo.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/alg_config/qmix.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/config_utils.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "config/default.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/cityflow.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/powergrid.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/replenishment.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/smac.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "entry.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/cityflow/cityflow_env.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/cityflow/cityflow_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/powergrid/energy_models.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/powergrid/powergrid_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/powergrid/smart_grid.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/replenishment/replenishment_env.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/replenishment/replenishment_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/smac/smac_env.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/smac/smac_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_controller.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_net.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_controller.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_net.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_controller.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_net.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_controller.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_net.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "requirement.txt",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "runner/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/async_runner/sample_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/async_runner/train_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/sync_runner/sync_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "scripts/kill_all.sh",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scripts/start.sh",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/buffer.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/logger.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/queue.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/scheme.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/utils.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/base_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/evaluate_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/infer_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/sample_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/train_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/zmq_worker.py",
+        "status": "identical",
+        "ast_equal": true
+      }
+    ]
+  },
+  {
+    "left": "wang_sadma",
+    "right": "yi_sadma_open",
+    "summary": {
+      "only_right": 6,
+      "different": 44,
+      "identical": 1,
+      "only_left": 2
+    },
+    "python_summary": {
+      "different": 37,
+      "only_right": 3,
+      "identical": 1
+    },
+    "ast_equal_python_files": 27,
+    "files": [
+      {
+        "relative_path": "LICENSE",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "README.md",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/alg_config/ppo.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/alg_config/qmix.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/config_utils.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "config/default.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/cityflow.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/powergrid.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/replenishment.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/env_config/smac.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "entry.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "envs/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "envs/cityflow/cityflow_env.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/cityflow/cityflow_runner.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/powergrid/energy_models.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/powergrid/powergrid_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/powergrid/smart_grid.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/replenishment/replenishment_env.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/replenishment/replenishment_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "envs/smac/smac_env.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/smac/smac_runner.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/__init__.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_controller.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "policy/base/base_net.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/base/base_policy.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_controller.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_net.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/maddpg/maddpg_policy.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_controller.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_net.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/mappo/ppo_policy.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "policy/qmix/q_controller.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_net.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "policy/qmix/q_policy.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "requirement.txt",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "runner/__init__.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/async_runner/sample_runner.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runner/async_runner/train_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runner/sync_runner/sync_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "scripts/kill_all.sh",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scripts/start.sh",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/buffer.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/logger.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "utils/queue.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/scheme.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/utils.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/__init__.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/base_worker.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/evaluate_worker.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/infer_worker.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/sample_worker.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "worker/train_worker.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "worker/zmq_worker.py",
+        "status": "different",
+        "ast_equal": true
+      }
+    ]
+  },
+  {
+    "left": "wang_operator",
+    "right": "yi_operator",
+    "summary": {
+      "different": 40,
+      "only_right": 39
+    },
+    "python_summary": {},
+    "ast_equal_python_files": 0,
+    "files": [
+      {
+        "relative_path": "Dockerfile",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "Makefile",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "README.md",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "api/v1/groupversion_info.go",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "api/v1/tcjob_types.go",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "api/v1/zz_generated.deepcopy.go",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/crd/bases/taichu.demo_tcjobs.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/crd/kustomization.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/crd/kustomizeconfig.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/crd/patches/cainjection_in_tcjobs.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/crd/patches/webhook_in_tcjobs.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/default/kustomization.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/default/manager_auth_proxy_patch.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/default/manager_config_patch.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/manager/kustomization.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/manager/manager.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/prometheus/kustomization.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/prometheus/monitor.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/auth_proxy_client_clusterrole.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/auth_proxy_role.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/auth_proxy_role_binding.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/auth_proxy_service.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/kustomization.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/leader_election_role.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/leader_election_role_binding.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/role.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/role_binding.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/service_account.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/tcjob_editor_role.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/rbac/tcjob_viewer_role.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/samples/kuberay.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/samples/schedule_test.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/samples/schedule_test2.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/samples/taichu_v1_tcjob.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/suite_test.go",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/tcjob_controller.go",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/README.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/_sidebar.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/begin/deploy.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/begin/gpu.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/begin/quickstart.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/begin/runJob.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/deploy/README.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/deploy/imagePBO.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/deploy/liveFefused.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/deploy/liveInvalid.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/deploy/noRoute.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/deploy/podForbidden.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/deploy/vet.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/deploy/wrongWay.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/test/README.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/bug/test/stageKeepStarting.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/static/docsify-copy-code.min.js",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/static/docsify@4.js",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/static/search.min.js",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "doc/static/sw.js",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "go.mod",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "go.sum",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "main.go",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/job.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/nodes.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/policy/BInPack.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/policy/DRF.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/policy/Gang.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/policy/JobAffinity.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/policy/JobAntiAffinity.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/policy/LeaderFirst.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/policy/MinFragment.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/policy/type.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/policy/utilfunc.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/status.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/tcjob_scheduler.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "scheduler/types/infos.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/config.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/util.go",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "workstation/pod.go",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "workstation/stage.go",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "workstation/svc.go",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "workstation/workstation.go",
+        "status": "different",
+        "ast_equal": null
+      }
+    ]
+  },
+  {
+    "left": "pymarl",
+    "right": "wang_rghmf",
+    "summary": {
+      "identical": 31,
+      "different": 12,
+      "only_right": 22
+    },
+    "python_summary": {
+      "identical": 22,
+      "different": 10,
+      "only_right": 19
+    },
+    "ast_equal_python_files": 22,
+    "files": [
+      {
+        "relative_path": "__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "components/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "components/action_selectors.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "components/episode_buffer.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "components/epsilon_schedules.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "components/transforms.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "config/algs/coma.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/iql.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/iql_beta.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_beta.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qtran.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/rode.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/rode_hmf.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/vdn.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/vdn_beta.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/default.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/envs/replenishment.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/envs/sc2.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/envs/sc2_beta.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "controllers/basic_controller.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "controllers/rode_controller.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "envs/multiagentenv.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/replenishment/ReplenishmentEnv.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/replenishment/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/starcraft2/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/starcraft2/maps/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/starcraft2/maps/smac_maps.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/starcraft2/starcraft2.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "learners/coma_learner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "learners/q_learner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "learners/qtran_learner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "learners/rode_hmf_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/rode_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "main.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "modules/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/action_encoders/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/action_encoders/obs_reward_encoder.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "modules/agents/rnn_agent.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/agents/rode_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/base/networks.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/critics/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/critics/coma.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/mixers/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/mixers/qmix.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/mixers/qtran.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/mixers/vdn.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/role_selectors/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/role_selectors/dot_selector.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/role_selectors/q_selector.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/roles/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/roles/dot_role.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/roles/q_role.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runners/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runners/episode_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runners/parallel_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "utils/dict2namedtuple.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/logging.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/rl_utils.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/timehelper.py",
+        "status": "identical",
+        "ast_equal": true
+      }
+    ]
+  },
+  {
+    "left": "pymarl",
+    "right": "kou_old",
+    "summary": {
+      "identical": 18,
+      "different": 16,
+      "only_right": 53,
+      "only_left": 9
+    },
+    "python_summary": {
+      "identical": 16,
+      "different": 14,
+      "only_right": 39,
+      "only_left": 2
+    },
+    "ast_equal_python_files": 16,
+    "files": [
+      {
+        "relative_path": "__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "components/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "components/action_selectors.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "components/episode_buffer.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "components/epsilon_schedules.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "components/preference.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/reward_model.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/reward_model_new.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/transforms.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "config/algs/coma.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/cw_qmix.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/cw_qmix_w_globalRM.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/iql.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/iql_beta.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/ow_qmix.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/ow_qmix_w_globalRM.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/pref_qmix.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/pref_qmix_new.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_beta.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_differ.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_make_datasets.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_new.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_w_globalRM.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qplex.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qplex_w_globalRM.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qtran.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/vdn.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/vdn_beta.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/default.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/envs/sc2.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/envs/sc2_beta.yaml",
+        "status": "identical",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "controllers/basic_controller.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "controllers/central_basic_controller.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/maddpg_controller.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "envs/multiagentenv.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/smac_maps.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/starcraft2.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/starcraft2_mappo.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/test_samc_env.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "learners/coma_learner.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/dmaq_qatten_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/dmaq_qatten_learner_globalRM.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/max_q_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/max_q_learner_globalRM.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/pref_qmix_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/pref_qmix_learner_new.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/q_learner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "learners/q_learner_differ.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/q_learner_globalRM.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/q_learner_new.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/qtran_learner.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "main.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "make_pref_datasets.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "make_pref_datasets_104.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/agents/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "modules/agents/central_rnn_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/mlp_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/mlp_ns_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/rnn_agent.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/critics/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "modules/critics/coma.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/critics/maddpg_ns.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/mixers/dmaq_general.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/dmaq_qatten.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/dmaq_qatten_weight.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/dmaq_si_weight.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/qmix.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/mixers/qmix_central_attention.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/qmix_central_no_hyper.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/qtran.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/mixers/vdn.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "run.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "run_globalRM.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run_make_datasets.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run_make_datasets.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run_pref.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run_pref_new.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "runners/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runners/episode_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runners/episode_runner_makedata.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "runners/parallel_runner.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runners/pref_episode_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "runners/pref_episode_runner_new.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "save_model.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/dict2namedtuple.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/logging.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "utils/model.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/rl_utils.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/timehelper.py",
+        "status": "identical",
+        "ast_equal": true
+      }
+    ]
+  },
+  {
+    "left": "pymarl",
+    "right": "kou_icq",
+    "summary": {
+      "only_left": 16,
+      "only_right": 344,
+      "different": 19,
+      "identical": 8
+    },
+    "python_summary": {
+      "only_left": 8,
+      "only_right": 203,
+      "different": 16,
+      "identical": 8
+    },
+    "ast_equal_python_files": 10,
+    "files": [
+      {
+        "relative_path": "__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/README.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/install_sc2.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/actor_critic.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/happo_policy.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/happo_trainer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/hatrpo_policy.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/hatrpo_trainer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/act.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/cnn.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/distributions.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/mlp.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/rnn.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/util.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/ma_transformer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/mat_decoder.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/mat_encoder.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/mat_gru.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/transformer_policy.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/mat_trainer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/MR.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/MultiPrefTransformer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/NMR.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/PrefTransformer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/encoder_decoder_divide.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/lstm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/ops.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/q_function.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/torch_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/trajectory_gpt2.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/utils/dataloader.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/utils/utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/utils/transformer_act.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/utils/util.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/config.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/result_after_merging.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/result_after_merging.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/result_after_merging.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/open_ai_assets/LICENSE.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/result_after_merging.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/urdf/shadow_hand_description/meshes/convert_dae2obj.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ddpg/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/franka_cabinet.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/happo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/happo/lift_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/hatrpo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/humanoid.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ippo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/maddpg/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mamlppo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mappo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mappo/lift_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_ml1.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_mt1.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_mt20.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_mt5.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_mt5_door.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mtppo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mtsac/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mttrpo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ppo/block_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ppo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ppo/humanoid_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ppo/lift_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/sac/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/sac/humanoid_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_block_stack.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_bottle_cap.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_catch_abreast.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_catch_over2underarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_catch_overarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_catch_underarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_door_close_inward.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_door_close_outward.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_door_open_inward.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_door_open_outward.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_grasp_and_place.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_kettle.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift_cup.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift_overarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift_underarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift_underarm2.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_over.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_over_overarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_pen.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_push_block.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_re_orientation.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_scissors.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_swing_cup.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_switch.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_test.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_two_catch_underarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/td3/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/td3/humanoid_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/trpo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/scripts/run_experiments.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/arm_base/multiAgent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/arm_base/oneFranka.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/arm_base/vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/franka_cabinet.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/base_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/meta_vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/multi_task_vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/multi_vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/humanoid.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_block_stack.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_bottle_cap.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_abreast.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_over2underarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_overarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_underarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_door_close_inward.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_door_close_outward.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_door_open_inward.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_door_open_outward.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_grasp_and_place.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_kettle.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_cup.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_overarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_underarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_underarm2.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_ml1.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_ml1_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt1.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt1_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt20.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt20_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt5.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt5_door.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt5_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_over.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_over_overarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_pen.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_push_block.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_re_orientation.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_scissors.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_swing_cup.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_switch.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_test.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_two_catch_abreast.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_two_catch_underarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/train.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/config.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/contact_buffer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/logger/analysis.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/logger/plotter.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/logger/tools.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/parse_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/process_marl.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/process_metarl.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/process_mtrl.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/process_sarl.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/torch_jit_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/util.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/env_wrappers.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/football/encode/obs_encode.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/football/encode/rew_encode.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/football/football_env.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/football/multiagentenv.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/assets/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/coupled_half_cheetah.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/manyagent_ant.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/manyagent_swimmer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/mujoco_multi.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/multiagentenv.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/obsk.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/random_mujoco_multi.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/MPE_env.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/core.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/environment.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/multi_discrete.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/rendering.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenario.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_adversary.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_attack.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_crypto.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_crypto_display.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_push.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_reference.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_speaker_listener.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_spread.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_tag.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_world_comm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/Random_StarCraft2_Env.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/Random_StarCraft2_Env_Multi.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/StarCraft2_Env.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/feature_translation.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/multiagentenv.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/render.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/smac_maps.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/separated/base_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/separated/hands_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/base_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/football_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/hands_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/mpe_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/mujoco_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/smac_multi_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/smac_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_football_3_vs_1_policy.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_football_3_vs_1_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_hands_doorOpenIn_policy.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_hands_doorOpenIn_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_mujoco_halfcheetah-6x1_policy.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_mujoco_halfcheetah-6x1_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_football.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_hands.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_hands_happo.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_mpe.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_mujoco.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_smac.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_smac_multi.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_reward/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_reward/train_reward_model.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_smac_3m_policy.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_smac_3m_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/mix_data.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/pair_dataloader.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/popart.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/pref_reward_assistant.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/separated_buffer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/shared_buffer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/util.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/valuenorm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/reference_reward_model.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/reference_smac_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/train_reward_model.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/train_reward_model_old.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/train_smac.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/train_smac_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/action_selectors.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "components/episode_buffer.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "components/epsilon_schedules.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "components/reward_model.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/transforms.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "config/algs/acpl_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/bc_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/bcmapt_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/coma.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/cpl_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/cql_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/dppo_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/hacpl_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/iql.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/iql_beta.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/iql_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/madpo_aux_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/madpo_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/maicpl_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/maidpo_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/offpg_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_beta.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qtran.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/vdn.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/vdn_beta.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/vdn_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/default.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/envs/sc2.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/envs/sc2_beta.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "controllers/basic_controller.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "controllers/cql_basic_controller.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/n_controller.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/__init__.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/multiagentenv.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/starcraft2.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "learners/bc_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/bcmapt_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/coma_learner.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/cpl_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/cql_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/dppo_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/iql_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/madpo_aux_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/madpo_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/offpg_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/q_learner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "learners/qtran_learner.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "main.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "modules/__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "modules/agents/grnn_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/n_rnn_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/rnn_agent.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/agents/rnn_ns_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/critics/__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/critics/coma.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/critics/doubleqv.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/critics/offpg.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/nmix.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/qatten.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/qmix.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "modules/mixers/qtran.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/time_atten.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/vdn.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "offline_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runners/__init__.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "runners/episode_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runners/parallel_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "utils/dict2namedtuple.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/logging.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "utils/offpg_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/rl_utils.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "utils/th_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/timehelper.py",
+        "status": "identical",
+        "ast_equal": true
+      }
+    ]
+  },
+  {
+    "left": "kou_old",
+    "right": "kou_icq",
+    "summary": {
+      "only_left": 58,
+      "only_right": 342,
+      "different": 21,
+      "identical": 8
+    },
+    "python_summary": {
+      "only_left": 43,
+      "only_right": 201,
+      "different": 18,
+      "identical": 8
+    },
+    "ast_equal_python_files": 9,
+    "files": [
+      {
+        "relative_path": "__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/README.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/install_sc2.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/actor_critic.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/happo_policy.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/happo_trainer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/hatrpo_policy.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/hatrpo_trainer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/act.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/cnn.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/distributions.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/mlp.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/rnn.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/happo/utils/util.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/ma_transformer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/mat_decoder.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/mat_encoder.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/mat_gru.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/algorithm/transformer_policy.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/mat/mat_trainer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/MR.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/MultiPrefTransformer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/NMR.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/PrefTransformer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/encoder_decoder_divide.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/lstm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/ops.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/q_function.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/torch_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/models/trajectory_gpt2.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/utils/dataloader.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/reward_model/utils/utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/utils/transformer_act.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/algorithms/utils/util.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/config.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bottle_cap/result_after_merging.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/100454/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/bucket/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/cup/result_after_merging.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/door/result_after_merging.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/kettle/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/open_ai_assets/LICENSE.md",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pen/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/pot/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/scissors/10495/result_after_merging.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/102872/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/bounding_box.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/meta.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/mobility_v2.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/result.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/mjcf/switch/result_original.json",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/assets/urdf/shadow_hand_description/meshes/convert_dae2obj.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ddpg/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/franka_cabinet.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/happo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/happo/lift_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/hatrpo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/humanoid.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ippo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/maddpg/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mamlppo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mappo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mappo/lift_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_ml1.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_mt1.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_mt20.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_mt5.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/meta_env_cfg/shadow_hand_meta_mt5_door.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mtppo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mtsac/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/mttrpo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ppo/block_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ppo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ppo/humanoid_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/ppo/lift_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/sac/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/sac/humanoid_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_block_stack.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_bottle_cap.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_catch_abreast.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_catch_over2underarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_catch_overarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_catch_underarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_door_close_inward.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_door_close_outward.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_door_open_inward.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_door_open_outward.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_grasp_and_place.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_kettle.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift_cup.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift_overarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift_underarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_lift_underarm2.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_over.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_over_overarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_pen.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_push_block.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_re_orientation.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_scissors.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_swing_cup.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_switch.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_test.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/shadow_hand_two_catch_underarm.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/td3/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/td3/humanoid_config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/cfg/trpo/config.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/scripts/run_experiments.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/arm_base/multiAgent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/arm_base/oneFranka.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/arm_base/vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/franka_cabinet.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/base_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/meta_vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/multi_task_vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/multi_vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/hand_base/vec_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/humanoid.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_block_stack.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_bottle_cap.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_abreast.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_over2underarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_overarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_catch_underarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_door_close_inward.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_door_close_outward.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_door_open_inward.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_door_open_outward.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_grasp_and_place.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_kettle.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_cup.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_overarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_underarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_lift_underarm2.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_ml1.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_ml1_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt1.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt1_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt20.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt20_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt5.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt5_door.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_mt5_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta/shadow_hand_meta_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_meta_task_info.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_over.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_over_overarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_pen.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_push_block.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_re_orientation.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_scissors.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_swing_cup.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_switch.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_test.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_two_catch_abreast.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/tasks/shadow_hand_two_catch_underarm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/train.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/config.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/contact_buffer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/logger/analysis.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/logger/plotter.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/logger/tools.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/parse_task.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/process_marl.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/process_metarl.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/process_mtrl.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/process_sarl.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/torch_jit_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/dexteroushandenvs/utils/util.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/env_wrappers.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/football/encode/obs_encode.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/football/encode/rew_encode.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/football/football_env.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/football/multiagentenv.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/assets/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/coupled_half_cheetah.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/manyagent_ant.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/manyagent_swimmer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/mujoco_multi.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/multiagentenv.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/obsk.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/ma_mujoco/multiagent_mujoco/random_mujoco_multi.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/MPE_env.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/core.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/environment.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/multi_discrete.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/rendering.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenario.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_adversary.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_attack.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_crypto.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_crypto_display.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_push.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_reference.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_speaker_listener.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_spread.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_tag.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/mpe/scenarios/simple_world_comm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/Random_StarCraft2_Env.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/Random_StarCraft2_Env_Multi.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/StarCraft2_Env.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/feature_translation.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/multiagentenv.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/render.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/envs/starcraft2/smac_maps.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/separated/base_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/separated/hands_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/base_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/football_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/hands_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/mpe_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/mujoco_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/smac_multi_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/runner/shared/smac_runner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_football_3_vs_1_policy.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_football_3_vs_1_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_hands_doorOpenIn_policy.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_hands_doorOpenIn_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_mujoco_halfcheetah-6x1_policy.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_mujoco_halfcheetah-6x1_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_football.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_hands.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_hands_happo.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_mpe.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_mujoco.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_smac.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_policy/train_smac_multi.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_reward/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_reward/train_reward_model.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_smac_3m_policy.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/scripts/train_smac_3m_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/__init__.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/mix_data.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/pair_dataloader.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/popart.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/pref_reward_assistant.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/separated_buffer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/shared_buffer.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/util.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/mat/utils/valuenorm.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/reference_reward_model.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/reference_smac_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/train_reward_model.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/train_reward_model_old.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/train_smac.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/MAPT/train_smac_reward.sh",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/action_selectors.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "components/episode_buffer.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "components/epsilon_schedules.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "components/preference.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/reward_model.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "components/reward_model_new.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "components/transforms.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "config/algs/acpl_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/bc_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/bcmapt_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/cpl_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/cql_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/cw_qmix.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/cw_qmix_w_globalRM.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/dppo_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/hacpl_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/iql_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/madpo_aux_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/madpo_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/maicpl_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/maidpo_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/offpg_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/ow_qmix.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/ow_qmix_w_globalRM.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/pref_qmix.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/pref_qmix_new.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_differ.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_make_datasets.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_new.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qmix_w_globalRM.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qplex.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/qplex_w_globalRM.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/algs/vdn_smac.yaml",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/default.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/envs/sc2.yaml",
+        "status": "different",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "config/envs/sc2_beta.yaml",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "controllers/basic_controller.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "controllers/central_basic_controller.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/cql_basic_controller.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/maddpg_controller.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "controllers/n_controller.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "envs/multiagentenv.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/smac_maps.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/starcraft2.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "envs/starcraft2_mappo.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "envs/test_samc_env.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "learners/bc_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/bcmapt_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/cpl_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/cql_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/dmaq_qatten_learner.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/dmaq_qatten_learner_globalRM.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/dppo_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/iql_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/madpo_aux_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/madpo_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/max_q_learner.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/max_q_learner_globalRM.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/offpg_learner.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/pref_qmix_learner.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/pref_qmix_learner_new.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/q_learner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "learners/q_learner_differ.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/q_learner_globalRM.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "learners/q_learner_new.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "main.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "make_pref_datasets.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "make_pref_datasets_104.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "modules/agents/central_rnn_agent.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/grnn_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/mlp_agent.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/mlp_ns_agent.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/n_rnn_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/agents/rnn_agent.py",
+        "status": "different",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/agents/rnn_ns_agent.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/critics/__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/critics/coma.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "modules/critics/doubleqv.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/critics/maddpg_ns.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/critics/offpg.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/dmaq_general.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/dmaq_qatten.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/dmaq_qatten_weight.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/dmaq_si_weight.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/nmix.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/qatten.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/qmix.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "modules/mixers/qmix_central_attention.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/qmix_central_no_hyper.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/qtran.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/time_atten.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "modules/mixers/vdn.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "offline_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "run_globalRM.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run_make_datasets.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run_make_datasets.sh",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run_pref.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "run_pref_new.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "runners/__init__.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runners/episode_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runners/episode_runner_makedata.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "runners/parallel_runner.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "runners/pref_episode_runner.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "runners/pref_episode_runner_new.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "save_model.sh",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/__init__.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/dict2namedtuple.py",
+        "status": "identical",
+        "ast_equal": true
+      },
+      {
+        "relative_path": "utils/logging.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "utils/model.py",
+        "status": "only_left",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/offpg_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/rl_utils.py",
+        "status": "different",
+        "ast_equal": false
+      },
+      {
+        "relative_path": "utils/th_utils.py",
+        "status": "only_right",
+        "ast_equal": null
+      },
+      {
+        "relative_path": "utils/timehelper.py",
+        "status": "identical",
+        "ast_equal": true
+      }
+    ]
+  }
+]

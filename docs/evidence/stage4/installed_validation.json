@@ -1,0 +1,976 @@
+{
+  "version": "0.4.0",
+  "package": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py",
+  "python": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Scripts\\python.exe",
+  "cwd": "G:\\AI\\Codex\\多智能体代码整合",
+  "data_source": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\寇谦\\论文代码及技术文档\\论文代码及技术文档\\MADiversePreferDatasets\\3m\\3m.th",
+  "policies": [
+    {
+      "algorithm": "kou/bc",
+      "train": {
+        "algorithm": "kou/bc",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.24685697075682414,
+        "metrics": {
+          "loss": 1.5473659038543701,
+          "grad_norm": 0.25113850831985474,
+          "agent_grad_norm": 0.25113850831985474
+        }
+      },
+      "resume": {
+        "algorithm": "kou/bc",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bc-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.08527599905796221,
+        "metrics": {
+          "loss": 1.5949807167053223,
+          "grad_norm": 0.15809157490730286,
+          "agent_grad_norm": 0.15809157490730286
+        }
+      }
+    },
+    {
+      "algorithm": "kou/cpl",
+      "train": {
+        "algorithm": "kou/cpl",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.18738087192052016,
+        "metrics": {
+          "loss": 1.731657862663269,
+          "cpl_loss": 1.731657862663269,
+          "nll_loss": 0.0,
+          "prefer_p_log": 0.18818020820617676,
+          "prefer_p_real": 0.20260700583457947,
+          "unprefer_p_log": 0.2149086445569992,
+          "unprefer_p_real": 0.2155933678150177,
+          "agent_grad_norm": 0.13597585260868073
+        }
+      },
+      "resume": {
+        "algorithm": "kou/cpl",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cpl-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.09540067654034647,
+        "metrics": {
+          "loss": 1.6449167728424072,
+          "cpl_loss": 1.6449167728424072,
+          "nll_loss": 0.0,
+          "prefer_p_log": 0.20746086537837982,
+          "prefer_p_real": 0.21481259167194366,
+          "unprefer_p_log": 0.22727806866168976,
+          "unprefer_p_real": 0.2622833251953125,
+          "agent_grad_norm": 0.14638356864452362
+        }
+      }
+    },
+    {
+      "algorithm": "kou/icq_ma",
+      "train": {
+        "algorithm": "kou/icq_ma",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.20751150185814946,
+        "metrics": {
+          "critic_loss": 0.017854131758213043,
+          "critic_grad_norm": 0.21158571541309357,
+          "q_taken_mean": 0.03477110713720322,
+          "beta_q": 100.0,
+          "coma_loss": 0.5193638801574707,
+          "agent_grad_norm": 0.0739506259560585,
+          "pi_max": 0.23202381712017636,
+          "loss": 0.5231919288635254
+        }
+      },
+      "resume": {
+        "algorithm": "kou/icq_ma",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-icq_ma-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.07232063447924902,
+        "metrics": {
+          "critic_loss": 0.1256025731563568,
+          "critic_grad_norm": 1.6022840738296509,
+          "q_taken_mean": 0.39436089992523193,
+          "beta_q": 100.0,
+          "coma_loss": 0.5359789729118347,
+          "agent_grad_norm": 0.04806132987141609,
+          "pi_max": 0.22734068379257666,
+          "loss": 0.5359789729118347
+        }
+      }
+    },
+    {
+      "algorithm": "kou/iql",
+      "train": {
+        "algorithm": "kou/iql",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.0432099320644364,
+        "metrics": {
+          "value_loss": 0.001161727006547153,
+          "value_grad_norm": 0.025134045630693436,
+          "q_loss": 0.012362536042928696,
+          "q_grad_norm": 0.07355351746082306,
+          "policy_loss": 1.4534554481506348,
+          "policy_grad_norm": 0.2127627432346344,
+          "v_mean": -0.008978097699582577,
+          "q_taken_mean": 0.022336436435580254,
+          "target_mean": -0.039106905460357666,
+          "v_loss": 0.001161727006547153,
+          "loss": 1.100447177886963
+        }
+      },
+      "resume": {
+        "algorithm": "kou/iql",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-iql-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.019689213273250298,
+        "metrics": {
+          "value_loss": 0.003196667181327939,
+          "value_grad_norm": 0.16165243089199066,
+          "q_loss": 0.040707044303417206,
+          "q_grad_norm": 0.22217242419719696,
+          "policy_loss": 1.8803917169570923,
+          "policy_grad_norm": 0.16045717895030975,
+          "v_mean": -0.08232960104942322,
+          "q_taken_mean": 0.04076552391052246,
+          "target_mean": -0.03456154838204384,
+          "v_loss": 0.003196667181327939,
+          "loss": 1.8803917169570923
+        }
+      }
+    },
+    {
+      "algorithm": "kou/cql",
+      "train": {
+        "algorithm": "kou/cql",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.04276231046430565,
+        "metrics": {
+          "loss_td": 0.09700944274663925,
+          "grad_norm": 1.3226649761199951,
+          "td_error_abs": 0.09700944206931374,
+          "q_taken_mean": 0.3818872625177557,
+          "target_mean": 0.7610734592784535,
+          "q_local_taken_mean": 0.03380653713688706,
+          "cql_loss": 1.5861717570911755,
+          "negtive_sampling_mean": 1.9680591930042615,
+          "loss": 1.6831811666488647
+        }
+      },
+      "resume": {
+        "algorithm": "kou/cql",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-cql-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.01932657646426636,
+        "metrics": {
+          "loss_td": 0.08795218169689178,
+          "grad_norm": 1.3008580207824707,
+          "td_error_abs": 0.08795218034224077,
+          "q_taken_mean": 0.48666641928932886,
+          "target_mean": 0.848295038396662,
+          "q_local_taken_mean": 0.04035211331916578,
+          "cql_loss": 1.617558392611417,
+          "negtive_sampling_mean": 2.1042246385054155,
+          "loss": 1.7055104970932007
+        }
+      }
+    },
+    {
+      "algorithm": "kou/dppo",
+      "train": {
+        "algorithm": "kou/dppo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.31997204669255247,
+        "metrics": {
+          "loss": 107.05213165283203,
+          "agent_grad_norm": 12.871442794799805
+        }
+      },
+      "resume": {
+        "algorithm": "kou/dppo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-dppo-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.15383324030638523,
+        "metrics": {
+          "loss": 87.53578186035156,
+          "agent_grad_norm": 16.29721450805664
+        }
+      }
+    },
+    {
+      "algorithm": "kou/madpo",
+      "train": {
+        "algorithm": "kou/madpo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.14556263784442836,
+        "metrics": {
+          "loss": 0.7377849817276001,
+          "agent_grad_norm": 0.016391536220908165
+        }
+      },
+      "resume": {
+        "algorithm": "kou/madpo",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.06223929111116042,
+        "metrics": {
+          "loss": 0.7322474718093872,
+          "agent_grad_norm": 0.012519478797912598
+        }
+      }
+    },
+    {
+      "algorithm": "kou/madpo_aux",
+      "train": {
+        "algorithm": "kou/madpo_aux",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.28419653524684263,
+        "metrics": {
+          "loss": 11.728612899780273,
+          "agent_grad_norm": 0.7236219644546509
+        }
+      },
+      "resume": {
+        "algorithm": "kou/madpo_aux",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-madpo_aux-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.12911567478865116,
+        "metrics": {
+          "loss": 11.20150375366211,
+          "agent_grad_norm": 1.0381524562835693
+        }
+      }
+    },
+    {
+      "algorithm": "kou/bcmapt",
+      "train": {
+        "algorithm": "kou/bcmapt",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.3103029787961536,
+        "metrics": {
+          "loss": 25.77802276611328,
+          "grad_norm": 2.5059852600097656,
+          "agent_grad_norm": 2.5059852600097656
+        }
+      },
+      "resume": {
+        "algorithm": "kou/bcmapt",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou-bcmapt-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.12385857719951084,
+        "metrics": {
+          "loss": 24.711380004882812,
+          "grad_norm": 2.464344024658203,
+          "agent_grad_norm": 2.464344024658203
+        }
+      }
+    },
+    {
+      "algorithm": "kou_old/qmix",
+      "train": {
+        "algorithm": "kou_old/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.12076914087865653,
+        "metrics": {
+          "loss": 0.31419992446899414,
+          "grad_norm": 4.108933925628662,
+          "td_error_abs": 0.5050937912680886,
+          "q_taken_mean": 0.2392098397919626,
+          "target_mean": 0.07495510216915247
+        }
+      },
+      "resume": {
+        "algorithm": "kou_old/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.06097988296182468,
+        "metrics": {
+          "loss": 0.08454490453004837,
+          "grad_norm": 0.8968853950500488,
+          "td_error_abs": 0.18735530159690164,
+          "q_taken_mean": 0.01992024074901234,
+          "target_mean": 0.07413370681531502
+        }
+      }
+    },
+    {
+      "algorithm": "kou_old/qplex",
+      "train": {
+        "algorithm": "kou_old/qplex",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.10814492871805832,
+        "metrics": {
+          "loss": 0.034102097153663635,
+          "hit_prob": 0.5075757503509521,
+          "grad_norm": 1.049494743347168,
+          "td_error_abs": 0.17260709675875577,
+          "q_taken_mean": 0.14071853233106207,
+          "target_mean": 0.08889909946557248
+        }
+      },
+      "resume": {
+        "algorithm": "kou_old/qplex",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.08201336075756253,
+        "metrics": {
+          "loss": 0.05926178768277168,
+          "hit_prob": 0.3484848737716675,
+          "grad_norm": 1.1932868957519531,
+          "td_error_abs": 0.1876141591505571,
+          "q_taken_mean": 0.03786181319843639,
+          "target_mean": 0.1003998698610248
+        }
+      }
+    },
+    {
+      "algorithm": "kou_old/cw_qmix",
+      "train": {
+        "algorithm": "kou_old/cw_qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.13350758120949868,
+        "metrics": {
+          "loss": 0.46244239807128906,
+          "qmix_loss": 0.15590745210647583,
+          "grad_norm": 4.299795150756836,
+          "mixer_norm": 2.075831920157561,
+          "agent_norm": 0.29966162160884413,
+          "td_error_abs": 0.34840024601329456,
+          "q_taken_mean": -0.1446583198778557,
+          "target_mean": -0.02852490454009085,
+          "central_loss": 0.30653494596481323,
+          "w_to_use": 0.8295454382896423
+        }
+      },
+      "resume": {
+        "algorithm": "kou_old/cw_qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.059417253831841065,
+        "metrics": {
+          "loss": 0.09652914106845856,
+          "qmix_loss": 0.04921334609389305,
+          "grad_norm": 1.1052906513214111,
+          "mixer_norm": 0.48014540339780365,
+          "agent_norm": 0.10826830458676441,
+          "td_error_abs": 0.16612477736039596,
+          "q_taken_mean": 0.006668952378359708,
+          "target_mean": -0.0211675763130188,
+          "central_loss": 0.04731579124927521,
+          "w_to_use": 0.7840909361839294
+        }
+      }
+    },
+    {
+      "algorithm": "kou_old/ow_qmix",
+      "train": {
+        "algorithm": "kou_old/ow_qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.11838545758990499,
+        "metrics": {
+          "loss": 0.48220375180244446,
+          "qmix_loss": 0.17544466257095337,
+          "grad_norm": 4.471363067626953,
+          "mixer_norm": 2.401202473521517,
+          "agent_norm": 0.3543666836479725,
+          "td_error_abs": 0.34266994216225366,
+          "q_taken_mean": -0.1428294037327622,
+          "target_mean": -0.028606095097281715,
+          "central_loss": 0.3067590892314911,
+          "w_to_use": 1.0
+        }
+      },
+      "resume": {
+        "algorithm": "kou_old/ow_qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.06033860018526796,
+        "metrics": {
+          "loss": 0.09128724783658981,
+          "qmix_loss": 0.04401011019945145,
+          "grad_norm": 1.0634711980819702,
+          "mixer_norm": 0.3788093234793316,
+          "agent_norm": 0.09263272729268994,
+          "td_error_abs": 0.19804690100929953,
+          "q_taken_mean": 0.02339451602011016,
+          "target_mean": -0.021183129512902462,
+          "central_loss": 0.04727713763713837,
+          "w_to_use": 0.5454545617103577
+        }
+      }
+    },
+    {
+      "algorithm": "kou_old/cw_qmix_w_globalRM",
+      "train": {
+        "algorithm": "kou_old/cw_qmix_w_globalRM",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.6458763489494787,
+        "metrics": {
+          "loss": 0.04535205662250519,
+          "qmix_loss": 0.03439287841320038,
+          "grad_norm": 1.1143279075622559,
+          "mixer_norm": 1.065410815697235,
+          "agent_norm": 0.045171898160003256,
+          "td_error_abs": 0.15770080956545743,
+          "q_taken_mean": -0.02696501486229174,
+          "target_mean": -0.0288037152001352,
+          "central_loss": 0.010959179140627384,
+          "w_to_use": 0.8295454382896423
+        }
+      },
+      "resume": {
+        "algorithm": "kou_old/cw_qmix_w_globalRM",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-cw_qmix_w_globalRM-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.3082505377130145,
+        "metrics": {
+          "loss": 0.07152727246284485,
+          "qmix_loss": 0.04275153577327728,
+          "grad_norm": 0.39397045969963074,
+          "mixer_norm": 0.24762676088984092,
+          "agent_norm": 0.06911071148102316,
+          "td_error_abs": 0.14765899831598456,
+          "q_taken_mean": -0.014929322582302671,
+          "target_mean": -0.02096190235831521,
+          "central_loss": 0.028775740414857864,
+          "w_to_use": 0.7727272510528564
+        }
+      }
+    },
+    {
+      "algorithm": "kou_old/ow_qmix_w_globalRM",
+      "train": {
+        "algorithm": "kou_old/ow_qmix_w_globalRM",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.5557618867950641,
+        "metrics": {
+          "loss": 0.04233599454164505,
+          "qmix_loss": 0.03135432302951813,
+          "grad_norm": 0.6285764575004578,
+          "mixer_norm": 0.5334623018395481,
+          "agent_norm": 0.07377411430924279,
+          "td_error_abs": 0.15906194123354825,
+          "q_taken_mean": -0.026253362496693928,
+          "target_mean": -0.028758675763101288,
+          "central_loss": 0.010981670580804348,
+          "w_to_use": 0.7159090638160706
+        }
+      },
+      "resume": {
+        "algorithm": "kou_old/ow_qmix_w_globalRM",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-ow_qmix_w_globalRM-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.3000331669717289,
+        "metrics": {
+          "loss": 0.069906085729599,
+          "qmix_loss": 0.041131507605314255,
+          "grad_norm": 0.3716999590396881,
+          "mixer_norm": 0.2106185093177173,
+          "agent_norm": 0.05588781422282509,
+          "td_error_abs": 0.1603350747715343,
+          "q_taken_mean": -0.005000479293592049,
+          "target_mean": -0.020822855559262363,
+          "central_loss": 0.028774581849575043,
+          "w_to_use": 0.6818181872367859
+        }
+      }
+    },
+    {
+      "algorithm": "kou_old/qmix_w_globalRM",
+      "train": {
+        "algorithm": "kou_old/qmix_w_globalRM",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.14425026486529516,
+        "metrics": {
+          "loss": 0.3104831874370575,
+          "grad_norm": 4.189189910888672,
+          "td_error_abs": 0.5123128024014559,
+          "q_taken_mean": 0.23308407176624646,
+          "target_mean": 0.062313108733206085
+        }
+      },
+      "resume": {
+        "algorithm": "kou_old/qmix_w_globalRM",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qmix_w_globalRM-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.04424081649397846,
+        "metrics": {
+          "loss": 0.03670784458518028,
+          "grad_norm": 0.7577876448631287,
+          "td_error_abs": 0.15233151479200882,
+          "q_taken_mean": 0.012665125456723299,
+          "target_mean": 0.05639608339829878
+        }
+      }
+    },
+    {
+      "algorithm": "kou_old/qplex_w_globalRM",
+      "train": {
+        "algorithm": "kou_old/qplex_w_globalRM",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 2,
+        "parameter_delta_l2": 0.10055391715002054,
+        "metrics": {
+          "loss": 0.07254369556903839,
+          "hit_prob": 0.45454540848731995,
+          "grad_norm": 1.6827917098999023,
+          "td_error_abs": 0.26217681711370294,
+          "q_taken_mean": -0.011143180457028475,
+          "target_mean": 0.0762490937204072
+        }
+      },
+      "resume": {
+        "algorithm": "kou_old/qplex_w_globalRM",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM-resumed",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM-resumed\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM-resumed\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM-resumed\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\kou_old-qplex_w_globalRM-resumed\\config.json",
+        "env_steps": 0,
+        "episodes": 0,
+        "updates": 3,
+        "parameter_delta_l2": 0.07462321104361,
+        "metrics": {
+          "loss": 0.007066343445330858,
+          "hit_prob": 0.3787878751754761,
+          "grad_norm": 0.47581160068511963,
+          "td_error_abs": 0.0733158913525668,
+          "q_taken_mean": 0.10699660127813165,
+          "target_mean": 0.08264006267894398
+        }
+      }
+    }
+  ],
+  "reward_models": [
+    {
+      "model": "MR",
+      "result": {
+        "model_type": "MR",
+        "updates": 1,
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-MR",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-MR\\reward.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-MR\\reward-training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-MR\\metrics.jsonl",
+        "parameter_delta_l2": 0.013245817970205274,
+        "output_semantics": "team",
+        "metrics": {
+          "trans_loss": 0.6914361715316772,
+          "pi_loss": 0.5251966323703527,
+          "loss": 0.5863968450576067
+        }
+      },
+      "prediction_shape": [
+        2,
+        12,
+        1
+      ]
+    },
+    {
+      "model": "NMR",
+      "result": {
+        "model_type": "NMR",
+        "updates": 1,
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-NMR",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-NMR\\reward.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-NMR\\reward-training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-NMR\\metrics.jsonl",
+        "parameter_delta_l2": 0.061135211055751947,
+        "output_semantics": "team",
+        "metrics": {
+          "trans_loss": 1.4357872009277344,
+          "pi_loss": 0.5128333941102028,
+          "loss": 1.3332205221056939
+        }
+      },
+      "prediction_shape": [
+        2,
+        12,
+        1
+      ]
+    },
+    {
+      "model": "PrefTransformer",
+      "result": {
+        "model_type": "PrefTransformer",
+        "updates": 1,
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-PrefTransformer",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-PrefTransformer\\reward.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-PrefTransformer\\reward-training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-PrefTransformer\\metrics.jsonl",
+        "parameter_delta_l2": 0.006275762619702253,
+        "output_semantics": "team",
+        "metrics": {
+          "trans_loss": 0.7549374103546143,
+          "pi_loss": 0.4116610959172249,
+          "loss": 0.6726051911711692
+        }
+      },
+      "prediction_shape": [
+        2,
+        12,
+        1
+      ]
+    },
+    {
+      "model": "MultiPrefTransformerDivide",
+      "result": {
+        "model_type": "MultiPrefTransformerDivide",
+        "updates": 1,
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-MultiPrefTransformerDivide",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-MultiPrefTransformerDivide\\reward.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-MultiPrefTransformerDivide\\reward-training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-MultiPrefTransformerDivide\\metrics.jsonl",
+        "parameter_delta_l2": 0.019474929934906265,
+        "output_semantics": "individual",
+        "metrics": {
+          "trans_loss": 1.835461974143982,
+          "pi_loss": 0.5092964321374893,
+          "loss": 1.733602687716484
+        }
+      },
+      "prediction_shape": [
+        2,
+        12,
+        3,
+        1
+      ]
+    },
+    {
+      "model": "old_global",
+      "result": {
+        "model_type": "old_global",
+        "updates": 1,
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-old_global",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-old_global\\reward.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-old_global\\reward-training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-old_global\\metrics.jsonl",
+        "parameter_delta_l2": 0.02800209621653431,
+        "output_semantics": "team",
+        "metrics": {
+          "loss": 1.351733922958374,
+          "loss_after_update": 1.344001591205597,
+          "accuracy": 0.75
+        }
+      },
+      "prediction_shape": [
+        2,
+        12,
+        1
+      ]
+    },
+    {
+      "model": "old_reward_global",
+      "result": {
+        "model_type": "old_reward_global",
+        "updates": 1,
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-old_reward_global",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-old_reward_global\\reward.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-old_reward_global\\reward-training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\reward-old_reward_global\\metrics.jsonl",
+        "parameter_delta_l2": 0.028006977390317888,
+        "output_semantics": "team",
+        "metrics": {
+          "loss": 1.4018781185150146,
+          "loss_after_update": 1.3940844535827637,
+          "accuracy": 0.25
+        }
+      },
+      "prediction_shape": [
+        2,
+        12,
+        1
+      ]
+    },
+    {
+      "model": "MultiPrefTransformerDivide/diverse",
+      "result": {
+        "model_type": "MultiPrefTransformerDivide",
+        "updates": 1,
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\diverse",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\diverse\\reward.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\diverse\\reward-training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\diverse\\metrics.jsonl",
+        "parameter_delta_l2": 0.01935365895984623,
+        "output_semantics": "individual",
+        "metrics": {
+          "trans_loss": 1.1014034748077393,
+          "loss": 3.352745532989502,
+          "in_loss": 0.7105808854103088,
+          "between_loss": 0.8301801681518555
+        }
+      }
+    }
+  ],
+  "qmix_regression": {
+    "train": {
+      "algorithm": "pymarl/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\qmix-regression",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\qmix-regression\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\qmix-regression\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\qmix-regression\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage4\\installed-runs-f473cb03\\qmix-regression\\config.json",
+      "env_steps": 12,
+      "episodes": 3,
+      "updates": 2,
+      "parameter_delta_l2": 0.5269016045677161,
+      "metrics": {
+        "loss": 0.35638558864593506,
+        "grad_norm": 4.917663097381592
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  "blocked": [
+    {
+      "name": "hacpl_smac",
+      "status": "SOURCE_BLOCKED",
+      "error": "Source configuration names missing learner hacpl_learner"
+    },
+    {
+      "name": "maicpl_smac",
+      "status": "SOURCE_BLOCKED",
+      "error": "Source configuration names missing learner maicpl_learner"
+    },
+    {
+      "name": "maidpo_smac",
+      "status": "SOURCE_BLOCKED",
+      "error": "Source configuration names missing learner maidpo_learner"
+    },
+    {
+      "name": "real_smac_evaluation",
+      "status": "ENVIRONMENT_BLOCKED",
+      "error": "SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.",
+      "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\smac.py\", line 7, in make_smac\n    from smac.env import StarCraft2Env\nModuleNotFoundError: No module named 'smac'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\validate_stage4_installed.py\", line 93, in main\n    evaluate(policy_runs[0][\"train\"][\"checkpoint\"],env=\"sc2\",env_args={\"map_name\":\"3m\"},episodes=1)\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py\", line 12, in evaluate\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\api.py\", line 301, in evaluate\n    runner = RUNNERS[\"episode\"](SimpleNamespace(**cfg), Logger())\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\runners\\episode_runner.py\", line 13, in __init__\n    self.env = make_env(args.env, **args.env_args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 28, in make_env\n    return factory(**kwargs)\n           ^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\__init__.py\", line 12, in _sc2\n    return make_smac(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\envs\\smac.py\", line 9, in make_smac\n    raise ImportError(\"SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.\") from exc\nImportError: SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.\n"
+    }
+  ],
+  "cli": {
+    "returncode": 0,
+    "stdout": "{\n  \"algorithm\": \"kou/bc\",\n  \"output_dir\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage4\\\\installed-runs-f473cb03\\\\cli-bc\",\n  \"checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage4\\\\installed-runs-f473cb03\\\\cli-bc\\\\policy.pt\",\n  \"training_checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage4\\\\installed-runs-f473cb03\\\\cli-bc\\\\training.pt\",\n  \"metrics_path\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage4\\\\installed-runs-f473cb03\\\\cli-bc\\\\metrics.jsonl\",\n  \"config_path\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage4\\\\installed-runs-f473cb03\\\\cli-bc\\\\config.json\",\n  \"env_steps\": 0,\n  \"episodes\": 0,\n  \"updates\": 1,\n  \"parameter_delta_l2\": 0.3943949152318903,\n  \"metrics\": {\n    \"loss\": 1.5974777936935425,\n    \"grad_norm\": 0.32392770051956177,\n    \"agent_grad_norm\": 0.32392770051956177\n  }\n}\n",
+    "stderr": ""
+  },
+  "cli_reward": {
+    "returncode": 0,
+    "stdout": "{\n  \"model_type\": \"MR\",\n  \"updates\": 1,\n  \"output_dir\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage4\\\\installed-runs-f473cb03\\\\cli-reward\",\n  \"checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage4\\\\installed-runs-f473cb03\\\\cli-reward\\\\reward.pt\",\n  \"training_checkpoint\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage4\\\\installed-runs-f473cb03\\\\cli-reward\\\\reward-training.pt\",\n  \"metrics_path\": \"G:\\\\AI\\\\Codex\\\\澶氭櫤鑳戒綋浠ｇ爜鏁村悎\\\\unified-marl\\\\docs\\\\evidence\\\\stage4\\\\installed-runs-f473cb03\\\\cli-reward\\\\metrics.jsonl\",\n  \"parameter_delta_l2\": 0.019320669301646134,\n  \"output_semantics\": \"team\",\n  \"metrics\": {\n    \"trans_loss\": 0.6907164454460144,\n    \"pi_loss\": 0.5221455991268158,\n    \"loss\": 0.5862873256206512\n  }\n}\n",
+    "stderr": ""
+  }
+}

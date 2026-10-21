@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "version": "0.4.0",
+  "tests": 112,
+  "matrix_rows": 361,
+  "policy_configs": 17,
+  "reward_models": 6,
+  "additional_diverse_mode": 1,
+  "source_parity_reports": 24,
+  "source_parity_max_error": 5.960464477539063e-08,
+  "real_episode_files_small_batch_read": 12,
+  "source_hash_records_unchanged": 1228,
+  "runtime_source_wheel_installed_files_identical": 299,
+  "reference_python312_bytecode_files": 0,
+  "wheel_sha256": "8853a72dce64b9dc207720b3851250dc71f214f56acce5f53874a11ac9d4a193",
+  "wheel_bytes": 425662,
+  "pip_checks": "PASS_BOTH_PROJECT_ENVS",
+  "real_smac_evaluation": "BLOCKED",
+  "policy_effectiveness": "NOT_VALIDATED",
+  "stopped_after_stage": 4
+}

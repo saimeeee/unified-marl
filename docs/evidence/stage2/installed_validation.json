@@ -1,0 +1,234 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Scripts\\python.exe",
+  "package_file": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-check\\Lib\\site-packages\\unified_marl\\__init__.py",
+  "cwd": "G:\\AI\\Codex\\多智能体代码整合",
+  "algorithms": {
+    "qmix": {
+      "train": {
+        "algorithm": "pymarl/qmix",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.5269016045677161,
+        "metrics": {
+          "loss": 0.35638558864593506,
+          "grad_norm": 4.917663097381592
+        }
+      },
+      "evaluate": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    "vdn": {
+      "train": {
+        "algorithm": "pymarl/vdn",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.6559009790253438,
+        "metrics": {
+          "loss": 0.20563551783561707,
+          "grad_norm": 1.1555551290512085
+        }
+      },
+      "evaluate": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    "iql": {
+      "train": {
+        "algorithm": "pymarl/iql",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.7065674346943449,
+        "metrics": {
+          "loss": 0.26310470700263977,
+          "grad_norm": 0.9442468881607056
+        }
+      },
+      "evaluate": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    "coma": {
+      "train": {
+        "algorithm": "pymarl/coma",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\coma",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\coma\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\coma\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\coma\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\coma\\config.json",
+        "env_steps": 16,
+        "episodes": 4,
+        "updates": 2,
+        "parameter_delta_l2": 0.37047295944520753,
+        "metrics": {
+          "loss": -0.03943070396780968,
+          "coma_loss": -0.03943070396780968,
+          "critic_loss": 0.5320207476615906,
+          "grad_norm": 0.045221295207738876
+        }
+      },
+      "evaluate": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    "qtran": {
+      "train": {
+        "algorithm": "pymarl/qtran",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qtran",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qtran\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qtran\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qtran\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qtran\\config.json",
+        "env_steps": 12,
+        "episodes": 3,
+        "updates": 2,
+        "parameter_delta_l2": 0.6376271247919042,
+        "metrics": {
+          "loss": 0.48741358518600464,
+          "grad_norm": 3.1703171730041504,
+          "td_loss": 0.26301610469818115,
+          "opt_loss": 0.18628236651420593,
+          "nopt_loss": 0.38115108013153076
+        }
+      },
+      "evaluate": {
+        "episodes": 2,
+        "returns": [
+          0.0,
+          0.0
+        ],
+        "return_mean": 0.0,
+        "return_std": 0.0
+      }
+    },
+    "qmix_beta": {
+      "train": {
+        "algorithm": "pymarl/qmix_beta",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix_beta",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix_beta\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix_beta\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix_beta\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\qmix_beta\\config.json",
+        "env_steps": 64,
+        "episodes": 16,
+        "updates": 2,
+        "parameter_delta_l2": 0.7150558181604312,
+        "metrics": {
+          "loss": 2.887834072113037,
+          "grad_norm": 28.698347091674805
+        }
+      },
+      "evaluate": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    "iql_beta": {
+      "train": {
+        "algorithm": "pymarl/iql_beta",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql_beta",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql_beta\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql_beta\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql_beta\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\iql_beta\\config.json",
+        "env_steps": 64,
+        "episodes": 16,
+        "updates": 2,
+        "parameter_delta_l2": 0.6331907652560034,
+        "metrics": {
+          "loss": 0.17376969754695892,
+          "grad_norm": 0.5103726387023926
+        }
+      },
+      "evaluate": {
+        "episodes": 2,
+        "returns": [
+          2.0,
+          2.0
+        ],
+        "return_mean": 2.0,
+        "return_std": 0.0
+      }
+    },
+    "vdn_beta": {
+      "train": {
+        "algorithm": "pymarl/vdn_beta",
+        "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn_beta",
+        "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn_beta\\policy.pt",
+        "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn_beta\\training.pt",
+        "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn_beta\\metrics.jsonl",
+        "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\docs\\evidence\\stage2\\installed-runs-a9acd7ed\\vdn_beta\\config.json",
+        "env_steps": 64,
+        "episodes": 16,
+        "updates": 2,
+        "parameter_delta_l2": 0.6082425229068825,
+        "metrics": {
+          "loss": 0.17334924638271332,
+          "grad_norm": 0.4615006446838379
+        }
+      },
+      "evaluate": {
+        "episodes": 2,
+        "returns": [
+          1.5,
+          1.5
+        ],
+        "return_mean": 1.5,
+        "return_std": 0.0
+      }
+    }
+  },
+  "smac": {
+    "status": "BLOCKED",
+    "reason": "SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.",
+    "training_verified": false
+  }
+}

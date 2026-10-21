@@ -1,0 +1,424 @@
+[
+  {
+    "name": "sadma/qmix",
+    "extra": {},
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\0",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\0\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\0\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\0\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\0\\config.json",
+      "env_steps": 12,
+      "episodes": 3,
+      "updates": 2,
+      "parameter_delta_l2": 0.07353066266779257,
+      "metrics": {
+        "loss_td": 0.1202375516295433,
+        "grad_norm": 2.3154354095458984,
+        "td_error_abs": 0.1202375516295433,
+        "q_taken_mean": -0.08745378255844116,
+        "target_mean": 0.10346934199333191,
+        "loss": 0.1202375516295433
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.5,
+        2.5
+      ],
+      "return_mean": 2.5,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma/ppo",
+    "extra": {},
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma/ppo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\1",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\1\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\1\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\1\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\1\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.06262203934102427,
+      "metrics": {
+        "advantage_mean": -4.470348358154297e-08,
+        "actor_loss": -0.0013493448495864868,
+        "entropy_loss": 0.8958041071891785,
+        "grad_norm": 1.774914026260376,
+        "critic_loss": 0.5978763699531555,
+        "target_mean": 0.7748743295669556,
+        "loss": 0.2975888252258301,
+        "policy_version": 4
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.5,
+        2.5
+      ],
+      "return_mean": 2.5,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma/vdn",
+    "extra": {},
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma/vdn",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\2",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\2\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\2\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\2\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\2\\config.json",
+      "env_steps": 12,
+      "episodes": 3,
+      "updates": 2,
+      "parameter_delta_l2": 0.07436584224082848,
+      "metrics": {
+        "loss_td": 0.4388306736946106,
+        "grad_norm": 1.513981580734253,
+        "td_error_abs": 0.4388306736946106,
+        "q_taken_mean": 0.002582043642178178,
+        "target_mean": 0.4374151825904846,
+        "loss": 0.4388306736946106
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma_yi/qmix",
+    "extra": {},
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma_yi/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\3",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\3\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\3\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\3\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\3\\config.json",
+      "env_steps": 12,
+      "episodes": 3,
+      "updates": 2,
+      "parameter_delta_l2": 0.07436584224082848,
+      "metrics": {
+        "loss_td": 0.4388306736946106,
+        "grad_norm": 1.513981580734253,
+        "td_error_abs": 0.4388306736946106,
+        "q_taken_mean": 0.002582043642178178,
+        "target_mean": 0.4374151825904846,
+        "loss": 0.4388306736946106
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma_yi/ppo",
+    "extra": {},
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma_yi/ppo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\4",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\4\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\4\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\4\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\4\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.05721662305848937,
+      "metrics": {
+        "advantage_mean": 1.043081283569336e-07,
+        "actor_loss": 0.00018333643674850464,
+        "entropy_loss": 0.8957890272140503,
+        "grad_norm": 1.2337597608566284,
+        "critic_loss": 0.724307656288147,
+        "target_mean": 0.4503542184829712,
+        "loss": 0.35233718156814575,
+        "policy_version": 4
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma_yi_closed/qmix",
+    "extra": {},
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma_yi_closed/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\5",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\5\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\5\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\5\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\5\\config.json",
+      "env_steps": 12,
+      "episodes": 3,
+      "updates": 2,
+      "parameter_delta_l2": 0.07353066266779257,
+      "metrics": {
+        "loss_td": 0.1202375516295433,
+        "grad_norm": 2.3154354095458984,
+        "td_error_abs": 0.1202375516295433,
+        "q_taken_mean": -0.08745378255844116,
+        "target_mean": 0.10346934199333191,
+        "loss": 0.1202375516295433
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.5,
+        2.5
+      ],
+      "return_mean": 2.5,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma_yi_closed/ppo",
+    "extra": {},
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma_yi_closed/ppo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\6",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\6\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\6\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\6\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\6\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.05721662305848937,
+      "metrics": {
+        "advantage_mean": 1.043081283569336e-07,
+        "actor_loss": 0.00018333643674850464,
+        "entropy_loss": 0.8957890272140503,
+        "grad_norm": 1.2337597608566284,
+        "critic_loss": 0.724307656288147,
+        "target_mean": 0.4503542184829712,
+        "loss": 0.35233718156814575,
+        "policy_version": 4
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma/ppo",
+    "extra": {
+      "agent_type": "mlp",
+      "critic_type": "mlp",
+      "use_value_norm": false
+    },
+    "status": "FAIL",
+    "error": "'NoneType' object has no attribute 'to'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage5.py\", line 23, in main\n    run=train(name,\"toy\",output_dir=runs/str(len(rows)),overrides=options)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 138, in train\n    return train_sadma(algorithm,env,env_args,device,seed,output_dir,config,overrides,resume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\sadma.py\", line 107, in train_sadma\n    metrics=learner.update(batch,UpdateContext(runner.t_env,progress[\"episodes\"],progress[\"updates\"]))\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\sadma\\adapter.py\", line 79, in update\n    metrics=self.native.train(native_batch(batch),context.episodes,context.env_steps)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\sadma\\native\\policy\\mappo\\ppo_policy.py\", line 90, in train\n    log_probs, entropy, hidden_states = self.mac.make_distribution(inputs, actions[:,t])\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\sadma\\native\\policy\\mappo\\ppo_controller.py\", line 13, in make_distribution\n    data = {k: v.to(self.device) for k, v in data.items()}\n               ^^^^\nAttributeError: 'NoneType' object has no attribute 'to'\n"
+  },
+  {
+    "name": "sadma/ppo",
+    "extra": {
+      "critic_inputs": [
+        "independent_obs",
+        "agent_id",
+        "last_action"
+      ]
+    },
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma/ppo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\8",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\8\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\8\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\8\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\8\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.06757981617961448,
+      "metrics": {
+        "advantage_mean": -5.960464477539063e-08,
+        "actor_loss": -0.00025978684425354004,
+        "entropy_loss": 0.8958286046981812,
+        "grad_norm": 1.2812131643295288,
+        "critic_loss": 0.47569194436073303,
+        "target_mean": 0.7639877200126648,
+        "loss": 0.23758618533611298,
+        "policy_version": 4
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma/ppo",
+    "extra": {
+      "critic_inputs": [
+        "central_obs",
+        "state"
+      ]
+    },
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma/ppo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\9",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\9\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\9\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\9\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\9\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.06590327010973243,
+      "metrics": {
+        "advantage_mean": 2.086162567138672e-07,
+        "actor_loss": -0.0010240301489830017,
+        "entropy_loss": 0.8958014249801636,
+        "grad_norm": 1.559126853942871,
+        "critic_loss": 0.5120965242385864,
+        "target_mean": 0.7285261750221252,
+        "loss": 0.2550242245197296,
+        "policy_version": 4
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.0,
+        2.0
+      ],
+      "return_mean": 2.0,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma/ppo",
+    "extra": {
+      "use_vtrace": true,
+      "dual_clip": 3
+    },
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma/ppo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\10",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\10\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\10\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\10\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\10\\config.json",
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "parameter_delta_l2": 0.06254616259653167,
+      "metrics": {
+        "advantage_mean": -2.4586915969848633e-07,
+        "actor_loss": -0.001352757215499878,
+        "entropy_loss": 0.8958041667938232,
+        "grad_norm": 1.7755705118179321,
+        "critic_loss": 0.597368597984314,
+        "target_mean": 0.77297043800354,
+        "loss": 0.2973315417766571,
+        "policy_version": 4
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.5,
+        2.5
+      ],
+      "return_mean": 2.5,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma/qmix",
+    "extra": {
+      "q_lambda": true
+    },
+    "status": "PASS",
+    "train": {
+      "algorithm": "sadma/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\11",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\11\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\11\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\11\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage5-probes-dbe891a5\\11\\config.json",
+      "env_steps": 12,
+      "episodes": 3,
+      "updates": 2,
+      "parameter_delta_l2": 0.07352802266048883,
+      "metrics": {
+        "loss_td": 0.12094168365001678,
+        "grad_norm": 2.3247463703155518,
+        "td_error_abs": 0.12094168365001678,
+        "q_taken_mean": -0.08745379745960236,
+        "target_mean": 0.10432251542806625,
+        "loss": 0.12094168365001678
+      }
+    },
+    "evaluation": {
+      "episodes": 2,
+      "returns": [
+        2.5,
+        2.5
+      ],
+      "return_mean": 2.5,
+      "return_std": 0.0
+    }
+  },
+  {
+    "name": "sadma/qmix",
+    "extra": {
+      "agent_type": "mlp"
+    },
+    "status": "FAIL",
+    "error": "'NoneType' object has no attribute 'to'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage5.py\", line 23, in main\n    run=train(name,\"toy\",output_dir=runs/str(len(rows)),overrides=options)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 138, in train\n    return train_sadma(algorithm,env,env_args,device,seed,output_dir,config,overrides,resume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\sadma.py\", line 112, in train_sadma\n    native_metrics=learner.native.train(sampled,progress[\"episodes\"],runner.t_env)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\sadma\\native\\policy\\qmix\\q_policy.py\", line 49, in train\n    agent_outs, hidden_states = self.mac.get_agent_outputs(inputs)\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\sadma\\native\\policy\\qmix\\q_controller.py\", line 15, in get_agent_outputs\n    data = {k: v.to(self.device) for k, v in data.items()}\n               ^^^^\nAttributeError: 'NoneType' object has no attribute 'to'\n"
+  }
+]

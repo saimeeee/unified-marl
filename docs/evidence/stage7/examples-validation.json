@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-sdist\\Scripts\\python.exe",
+        "-B",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\make_demo_data.py",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-demo.th"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-demo.th\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-sdist\\Scripts\\python.exe",
+        "-B",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\online.py",
+        "--output",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-qmix"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "{'algorithm': 'pymarl/qmix', 'output_dir': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\first', 'checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\first\\\\policy.pt', 'training_checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\first\\\\training.pt', 'metrics_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\first\\\\metrics.jsonl', 'config_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\first\\\\config.json', 'env_steps': 12, 'episodes': 3, 'updates': 2, 'parameter_delta_l2': 0.13039140045601988, 'metrics': {'loss': 0.2159450650215149, 'grad_norm': 3.749818801879883}}\n{'episodes': 2, 'returns': [2.0, 2.0], 'return_mean': 2.0, 'return_std': 0.0}\n{'algorithm': 'pymarl/qmix', 'output_dir': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\continued', 'checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\continued\\\\policy.pt', 'training_checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\continued\\\\training.pt', 'metrics_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\continued\\\\metrics.jsonl', 'config_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-qmix\\\\continued\\\\config.json', 'env_steps': 16, 'episodes': 4, 'updates': 3, 'parameter_delta_l2': 0.057887669016980454, 'metrics': {'loss': 0.14690855145454407, 'grad_norm': 1.9398151636123657}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-sdist\\Scripts\\python.exe",
+        "-B",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\online.py",
+        "--algorithm",
+        "sadma/ppo",
+        "--output",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-ppo"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "{'algorithm': 'sadma/ppo', 'output_dir': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\first', 'checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\first\\\\policy.pt', 'training_checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\first\\\\training.pt', 'metrics_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\first\\\\metrics.jsonl', 'config_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\first\\\\config.json', 'env_steps': 16, 'episodes': 4, 'updates': 2, 'parameter_delta_l2': 0.05757670722319493, 'metrics': {'advantage_mean': 1.043081283569336e-07, 'actor_loss': -0.0024109110236167908, 'entropy_loss': 0.8958690762519836, 'grad_norm': 1.72780179977417, 'critic_loss': 0.5251662135124207, 'target_mean': 0.39454296231269836, 'loss': 0.26017218828201294, 'policy_version': 4}}\n{'episodes': 2, 'returns': [1.5, 1.5], 'return_mean': 1.5, 'return_std': 0.0}\n{'algorithm': 'sadma/ppo', 'output_dir': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\continued', 'checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\continued\\\\policy.pt', 'training_checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\continued\\\\training.pt', 'metrics_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\continued\\\\metrics.jsonl', 'config_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-ppo\\\\continued\\\\config.json', 'env_steps': 24, 'episodes': 6, 'updates': 3, 'parameter_delta_l2': 0.023794882134090648, 'metrics': {'advantage_mean': 2.9802322387695312e-08, 'actor_loss': -0.0001554340124130249, 'entropy_loss': 0.8958455920219421, 'grad_norm': 2.3008761405944824, 'critic_loss': 0.7239745855331421, 'target_mean': 1.0448652505874634, 'loss': 0.3618318438529968, 'policy_version': 6}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-sdist\\Scripts\\python.exe",
+        "-B",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\inference.py",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-qmix\\first\\policy.pt"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "回报 2.0\n回报 2.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-sdist\\Scripts\\python.exe",
+        "-B",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\offline.py",
+        "--algorithm",
+        "kou/bc",
+        "--dataset",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-demo.th",
+        "--output",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-kou-bc"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "{'algorithm': 'kou/bc', 'output_dir': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-bc', 'checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-bc\\\\policy.pt', 'training_checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-bc\\\\training.pt', 'metrics_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-bc\\\\metrics.jsonl', 'config_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-bc\\\\config.json', 'env_steps': 0, 'episodes': 0, 'updates': 2, 'parameter_delta_l2': 0.18879411660197357, 'metrics': {'loss': 1.1105223894119263, 'grad_norm': 0.12527281045913696, 'agent_grad_norm': 0.12527281045913696}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-sdist\\Scripts\\python.exe",
+        "-B",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\offline.py",
+        "--algorithm",
+        "kou/cpl",
+        "--dataset",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-demo.th",
+        "--output",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-kou-cpl"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "{'algorithm': 'kou/cpl', 'output_dir': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-cpl', 'checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-cpl\\\\policy.pt', 'training_checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-cpl\\\\training.pt', 'metrics_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-cpl\\\\metrics.jsonl', 'config_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-kou-cpl\\\\config.json', 'env_steps': 0, 'episodes': 0, 'updates': 2, 'parameter_delta_l2': 0.11589270803728108, 'metrics': {'loss': 1.318924903869629, 'cpl_loss': 1.318924903869629, 'nll_loss': 0.0, 'prefer_p_log': 0.4577741026878357, 'prefer_p_real': 0.25841379165649414, 'unprefer_p_log': 0.4598658084869385, 'unprefer_p_real': 0.2603188157081604, 'agent_grad_norm': 0.07370575517416}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-release\\Scripts\\python.exe",
+        "-B",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\reward.py",
+        "--dataset",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-demo.th",
+        "--output",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-reward"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "{'model_type': 'MR', 'updates': 2, 'output_dir': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-reward', 'checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-reward\\\\reward.pt', 'training_checkpoint': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-reward\\\\reward-training.pt', 'metrics_path': 'G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-reward\\\\metrics.jsonl', 'parameter_delta_l2': 0.01577573165734226, 'output_semantics': 'team', 'metrics': {'trans_loss': 0.691114068031311, 'pi_loss': 0.49904815107584, 'loss': 0.5913044378161431}}\n团队奖励预测形状 (2, 5, 1)\n{'trans_loss': 0.6783421635627747, 'pi_loss': 0.5151930600404739, 'loss': 0.5753035515546798}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-sdist\\Scripts\\python.exe",
+        "-B",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\train_qmix.py"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "TrainResult(algorithm='pymarl/qmix', output_dir='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\20261021-105535-de127d60', checkpoint='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\20261021-105535-de127d60\\\\policy.pt', training_checkpoint='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\20261021-105535-de127d60\\\\training.pt', metrics_path='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\20261021-105535-de127d60\\\\metrics.jsonl', config_path='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\20261021-105535-de127d60\\\\config.json', env_steps=32, episodes=8, updates=7, parameter_delta_l2=0.682962487870527, metrics={'loss': 0.0416642427444458, 'grad_norm': 1.271093487739563})\nEvaluationResult(episodes=2, returns=[2.0, 2.0], return_mean=2.0, return_std=0.0)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-release\\Scripts\\python.exe",
+        "-B",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\stage6_zmq.py"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "TrainResult(algorithm='sadma/qmix', output_dir='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\zmq-example', checkpoint='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\zmq-example\\\\policy.pt', training_checkpoint='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\zmq-example\\\\training.pt', metrics_path='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\zmq-example\\\\metrics.jsonl', config_path='G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\results\\\\zmq-example\\\\config.json', env_steps=16, episodes=4, updates=2, parameter_delta_l2=0.0729783590884229, metrics={'loss_td': 0.45976823568344116, 'grad_norm': 4.4948649406433105, 'td_error_abs': 0.45976823568344116, 'q_taken_mean': -0.0880419984459877, 'target_mean': 0.2941153347492218, 'loss': 0.45976823568344116})\nEvaluationResult(episodes=2, returns=[2.0, 2.0], return_mean=2.0, return_std=0.0)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv-release\\Scripts\\unified-marl.exe",
+        "train",
+        "--algorithm",
+        "sadma/qmix",
+        "--env",
+        "toy",
+        "--execution",
+        "zmq",
+        "--config",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\unified_marl-0.7.0\\examples\\zmq_managed.yaml",
+        "--output-dir",
+        "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872\\examples-zmq-cli",
+        "--set",
+        "evaluation_interval_updates=1",
+        "--set",
+        "evaluation_episodes=2"
+      ],
+      "cwd": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872",
+      "returncode": 0,
+      "stdout": "{\n  \"algorithm\": \"sadma/qmix\",\n  \"output_dir\": \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-zmq-cli\",\n  \"checkpoint\": \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-zmq-cli\\\\policy.pt\",\n  \"training_checkpoint\": \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-zmq-cli\\\\training.pt\",\n  \"metrics_path\": \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-zmq-cli\\\\metrics.jsonl\",\n  \"config_path\": \"G:\\\\AI\\\\Codex\\\\多智能体代码整合\\\\.release-check\\\\sdist-11114872\\\\examples-zmq-cli\\\\config.json\",\n  \"env_steps\": 16,\n  \"episodes\": 4,\n  \"updates\": 2,\n  \"parameter_delta_l2\": 0.0729783590884229,\n  \"metrics\": {\n    \"loss_td\": 0.45976823568344116,\n    \"grad_norm\": 4.4948649406433105,\n    \"td_error_abs\": 0.45976823568344116,\n    \"q_taken_mean\": -0.0880419984459877,\n    \"target_mean\": 0.2941153347492218,\n    \"loss\": 0.45976823568344116\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "runs": 10,
+  "directory": "G:\\AI\\Codex\\多智能体代码整合\\.release-check\\sdist-11114872"
+}

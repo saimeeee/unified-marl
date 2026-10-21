@@ -1,0 +1,146 @@
+[
+  {
+    "project": "pymarl",
+    "command": [
+      "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "G:\\AI\\Codex\\多智能体代码整合\\pymarl-master\\pymarl-master\\src\\main.py",
+      "--config=qmix",
+      "--env-config=sc2",
+      "with",
+      "env_args.map_name=3m",
+      "use_cuda=False",
+      "t_max=1"
+    ],
+    "cwd": "G:\\AI\\Codex\\多智能体代码整合\\pymarl-master\\pymarl-master\\src",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\pymarl-master\\pymarl-master\\src\\main.py\", line 6, in <module>\n    from sacred import Experiment, SETTINGS\nModuleNotFoundError: No module named 'sacred'\n",
+    "training_verified": false
+  },
+  {
+    "project": "wang_rghmf",
+    "command": [
+      "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\large_scale\\RGHMF\\main.py",
+      "--config=rode_hmf",
+      "--env-config=sc2",
+      "with",
+      "env_args.map_name=3m",
+      "use_cuda=False",
+      "t_max=1"
+    ],
+    "cwd": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\large_scale\\RGHMF",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\large_scale\\RGHMF\\main.py\", line 6, in <module>\n    from sacred import Experiment, SETTINGS\nModuleNotFoundError: No module named 'sacred'\n",
+    "training_verified": false
+  },
+  {
+    "project": "wang_hmf",
+    "command": [
+      "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\large_scale\\hmf_replenishment\\main_replenishment.py",
+      "--help"
+    ],
+    "cwd": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\large_scale\\hmf_replenishment",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\large_scale\\hmf_replenishment\\main_replenishment.py\", line 2, in <module>\n    import yaml\nModuleNotFoundError: No module named 'yaml'\n",
+    "training_verified": false
+  },
+  {
+    "project": "wang_sadma",
+    "command": [
+      "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\sadma\\entry.py",
+      "--help"
+    ],
+    "cwd": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\sadma",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\王思哲\\code\\sadma\\entry.py\", line 1, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+    "training_verified": false
+  },
+  {
+    "project": "yi_sadma_closed",
+    "command": [
+      "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\论文\\SADMA\\sadma源代码闭源版本\\entry.py",
+      "--help"
+    ],
+    "cwd": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\论文\\SADMA\\sadma源代码闭源版本",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\论文\\SADMA\\sadma源代码闭源版本\\entry.py\", line 1, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+    "training_verified": false
+  },
+  {
+    "project": "yi_sadma_open",
+    "command": [
+      "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\论文\\SADMA\\sadma源代码开源版本\\entry.py",
+      "--help"
+    ],
+    "cwd": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\论文\\SADMA\\sadma源代码开源版本",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\论文\\SADMA\\sadma源代码开源版本\\entry.py\", line 1, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+    "training_verified": false
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "command": [
+      "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\基于ZMQ的分布式多智能体强化学习算法\\sadma源代码公开版本\\entry.py",
+      "--help"
+    ],
+    "cwd": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\基于ZMQ的分布式多智能体强化学习算法\\sadma源代码公开版本",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\易才润\\基于ZMQ的分布式多智能体强化学习算法\\sadma源代码公开版本\\entry.py\", line 1, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+    "training_verified": false
+  },
+  {
+    "project": "kou_old",
+    "command": [
+      "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\寇谦\\论文代码及技术文档\\论文代码及技术文档\\old_src\\main.py",
+      "--config=qmix",
+      "--env-config=sc2",
+      "with",
+      "use_cuda=False",
+      "t_max=1"
+    ],
+    "cwd": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\寇谦\\论文代码及技术文档\\论文代码及技术文档\\old_src",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\寇谦\\论文代码及技术文档\\论文代码及技术文档\\old_src\\main.py\", line 6, in <module>\n    from sacred import Experiment, SETTINGS\nModuleNotFoundError: No module named 'sacred'\n",
+    "training_verified": false
+  },
+  {
+    "project": "kou_icq",
+    "command": [
+      "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\寇谦\\论文代码及技术文档\\论文代码及技术文档\\ICQ-MA\\src\\main.py",
+      "--config=offpg_smac",
+      "--env-config=sc2",
+      "with",
+      "use_cuda=False",
+      "t_max=1"
+    ],
+    "cwd": "G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\寇谦\\论文代码及技术文档\\论文代码及技术文档\\ICQ-MA\\src",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\marl平台代码\\寇谦\\论文代码及技术文档\\论文代码及技术文档\\ICQ-MA\\src\\main.py\", line 6, in <module>\n    from sacred import Experiment, SETTINGS\nModuleNotFoundError: No module named 'sacred'\n",
+    "training_verified": false
+  }
+]

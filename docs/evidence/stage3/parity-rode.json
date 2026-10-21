@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "network_max_abs_error": 0.0,
+  "loss_abs_error": 2.384185791015625e-07,
+  "updated_parameter_max_abs_error": 0.0,
+  "source": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\marl\u5e73\u53f0\u4ee3\u7801\\\u738b\u601d\u54f2\\code\\large_scale\\RGHMF",
+  "scope": "pre-clustering; includes source optimizer omissions for rode_hmf"
+}

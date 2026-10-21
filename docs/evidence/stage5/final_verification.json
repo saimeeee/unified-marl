@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "version": "0.5.0",
+  "tests": 149,
+  "source_parity_reports": 13,
+  "source_parity_max_error": 0.0,
+  "installed_configs": 7,
+  "source_hash_records_unchanged": 1228,
+  "sadma_compared_source_hash_records_unchanged": 192,
+  "matrix_rows": 369,
+  "runtime_source_wheel_installed_files_identical": 345,
+  "reference_python312_bytecode_files": 0,
+  "wheel_bytes": 462372,
+  "wheel_sha256": "c21599360d9309340594d1680fbbca0e2ebbb6d66e9830d4afc63657cf36b50f",
+  "two_project_env_pip_checks": "PASS",
+  "representative_regressions": 5,
+  "real_environments": "BLOCKED",
+  "continuous_actions": "BLOCKED_SCHEMA_AND_ASSETS",
+  "policy_effectiveness": "NOT_VALIDATED",
+  "distributed_stage6": "NOT_EXECUTED",
+  "stopped_after_stage": 5
+}

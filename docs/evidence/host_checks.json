@@ -1,0 +1,113 @@
+{
+  "checked_at": "2026-10-20T19:33:54.9737519+08:00",
+  "commands": [
+    {
+      "name": "python",
+      "found": true,
+      "path": "C:\\Users\\71919\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
+    },
+    {
+      "name": "py",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "conda",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "nvcc",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "nvidia-smi",
+      "found": true,
+      "path": "C:\\windows\\system32\\nvidia-smi.exe"
+    },
+    {
+      "name": "docker",
+      "found": true,
+      "path": "C:\\Users\\71919\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe"
+    },
+    {
+      "name": "kubectl",
+      "found": true,
+      "path": "C:\\Users\\71919\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\kubectl.exe"
+    },
+    {
+      "name": "go",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "node",
+      "found": true,
+      "path": "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+    },
+    {
+      "name": "git",
+      "found": true,
+      "path": "C:\\Users\\71919\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe"
+    }
+  ],
+  "known_locations": [
+    {
+      "path": "C:\\Users\\71919\\anaconda3\\python.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\71919\\miniconda3\\python.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\ProgramData\\anaconda3\\python.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\ProgramData\\miniconda3\\python.exe",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\71919\\AppData\\Local\\Programs\\Python",
+      "exists": false
+    },
+    {
+      "path": "C:\\Users\\71919\\.conda\\environments.txt",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files (x86)\\StarCraft II",
+      "exists": false
+    },
+    {
+      "path": "C:\\Program Files\\StarCraft II",
+      "exists": false
+    }
+  ],
+  "agents_files": [],
+  "ancestor_agents": [
+    {
+      "path": "G:\\AGENTS.md",
+      "exists": false
+    },
+    {
+      "path": "G:\\AI\\AGENTS.md",
+      "exists": false
+    },
+    {
+      "path": "G:\\AI\\Codex\\AGENTS.md",
+      "exists": false
+    },
+    {
+      "path": "G:\\AI\\Codex\\多智能体代码整合\\AGENTS.md",
+      "exists": false
+    }
+  ],
+  "path_python_probe": "python --version failed: WindowsApps execution alias could not be started; system could not access the file."
+}

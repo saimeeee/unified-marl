@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "required_documents": 6,
+  "matrix_rows": 340,
+  "source_paths_exist": true,
+  "unique_ids": true,
+  "all_migrations_not_started": true,
+  "source_hash_records_verified": 1228,
+  "changed_source_files": [],
+  "original_entry_probes": 9,
+  "training_baselines_passed": 0,
+  "component_smoke_passed": true,
+  "data_archives_metadata_checked": 18,
+  "markdown_links_resolve": true,
+  "stage_2_not_started": true
+}

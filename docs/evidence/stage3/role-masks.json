@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "partial_batch": true,
+  "greedy_intersection_and_fallback": true,
+  "empty_intersection": "source argmax picks 0; random legal fallback only if 0 is unavailable",
+  "exploration": "source exploration respects environment mask and can ignore role mask"
+}

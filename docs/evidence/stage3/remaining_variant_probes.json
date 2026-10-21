@@ -1,0 +1,104 @@
+[
+  {
+    "name": "hierarchical_qmix",
+    "status": "BLOCKED",
+    "error": "QMixNet.__init__() got an unexpected keyword argument 'input_dim'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\tools\\probe_wang_variants.py\", line 34, in main\n    result = train(\"wang_hmf/\" + name, \"toy\", env_args={\"n_agents\": 4, \"mask_actions\": False},\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\api.py\", line 166, in train\n    args, scheme, groups, preprocess, mac, learner = _make_model(cfg, info, logger)\n                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\api.py\", line 93, in _make_model\n    mac = controller_class(template.scheme, groups, args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\adapter.py\", line 51, in __init__\n    self.native = construct_native(args)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\adapter.py\", line 39, in construct_native\n    native = cls.init_from_env(proxy, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\algorithms\\hierarchical_qmix.py\", line 316, in init_from_env\n    instance = cls(**init_dict)\n               ^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\algorithms\\hierarchical_qmix.py\", line 34, in __init__\n    self.agent = Agent(lr=lr, discrete_action=discrete_action,\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\agent\\hierarchical_qmix_agent.py\", line 40, in __init__\n    self.qmix_net = QMixNet(input_dim=num_in_mf_critic*num_groups, num_groups=num_groups, qmix_hidden_dim=32)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: QMixNet.__init__() got an unexpected keyword argument 'input_dim'\n"
+  },
+  {
+    "name": "hierarchical_vdac",
+    "status": "BLOCKED",
+    "error": "masked_fill_ only supports boolean masks, but got mask with dtype unsigned char",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\tools\\probe_wang_variants.py\", line 34, in main\n    result = train(\"wang_hmf/\" + name, \"toy\", env_args={\"n_agents\": 4, \"mask_actions\": False},\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\api.py\", line 199, in train\n    current_metrics = learner.update(sample, UpdateContext(runner.t_env, progress[\"episodes\"], progress[\"updates\"]))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\adapter.py\", line 149, in update\n    self.mac.native.update(sample, **kwargs)\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\algorithms\\hierarchical_vdac.py\", line 282, in update\n    trgt_mf_info_use_attn, trgt_mf_weight = self.agent.attention(h=trgt_mf_info, he=trgt_local_info, num_groups=self.num_groups,\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\utils\\networks.py\", line 710, in forward\n    compatibility[mask] = -math.inf\n    ~~~~~~~~~~~~~^^^^^^\nRuntimeError: masked_fill_ only supports boolean masks, but got mask with dtype unsigned char\n"
+  },
+  {
+    "name": "hierarchical_vdn_copy",
+    "status": "DEFAULT_UPDATE_PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical_vdn_copy",
+      "output_dir": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_copy",
+      "checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_copy\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_copy\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_copy\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_copy\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.3146152137054366,
+      "metrics": {
+        "loss": 0.33142295479774475,
+        "total_vf_loss": 0.16838401556015015,
+        "local_vf_loss": 0.10503513365983963,
+        "mf_vf_loss": 0.016369402408599854,
+        "high_mf_critic_loss": 0.04163440316915512
+      }
+    },
+    "scope": "Candidate default update only; dynamic/high-level schedule not established"
+  },
+  {
+    "name": "hierarchical_vdn_meanq",
+    "status": "DEFAULT_UPDATE_PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical_vdn_meanq",
+      "output_dir": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_meanq",
+      "checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_meanq\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_meanq\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_meanq\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_meanq\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.2937653074224146,
+      "metrics": {
+        "loss": 0.15716147422790527,
+        "total_vf_loss": 0.051426902413368225,
+        "local_vf_loss": 0.05261807516217232,
+        "mf_vf_loss": 0.021408814936876297,
+        "high_mf_critic_loss": 0.031707681715488434
+      }
+    },
+    "scope": "Candidate default update only; dynamic/high-level schedule not established"
+  },
+  {
+    "name": "hierarchical_vdn_dynamic_ipc",
+    "status": "BLOCKED",
+    "error": "running_mean should contain 6 elements not 5",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\tools\\probe_wang_variants.py\", line 34, in main\n    result = train(\"wang_hmf/\" + name, \"toy\", env_args={\"n_agents\": 4, \"mask_actions\": False},\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\api.py\", line 199, in train\n    current_metrics = learner.update(sample, UpdateContext(runner.t_env, progress[\"episodes\"], progress[\"updates\"]))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\adapter.py\", line 149, in update\n    self.mac.native.update(sample, **kwargs)\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\algorithms\\hierarchical_vdn_IPC.py\", line 334, in update\n    mean_pol_out = self.agent.mean_policy(eval_mf_obs_use_attn)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\utils\\networks.py\", line 91, in forward\n    h1 = self.nonlin(self.fc1(self.in_fn(X)))\n                              ^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1739, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1750, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\batchnorm.py\", line 193, in forward\n    return F.batch_norm(\n           ^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.venv\\Lib\\site-packages\\torch\\nn\\functional.py\", line 2822, in batch_norm\n    return torch.batch_norm(\n           ^^^^^^^^^^^^^^^^^\nRuntimeError: running_mean should contain 6 elements not 5\n"
+  },
+  {
+    "name": "hierarchical_vdn_k_means",
+    "status": "DEFAULT_UPDATE_PASS",
+    "train": {
+      "algorithm": "wang_hmf/hierarchical_vdn_k_means",
+      "output_dir": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_k_means",
+      "checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_k_means\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_k_means\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_k_means\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\variant-probes\\9d26e35d\\hierarchical_vdn_k_means\\config.json",
+      "env_steps": 4,
+      "episodes": 1,
+      "updates": 1,
+      "parameter_delta_l2": 0.3146152137054366,
+      "metrics": {
+        "loss": 0.33142295479774475,
+        "total_vf_loss": 0.16838401556015015,
+        "local_vf_loss": 0.10503513365983963,
+        "mf_vf_loss": 0.016369402408599854,
+        "high_mf_critic_loss": 0.04163440316915512
+      }
+    },
+    "scope": "Candidate default update only; dynamic/high-level schedule not established"
+  },
+  {
+    "name": "hierarchical_vdn_roma",
+    "status": "BLOCKED",
+    "error": "cannot access local variable 'NN_HIDDEN_SIZE' where it is not associated with a value",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\tools\\probe_wang_variants.py\", line 34, in main\n    result = train(\"wang_hmf/\" + name, \"toy\", env_args={\"n_agents\": 4, \"mask_actions\": False},\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\api.py\", line 166, in train\n    args, scheme, groups, preprocess, mac, learner = _make_model(cfg, info, logger)\n                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\api.py\", line 93, in _make_model\n    mac = controller_class(template.scheme, groups, args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\adapter.py\", line 51, in __init__\n    self.native = construct_native(args)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\adapter.py\", line 39, in construct_native\n    native = cls.init_from_env(proxy, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\algorithms\\hierarchical_vdn_roma.py\", line 484, in init_from_env\n    instance = cls(**init_dict)\n               ^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\algorithms\\hierarchical_vdn_roma.py\", line 35, in __init__\n    self.agent = Agent(lr=lr, discrete_action=discrete_action,\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\agent\\hierarchical_roma_agents.py\", line 24, in __init__\n    self.local_critic = LatentCEDisRNNAgent(num_in_local_critic, num_out_local_pol, hidden_dim, num_agents, num_groups)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\agent\\roma_agent.py\", line 35, in __init__\n    NN_HIDDEN_SIZE = NN_HIDDEN_SIZE\n                     ^^^^^^^^^^^^^^\nUnboundLocalError: cannot access local variable 'NN_HIDDEN_SIZE' where it is not associated with a value\n"
+  },
+  {
+    "name": "mfac",
+    "status": "BLOCKED",
+    "error": "MFAC.init_from_env() missing 1 required positional argument: 'num_evaders'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\tools\\probe_wang_variants.py\", line 34, in main\n    result = train(\"wang_hmf/\" + name, \"toy\", env_args={\"n_agents\": 4, \"mask_actions\": False},\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\api.py\", line 166, in train\n    args, scheme, groups, preprocess, mac, learner = _make_model(cfg, info, logger)\n                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\api.py\", line 93, in _make_model\n    mac = controller_class(template.scheme, groups, args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\adapter.py\", line 51, in __init__\n    self.native = construct_native(args)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\src\\unified_marl\\algorithms\\hmf\\adapter.py\", line 39, in construct_native\n    native = cls.init_from_env(proxy, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: MFAC.init_from_env() missing 1 required positional argument: 'num_evaders'\n"
+  }
+]

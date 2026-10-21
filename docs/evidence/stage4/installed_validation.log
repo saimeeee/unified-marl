@@ -1,0 +1,23 @@
+kou/bc PASS
+kou/cpl PASS
+kou/icq_ma PASS
+kou/iql PASS
+kou/cql PASS
+kou/dppo PASS
+kou/madpo PASS
+kou/madpo_aux PASS
+kou/bcmapt PASS
+kou_old/qmix PASS
+kou_old/qplex PASS
+kou_old/cw_qmix PASS
+kou_old/ow_qmix PASS
+kou_old/cw_qmix_w_globalRM PASS
+kou_old/ow_qmix_w_globalRM PASS
+reward MR PASS
+reward NMR PASS
+reward PrefTransformer PASS
+reward MultiPrefTransformerDivide PASS
+kou_old/qmix_w_globalRM PASS
+kou_old/qplex_w_globalRM PASS
+reward old_global PASS
+reward old_reward_global PASS

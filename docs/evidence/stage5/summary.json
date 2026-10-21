@@ -1,0 +1,30 @@
+{
+  "stage": 5,
+  "version": "0.5.0",
+  "status": "LOCAL_SYNCHRONOUS_VERIFIED_WITH_SOURCE_AND_ENVIRONMENT_LIMITATIONS",
+  "tests": 149,
+  "failures": 0,
+  "source_parity_reports": 13,
+  "installed_configs": 7,
+  "tested_config_and_branch_cases": 13,
+  "source_hash_records_unchanged": 1228,
+  "sadma_compared_hash_records_unchanged": 192,
+  "matrix_rows": 369,
+  "real_environments": "BLOCKED",
+  "policy_effectiveness": "NOT_VALIDATED",
+  "distributed_stage6": "NOT_EXECUTED",
+  "stopped_after_stage": 5,
+  "matrix_sadma_statuses": {
+    "SHARED_ADAPTER_REAL_ENV_BLOCKED": 8,
+    "ADAPTER_MOCK_BACKEND_ONLY": 16,
+    "INTEGRATED_SADMA_LOCAL_SYNC": 48,
+    "BLOCKED_EMPTY_SOURCE_POLICY": 20,
+    "DEFERRED_STAGE6_NOT_EXECUTED": 37,
+    "LOCAL_SYNC_REPLACEMENT_VERIFIED": 4,
+    "CANONICAL_SCHEMA_BRIDGE_VERIFIED": 12,
+    "BLOCKED_CONTINUOUS_ACTION_SCHEMA_AND_ASSETS": 6,
+    "PARTIAL_LOCAL_BUFFER_AND_SCHEMA_VERIFIED": 2,
+    "PACKAGE_FULL_CHECKPOINT_VERIFIED": 2
+  },
+  "wheel": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\dist\\unified_marl-0.5.0-py3-none-any.whl"
+}

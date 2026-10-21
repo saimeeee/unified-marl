@@ -1,0 +1,8992 @@
+[
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/default.yaml",
+    "top_level_scalars": {
+      "runner": {
+        "value": "episode",
+        "line": 4
+      },
+      "mac": {
+        "value": "basic_mac",
+        "line": 5
+      },
+      "env": {
+        "value": "sc2",
+        "line": 6
+      },
+      "env_args": {
+        "value": "{}",
+        "line": 7
+      },
+      "batch_size_run": {
+        "value": "1",
+        "line": 8
+      },
+      "test_nepisode": {
+        "value": "20",
+        "line": 9
+      },
+      "test_interval": {
+        "value": "2000",
+        "line": 10
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 11
+      },
+      "log_interval": {
+        "value": "2000",
+        "line": 12
+      },
+      "runner_log_interval": {
+        "value": "2000",
+        "line": 13
+      },
+      "learner_log_interval": {
+        "value": "2000",
+        "line": 14
+      },
+      "t_max": {
+        "value": "10000",
+        "line": 15
+      },
+      "use_cuda": {
+        "value": "True",
+        "line": 16
+      },
+      "buffer_cpu_only": {
+        "value": "True",
+        "line": 17
+      },
+      "use_tensorboard": {
+        "value": "False",
+        "line": 20
+      },
+      "save_model": {
+        "value": "False",
+        "line": 21
+      },
+      "save_model_interval": {
+        "value": "2000000",
+        "line": 22
+      },
+      "checkpoint_path": {
+        "value": "",
+        "line": 23
+      },
+      "evaluate": {
+        "value": "False",
+        "line": 24
+      },
+      "load_step": {
+        "value": "0",
+        "line": 25
+      },
+      "save_replay": {
+        "value": "False",
+        "line": 26
+      },
+      "local_results_path": {
+        "value": "results",
+        "line": 27
+      },
+      "gamma": {
+        "value": "0.99",
+        "line": 30
+      },
+      "batch_size": {
+        "value": "32",
+        "line": 31
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 32
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 33
+      },
+      "critic_lr": {
+        "value": "0.0005",
+        "line": 34
+      },
+      "optim_alpha": {
+        "value": "0.99",
+        "line": 35
+      },
+      "optim_eps": {
+        "value": "0.00001",
+        "line": 36
+      },
+      "grad_norm_clip": {
+        "value": "10",
+        "line": 37
+      },
+      "agent": {
+        "value": "rnn",
+        "line": 40
+      },
+      "rnn_hidden_dim": {
+        "value": "64",
+        "line": 41
+      },
+      "obs_agent_id": {
+        "value": "True",
+        "line": 42
+      },
+      "obs_last_action": {
+        "value": "True",
+        "line": 43
+      },
+      "repeat_id": {
+        "value": "1",
+        "line": 46
+      },
+      "label": {
+        "value": "default_label",
+        "line": 47
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/algs/coma.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".01",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "100000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "8",
+        "line": 11
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 12
+      },
+      "batch_size": {
+        "value": "8",
+        "line": 13
+      },
+      "env_args": {
+        "value": "",
+        "line": 15
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 19
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "critic_lr": {
+        "value": "0.0005",
+        "line": 22
+      },
+      "td_lambda": {
+        "value": "0.8",
+        "line": 23
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 26
+      },
+      "learner": {
+        "value": "coma_learner",
+        "line": 27
+      },
+      "critic_q_fn": {
+        "value": "coma",
+        "line": 28
+      },
+      "critic_baseline_fn": {
+        "value": "coma",
+        "line": 29
+      },
+      "critic_train_mode": {
+        "value": "seq",
+        "line": 30
+      },
+      "critic_train_reps": {
+        "value": "1",
+        "line": 31
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 32
+      },
+      "name": {
+        "value": "coma",
+        "line": 34
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/algs/iql.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "",
+        "line": 20
+      },
+      "name": {
+        "value": "iql",
+        "line": 22
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/algs/iql_beta.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 10
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 12
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 15
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 18
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 19
+      },
+      "double_q": {
+        "value": "True",
+        "line": 20
+      },
+      "mixer": {
+        "value": "",
+        "line": 21
+      },
+      "name": {
+        "value": "iql_smac_parallel",
+        "line": 23
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/algs/qmix.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 22
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 23
+      },
+      "name": {
+        "value": "qmix",
+        "line": 25
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/algs/qmix_beta.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 10
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 12
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 15
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 18
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 19
+      },
+      "double_q": {
+        "value": "True",
+        "line": 20
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 21
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 22
+      },
+      "name": {
+        "value": "qmix_smac_parallel",
+        "line": 24
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/algs/qtran.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "qtran_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qtran_base",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "64",
+        "line": 21
+      },
+      "qtran_arch": {
+        "value": "qtran_paper",
+        "line": 22
+      },
+      "opt_loss": {
+        "value": "1",
+        "line": 24
+      },
+      "nopt_min_loss": {
+        "value": "0.1",
+        "line": 25
+      },
+      "network_size": {
+        "value": "small",
+        "line": 27
+      },
+      "name": {
+        "value": "qtran",
+        "line": 29
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/algs/vdn.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "vdn",
+        "line": 20
+      },
+      "name": {
+        "value": "vdn",
+        "line": 22
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/algs/vdn_beta.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 10
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 12
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 15
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 18
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 19
+      },
+      "double_q": {
+        "value": "True",
+        "line": 20
+      },
+      "mixer": {
+        "value": "vdn",
+        "line": 21
+      },
+      "name": {
+        "value": "vdn_smac_parallel",
+        "line": 23
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/envs/sc2.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "sc2",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 34
+      },
+      "test_nepisode": {
+        "value": "32",
+        "line": 35
+      },
+      "test_interval": {
+        "value": "10000",
+        "line": 36
+      },
+      "log_interval": {
+        "value": "10000",
+        "line": 37
+      },
+      "runner_log_interval": {
+        "value": "10000",
+        "line": 38
+      },
+      "learner_log_interval": {
+        "value": "10000",
+        "line": 39
+      },
+      "t_max": {
+        "value": "2050000",
+        "line": 40
+      }
+    }
+  },
+  {
+    "project": "pymarl",
+    "path": "pymarl-master/pymarl-master/src/config/envs/sc2_beta.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "sc2",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "learner_log_interval": {
+        "value": "20000",
+        "line": 33
+      },
+      "log_interval": {
+        "value": "20000",
+        "line": 34
+      },
+      "runner_log_interval": {
+        "value": "20000",
+        "line": 35
+      },
+      "t_max": {
+        "value": "10050000",
+        "line": 36
+      },
+      "test_interval": {
+        "value": "20000",
+        "line": 37
+      },
+      "test_nepisode": {
+        "value": "24",
+        "line": 38
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 39
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/default.yaml",
+    "top_level_scalars": {
+      "runner": {
+        "value": "episode",
+        "line": 4
+      },
+      "mac": {
+        "value": "basic_mac",
+        "line": 5
+      },
+      "env": {
+        "value": "sc2",
+        "line": 6
+      },
+      "env_args": {
+        "value": "{}",
+        "line": 7
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 8
+      },
+      "test_nepisode": {
+        "value": "20",
+        "line": 9
+      },
+      "test_interval": {
+        "value": "2000",
+        "line": 10
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 11
+      },
+      "log_interval": {
+        "value": "2000",
+        "line": 12
+      },
+      "runner_log_interval": {
+        "value": "2000",
+        "line": 13
+      },
+      "learner_log_interval": {
+        "value": "2000",
+        "line": 14
+      },
+      "t_max": {
+        "value": "2001000",
+        "line": 15
+      },
+      "use_cuda": {
+        "value": "True",
+        "line": 16
+      },
+      "buffer_cpu_only": {
+        "value": "True",
+        "line": 17
+      },
+      "device": {
+        "value": "cuda",
+        "line": 18
+      },
+      "use_tensorboard": {
+        "value": "True",
+        "line": 20
+      },
+      "save_model": {
+        "value": "True",
+        "line": 21
+      },
+      "save_model_interval": {
+        "value": "2000000",
+        "line": 22
+      },
+      "checkpoint_path": {
+        "value": "",
+        "line": 23
+      },
+      "evaluate": {
+        "value": "False",
+        "line": 24
+      },
+      "load_step": {
+        "value": "0",
+        "line": 25
+      },
+      "save_replay": {
+        "value": "False",
+        "line": 26
+      },
+      "local_results_path": {
+        "value": "results",
+        "line": 27
+      },
+      "gamma": {
+        "value": "0.99",
+        "line": 30
+      },
+      "batch_size": {
+        "value": "8",
+        "line": 31
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 32
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 33
+      },
+      "critic_lr": {
+        "value": "0.0005",
+        "line": 34
+      },
+      "optim_alpha": {
+        "value": "0.99",
+        "line": 35
+      },
+      "optim_eps": {
+        "value": "0.00001",
+        "line": 36
+      },
+      "grad_norm_clip": {
+        "value": "10",
+        "line": 37
+      },
+      "agent": {
+        "value": "rnn",
+        "line": 40
+      },
+      "rnn_hidden_dim": {
+        "value": "64",
+        "line": 41
+      },
+      "obs_agent_id": {
+        "value": "True",
+        "line": 42
+      },
+      "obs_last_action": {
+        "value": "True",
+        "line": 43
+      },
+      "repeat_id": {
+        "value": "1",
+        "line": 46
+      },
+      "label": {
+        "value": "default_label",
+        "line": 47
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/coma.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".01",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "100000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "8",
+        "line": 11
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 12
+      },
+      "batch_size": {
+        "value": "8",
+        "line": 13
+      },
+      "env_args": {
+        "value": "",
+        "line": 15
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 19
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "critic_lr": {
+        "value": "0.0005",
+        "line": 22
+      },
+      "td_lambda": {
+        "value": "0.8",
+        "line": 23
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 26
+      },
+      "learner": {
+        "value": "coma_learner",
+        "line": 27
+      },
+      "critic_q_fn": {
+        "value": "coma",
+        "line": 28
+      },
+      "critic_baseline_fn": {
+        "value": "coma",
+        "line": 29
+      },
+      "critic_train_mode": {
+        "value": "seq",
+        "line": 30
+      },
+      "critic_train_reps": {
+        "value": "1",
+        "line": 31
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 32
+      },
+      "name": {
+        "value": "coma",
+        "line": 34
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/iql.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "",
+        "line": 20
+      },
+      "name": {
+        "value": "iql",
+        "line": 22
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/iql_beta.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 10
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 12
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 15
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 18
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 19
+      },
+      "double_q": {
+        "value": "True",
+        "line": 20
+      },
+      "mixer": {
+        "value": "",
+        "line": 21
+      },
+      "name": {
+        "value": "iql_smac_parallel",
+        "line": 23
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/qmix.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 22
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 23
+      },
+      "name": {
+        "value": "qmix",
+        "line": 25
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/qmix_beta.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 10
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 12
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 15
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 18
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 19
+      },
+      "double_q": {
+        "value": "True",
+        "line": 20
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 21
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 22
+      },
+      "name": {
+        "value": "qmix_smac_parallel",
+        "line": 24
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/qtran.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "qtran_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qtran_base",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "64",
+        "line": 21
+      },
+      "qtran_arch": {
+        "value": "qtran_paper",
+        "line": 22
+      },
+      "opt_loss": {
+        "value": "1",
+        "line": 24
+      },
+      "nopt_min_loss": {
+        "value": "0.1",
+        "line": 25
+      },
+      "network_size": {
+        "value": "small",
+        "line": 27
+      },
+      "name": {
+        "value": "qtran",
+        "line": 29
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/rode.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "soft_epsilon_greedy",
+        "line": 4
+      },
+      "action_encoder": {
+        "value": "obs_reward",
+        "line": 5
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 6
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 7
+      },
+      "role_epsilon_finish": {
+        "value": "0.05",
+        "line": 8
+      },
+      "epsilon_anneal_time": {
+        "value": "70000",
+        "line": 9
+      },
+      "epsilon_anneal_time_exp": {
+        "value": "70000",
+        "line": 10
+      },
+      "runner": {
+        "value": "episode",
+        "line": 12
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 14
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 17
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 20
+      },
+      "learner": {
+        "value": "rode_learner",
+        "line": 21
+      },
+      "double_q": {
+        "value": "True",
+        "line": 22
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 23
+      },
+      "role_mixer": {
+        "value": "qmix",
+        "line": 24
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 25
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 26
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 27
+      },
+      "name": {
+        "value": "rode",
+        "line": 29
+      },
+      "mac": {
+        "value": "rode_mac",
+        "line": 30
+      },
+      "agent": {
+        "value": "rode",
+        "line": 31
+      },
+      "role": {
+        "value": "dot",
+        "line": 32
+      },
+      "role_selector": {
+        "value": "dot",
+        "line": 33
+      },
+      "bi_opt": {
+        "value": "False",
+        "line": 34
+      },
+      "n_role_clusters": {
+        "value": "5",
+        "line": 36
+      },
+      "role_interval": {
+        "value": "5",
+        "line": 37
+      },
+      "state_latent_dim": {
+        "value": "32",
+        "line": 38
+      },
+      "action_latent_dim": {
+        "value": "20",
+        "line": 39
+      },
+      "role_action_spaces_update_start": {
+        "value": "50000",
+        "line": 40
+      },
+      "verbose": {
+        "value": "False",
+        "line": 43
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/rode_hmf.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "soft_epsilon_greedy",
+        "line": 4
+      },
+      "action_encoder": {
+        "value": "obs_reward",
+        "line": 5
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 6
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 7
+      },
+      "role_epsilon_finish": {
+        "value": "0.05",
+        "line": 8
+      },
+      "epsilon_anneal_time": {
+        "value": "70000",
+        "line": 9
+      },
+      "epsilon_anneal_time_exp": {
+        "value": "70000",
+        "line": 10
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 12
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 14
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 17
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 20
+      },
+      "learner": {
+        "value": "rode_hmf_learner",
+        "line": 21
+      },
+      "double_q": {
+        "value": "True",
+        "line": 22
+      },
+      "mixer": {
+        "value": "vdn",
+        "line": 23
+      },
+      "role_mixer": {
+        "value": "vdn",
+        "line": 24
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 25
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 26
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 27
+      },
+      "name": {
+        "value": "rode",
+        "line": 29
+      },
+      "mac": {
+        "value": "rode_mac",
+        "line": 30
+      },
+      "agent": {
+        "value": "rode",
+        "line": 31
+      },
+      "role": {
+        "value": "dot",
+        "line": 32
+      },
+      "role_selector": {
+        "value": "dot",
+        "line": 33
+      },
+      "bi_opt": {
+        "value": "False",
+        "line": 34
+      },
+      "n_roles": {
+        "value": "2",
+        "line": 35
+      },
+      "n_role_clusters": {
+        "value": "5",
+        "line": 36
+      },
+      "role_interval": {
+        "value": "5",
+        "line": 37
+      },
+      "state_latent_dim": {
+        "value": "32",
+        "line": 38
+      },
+      "action_latent_dim": {
+        "value": "20",
+        "line": 39
+      },
+      "role_action_spaces_update_start": {
+        "value": "50000",
+        "line": 40
+      },
+      "verbose": {
+        "value": "False",
+        "line": 43
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/vdn.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "vdn",
+        "line": 20
+      },
+      "name": {
+        "value": "vdn",
+        "line": 22
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/algs/vdn_beta.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 10
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 12
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 15
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 18
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 19
+      },
+      "double_q": {
+        "value": "True",
+        "line": 20
+      },
+      "mixer": {
+        "value": "vdn",
+        "line": 21
+      },
+      "name": {
+        "value": "vdn_smac_parallel",
+        "line": 23
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/envs/replenishment.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "replenishment",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/envs/sc2.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "sc2",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 34
+      },
+      "test_nepisode": {
+        "value": "32",
+        "line": 35
+      },
+      "test_interval": {
+        "value": "10000",
+        "line": 36
+      },
+      "log_interval": {
+        "value": "10000",
+        "line": 37
+      },
+      "runner_log_interval": {
+        "value": "10000",
+        "line": 38
+      },
+      "learner_log_interval": {
+        "value": "10000",
+        "line": 39
+      },
+      "t_max": {
+        "value": "2050000",
+        "line": 40
+      }
+    }
+  },
+  {
+    "project": "wang_rghmf",
+    "path": "marl平台代码/王思哲/code/large_scale/RGHMF/config/envs/sc2_beta.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "sc2",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "learner_log_interval": {
+        "value": "20000",
+        "line": 33
+      },
+      "log_interval": {
+        "value": "20000",
+        "line": 34
+      },
+      "runner_log_interval": {
+        "value": "20000",
+        "line": 35
+      },
+      "t_max": {
+        "value": "10050000",
+        "line": 36
+      },
+      "test_interval": {
+        "value": "20000",
+        "line": 37
+      },
+      "test_nepisode": {
+        "value": "24",
+        "line": 38
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 39
+      }
+    }
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/config/default.yaml",
+    "top_level_scalars": {
+      "log_root_path": {
+        "value": "logdir",
+        "line": 2
+      },
+      "save_log": {
+        "value": "True",
+        "line": 3
+      },
+      "use_tensorboard": {
+        "value": "True",
+        "line": 4
+      },
+      "log_interval_step": {
+        "value": "2000",
+        "line": 5
+      },
+      "log_interval_episode": {
+        "value": "100",
+        "line": 6
+      },
+      "save_model_episode": {
+        "value": "0",
+        "line": 7
+      },
+      "checkpoint_path": {
+        "value": "",
+        "line": 8
+      },
+      "gamma": {
+        "value": "0.99",
+        "line": 11
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 12
+      },
+      "optim_alpha": {
+        "value": "0.99",
+        "line": 13
+      },
+      "optim_eps": {
+        "value": "0.00001",
+        "line": 14
+      },
+      "grad_norm_clip": {
+        "value": "10",
+        "line": 15
+      },
+      "agent_type": {
+        "value": "rnn",
+        "line": 18
+      },
+      "hidden_dim": {
+        "value": "128",
+        "line": 19
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 20
+      },
+      "save_log_probs": {
+        "value": "False",
+        "line": 21
+      },
+      "use_individual_rewards": {
+        "value": "False",
+        "line": 22
+      },
+      "evaluate": {
+        "value": "False",
+        "line": 25
+      },
+      "evaluate_episodes": {
+        "value": "32",
+        "line": 26
+      },
+      "evaluate_interval": {
+        "value": "10000",
+        "line": 27
+      },
+      "evaluate_batch_size": {
+        "value": "2",
+        "line": 28
+      },
+      "num_env_runner": {
+        "value": "1",
+        "line": 31
+      },
+      "asynchronous_env": {
+        "value": "True",
+        "line": 32
+      },
+      "shared_buffer_size": {
+        "value": "8",
+        "line": 33
+      },
+      "base_port": {
+        "value": "16400",
+        "line": 36
+      },
+      "num_inference_worker": {
+        "value": "1",
+        "line": 37
+      },
+      "infer_batch_size": {
+        "value": "1",
+        "line": 38
+      },
+      "infer_device": {
+        "value": "cuda",
+        "line": 39
+      }
+    }
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/config/alg_config/ppo.yaml",
+    "top_level_scalars": {
+      "train_buffer_size": {
+        "value": "8",
+        "line": 1
+      },
+      "train_batch_size": {
+        "value": "8",
+        "line": 2
+      },
+      "update_rate": {
+        "value": "8",
+        "line": 3
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 6
+      },
+      "critic_coef": {
+        "value": "0.5",
+        "line": 7
+      },
+      "entropy": {
+        "value": "0",
+        "line": 8
+      },
+      "gae_lambda": {
+        "value": "0.95",
+        "line": 9
+      },
+      "mini_epochs": {
+        "value": "4",
+        "line": 10
+      },
+      "eps_clip": {
+        "value": "0.2",
+        "line": 11
+      },
+      "save_log_probs": {
+        "value": "True",
+        "line": 12
+      },
+      "dual_clip": {
+        "value": "0",
+        "line": 13
+      },
+      "use_vtrace": {
+        "value": "False",
+        "line": 14
+      },
+      "agenet_type": {
+        "value": "rnn",
+        "line": 16
+      },
+      "critic_type": {
+        "value": "rnn",
+        "line": 17
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"last_action\"]",
+        "line": 18
+      },
+      "critic_inputs": {
+        "value": "[\"central_obs\"]",
+        "line": 20
+      },
+      "use_layer_norm": {
+        "value": "True",
+        "line": 22
+      },
+      "use_orthogonal": {
+        "value": "True",
+        "line": 23
+      },
+      "use_value_norm": {
+        "value": "True",
+        "line": 24
+      },
+      "gain": {
+        "value": "0.01",
+        "line": 25
+      }
+    }
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/config/alg_config/qmix.yaml",
+    "top_level_scalars": {
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 1
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 2
+      },
+      "epsilon_anneal_time": {
+        "value": "100000",
+        "line": 3
+      },
+      "train_buffer_size": {
+        "value": "5000",
+        "line": 5
+      },
+      "train_batch_size": {
+        "value": "8",
+        "line": 6
+      },
+      "update_rate": {
+        "value": "1",
+        "line": 7
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 8
+      },
+      "agenet_type": {
+        "value": "rnn",
+        "line": 10
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 11
+      },
+      "mixer": {
+        "value": "q_mixer",
+        "line": 12
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 13
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 14
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 15
+      },
+      "lr": {
+        "value": "0.001",
+        "line": 16
+      },
+      "td_lambda": {
+        "value": "0.6",
+        "line": 17
+      },
+      "q_lambda": {
+        "value": "False",
+        "line": 18
+      },
+      "use_orthogonal": {
+        "value": "True",
+        "line": 20
+      },
+      "use_layer_norm": {
+        "value": "False",
+        "line": 21
+      },
+      "gain": {
+        "value": "0.01",
+        "line": 22
+      }
+    }
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/config/env_config/cityflow.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "cityflow",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 13
+      },
+      "max_steps": {
+        "value": "10000000",
+        "line": 14
+      }
+    }
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/config/env_config/replenishment.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "replenishment",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "max_steps": {
+        "value": "2000000",
+        "line": 12
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "wang_sadma",
+    "path": "marl平台代码/王思哲/code/sadma/config/env_config/smac.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "smac",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "max_steps": {
+        "value": "20050000",
+        "line": 34
+      },
+      "max_episodes": {
+        "value": "10000000",
+        "line": 35
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 36
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/default.yaml",
+    "top_level_scalars": {
+      "log_root_path": {
+        "value": "logdir",
+        "line": 2
+      },
+      "save_log": {
+        "value": "True",
+        "line": 3
+      },
+      "use_tensorboard": {
+        "value": "True",
+        "line": 4
+      },
+      "log_interval_step": {
+        "value": "2000",
+        "line": 5
+      },
+      "log_interval_episode": {
+        "value": "16",
+        "line": 6
+      },
+      "gamma": {
+        "value": "0.99",
+        "line": 9
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 10
+      },
+      "optim_alpha": {
+        "value": "0.99",
+        "line": 11
+      },
+      "optim_eps": {
+        "value": "0.00001",
+        "line": 12
+      },
+      "grad_norm_clip": {
+        "value": "10",
+        "line": 13
+      },
+      "agent_type": {
+        "value": "rnn",
+        "line": 16
+      },
+      "hidden_dim": {
+        "value": "64",
+        "line": 17
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 18
+      },
+      "save_log_probs": {
+        "value": "False",
+        "line": 19
+      },
+      "use_individual_rewards": {
+        "value": "False",
+        "line": 20
+      },
+      "evaluate": {
+        "value": "False",
+        "line": 23
+      },
+      "evaluate_episodes": {
+        "value": "32",
+        "line": 24
+      },
+      "evaluate_interval": {
+        "value": "10000",
+        "line": 25
+      },
+      "evaluate_batch_size": {
+        "value": "2",
+        "line": 26
+      },
+      "num_env_runner": {
+        "value": "1",
+        "line": 29
+      },
+      "asynchronous_env": {
+        "value": "True",
+        "line": 30
+      },
+      "shared_buffer_size": {
+        "value": "8",
+        "line": 31
+      },
+      "base_port": {
+        "value": "16400",
+        "line": 34
+      },
+      "num_inference_worker": {
+        "value": "1",
+        "line": 35
+      },
+      "infer_batch_size": {
+        "value": "1",
+        "line": 36
+      },
+      "infer_device": {
+        "value": "cuda",
+        "line": 37
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/alg_config/ppo.yaml",
+    "top_level_scalars": {
+      "train_buffer_size": {
+        "value": "8",
+        "line": 1
+      },
+      "train_batch_size": {
+        "value": "8",
+        "line": 2
+      },
+      "update_rate": {
+        "value": "8",
+        "line": 3
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 6
+      },
+      "critic_coef": {
+        "value": "0.5",
+        "line": 7
+      },
+      "entropy": {
+        "value": "0.01",
+        "line": 8
+      },
+      "gae_lambda": {
+        "value": "0.95",
+        "line": 9
+      },
+      "mini_epochs": {
+        "value": "8",
+        "line": 10
+      },
+      "eps_clip": {
+        "value": "0.2",
+        "line": 11
+      },
+      "save_log_probs": {
+        "value": "True",
+        "line": 12
+      },
+      "dual_clip": {
+        "value": "0",
+        "line": 13
+      },
+      "use_vtrace": {
+        "value": "False",
+        "line": 14
+      },
+      "agenet_type": {
+        "value": "rnn",
+        "line": 16
+      },
+      "critic_type": {
+        "value": "rnn",
+        "line": 17
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 18
+      },
+      "critic_inputs": {
+        "value": "[\"central_obs\"]",
+        "line": 20
+      },
+      "use_layer_norm": {
+        "value": "True",
+        "line": 22
+      },
+      "use_orthogonal": {
+        "value": "True",
+        "line": 23
+      },
+      "use_value_norm": {
+        "value": "True",
+        "line": 24
+      },
+      "gain": {
+        "value": "0.01",
+        "line": 25
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/alg_config/qmix.yaml",
+    "top_level_scalars": {
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 1
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 2
+      },
+      "epsilon_anneal_time": {
+        "value": "100000",
+        "line": 3
+      },
+      "train_buffer_size": {
+        "value": "5000",
+        "line": 5
+      },
+      "train_batch_size": {
+        "value": "8",
+        "line": 6
+      },
+      "update_rate": {
+        "value": "1",
+        "line": 7
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 8
+      },
+      "agenet_type": {
+        "value": "rnn",
+        "line": 10
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 11
+      },
+      "mixer": {
+        "value": "q_mixer",
+        "line": 12
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 13
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 14
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 15
+      },
+      "lr": {
+        "value": "0.001",
+        "line": 16
+      },
+      "td_lambda": {
+        "value": "0.6",
+        "line": 17
+      },
+      "q_lambda": {
+        "value": "False",
+        "line": 18
+      },
+      "use_orthogonal": {
+        "value": "True",
+        "line": 20
+      },
+      "use_layer_norm": {
+        "value": "False",
+        "line": 21
+      },
+      "gain": {
+        "value": "0.01",
+        "line": 22
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/env_config/cityflow.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "cityflow",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 13
+      },
+      "max_steps": {
+        "value": "600000",
+        "line": 14
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/env_config/powergrid.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "powergrid",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "env_type": {
+        "value": "continuous",
+        "line": 6
+      },
+      "max_steps": {
+        "value": "1000000",
+        "line": 7
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/env_config/replenishment.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "replenishment",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "max_steps": {
+        "value": "2000000",
+        "line": 12
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_closed",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码闭源版本/config/env_config/smac.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "smac",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "max_steps": {
+        "value": "20050000",
+        "line": 34
+      },
+      "max_episodes": {
+        "value": "10000000",
+        "line": 35
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 36
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/default.yaml",
+    "top_level_scalars": {
+      "log_root_path": {
+        "value": "logdir",
+        "line": 2
+      },
+      "save_log": {
+        "value": "True",
+        "line": 3
+      },
+      "use_tensorboard": {
+        "value": "True",
+        "line": 4
+      },
+      "log_interval_step": {
+        "value": "2000",
+        "line": 5
+      },
+      "log_interval_episode": {
+        "value": "16",
+        "line": 6
+      },
+      "gamma": {
+        "value": "0.99",
+        "line": 9
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 10
+      },
+      "optim_alpha": {
+        "value": "0.99",
+        "line": 11
+      },
+      "optim_eps": {
+        "value": "0.00001",
+        "line": 12
+      },
+      "grad_norm_clip": {
+        "value": "10",
+        "line": 13
+      },
+      "agent_type": {
+        "value": "rnn",
+        "line": 16
+      },
+      "hidden_dim": {
+        "value": "64",
+        "line": 17
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 18
+      },
+      "save_log_probs": {
+        "value": "False",
+        "line": 19
+      },
+      "use_individual_rewards": {
+        "value": "False",
+        "line": 20
+      },
+      "evaluate": {
+        "value": "False",
+        "line": 23
+      },
+      "evaluate_episodes": {
+        "value": "32",
+        "line": 24
+      },
+      "evaluate_interval": {
+        "value": "10000",
+        "line": 25
+      },
+      "evaluate_batch_size": {
+        "value": "2",
+        "line": 26
+      },
+      "num_env_runner": {
+        "value": "1",
+        "line": 29
+      },
+      "asynchronous_env": {
+        "value": "True",
+        "line": 30
+      },
+      "shared_buffer_size": {
+        "value": "8",
+        "line": 31
+      },
+      "base_port": {
+        "value": "16400",
+        "line": 34
+      },
+      "num_inference_worker": {
+        "value": "1",
+        "line": 35
+      },
+      "infer_batch_size": {
+        "value": "1",
+        "line": 36
+      },
+      "infer_device": {
+        "value": "cuda",
+        "line": 37
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/alg_config/ppo.yaml",
+    "top_level_scalars": {
+      "train_buffer_size": {
+        "value": "32",
+        "line": 1
+      },
+      "train_batch_size": {
+        "value": "32",
+        "line": 2
+      },
+      "update_rate": {
+        "value": "8",
+        "line": 3
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 6
+      },
+      "critic_coef": {
+        "value": "0.5",
+        "line": 7
+      },
+      "entropy": {
+        "value": "0.01",
+        "line": 8
+      },
+      "gae_lambda": {
+        "value": "0.95",
+        "line": 9
+      },
+      "mini_epochs": {
+        "value": "4",
+        "line": 10
+      },
+      "eps_clip": {
+        "value": "0.2",
+        "line": 11
+      },
+      "save_log_probs": {
+        "value": "True",
+        "line": 12
+      },
+      "dual_clip": {
+        "value": "0",
+        "line": 13
+      },
+      "use_vtrace": {
+        "value": "False",
+        "line": 14
+      },
+      "agenet_type": {
+        "value": "rnn",
+        "line": 16
+      },
+      "critic_type": {
+        "value": "rnn",
+        "line": 17
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 18
+      },
+      "critic_inputs": {
+        "value": "[\"central_obs\"]",
+        "line": 20
+      },
+      "use_layer_norm": {
+        "value": "True",
+        "line": 22
+      },
+      "use_orthogonal": {
+        "value": "True",
+        "line": 23
+      },
+      "use_value_norm": {
+        "value": "True",
+        "line": 24
+      },
+      "gain": {
+        "value": "0.01",
+        "line": 25
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/alg_config/qmix.yaml",
+    "top_level_scalars": {
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 1
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 2
+      },
+      "epsilon_anneal_time": {
+        "value": "100000",
+        "line": 3
+      },
+      "train_buffer_size": {
+        "value": "2000",
+        "line": 5
+      },
+      "train_batch_size": {
+        "value": "64",
+        "line": 6
+      },
+      "update_rate": {
+        "value": "8",
+        "line": 7
+      },
+      "target_update_interval": {
+        "value": "100",
+        "line": 8
+      },
+      "agenet_type": {
+        "value": "rnn",
+        "line": 10
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 11
+      },
+      "mixer": {
+        "value": "vdn_mixer",
+        "line": 12
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 13
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 14
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 15
+      },
+      "lr": {
+        "value": "0.001",
+        "line": 16
+      },
+      "td_lambda": {
+        "value": "0.6",
+        "line": 17
+      },
+      "q_lambda": {
+        "value": "False",
+        "line": 18
+      },
+      "use_orthogonal": {
+        "value": "True",
+        "line": 20
+      },
+      "use_layer_norm": {
+        "value": "False",
+        "line": 21
+      },
+      "gain": {
+        "value": "0.01",
+        "line": 22
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/env_config/cityflow.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "cityflow",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 13
+      },
+      "max_steps": {
+        "value": "10000000",
+        "line": 14
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/env_config/powergrid.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "powergrid",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "env_type": {
+        "value": "continuous",
+        "line": 6
+      },
+      "max_steps": {
+        "value": "1000000",
+        "line": 7
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/env_config/replenishment.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "replenishment",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "max_steps": {
+        "value": "2000000",
+        "line": 12
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_open",
+    "path": "marl平台代码/易才润/论文/SADMA/sadma源代码开源版本/config/env_config/smac.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "smac",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "max_steps": {
+        "value": "20050000",
+        "line": 34
+      },
+      "max_episodes": {
+        "value": "10000000",
+        "line": 35
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 36
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/default.yaml",
+    "top_level_scalars": {
+      "log_root_path": {
+        "value": "logdir",
+        "line": 2
+      },
+      "save_log": {
+        "value": "True",
+        "line": 3
+      },
+      "use_tensorboard": {
+        "value": "True",
+        "line": 4
+      },
+      "log_interval_step": {
+        "value": "2000",
+        "line": 5
+      },
+      "log_interval_episode": {
+        "value": "16",
+        "line": 6
+      },
+      "gamma": {
+        "value": "0.99",
+        "line": 9
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 10
+      },
+      "optim_alpha": {
+        "value": "0.99",
+        "line": 11
+      },
+      "optim_eps": {
+        "value": "0.00001",
+        "line": 12
+      },
+      "grad_norm_clip": {
+        "value": "10",
+        "line": 13
+      },
+      "agent_type": {
+        "value": "rnn",
+        "line": 16
+      },
+      "hidden_dim": {
+        "value": "64",
+        "line": 17
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 18
+      },
+      "save_log_probs": {
+        "value": "False",
+        "line": 19
+      },
+      "use_individual_rewards": {
+        "value": "False",
+        "line": 20
+      },
+      "evaluate": {
+        "value": "False",
+        "line": 23
+      },
+      "evaluate_episodes": {
+        "value": "32",
+        "line": 24
+      },
+      "evaluate_interval": {
+        "value": "10000",
+        "line": 25
+      },
+      "evaluate_batch_size": {
+        "value": "2",
+        "line": 26
+      },
+      "num_env_runner": {
+        "value": "1",
+        "line": 29
+      },
+      "asynchronous_env": {
+        "value": "True",
+        "line": 30
+      },
+      "shared_buffer_size": {
+        "value": "8",
+        "line": 31
+      },
+      "base_port": {
+        "value": "16400",
+        "line": 34
+      },
+      "num_inference_worker": {
+        "value": "1",
+        "line": 35
+      },
+      "infer_batch_size": {
+        "value": "1",
+        "line": 36
+      },
+      "infer_device": {
+        "value": "cuda",
+        "line": 37
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/alg_config/ppo.yaml",
+    "top_level_scalars": {
+      "train_buffer_size": {
+        "value": "32",
+        "line": 1
+      },
+      "train_batch_size": {
+        "value": "32",
+        "line": 2
+      },
+      "update_rate": {
+        "value": "8",
+        "line": 3
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 6
+      },
+      "critic_coef": {
+        "value": "0.5",
+        "line": 7
+      },
+      "entropy": {
+        "value": "0.01",
+        "line": 8
+      },
+      "gae_lambda": {
+        "value": "0.95",
+        "line": 9
+      },
+      "mini_epochs": {
+        "value": "4",
+        "line": 10
+      },
+      "eps_clip": {
+        "value": "0.2",
+        "line": 11
+      },
+      "save_log_probs": {
+        "value": "True",
+        "line": 12
+      },
+      "dual_clip": {
+        "value": "0",
+        "line": 13
+      },
+      "use_vtrace": {
+        "value": "False",
+        "line": 14
+      },
+      "agenet_type": {
+        "value": "rnn",
+        "line": 16
+      },
+      "critic_type": {
+        "value": "rnn",
+        "line": 17
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 18
+      },
+      "critic_inputs": {
+        "value": "[\"central_obs\"]",
+        "line": 20
+      },
+      "use_layer_norm": {
+        "value": "True",
+        "line": 22
+      },
+      "use_orthogonal": {
+        "value": "True",
+        "line": 23
+      },
+      "use_value_norm": {
+        "value": "True",
+        "line": 24
+      },
+      "gain": {
+        "value": "0.01",
+        "line": 25
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/alg_config/qmix.yaml",
+    "top_level_scalars": {
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 1
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 2
+      },
+      "epsilon_anneal_time": {
+        "value": "100000",
+        "line": 3
+      },
+      "train_buffer_size": {
+        "value": "2000",
+        "line": 5
+      },
+      "train_batch_size": {
+        "value": "64",
+        "line": 6
+      },
+      "update_rate": {
+        "value": "8",
+        "line": 7
+      },
+      "target_update_interval": {
+        "value": "100",
+        "line": 8
+      },
+      "agenet_type": {
+        "value": "rnn",
+        "line": 10
+      },
+      "agent_inputs": {
+        "value": "[\"obs\", \"agent_id\", \"last_action\"]",
+        "line": 11
+      },
+      "mixer": {
+        "value": "vdn_mixer",
+        "line": 12
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 13
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 14
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 15
+      },
+      "lr": {
+        "value": "0.001",
+        "line": 16
+      },
+      "td_lambda": {
+        "value": "0.6",
+        "line": 17
+      },
+      "q_lambda": {
+        "value": "False",
+        "line": 18
+      },
+      "use_orthogonal": {
+        "value": "True",
+        "line": 20
+      },
+      "use_layer_norm": {
+        "value": "False",
+        "line": 21
+      },
+      "gain": {
+        "value": "0.01",
+        "line": 22
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/env_config/cityflow.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "cityflow",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 13
+      },
+      "max_steps": {
+        "value": "10000000",
+        "line": 14
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/env_config/powergrid.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "powergrid",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "env_type": {
+        "value": "continuous",
+        "line": 6
+      },
+      "max_steps": {
+        "value": "1000000",
+        "line": 7
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/env_config/replenishment.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "replenishment",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "max_steps": {
+        "value": "2000000",
+        "line": 12
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "yi_sadma_zmq",
+    "path": "marl平台代码/易才润/基于ZMQ的分布式多智能体强化学习算法/sadma源代码公开版本/config/env_config/smac.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "smac",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "max_steps": {
+        "value": "20050000",
+        "line": 34
+      },
+      "max_episodes": {
+        "value": "10000000",
+        "line": 35
+      },
+      "env_type": {
+        "value": "discrete",
+        "line": 36
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/default.yaml",
+    "top_level_scalars": {
+      "runner": {
+        "value": "episode",
+        "line": 4
+      },
+      "mac": {
+        "value": "basic_mac",
+        "line": 5
+      },
+      "env": {
+        "value": "sc2",
+        "line": 6
+      },
+      "env_args": {
+        "value": "{}",
+        "line": 7
+      },
+      "batch_size_run": {
+        "value": "1",
+        "line": 8
+      },
+      "test_nepisode": {
+        "value": "20",
+        "line": 9
+      },
+      "test_interval": {
+        "value": "2000",
+        "line": 10
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 11
+      },
+      "log_interval": {
+        "value": "2000",
+        "line": 12
+      },
+      "runner_log_interval": {
+        "value": "2000",
+        "line": 13
+      },
+      "learner_log_interval": {
+        "value": "2000",
+        "line": 14
+      },
+      "t_max": {
+        "value": "10000",
+        "line": 15
+      },
+      "use_cuda": {
+        "value": "True",
+        "line": 16
+      },
+      "buffer_cpu_only": {
+        "value": "True",
+        "line": 17
+      },
+      "use_tensorboard": {
+        "value": "False",
+        "line": 20
+      },
+      "save_model": {
+        "value": "False",
+        "line": 21
+      },
+      "save_model_interval": {
+        "value": "500000",
+        "line": 22
+      },
+      "checkpoint_path": {
+        "value": "",
+        "line": 23
+      },
+      "evaluate": {
+        "value": "False",
+        "line": 24
+      },
+      "load_step": {
+        "value": "18172",
+        "line": 25
+      },
+      "save_replay": {
+        "value": "True",
+        "line": 26
+      },
+      "local_results_path": {
+        "value": "results",
+        "line": 27
+      },
+      "gamma": {
+        "value": "0.99",
+        "line": 30
+      },
+      "batch_size": {
+        "value": "32",
+        "line": 31
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 32
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 33
+      },
+      "critic_lr": {
+        "value": "0.0005",
+        "line": 34
+      },
+      "optim_alpha": {
+        "value": "0.99",
+        "line": 35
+      },
+      "optim_eps": {
+        "value": "0.00001",
+        "line": 36
+      },
+      "grad_norm_clip": {
+        "value": "10",
+        "line": 37
+      },
+      "agent": {
+        "value": "rnn",
+        "line": 40
+      },
+      "rnn_hidden_dim": {
+        "value": "64",
+        "line": 41
+      },
+      "obs_agent_id": {
+        "value": "True",
+        "line": 42
+      },
+      "obs_last_action": {
+        "value": "True",
+        "line": 43
+      },
+      "repeat_id": {
+        "value": "1",
+        "line": 46
+      },
+      "label": {
+        "value": "default_label",
+        "line": 47
+      },
+      "burn_in_period": {
+        "value": "0",
+        "line": 48
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/cw_qmix.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 2
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 3
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 4
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 5
+      },
+      "runner": {
+        "value": "episode",
+        "line": 7
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 9
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 12
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 15
+      },
+      "learner": {
+        "value": "max_q_learner",
+        "line": 16
+      },
+      "double_q": {
+        "value": "True",
+        "line": 17
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 18
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 19
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 20
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 21
+      },
+      "central_loss": {
+        "value": "1",
+        "line": 23
+      },
+      "qmix_loss": {
+        "value": "1",
+        "line": 24
+      },
+      "w": {
+        "value": "0.5",
+        "line": 25
+      },
+      "hysteretic_qmix": {
+        "value": "False",
+        "line": 26
+      },
+      "central_mixing_embed_dim": {
+        "value": "256",
+        "line": 28
+      },
+      "central_action_embed": {
+        "value": "1",
+        "line": 29
+      },
+      "central_mac": {
+        "value": "basic_central_mac",
+        "line": 30
+      },
+      "central_agent": {
+        "value": "central_rnn",
+        "line": 31
+      },
+      "central_rnn_hidden_dim": {
+        "value": "64",
+        "line": 32
+      },
+      "central_mixer": {
+        "value": "ff",
+        "line": 33
+      },
+      "name": {
+        "value": "cw_qmix",
+        "line": 35
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/cw_qmix_w_globalRM.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 2
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 3
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 4
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 5
+      },
+      "runner": {
+        "value": "pref_episode",
+        "line": 7
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 9
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 12
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 15
+      },
+      "learner": {
+        "value": "max_q_learner_w_globalRM",
+        "line": 16
+      },
+      "double_q": {
+        "value": "True",
+        "line": 17
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 18
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 19
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 20
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 21
+      },
+      "central_loss": {
+        "value": "1",
+        "line": 23
+      },
+      "qmix_loss": {
+        "value": "1",
+        "line": 24
+      },
+      "w": {
+        "value": "0.5",
+        "line": 25
+      },
+      "hysteretic_qmix": {
+        "value": "False",
+        "line": 26
+      },
+      "central_mixing_embed_dim": {
+        "value": "256",
+        "line": 28
+      },
+      "central_action_embed": {
+        "value": "1",
+        "line": 29
+      },
+      "central_mac": {
+        "value": "basic_central_mac",
+        "line": 30
+      },
+      "central_agent": {
+        "value": "central_rnn",
+        "line": 31
+      },
+      "central_rnn_hidden_dim": {
+        "value": "64",
+        "line": 32
+      },
+      "central_mixer": {
+        "value": "ff",
+        "line": 33
+      },
+      "name": {
+        "value": "cw_qmix_w_globalRM",
+        "line": 35
+      },
+      "run": {
+        "value": "pref",
+        "line": 38
+      },
+      "use_global_reward": {
+        "value": "True",
+        "line": 39
+      },
+      "use_local_reward": {
+        "value": "False",
+        "line": 40
+      },
+      "direct_local_preference": {
+        "value": "False",
+        "line": 41
+      },
+      "num_seed_timesteps": {
+        "value": "10",
+        "line": 43
+      },
+      "num_unsup_timesteps": {
+        "value": "10000",
+        "line": 44
+      },
+      "k": {
+        "value": "6",
+        "line": 45
+      },
+      "num_interact": {
+        "value": "3000",
+        "line": 46
+      },
+      "reset_critic": {
+        "value": "True",
+        "line": 47
+      },
+      "max_feedback": {
+        "value": "40000",
+        "line": 48
+      },
+      "reward_schedule": {
+        "value": "True",
+        "line": 49
+      },
+      "active": {
+        "value": "tan",
+        "line": 51
+      },
+      "reward_lr": {
+        "value": "0.0003",
+        "line": 52
+      },
+      "reward_hidden_size": {
+        "value": "256",
+        "line": 53
+      },
+      "reward_update": {
+        "value": "250",
+        "line": 54
+      },
+      "ensemble_size": {
+        "value": "3",
+        "line": 55
+      },
+      "state_or_obs": {
+        "value": "True",
+        "line": 56
+      },
+      "actions_onehot": {
+        "value": "True",
+        "line": 57
+      },
+      "reward_train_batch_size": {
+        "value": "128",
+        "line": 58
+      },
+      "loss_func": {
+        "value": "cross_entropy",
+        "line": 59
+      },
+      "local_acc": {
+        "value": "0.97",
+        "line": 60
+      },
+      "sample_episode_size": {
+        "value": "100",
+        "line": 62
+      },
+      "sample_segment_size": {
+        "value": "128",
+        "line": 63
+      },
+      "segment_size": {
+        "value": "10",
+        "line": 64
+      },
+      "segment_capacity": {
+        "value": "50000",
+        "line": 65
+      },
+      "global_preference_type": {
+        "value": "true_rewards",
+        "line": 67
+      },
+      "policy_dir": {
+        "value": "results/models/qmix__5m_vs_6m__4__pos__2023-12-22_20-34-50/2000064",
+        "line": 68
+      },
+      "local_preference_type": {
+        "value": "true_indi_rewards",
+        "line": 69
+      },
+      "local_preference_type_training": {
+        "value": "indi_rewards",
+        "line": 70
+      },
+      "lamda": {
+        "value": "0.01",
+        "line": 72
+      },
+      "lcoal_pretrain_timesteps": {
+        "value": "200000",
+        "line": 73
+      },
+      "lcoal_label_equal_thres": {
+        "value": "0.5",
+        "line": 74
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/ow_qmix.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 2
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 3
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 4
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 5
+      },
+      "runner": {
+        "value": "episode",
+        "line": 7
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 9
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 12
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 15
+      },
+      "learner": {
+        "value": "max_q_learner",
+        "line": 16
+      },
+      "double_q": {
+        "value": "True",
+        "line": 17
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 18
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 19
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 20
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 21
+      },
+      "central_loss": {
+        "value": "1",
+        "line": 23
+      },
+      "qmix_loss": {
+        "value": "1",
+        "line": 24
+      },
+      "w": {
+        "value": "0.5",
+        "line": 25
+      },
+      "hysteretic_qmix": {
+        "value": "True",
+        "line": 26
+      },
+      "central_mixing_embed_dim": {
+        "value": "256",
+        "line": 28
+      },
+      "central_action_embed": {
+        "value": "1",
+        "line": 29
+      },
+      "central_mac": {
+        "value": "basic_central_mac",
+        "line": 30
+      },
+      "central_agent": {
+        "value": "central_rnn",
+        "line": 31
+      },
+      "central_rnn_hidden_dim": {
+        "value": "64",
+        "line": 32
+      },
+      "central_mixer": {
+        "value": "ff",
+        "line": 33
+      },
+      "name": {
+        "value": "ow_qmix",
+        "line": 35
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/ow_qmix_w_globalRM.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 2
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 3
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 4
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 5
+      },
+      "runner": {
+        "value": "pref_episode",
+        "line": 7
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 9
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 12
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 15
+      },
+      "learner": {
+        "value": "max_q_learner_w_globalRM",
+        "line": 16
+      },
+      "double_q": {
+        "value": "True",
+        "line": 17
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 18
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 19
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 20
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 21
+      },
+      "central_loss": {
+        "value": "1",
+        "line": 23
+      },
+      "qmix_loss": {
+        "value": "1",
+        "line": 24
+      },
+      "w": {
+        "value": "0.5",
+        "line": 25
+      },
+      "hysteretic_qmix": {
+        "value": "True",
+        "line": 26
+      },
+      "central_mixing_embed_dim": {
+        "value": "256",
+        "line": 28
+      },
+      "central_action_embed": {
+        "value": "1",
+        "line": 29
+      },
+      "central_mac": {
+        "value": "basic_central_mac",
+        "line": 30
+      },
+      "central_agent": {
+        "value": "central_rnn",
+        "line": 31
+      },
+      "central_rnn_hidden_dim": {
+        "value": "64",
+        "line": 32
+      },
+      "central_mixer": {
+        "value": "ff",
+        "line": 33
+      },
+      "name": {
+        "value": "ow_qmix_w_globalRM",
+        "line": 35
+      },
+      "run": {
+        "value": "pref",
+        "line": 38
+      },
+      "use_global_reward": {
+        "value": "True",
+        "line": 39
+      },
+      "use_local_reward": {
+        "value": "False",
+        "line": 40
+      },
+      "direct_local_preference": {
+        "value": "False",
+        "line": 41
+      },
+      "num_seed_timesteps": {
+        "value": "10",
+        "line": 43
+      },
+      "num_unsup_timesteps": {
+        "value": "10000",
+        "line": 44
+      },
+      "k": {
+        "value": "6",
+        "line": 45
+      },
+      "num_interact": {
+        "value": "3000",
+        "line": 46
+      },
+      "reset_critic": {
+        "value": "True",
+        "line": 47
+      },
+      "max_feedback": {
+        "value": "40000",
+        "line": 48
+      },
+      "reward_schedule": {
+        "value": "True",
+        "line": 49
+      },
+      "active": {
+        "value": "tan",
+        "line": 51
+      },
+      "reward_lr": {
+        "value": "0.0003",
+        "line": 52
+      },
+      "reward_hidden_size": {
+        "value": "256",
+        "line": 53
+      },
+      "reward_update": {
+        "value": "250",
+        "line": 54
+      },
+      "ensemble_size": {
+        "value": "3",
+        "line": 55
+      },
+      "state_or_obs": {
+        "value": "True",
+        "line": 56
+      },
+      "actions_onehot": {
+        "value": "True",
+        "line": 57
+      },
+      "reward_train_batch_size": {
+        "value": "128",
+        "line": 58
+      },
+      "loss_func": {
+        "value": "cross_entropy",
+        "line": 59
+      },
+      "local_acc": {
+        "value": "0.97",
+        "line": 60
+      },
+      "sample_episode_size": {
+        "value": "100",
+        "line": 62
+      },
+      "sample_segment_size": {
+        "value": "128",
+        "line": 63
+      },
+      "segment_size": {
+        "value": "10",
+        "line": 64
+      },
+      "segment_capacity": {
+        "value": "50000",
+        "line": 65
+      },
+      "global_preference_type": {
+        "value": "true_rewards",
+        "line": 67
+      },
+      "policy_dir": {
+        "value": "results/models/qmix__5m_vs_6m__4__pos__2023-12-22_20-34-50/2000064",
+        "line": 68
+      },
+      "local_preference_type": {
+        "value": "true_indi_rewards",
+        "line": 69
+      },
+      "local_preference_type_training": {
+        "value": "indi_rewards",
+        "line": 70
+      },
+      "lamda": {
+        "value": "0.01",
+        "line": 72
+      },
+      "lcoal_pretrain_timesteps": {
+        "value": "200000",
+        "line": 73
+      },
+      "lcoal_label_equal_thres": {
+        "value": "0.5",
+        "line": 74
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/pref_qmix.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "pref_episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "pref_qmix_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 22
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 23
+      },
+      "name": {
+        "value": "pref_qmix",
+        "line": 25
+      },
+      "run": {
+        "value": "pref",
+        "line": 28
+      },
+      "use_global_reward": {
+        "value": "False",
+        "line": 29
+      },
+      "use_local_reward": {
+        "value": "True",
+        "line": 30
+      },
+      "direct_local_preference": {
+        "value": "False",
+        "line": 31
+      },
+      "num_seed_timesteps": {
+        "value": "10",
+        "line": 33
+      },
+      "num_unsup_timesteps": {
+        "value": "1000",
+        "line": 34
+      },
+      "k": {
+        "value": "6",
+        "line": 35
+      },
+      "num_interact": {
+        "value": "3000",
+        "line": 36
+      },
+      "reset_critic": {
+        "value": "True",
+        "line": 37
+      },
+      "max_feedback": {
+        "value": "40000",
+        "line": 38
+      },
+      "reward_schedule": {
+        "value": "True",
+        "line": 39
+      },
+      "active": {
+        "value": "sig",
+        "line": 41
+      },
+      "reward_lr": {
+        "value": "0.0003",
+        "line": 42
+      },
+      "reward_hidden_size": {
+        "value": "256",
+        "line": 43
+      },
+      "reward_update": {
+        "value": "250",
+        "line": 44
+      },
+      "ensemble_size": {
+        "value": "3",
+        "line": 45
+      },
+      "state_or_obs": {
+        "value": "True",
+        "line": 46
+      },
+      "actions_onehot": {
+        "value": "True",
+        "line": 47
+      },
+      "reward_train_batch_size": {
+        "value": "128",
+        "line": 48
+      },
+      "loss_func": {
+        "value": "cross_entropy",
+        "line": 49
+      },
+      "local_acc": {
+        "value": "0.97",
+        "line": 50
+      },
+      "sample_episode_size": {
+        "value": "100",
+        "line": 52
+      },
+      "sample_segment_size": {
+        "value": "50",
+        "line": 53
+      },
+      "segment_size": {
+        "value": "10",
+        "line": 54
+      },
+      "segment_capacity": {
+        "value": "3000",
+        "line": 55
+      },
+      "global_preference_type": {
+        "value": "true_rewards",
+        "line": 57
+      },
+      "policy_dir": {
+        "value": "results/models/qmix__3s_vs_5z__1__neg__2024-01-01_00-10-22/2000620",
+        "line": 58
+      },
+      "local_preference_type": {
+        "value": "true_indi_rewards",
+        "line": 59
+      },
+      "local_preference_type_training": {
+        "value": "indi_rewards",
+        "line": 60
+      },
+      "lamda": {
+        "value": "10",
+        "line": 62
+      },
+      "lamda_decay": {
+        "value": "True",
+        "line": 63
+      },
+      "lcoal_pretrain_timesteps": {
+        "value": "10000",
+        "line": 64
+      },
+      "lcoal_label_equal_thres": {
+        "value": "0.4",
+        "line": 65
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/pref_qmix_new.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "pref_episode_new",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "pref_qmix_learner_new",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 22
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 23
+      },
+      "name": {
+        "value": "pref_qmix_new",
+        "line": 25
+      },
+      "run": {
+        "value": "pref",
+        "line": 28
+      },
+      "pref_mac": {
+        "value": "basic_mac",
+        "line": 29
+      },
+      "use_global_reward": {
+        "value": "False",
+        "line": 30
+      },
+      "use_local_reward": {
+        "value": "True",
+        "line": 31
+      },
+      "direct_local_preference": {
+        "value": "False",
+        "line": 32
+      },
+      "pretrain_timesteps": {
+        "value": "1000",
+        "line": 34
+      },
+      "num_interact": {
+        "value": "1",
+        "line": 35
+      },
+      "max_labels": {
+        "value": "1000000",
+        "line": 36
+      },
+      "reward_schedule": {
+        "value": "False",
+        "line": 37
+      },
+      "active": {
+        "value": "tan",
+        "line": 39
+      },
+      "reward_lr": {
+        "value": "0.0005",
+        "line": 40
+      },
+      "reward_hidden_size": {
+        "value": "64",
+        "line": 41
+      },
+      "reward_update_times": {
+        "value": "250",
+        "line": 42
+      },
+      "ensemble_size": {
+        "value": "3",
+        "line": 43
+      },
+      "actions_onehot": {
+        "value": "False",
+        "line": 44
+      },
+      "reward_train_batch_size": {
+        "value": "128",
+        "line": 45
+      },
+      "loss_func": {
+        "value": "cross_entropy",
+        "line": 46
+      },
+      "local_acc": {
+        "value": "0.97",
+        "line": 47
+      },
+      "sample_method": {
+        "value": "uniform",
+        "line": 49
+      },
+      "sample_batch_size": {
+        "value": "32",
+        "line": 50
+      },
+      "add_batch_size": {
+        "value": "10",
+        "line": 51
+      },
+      "segment_size": {
+        "value": "10",
+        "line": 52
+      },
+      "policy_dir": {
+        "value": "results/models/qmix__5m_vs_6m__173041785__neg__2024-02-01_10-10-35/4800754",
+        "line": 54
+      },
+      "lamda": {
+        "value": "0.005",
+        "line": 56
+      },
+      "lamda_decay": {
+        "value": "False",
+        "line": 57
+      },
+      "apply_local_timesteps": {
+        "value": "50000",
+        "line": 58
+      },
+      "lcoal_label_equal_thres": {
+        "value": "0.4",
+        "line": 59
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qmix.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 22
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 23
+      },
+      "name": {
+        "value": "qmix",
+        "line": 25
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qmix_differ.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "qdiffer_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 22
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 23
+      },
+      "name": {
+        "value": "qdiffer",
+        "line": 25
+      },
+      "seed": {
+        "value": "667792542",
+        "line": 26
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qmix_make_datasets.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "makedata_runner",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "2000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 22
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 23
+      },
+      "name": {
+        "value": "qmix",
+        "line": 25
+      },
+      "data_dir0": {
+        "value": "/home/limingyang/kouqian_code/MARLHF_for_dataset/dataset_models/smac/2s3z/poor/",
+        "line": 26
+      },
+      "data_dir1": {
+        "value": "/home/limingyang/kouqian_code/MARLHF_for_dataset/dataset_models/smac/2s3z/good/",
+        "line": 27
+      },
+      "dataset_type": {
+        "value": "good_200episode_final",
+        "line": 29
+      },
+      "dataset_size": {
+        "value": "200",
+        "line": 30
+      },
+      "save_buffer_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_balanced/2s3z/",
+        "line": 31
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qmix_new.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "pref_episode_new",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner_new",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 22
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 23
+      },
+      "name": {
+        "value": "qmix_new",
+        "line": 25
+      },
+      "run": {
+        "value": "pref",
+        "line": 28
+      },
+      "pref_mac": {
+        "value": "basic_mac",
+        "line": 29
+      },
+      "use_global_reward": {
+        "value": "False",
+        "line": 30
+      },
+      "use_local_reward": {
+        "value": "False",
+        "line": 31
+      },
+      "direct_local_preference": {
+        "value": "True",
+        "line": 32
+      },
+      "pretrain_timesteps": {
+        "value": "1000",
+        "line": 34
+      },
+      "num_interact": {
+        "value": "1",
+        "line": 35
+      },
+      "max_labels": {
+        "value": "1000000",
+        "line": 36
+      },
+      "reward_schedule": {
+        "value": "False",
+        "line": 37
+      },
+      "active": {
+        "value": "tan",
+        "line": 39
+      },
+      "reward_lr": {
+        "value": "0.0005",
+        "line": 40
+      },
+      "reward_hidden_size": {
+        "value": "64",
+        "line": 41
+      },
+      "reward_update_times": {
+        "value": "250",
+        "line": 42
+      },
+      "ensemble_size": {
+        "value": "3",
+        "line": 43
+      },
+      "actions_onehot": {
+        "value": "False",
+        "line": 44
+      },
+      "reward_train_batch_size": {
+        "value": "128",
+        "line": 45
+      },
+      "loss_func": {
+        "value": "cross_entropy",
+        "line": 46
+      },
+      "local_acc": {
+        "value": "0.97",
+        "line": 47
+      },
+      "sample_method": {
+        "value": "uniform",
+        "line": 49
+      },
+      "sample_batch_size": {
+        "value": "32",
+        "line": 50
+      },
+      "add_batch_size": {
+        "value": "10",
+        "line": 51
+      },
+      "segment_size": {
+        "value": "10",
+        "line": 52
+      },
+      "policy_dir": {
+        "value": "results/models/qmix__5m_vs_6m__173041785__neg__2024-02-01_10-10-35/4800754",
+        "line": 54
+      },
+      "lamda": {
+        "value": "0.005",
+        "line": 56
+      },
+      "lamda_decay": {
+        "value": "False",
+        "line": 57
+      },
+      "apply_local_timesteps": {
+        "value": "50000",
+        "line": 58
+      },
+      "lcoal_label_equal_thres": {
+        "value": "0.4",
+        "line": 59
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qmix_w_globalRM.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "pref_episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "q_learner_w_globalRM",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_layers": {
+        "value": "2",
+        "line": 22
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 23
+      },
+      "name": {
+        "value": "qmix_w_globalRM",
+        "line": 25
+      },
+      "run": {
+        "value": "pref",
+        "line": 28
+      },
+      "use_global_reward": {
+        "value": "True",
+        "line": 29
+      },
+      "use_local_reward": {
+        "value": "False",
+        "line": 30
+      },
+      "direct_local_preference": {
+        "value": "False",
+        "line": 31
+      },
+      "num_seed_timesteps": {
+        "value": "10",
+        "line": 33
+      },
+      "num_unsup_timesteps": {
+        "value": "10000",
+        "line": 34
+      },
+      "k": {
+        "value": "6",
+        "line": 35
+      },
+      "num_interact": {
+        "value": "5000",
+        "line": 36
+      },
+      "reset_critic": {
+        "value": "True",
+        "line": 37
+      },
+      "max_feedback": {
+        "value": "40000",
+        "line": 38
+      },
+      "reward_schedule": {
+        "value": "True",
+        "line": 39
+      },
+      "active": {
+        "value": "tan",
+        "line": 41
+      },
+      "reward_lr": {
+        "value": "0.0003",
+        "line": 42
+      },
+      "reward_hidden_size": {
+        "value": "256",
+        "line": 43
+      },
+      "reward_update": {
+        "value": "250",
+        "line": 44
+      },
+      "ensemble_size": {
+        "value": "3",
+        "line": 45
+      },
+      "state_or_obs": {
+        "value": "True",
+        "line": 46
+      },
+      "actions_onehot": {
+        "value": "True",
+        "line": 47
+      },
+      "reward_train_batch_size": {
+        "value": "128",
+        "line": 48
+      },
+      "loss_func": {
+        "value": "cross_entropy",
+        "line": 49
+      },
+      "local_acc": {
+        "value": "0.97",
+        "line": 50
+      },
+      "sample_episode_size": {
+        "value": "100",
+        "line": 52
+      },
+      "sample_segment_size": {
+        "value": "128",
+        "line": 53
+      },
+      "segment_size": {
+        "value": "10",
+        "line": 54
+      },
+      "segment_capacity": {
+        "value": "50000",
+        "line": 55
+      },
+      "global_preference_type": {
+        "value": "policy",
+        "line": 57
+      },
+      "policy_dir": {
+        "value": "results/models/qmix__2c_vs_64zg__3__neg__2024-01-01_00-09-55/2000673",
+        "line": 58
+      },
+      "local_preference_type": {
+        "value": "true_indi_rewards",
+        "line": 59
+      },
+      "local_preference_type_training": {
+        "value": "indi_rewards",
+        "line": 60
+      },
+      "lamda": {
+        "value": "0.01",
+        "line": 62
+      },
+      "lcoal_pretrain_timesteps": {
+        "value": "200000",
+        "line": 63
+      },
+      "lcoal_label_equal_thres": {
+        "value": "0.5",
+        "line": 64
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qplex.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "dmaq_qatten_learner",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "dmaq",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 22
+      },
+      "adv_hypernet_layers": {
+        "value": "1",
+        "line": 23
+      },
+      "adv_hypernet_embed": {
+        "value": "64",
+        "line": 24
+      },
+      "num_kernel": {
+        "value": "4",
+        "line": 26
+      },
+      "is_minus_one": {
+        "value": "True",
+        "line": 27
+      },
+      "weighted_head": {
+        "value": "True",
+        "line": 28
+      },
+      "is_adv_attention": {
+        "value": "True",
+        "line": 29
+      },
+      "is_stop_gradient": {
+        "value": "True",
+        "line": 30
+      },
+      "burn_in_period": {
+        "value": "100",
+        "line": 32
+      },
+      "name": {
+        "value": "qplex",
+        "line": 34
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/algs/qplex_w_globalRM.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "pref_episode",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 11
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 14
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 17
+      },
+      "learner": {
+        "value": "dmaq_qatten_learner_w_globalRM",
+        "line": 18
+      },
+      "double_q": {
+        "value": "True",
+        "line": 19
+      },
+      "mixer": {
+        "value": "dmaq",
+        "line": 20
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 21
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 22
+      },
+      "adv_hypernet_layers": {
+        "value": "1",
+        "line": 23
+      },
+      "adv_hypernet_embed": {
+        "value": "64",
+        "line": 24
+      },
+      "num_kernel": {
+        "value": "4",
+        "line": 26
+      },
+      "is_minus_one": {
+        "value": "True",
+        "line": 27
+      },
+      "weighted_head": {
+        "value": "True",
+        "line": 28
+      },
+      "is_adv_attention": {
+        "value": "True",
+        "line": 29
+      },
+      "is_stop_gradient": {
+        "value": "True",
+        "line": 30
+      },
+      "burn_in_period": {
+        "value": "100",
+        "line": 32
+      },
+      "name": {
+        "value": "qplex_w_globalRM",
+        "line": 34
+      },
+      "run": {
+        "value": "pref",
+        "line": 37
+      },
+      "use_global_reward": {
+        "value": "True",
+        "line": 38
+      },
+      "use_local_reward": {
+        "value": "False",
+        "line": 39
+      },
+      "direct_local_preference": {
+        "value": "False",
+        "line": 40
+      },
+      "num_seed_timesteps": {
+        "value": "10",
+        "line": 42
+      },
+      "num_unsup_timesteps": {
+        "value": "10000",
+        "line": 43
+      },
+      "k": {
+        "value": "6",
+        "line": 44
+      },
+      "num_interact": {
+        "value": "3000",
+        "line": 45
+      },
+      "reset_critic": {
+        "value": "True",
+        "line": 46
+      },
+      "max_feedback": {
+        "value": "40000",
+        "line": 47
+      },
+      "reward_schedule": {
+        "value": "True",
+        "line": 48
+      },
+      "active": {
+        "value": "tan",
+        "line": 50
+      },
+      "reward_lr": {
+        "value": "0.0003",
+        "line": 51
+      },
+      "reward_hidden_size": {
+        "value": "256",
+        "line": 52
+      },
+      "reward_update": {
+        "value": "250",
+        "line": 53
+      },
+      "ensemble_size": {
+        "value": "3",
+        "line": 54
+      },
+      "state_or_obs": {
+        "value": "True",
+        "line": 55
+      },
+      "actions_onehot": {
+        "value": "True",
+        "line": 56
+      },
+      "reward_train_batch_size": {
+        "value": "128",
+        "line": 57
+      },
+      "loss_func": {
+        "value": "cross_entropy",
+        "line": 58
+      },
+      "local_acc": {
+        "value": "0.97",
+        "line": 59
+      },
+      "sample_episode_size": {
+        "value": "100",
+        "line": 61
+      },
+      "sample_segment_size": {
+        "value": "128",
+        "line": 62
+      },
+      "segment_size": {
+        "value": "10",
+        "line": 63
+      },
+      "segment_capacity": {
+        "value": "50000",
+        "line": 64
+      },
+      "global_preference_type": {
+        "value": "true_rewards",
+        "line": 66
+      },
+      "policy_dir": {
+        "value": "results/models/qmix__5m_vs_6m__4__pos__2023-12-22_20-34-50/2000064",
+        "line": 67
+      },
+      "local_preference_type": {
+        "value": "true_indi_rewards",
+        "line": 68
+      },
+      "local_preference_type_training": {
+        "value": "indi_rewards",
+        "line": 69
+      },
+      "lamda": {
+        "value": "0.01",
+        "line": 71
+      },
+      "lcoal_pretrain_timesteps": {
+        "value": "200000",
+        "line": 72
+      },
+      "lcoal_label_equal_thres": {
+        "value": "0.5",
+        "line": 73
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/envs/sc2.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "sc2",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 35
+      },
+      "test_nepisode": {
+        "value": "32",
+        "line": 36
+      },
+      "test_interval": {
+        "value": "10000",
+        "line": 37
+      },
+      "log_interval": {
+        "value": "10000",
+        "line": 38
+      },
+      "runner_log_interval": {
+        "value": "10000",
+        "line": 39
+      },
+      "learner_log_interval": {
+        "value": "10000",
+        "line": 40
+      },
+      "t_max": {
+        "value": "2050000",
+        "line": 41
+      }
+    }
+  },
+  {
+    "project": "kou_old",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/old_src/config/envs/sc2_beta.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "sc2",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "learner_log_interval": {
+        "value": "20000",
+        "line": 33
+      },
+      "log_interval": {
+        "value": "20000",
+        "line": 34
+      },
+      "runner_log_interval": {
+        "value": "20000",
+        "line": 35
+      },
+      "t_max": {
+        "value": "10050000",
+        "line": 36
+      },
+      "test_interval": {
+        "value": "20000",
+        "line": 37
+      },
+      "test_nepisode": {
+        "value": "24",
+        "line": 38
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 39
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/default.yaml",
+    "top_level_scalars": {
+      "runner": {
+        "value": "episode",
+        "line": 4
+      },
+      "mac": {
+        "value": "basic_mac",
+        "line": 5
+      },
+      "env": {
+        "value": "sc2",
+        "line": 6
+      },
+      "env_args": {
+        "value": "{}",
+        "line": 7
+      },
+      "batch_size_run": {
+        "value": "4",
+        "line": 8
+      },
+      "test_nepisode": {
+        "value": "16",
+        "line": 9
+      },
+      "test_interval": {
+        "value": "2000",
+        "line": 10
+      },
+      "test_greedy": {
+        "value": "True",
+        "line": 11
+      },
+      "log_interval": {
+        "value": "2000",
+        "line": 12
+      },
+      "runner_log_interval": {
+        "value": "2000",
+        "line": 13
+      },
+      "learner_log_interval": {
+        "value": "2000",
+        "line": 14
+      },
+      "t_max": {
+        "value": "10000",
+        "line": 15
+      },
+      "use_cuda": {
+        "value": "True",
+        "line": 16
+      },
+      "buffer_cpu_only": {
+        "value": "True",
+        "line": 17
+      },
+      "use_tensorboard": {
+        "value": "False",
+        "line": 20
+      },
+      "use_wandb": {
+        "value": "False",
+        "line": 21
+      },
+      "save_model": {
+        "value": "False",
+        "line": 22
+      },
+      "save_model_interval": {
+        "value": "1000000",
+        "line": 23
+      },
+      "checkpoint_path": {
+        "value": "",
+        "line": 24
+      },
+      "evaluate": {
+        "value": "False",
+        "line": 25
+      },
+      "load_step": {
+        "value": "0",
+        "line": 26
+      },
+      "save_replay": {
+        "value": "False",
+        "line": 27
+      },
+      "local_results_path": {
+        "value": "results",
+        "line": 28
+      },
+      "gamma": {
+        "value": "0.99",
+        "line": 31
+      },
+      "batch_size": {
+        "value": "32",
+        "line": 32
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 33
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 34
+      },
+      "critic_lr": {
+        "value": "0.0005",
+        "line": 35
+      },
+      "optim_alpha": {
+        "value": "0.99",
+        "line": 36
+      },
+      "optim_eps": {
+        "value": "0.00001",
+        "line": 37
+      },
+      "grad_norm_clip": {
+        "value": "20",
+        "line": 38
+      },
+      "agent": {
+        "value": "rnn",
+        "line": 41
+      },
+      "rnn_hidden_dim": {
+        "value": "64",
+        "line": 42
+      },
+      "obs_agent_id": {
+        "value": "True",
+        "line": 43
+      },
+      "obs_last_action": {
+        "value": "True",
+        "line": 44
+      },
+      "repeat_id": {
+        "value": "1",
+        "line": 47
+      },
+      "label": {
+        "value": "default_label",
+        "line": 48
+      },
+      "collect_nepisode": {
+        "value": "50000",
+        "line": 50
+      },
+      "h5file_suffix": {
+        "value": "expert",
+        "line": 51
+      },
+      "training_episodes": {
+        "value": "5000",
+        "line": 52
+      },
+      "max_behaviour_train_steps": {
+        "value": "10000",
+        "line": 53
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/acpl_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "cpl_lambda": {
+        "value": "0.1",
+        "line": 22
+      },
+      "cpl_alpha": {
+        "value": "1000",
+        "line": 23
+      },
+      "cpl_constrain_coe": {
+        "value": "1.0",
+        "line": 24
+      },
+      "cpl_constrain_type": {
+        "value": "pi",
+        "line": 25
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 28
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 31
+      },
+      "learner": {
+        "value": "cpl_learner",
+        "line": 32
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 33
+      },
+      "name": {
+        "value": "ACPL",
+        "line": 35
+      },
+      "offline_dataset_dir": {
+        "value": "/data/user/kouqian/SMAC410_pref_new/5m_vs_6m_good-medium_1000_30.th",
+        "line": 37
+      },
+      "offline_dataset_quality": {
+        "value": "good-medium",
+        "line": 38
+      },
+      "pref_segment_pairs": {
+        "value": "1000",
+        "line": 39
+      },
+      "use_pref": {
+        "value": "True",
+        "line": 40
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 42
+      },
+      "max_traj_length": {
+        "value": "30",
+        "line": 43
+      },
+      "model_type": {
+        "value": "MR",
+        "line": 44
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 45
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 46
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 47
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 48
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/bc_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "e2e": {
+        "value": "false",
+        "line": 16
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 21
+      },
+      "learner": {
+        "value": "bc_learner",
+        "line": 22
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 23
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 24
+      },
+      "name": {
+        "value": "BC",
+        "line": 26
+      },
+      "offline_dataset_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled.th",
+        "line": 28
+      },
+      "offline_dataset_quality": {
+        "value": "low_1000episode_policypool_new",
+        "line": 29
+      },
+      "map_name": {
+        "value": "10m_vs_11m",
+        "line": 30
+      },
+      "max_traj_length": {
+        "value": "150",
+        "line": 31
+      },
+      "reward_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled_MultiPrefTransformerDivide_testrm_agent_reward.th",
+        "line": 32
+      },
+      "pref_segment_pairs": {
+        "value": "500",
+        "line": 33
+      },
+      "use_pref": {
+        "value": "False",
+        "line": 34
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 37
+      },
+      "model_type": {
+        "value": "MultiPrefTransformerDivide",
+        "line": 38
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 39
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 40
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 41
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 42
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 43
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/bcmapt_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "e2e": {
+        "value": "False",
+        "line": 20
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 23
+      },
+      "learner": {
+        "value": "bcmapt_learner",
+        "line": 24
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 25
+      },
+      "lamda": {
+        "value": "1",
+        "line": 26
+      },
+      "T": {
+        "value": "0.5",
+        "line": 27
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 28
+      },
+      "name": {
+        "value": "BCMAPT",
+        "line": 30
+      },
+      "offline_dataset_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled.th",
+        "line": 32
+      },
+      "offline_dataset_quality": {
+        "value": "low_1000episode_policypool_new",
+        "line": 33
+      },
+      "map_name": {
+        "value": "10m_vs_11m",
+        "line": 34
+      },
+      "max_traj_length": {
+        "value": "150",
+        "line": 35
+      },
+      "reward_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled_MultiPrefTransformerDivide_testrm_agent_reward.th",
+        "line": 36
+      },
+      "pref_segment_pairs": {
+        "value": "500",
+        "line": 37
+      },
+      "use_pref": {
+        "value": "True",
+        "line": 38
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 41
+      },
+      "model_type": {
+        "value": "MultiPrefTransformerDivide",
+        "line": 42
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 43
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 44
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 45
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 46
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 47
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/cpl_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "cpl_lambda": {
+        "value": "0.1",
+        "line": 22
+      },
+      "cpl_alpha": {
+        "value": "1",
+        "line": 23
+      },
+      "cpl_constrain_coe": {
+        "value": "1.0",
+        "line": 24
+      },
+      "cpl_constrain_type": {
+        "value": "pi",
+        "line": 25
+      },
+      "NLL_lamda": {
+        "value": "0.2",
+        "line": 26
+      },
+      "use_nll": {
+        "value": "False",
+        "line": 27
+      },
+      "e2e": {
+        "value": "False",
+        "line": 28
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 31
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 34
+      },
+      "learner": {
+        "value": "cpl_learner",
+        "line": 35
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 36
+      },
+      "name": {
+        "value": "CPL",
+        "line": 38
+      },
+      "offline_dataset_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/8m/low_6-4_1000episode_policypool/500_120labeled.th",
+        "line": 40
+      },
+      "offline_dataset_quality": {
+        "value": "low_6-4_1000episode_policypool",
+        "line": 42
+      },
+      "pref_segment_pairs": {
+        "value": "500",
+        "line": 44
+      },
+      "use_pref": {
+        "value": "True",
+        "line": 45
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 47
+      },
+      "max_traj_length": {
+        "value": "30",
+        "line": 48
+      },
+      "model_type": {
+        "value": "MultiPrefTransformerDivide",
+        "line": 49
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 50
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 51
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 52
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 53
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 54
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/cql_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "100000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 10
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 11
+      },
+      "t_max": {
+        "value": "10050000",
+        "line": 12
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 14
+      },
+      "batch_size": {
+        "value": "128",
+        "line": 15
+      },
+      "optimizer": {
+        "value": "adam",
+        "line": 16
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 17
+      },
+      "pi_accuracy": {
+        "value": "0.65",
+        "line": 18
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 21
+      },
+      "mac": {
+        "value": "n_mac",
+        "line": 24
+      },
+      "agent": {
+        "value": "n_rnn",
+        "line": 25
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 26
+      },
+      "learner": {
+        "value": "cql_learner",
+        "line": 28
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 29
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 30
+      },
+      "hypernet_embed": {
+        "value": "64",
+        "line": 31
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 32
+      },
+      "td_lambda": {
+        "value": "0.8",
+        "line": 33
+      },
+      "q_lambda": {
+        "value": "False",
+        "line": 34
+      },
+      "use_layer_norm": {
+        "value": "False",
+        "line": 37
+      },
+      "use_orthogonal": {
+        "value": "False",
+        "line": 40
+      },
+      "gain": {
+        "value": "0.01",
+        "line": 41
+      },
+      "use_per": {
+        "value": "False",
+        "line": 44
+      },
+      "per_alpha": {
+        "value": "0.6",
+        "line": 45
+      },
+      "per_beta": {
+        "value": "0.4",
+        "line": 46
+      },
+      "return_priority": {
+        "value": "False",
+        "line": 47
+      },
+      "use_offline": {
+        "value": "True",
+        "line": 49
+      },
+      "use_sarsa": {
+        "value": "False",
+        "line": 50
+      },
+      "cql_alpha": {
+        "value": "5.0",
+        "line": 51
+      },
+      "global_cql_alpha": {
+        "value": "1.0",
+        "line": 52
+      },
+      "training_episodes": {
+        "value": "5000",
+        "line": 53
+      },
+      "moderate_lambda": {
+        "value": "False",
+        "line": 56
+      },
+      "softmax_temp": {
+        "value": "5",
+        "line": 57
+      },
+      "e2e": {
+        "value": "False",
+        "line": 58
+      },
+      "raw_cql": {
+        "value": "False",
+        "line": 61
+      },
+      "raw_sample_actions": {
+        "value": "100",
+        "line": 62
+      },
+      "data_dir": {
+        "value": "/home/limingyang/kouqian_code/MARLHF_for_dataset/ICQ-MA/save_models",
+        "line": 64
+      },
+      "name": {
+        "value": "CQL",
+        "line": 66
+      },
+      "offline_dataset_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled.th",
+        "line": 68
+      },
+      "offline_dataset_quality": {
+        "value": "low_1000episode_policypool_new",
+        "line": 69
+      },
+      "map_name": {
+        "value": "10m_vs_11m",
+        "line": 70
+      },
+      "max_traj_length": {
+        "value": "150",
+        "line": 71
+      },
+      "pref_segment_pairs": {
+        "value": "500",
+        "line": 72
+      },
+      "use_pref": {
+        "value": "False",
+        "line": 74
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 76
+      },
+      "model_type": {
+        "value": "MultiPrefTransformerDivide",
+        "line": 77
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 78
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 79
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 80
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 81
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 82
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/dppo_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "e2e": {
+        "value": "False",
+        "line": 16
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "dppo_alpha": {
+        "value": "100",
+        "line": 22
+      },
+      "dppo_lambda": {
+        "value": "0.5",
+        "line": 23
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 26
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 29
+      },
+      "learner": {
+        "value": "dppo_learner",
+        "line": 30
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 31
+      },
+      "name": {
+        "value": "DPPO",
+        "line": 33
+      },
+      "offline_dataset_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_discrete/500_150labeled.th",
+        "line": 35
+      },
+      "offline_dataset_quality": {
+        "value": "low_1000episode_policypool_discrete",
+        "line": 36
+      },
+      "map_name": {
+        "value": "10m_vs_11m",
+        "line": 37
+      },
+      "max_traj_length": {
+        "value": "30",
+        "line": 44
+      },
+      "reward_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_6-4_1000episode_policypool/500_150labeled_MultiPrefTransformerDivide_agent_reward.th",
+        "line": 39
+      },
+      "use_pref": {
+        "value": "True",
+        "line": 40
+      },
+      "pref_segment_pairs": {
+        "value": "500",
+        "line": 42
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 43
+      },
+      "model_type": {
+        "value": "MR",
+        "line": 45
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 46
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 47
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 48
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 49
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 50
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/hacpl_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "cpl_lambda": {
+        "value": "0.1",
+        "line": 22
+      },
+      "cpl_alpha": {
+        "value": "1000",
+        "line": 23
+      },
+      "cpl_constrain_coe": {
+        "value": "1.0",
+        "line": 24
+      },
+      "cpl_constrain_type": {
+        "value": "pi",
+        "line": 25
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 28
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 31
+      },
+      "learner": {
+        "value": "hacpl_learner",
+        "line": 32
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 33
+      },
+      "name": {
+        "value": "HACPL",
+        "line": 35
+      },
+      "fix_order": {
+        "value": "True",
+        "line": 37
+      },
+      "offline_dataset_dir": {
+        "value": "/data/user/kouqian/SMAC410_pref_new/5m_vs_6m_good-medium_1000_30.th",
+        "line": 39
+      },
+      "offline_dataset_quality": {
+        "value": "good-medium",
+        "line": 40
+      },
+      "pref_segment_pairs": {
+        "value": "1000",
+        "line": 41
+      },
+      "use_pref": {
+        "value": "True",
+        "line": 42
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 44
+      },
+      "max_traj_length": {
+        "value": "30",
+        "line": 45
+      },
+      "model_type": {
+        "value": "MR",
+        "line": 46
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 47
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 48
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 49
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 50
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/iql_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "True",
+        "line": 7
+      },
+      "e2e": {
+        "value": "False",
+        "line": 8
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 9
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 11
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 12
+      },
+      "t_max": {
+        "value": "10050000",
+        "line": 13
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 15
+      },
+      "batch_size": {
+        "value": "128",
+        "line": 16
+      },
+      "target_update_interval": {
+        "value": "600",
+        "line": 18
+      },
+      "step": {
+        "value": "5",
+        "line": 19
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "tau": {
+        "value": "0.7",
+        "line": 22
+      },
+      "beta": {
+        "value": "3.0",
+        "line": 23
+      },
+      "alpha": {
+        "value": "0.005",
+        "line": 24
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 27
+      },
+      "learner": {
+        "value": "iql_learner",
+        "line": 28
+      },
+      "use_offline": {
+        "value": "True",
+        "line": 30
+      },
+      "training_episodes": {
+        "value": "5000",
+        "line": 31
+      },
+      "name": {
+        "value": "IQL",
+        "line": 34
+      },
+      "offline_dataset_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled.th",
+        "line": 36
+      },
+      "offline_dataset_quality": {
+        "value": "low_1000episode_policypool_new",
+        "line": 37
+      },
+      "map_name": {
+        "value": "10m_vs_11m",
+        "line": 38
+      },
+      "max_traj_length": {
+        "value": "150",
+        "line": 39
+      },
+      "pref_segment_pairs": {
+        "value": "500",
+        "line": 40
+      },
+      "use_pref": {
+        "value": "False",
+        "line": 42
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 44
+      },
+      "model_type": {
+        "value": "MultiPrefTransformerDivide",
+        "line": 45
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 46
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 47
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 48
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 49
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 50
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/madpo_aux_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "cpl_lambda": {
+        "value": "0.1",
+        "line": 22
+      },
+      "cpl_alpha": {
+        "value": "1",
+        "line": 23
+      },
+      "cpl_constrain_coe": {
+        "value": "1.0",
+        "line": 24
+      },
+      "cpl_constrain_type": {
+        "value": "pi",
+        "line": 25
+      },
+      "aux_loss_coe": {
+        "value": "1",
+        "line": 26
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 29
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 32
+      },
+      "learner": {
+        "value": "madpo_aux_learner",
+        "line": 33
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 34
+      },
+      "name": {
+        "value": "MADPO_aux",
+        "line": 36
+      },
+      "offline_dataset_dir": {
+        "value": "/data/user/kouqian/MAOfflineDatasets/SMAC410_imbalanced_pref/8m/medium_normal/100_120labeled.th",
+        "line": 38
+      },
+      "offline_dataset_quality": {
+        "value": "medium_normal",
+        "line": 39
+      },
+      "pref_segment_pairs": {
+        "value": "100",
+        "line": 40
+      },
+      "use_pref": {
+        "value": "True",
+        "line": 41
+      },
+      "reward_dir": {
+        "value": "/data/user/kouqian/MAOfflineDatasets/SMAC410_imbalanced_pref/8m/medium_normal/100_120labeled_MultiPrefTransformerDivide_agent_reward.th",
+        "line": 42
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 45
+      },
+      "max_traj_length": {
+        "value": "120",
+        "line": 46
+      },
+      "model_type": {
+        "value": "MR",
+        "line": 47
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 48
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 49
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 50
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 51
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 52
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/madpo_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "pi_accuracy": {
+        "value": "0.65",
+        "line": 16
+      },
+      "env_args": {
+        "value": "",
+        "line": 18
+      },
+      "e2e": {
+        "value": "False",
+        "line": 22
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 24
+      },
+      "dpo_lambda": {
+        "value": "0.5",
+        "line": 25
+      },
+      "dpo_alpha": {
+        "value": "0.1",
+        "line": 27
+      },
+      "T": {
+        "value": "0.5",
+        "line": 28
+      },
+      "distence_type": {
+        "value": "log_pi",
+        "line": 29
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 32
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 35
+      },
+      "learner": {
+        "value": "madpo_learner",
+        "line": 36
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 37
+      },
+      "name": {
+        "value": "MADPO",
+        "line": 39
+      },
+      "offline_dataset_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_6-4_1000episode_policypool/500_150labeled.th",
+        "line": 41
+      },
+      "offline_dataset_quality": {
+        "value": "low_6-4_1000episode_policypool",
+        "line": 42
+      },
+      "map_name": {
+        "value": "10m_vs_11m",
+        "line": 43
+      },
+      "max_traj_length": {
+        "value": "150",
+        "line": 44
+      },
+      "reward_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_6-4_1000episode_policypool/500_150labeled_MultiPrefTransformerDivide_testrm_agent_reward.th",
+        "line": 45
+      },
+      "pref_segment_pairs": {
+        "value": "500",
+        "line": 46
+      },
+      "use_pref": {
+        "value": "True",
+        "line": 47
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 49
+      },
+      "model_type": {
+        "value": "MultiPrefTransformerDivide",
+        "line": 50
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 51
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 52
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 53
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 54
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 55
+      },
+      "train_diverse_predictor": {
+        "value": "False",
+        "line": 56
+      },
+      "diverse_dataset_dir": {
+        "value": "/share/project/kouqian/Codes/MARLHF/MADiversePreferDatasets/3m/3m.th",
+        "line": 58
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/maicpl_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "cpl_lambda": {
+        "value": "0.1",
+        "line": 22
+      },
+      "cpl_alpha": {
+        "value": "1000",
+        "line": 23
+      },
+      "cpl_constrain_coe": {
+        "value": "1.0",
+        "line": 24
+      },
+      "cpl_constrain_type": {
+        "value": "pi",
+        "line": 25
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 28
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 31
+      },
+      "learner": {
+        "value": "maicpl_learner",
+        "line": 32
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 33
+      },
+      "name": {
+        "value": "MAICPL",
+        "line": 35
+      },
+      "offline_dataset_dir": {
+        "value": "/home/kouqian/buffer/pref_datasets/3m_good_1000_16.th",
+        "line": 38
+      },
+      "offline_dataset_quality": {
+        "value": "good",
+        "line": 39
+      },
+      "pref_segment_pairs": {
+        "value": "1000",
+        "line": 40
+      },
+      "use_pref": {
+        "value": "True",
+        "line": 41
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 43
+      },
+      "max_traj_length": {
+        "value": "30",
+        "line": 44
+      },
+      "model_type": {
+        "value": "MR",
+        "line": 45
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 46
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 47
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 48
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 49
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 50
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/maidpo_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 21
+      },
+      "dpo_lambda": {
+        "value": "0.1",
+        "line": 22
+      },
+      "dpo_alpha": {
+        "value": "1000",
+        "line": 23
+      },
+      "distence_type": {
+        "value": "log_pi",
+        "line": 25
+      },
+      "distence_log": {
+        "value": "True",
+        "line": 26
+      },
+      "n_query_embedding_layer1": {
+        "value": "64",
+        "line": 30
+      },
+      "n_query_embedding_layer2": {
+        "value": "32",
+        "line": 31
+      },
+      "n_key_embedding_layer1": {
+        "value": "32",
+        "line": 32
+      },
+      "n_head_embedding_layer1": {
+        "value": "64",
+        "line": 33
+      },
+      "n_head_embedding_layer2": {
+        "value": "4",
+        "line": 34
+      },
+      "n_attention_head": {
+        "value": "4",
+        "line": 35
+      },
+      "n_constant_value": {
+        "value": "32",
+        "line": 36
+      },
+      "qatten_type": {
+        "value": "none",
+        "line": 37
+      },
+      "traj_feature_rtgs": {
+        "value": "4",
+        "line": 38
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 41
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 44
+      },
+      "learner": {
+        "value": "maidpo_learner",
+        "line": 45
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 46
+      },
+      "name": {
+        "value": "MAIDPO",
+        "line": 48
+      },
+      "offline_dataset_dir": {
+        "value": "/home/kouqian/buffer/pref_datasets/3m_poor_1000_16.th",
+        "line": 50
+      },
+      "offline_dataset_quality": {
+        "value": "poor",
+        "line": 51
+      },
+      "pref_segment_pairs": {
+        "value": "1000",
+        "line": 52
+      },
+      "use_pref": {
+        "value": "True",
+        "line": 53
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 55
+      },
+      "max_traj_length": {
+        "value": "30",
+        "line": 56
+      },
+      "model_type": {
+        "value": "MR",
+        "line": 57
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 58
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 59
+      },
+      "reward_batch_size": {
+        "value": "128",
+        "line": 60
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 61
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 62
+      },
+      "reward_dir": {
+        "value": "/home/kouqian/buffer/pref_datasets/3m_poor_1000_16_MultiPrefTransformerDivide_agent_reward.th",
+        "line": 63
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/offpg_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "multinomial",
+        "line": 3
+      },
+      "epsilon_start": {
+        "value": ".5",
+        "line": 4
+      },
+      "epsilon_finish": {
+        "value": ".05",
+        "line": 5
+      },
+      "epsilon_anneal_time": {
+        "value": "500000",
+        "line": 6
+      },
+      "mask_before_softmax": {
+        "value": "False",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "buffer_size": {
+        "value": "32",
+        "line": 11
+      },
+      "off_buffer_size": {
+        "value": "70000",
+        "line": 12
+      },
+      "batch_size_run": {
+        "value": "10",
+        "line": 13
+      },
+      "batch_size": {
+        "value": "16",
+        "line": 14
+      },
+      "off_batch_size": {
+        "value": "32",
+        "line": 15
+      },
+      "e2e": {
+        "value": "False",
+        "line": 16
+      },
+      "env_args": {
+        "value": "",
+        "line": 18
+      },
+      "target_update_interval": {
+        "value": "600",
+        "line": 22
+      },
+      "step": {
+        "value": "5",
+        "line": 23
+      },
+      "pi_accuracy": {
+        "value": "0.5",
+        "line": 25
+      },
+      "lr": {
+        "value": "0.0005",
+        "line": 26
+      },
+      "critic_lr": {
+        "value": "0.0001",
+        "line": 27
+      },
+      "td_lambda": {
+        "value": "0.8",
+        "line": 28
+      },
+      "icq_alpha": {
+        "value": "1",
+        "line": 29
+      },
+      "icq_beta": {
+        "value": "100",
+        "line": 30
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 33
+      },
+      "agent_output_type": {
+        "value": "pi_logits",
+        "line": 36
+      },
+      "learner": {
+        "value": "offpg_learner",
+        "line": 37
+      },
+      "q_nstep": {
+        "value": "0",
+        "line": 39
+      },
+      "name": {
+        "value": "ICQ-MA",
+        "line": 41
+      },
+      "offline_dataset_dir": {
+        "value": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_balanced_pref/8m/good_200episode_final/100_120labeled.th",
+        "line": 43
+      },
+      "offline_dataset_quality": {
+        "value": "good_200episode_final",
+        "line": 44
+      },
+      "map_name": {
+        "value": "3m",
+        "line": 45
+      },
+      "max_traj_length": {
+        "value": "60",
+        "line": 46
+      },
+      "reward_dir": {
+        "value": "/share/project/kouqian/Codes/MARLHF/MADiversePreferDatasets/3m/reward.th",
+        "line": 47
+      },
+      "use_pref": {
+        "value": "False",
+        "line": 48
+      },
+      "pref_segment_pairs": {
+        "value": "100",
+        "line": 51
+      },
+      "train_reward": {
+        "value": "False",
+        "line": 52
+      },
+      "train_predicter": {
+        "value": "False",
+        "line": 53
+      },
+      "model_type": {
+        "value": "MultiPrefTransformerDivide",
+        "line": 54
+      },
+      "action_type": {
+        "value": "Discrete",
+        "line": 55
+      },
+      "reward_train_epoch": {
+        "value": "100",
+        "line": 56
+      },
+      "reward_batch_size": {
+        "value": "32",
+        "line": 57
+      },
+      "use_reward_hat": {
+        "value": "False",
+        "line": 58
+      },
+      "train_diverse_predictor": {
+        "value": "True",
+        "line": 61
+      },
+      "diverse_dataset_dir": {
+        "value": "/share/project/kouqian/Codes/MARLHF/MADiversePreferDatasets/3m/3m.th",
+        "line": 62
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/qmix.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 5
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 6
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 7
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 8
+      },
+      "runner": {
+        "value": "episode",
+        "line": 10
+      },
+      "batch_size_run": {
+        "value": "1",
+        "line": 11
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 13
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 16
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 19
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 20
+      },
+      "double_q": {
+        "value": "True",
+        "line": 21
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 22
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 23
+      },
+      "name": {
+        "value": "qmix",
+        "line": 25
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/qmix_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "batch_size_run": {
+        "value": "4",
+        "line": 10
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 12
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 15
+      },
+      "env_args": {
+        "value": "",
+        "line": 17
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 21
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 22
+      },
+      "double_q": {
+        "value": "True",
+        "line": 23
+      },
+      "mixer": {
+        "value": "qmix",
+        "line": 24
+      },
+      "mixing_embed_dim": {
+        "value": "32",
+        "line": 25
+      },
+      "name": {
+        "value": "qmix_smac_parallel",
+        "line": 27
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/algs/vdn_smac.yaml",
+    "top_level_scalars": {
+      "action_selector": {
+        "value": "epsilon_greedy",
+        "line": 4
+      },
+      "epsilon_start": {
+        "value": "1.0",
+        "line": 5
+      },
+      "epsilon_finish": {
+        "value": "0.05",
+        "line": 6
+      },
+      "epsilon_anneal_time": {
+        "value": "50000",
+        "line": 7
+      },
+      "runner": {
+        "value": "parallel",
+        "line": 9
+      },
+      "batch_size_run": {
+        "value": "8",
+        "line": 10
+      },
+      "buffer_size": {
+        "value": "5000",
+        "line": 12
+      },
+      "target_update_interval": {
+        "value": "200",
+        "line": 15
+      },
+      "agent_output_type": {
+        "value": "q",
+        "line": 18
+      },
+      "learner": {
+        "value": "q_learner",
+        "line": 19
+      },
+      "double_q": {
+        "value": "True",
+        "line": 20
+      },
+      "mixer": {
+        "value": "vdn",
+        "line": 21
+      },
+      "name": {
+        "value": "vdn_smac_parallel",
+        "line": 23
+      }
+    }
+  },
+  {
+    "project": "kou_icq",
+    "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/ICQ-MA/src/config/envs/sc2.yaml",
+    "top_level_scalars": {
+      "env": {
+        "value": "sc2",
+        "line": 1
+      },
+      "env_args": {
+        "value": "",
+        "line": 3
+      },
+      "learner_log_interval": {
+        "value": "20000",
+        "line": 32
+      },
+      "log_interval": {
+        "value": "20000",
+        "line": 33
+      },
+      "runner_log_interval": {
+        "value": "20000",
+        "line": 34
+      },
+      "t_max": {
+        "value": "1000200",
+        "line": 35
+      },
+      "test_interval": {
+        "value": "20000",
+        "line": 36
+      },
+      "test_nepisode": {
+        "value": "24",
+        "line": 37
+      },
+      "test_greedy": {
+        "value": "False",
+        "line": 38
+      },
+      "CUDA_VISIBLE_DEVICES": {
+        "value": "0",
+        "line": 39
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/crd/kustomization.yaml",
+    "top_level_scalars": {
+      "resources": {
+        "value": "",
+        "line": 4
+      },
+      "patchesStrategicMerge": {
+        "value": "",
+        "line": 8
+      },
+      "configurations": {
+        "value": "",
+        "line": 20
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/crd/kustomizeconfig.yaml",
+    "top_level_scalars": {
+      "nameReference": {
+        "value": "",
+        "line": 2
+      },
+      "namespace": {
+        "value": "",
+        "line": 11
+      },
+      "varReference": {
+        "value": "",
+        "line": 18
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/crd/bases/taichu.demo_tcjobs.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apiextensions.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "CustomResourceDefinition",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "spec": {
+        "value": "",
+        "line": 9
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/crd/patches/cainjection_in_tcjobs.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apiextensions.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "CustomResourceDefinition",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/crd/patches/webhook_in_tcjobs.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apiextensions.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "CustomResourceDefinition",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "spec": {
+        "value": "",
+        "line": 6
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/default/kustomization.yaml",
+    "top_level_scalars": {
+      "namespace": {
+        "value": "operator-system",
+        "line": 2
+      },
+      "namePrefix": {
+        "value": "operator-",
+        "line": 9
+      },
+      "bases": {
+        "value": "",
+        "line": 15
+      },
+      "patchesStrategicMerge": {
+        "value": "",
+        "line": 27
+      },
+      "vars": {
+        "value": "",
+        "line": 45
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/default/manager_auth_proxy_patch.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apps/v1",
+        "line": 3
+      },
+      "kind": {
+        "value": "Deployment",
+        "line": 4
+      },
+      "metadata": {
+        "value": "",
+        "line": 5
+      },
+      "spec": {
+        "value": "",
+        "line": 8
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/default/manager_config_patch.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apps/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "Deployment",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "spec": {
+        "value": "",
+        "line": 6
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/manager/kustomization.yaml",
+    "top_level_scalars": {
+      "resources": {
+        "value": "",
+        "line": 1
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/manager/manager.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apps/v1",
+        "line": 14
+      },
+      "kind": {
+        "value": "Deployment",
+        "line": 15
+      },
+      "metadata": {
+        "value": "",
+        "line": 16
+      },
+      "spec": {
+        "value": "",
+        "line": 27
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/prometheus/kustomization.yaml",
+    "top_level_scalars": {
+      "resources": {
+        "value": "",
+        "line": 1
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/prometheus/monitor.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "monitoring.coreos.com/v1",
+        "line": 3
+      },
+      "kind": {
+        "value": "ServiceMonitor",
+        "line": 4
+      },
+      "metadata": {
+        "value": "",
+        "line": 5
+      },
+      "spec": {
+        "value": "",
+        "line": 16
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/auth_proxy_client_clusterrole.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "rules": {
+        "value": "",
+        "line": 12
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/auth_proxy_role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "rules": {
+        "value": "",
+        "line": 12
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/auth_proxy_role_binding.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ClusterRoleBinding",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "roleRef": {
+        "value": "",
+        "line": 12
+      },
+      "subjects": {
+        "value": "",
+        "line": 16
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/auth_proxy_service.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "Service",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "spec": {
+        "value": "",
+        "line": 14
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/kustomization.yaml",
+    "top_level_scalars": {
+      "resources": {
+        "value": "",
+        "line": 1
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/leader_election_role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "Role",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "rules": {
+        "value": "",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/leader_election_role_binding.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "RoleBinding",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "roleRef": {
+        "value": "",
+        "line": 12
+      },
+      "subjects": {
+        "value": "",
+        "line": 16
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "rules": {
+        "value": "",
+        "line": 7
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/role_binding.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ClusterRoleBinding",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "roleRef": {
+        "value": "",
+        "line": 12
+      },
+      "subjects": {
+        "value": "",
+        "line": 16
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/service_account.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ServiceAccount",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/tcjob_editor_role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "rules": {
+        "value": "",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/rbac/tcjob_viewer_role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "rules": {
+        "value": "",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "wang_operator",
+    "path": "marl平台代码/王思哲/code/operator/config/samples/taichu_v1_tcjob.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "taichu.demo/v1",
+        "line": 6
+      },
+      "kind": {
+        "value": "TCJob",
+        "line": 7
+      },
+      "metadata": {
+        "value": "",
+        "line": 8
+      },
+      "spec": {
+        "value": "",
+        "line": 10
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/crd/kustomization.yaml",
+    "top_level_scalars": {
+      "resources": {
+        "value": "",
+        "line": 4
+      },
+      "patchesStrategicMerge": {
+        "value": "",
+        "line": 8
+      },
+      "configurations": {
+        "value": "",
+        "line": 20
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/crd/kustomizeconfig.yaml",
+    "top_level_scalars": {
+      "nameReference": {
+        "value": "",
+        "line": 2
+      },
+      "namespace": {
+        "value": "",
+        "line": 11
+      },
+      "varReference": {
+        "value": "",
+        "line": 18
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/crd/bases/taichu.demo_tcjobs.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apiextensions.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "CustomResourceDefinition",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "spec": {
+        "value": "",
+        "line": 9
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/crd/patches/cainjection_in_tcjobs.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apiextensions.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "CustomResourceDefinition",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/crd/patches/webhook_in_tcjobs.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apiextensions.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "CustomResourceDefinition",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "spec": {
+        "value": "",
+        "line": 6
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/default/kustomization.yaml",
+    "top_level_scalars": {
+      "namespace": {
+        "value": "operator-system",
+        "line": 2
+      },
+      "namePrefix": {
+        "value": "operator-",
+        "line": 9
+      },
+      "bases": {
+        "value": "",
+        "line": 15
+      },
+      "patchesStrategicMerge": {
+        "value": "",
+        "line": 27
+      },
+      "vars": {
+        "value": "",
+        "line": 45
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/default/manager_auth_proxy_patch.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apps/v1",
+        "line": 3
+      },
+      "kind": {
+        "value": "Deployment",
+        "line": 4
+      },
+      "metadata": {
+        "value": "",
+        "line": 5
+      },
+      "spec": {
+        "value": "",
+        "line": 8
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/default/manager_config_patch.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apps/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "Deployment",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "spec": {
+        "value": "",
+        "line": 6
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/manager/kustomization.yaml",
+    "top_level_scalars": {
+      "resources": {
+        "value": "",
+        "line": 1
+      },
+      "apiVersion": {
+        "value": "kustomize.config.k8s.io/v1beta1",
+        "line": 3
+      },
+      "kind": {
+        "value": "Kustomization",
+        "line": 4
+      },
+      "images": {
+        "value": "",
+        "line": 5
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/manager/manager.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "apps/v1",
+        "line": 14
+      },
+      "kind": {
+        "value": "Deployment",
+        "line": 15
+      },
+      "metadata": {
+        "value": "",
+        "line": 16
+      },
+      "spec": {
+        "value": "",
+        "line": 27
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/prometheus/kustomization.yaml",
+    "top_level_scalars": {
+      "resources": {
+        "value": "",
+        "line": 1
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/prometheus/monitor.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "monitoring.coreos.com/v1",
+        "line": 3
+      },
+      "kind": {
+        "value": "ServiceMonitor",
+        "line": 4
+      },
+      "metadata": {
+        "value": "",
+        "line": 5
+      },
+      "spec": {
+        "value": "",
+        "line": 16
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/auth_proxy_client_clusterrole.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "rules": {
+        "value": "",
+        "line": 12
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/auth_proxy_role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "rules": {
+        "value": "",
+        "line": 12
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/auth_proxy_role_binding.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ClusterRoleBinding",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "roleRef": {
+        "value": "",
+        "line": 12
+      },
+      "subjects": {
+        "value": "",
+        "line": 16
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/auth_proxy_service.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "Service",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "spec": {
+        "value": "",
+        "line": 14
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/kustomization.yaml",
+    "top_level_scalars": {
+      "resources": {
+        "value": "",
+        "line": 1
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/leader_election_role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "Role",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "rules": {
+        "value": "",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/leader_election_role_binding.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "RoleBinding",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "roleRef": {
+        "value": "",
+        "line": 12
+      },
+      "subjects": {
+        "value": "",
+        "line": 16
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "rules": {
+        "value": "",
+        "line": 7
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/role_binding.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ClusterRoleBinding",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      },
+      "roleRef": {
+        "value": "",
+        "line": 12
+      },
+      "subjects": {
+        "value": "",
+        "line": 16
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/service_account.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "v1",
+        "line": 1
+      },
+      "kind": {
+        "value": "ServiceAccount",
+        "line": 2
+      },
+      "metadata": {
+        "value": "",
+        "line": 3
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/tcjob_editor_role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "rules": {
+        "value": "",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/rbac/tcjob_viewer_role.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "rbac.authorization.k8s.io/v1",
+        "line": 2
+      },
+      "kind": {
+        "value": "ClusterRole",
+        "line": 3
+      },
+      "metadata": {
+        "value": "",
+        "line": 4
+      },
+      "rules": {
+        "value": "",
+        "line": 13
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/samples/kuberay.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "ray.io/v1alpha1",
+        "line": 5
+      },
+      "kind": {
+        "value": "RayCluster",
+        "line": 6
+      },
+      "metadata": {
+        "value": "",
+        "line": 7
+      },
+      "spec": {
+        "value": "",
+        "line": 12
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/samples/schedule_test.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "taichu.demo/v1",
+        "line": 6
+      },
+      "kind": {
+        "value": "TCJob",
+        "line": 7
+      },
+      "metadata": {
+        "value": "",
+        "line": 8
+      },
+      "spec": {
+        "value": "",
+        "line": 10
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/samples/schedule_test2.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "taichu.demo/v1",
+        "line": 6
+      },
+      "kind": {
+        "value": "TCJob",
+        "line": 7
+      },
+      "metadata": {
+        "value": "",
+        "line": 8
+      },
+      "spec": {
+        "value": "",
+        "line": 10
+      }
+    }
+  },
+  {
+    "project": "yi_operator",
+    "path": "marl平台代码/易才润/基于K8s的集群资源调度管理系统/operator源代码闭源版本/config/samples/taichu_v1_tcjob.yaml",
+    "top_level_scalars": {
+      "apiVersion": {
+        "value": "taichu.demo/v1",
+        "line": 6
+      },
+      "kind": {
+        "value": "TCJob",
+        "line": 7
+      },
+      "metadata": {
+        "value": "",
+        "line": 8
+      },
+      "spec": {
+        "value": "",
+        "line": 10
+      }
+    }
+  }
+]

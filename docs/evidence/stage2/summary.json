@@ -1,0 +1,86 @@
+{
+  "stage": 2,
+  "status": "LOCAL_VALIDATION_PASSED_REAL_SMAC_BLOCKED",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.6.0+cpu",
+  "numpy": "1.26.4",
+  "yaml": "6.0.2",
+  "tests": 21,
+  "tests_failed": 0,
+  "installed_algorithms_validated": [
+    "qmix",
+    "vdn",
+    "iql",
+    "coma",
+    "qtran",
+    "qmix_beta",
+    "iql_beta",
+    "vdn_beta"
+  ],
+  "parity": [
+    {
+      "algorithm": "coma",
+      "seed": 2026,
+      "network_max_abs_error": 0.0,
+      "loss_abs_error": 0.0,
+      "updated_parameter_max_abs_error": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06,
+      "source": "G:\\AI\\Codex\\多智能体代码整合\\pymarl-master\\pymarl-master\\src",
+      "result": "PASS"
+    },
+    {
+      "algorithm": "iql",
+      "seed": 2026,
+      "network_max_abs_error": 0.0,
+      "loss_abs_error": 0.0,
+      "updated_parameter_max_abs_error": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06,
+      "source": "G:\\AI\\Codex\\多智能体代码整合\\pymarl-master\\pymarl-master\\src",
+      "result": "PASS"
+    },
+    {
+      "algorithm": "qmix",
+      "seed": 2026,
+      "network_max_abs_error": 0.0,
+      "loss_abs_error": 0.0,
+      "updated_parameter_max_abs_error": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06,
+      "source": "G:\\AI\\Codex\\多智能体代码整合\\pymarl-master\\pymarl-master\\src",
+      "result": "PASS"
+    },
+    {
+      "algorithm": "qtran",
+      "seed": 2026,
+      "network_max_abs_error": 0.0,
+      "loss_abs_error": 0.0,
+      "updated_parameter_max_abs_error": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06,
+      "source": "G:\\AI\\Codex\\多智能体代码整合\\pymarl-master\\pymarl-master\\src",
+      "result": "PASS"
+    },
+    {
+      "algorithm": "vdn",
+      "seed": 2026,
+      "network_max_abs_error": 0.0,
+      "loss_abs_error": 0.0,
+      "updated_parameter_max_abs_error": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06,
+      "source": "G:\\AI\\Codex\\多智能体代码整合\\pymarl-master\\pymarl-master\\src",
+      "result": "PASS"
+    }
+  ],
+  "smac": {
+    "status": "BLOCKED",
+    "reason": "SMAC is optional. Install unified-marl[smac] and configure a StarCraft II installation.",
+    "training_verified": false
+  },
+  "source_hash_records_unchanged": 1228,
+  "matrix_rows": 345,
+  "wheel": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\dist\\unified_marl-0.2.0-py3-none-any.whl"
+}

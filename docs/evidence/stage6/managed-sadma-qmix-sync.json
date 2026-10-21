@@ -1,0 +1,143 @@
+{
+  "result": "PASS",
+  "train": {
+    "algorithm": "sadma/qmix",
+    "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an0",
+    "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an0\\policy.pt",
+    "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an0\\training.pt",
+    "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an0\\metrics.jsonl",
+    "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_managed_training_modes_an0\\config.json",
+    "env_steps": 16,
+    "episodes": 4,
+    "updates": 2,
+    "parameter_delta_l2": 0.07573703633005187,
+    "metrics": {
+      "loss_td": 0.5446997880935669,
+      "grad_norm": 5.493360996246338,
+      "td_error_abs": 0.5446997880935669,
+      "q_taken_mean": -0.08777518570423126,
+      "target_mean": 0.3911578953266144,
+      "loss": 0.5446997880935669
+    }
+  },
+  "report": {
+    "mode": "sync",
+    "job_id": "8a8ed9ac91dc4672b0660ad03838eec5",
+    "cross_machine_verified": false,
+    "platform": "Windows spawn tested; other platforms NOT VALIDATED",
+    "status": "PASS",
+    "error": null,
+    "trainer_endpoint": "tcp://127.0.0.1:55010",
+    "inference_endpoints": [
+      "tcp://127.0.0.1:55019"
+    ],
+    "counters": {
+      "env_steps": 16,
+      "episodes": 4,
+      "updates": 2,
+      "last_update_episode": 4,
+      "episodes_accepted": 4,
+      "episodes_dropped_stale": 0,
+      "completed_steps": 16,
+      "inference_calls": 20,
+      "snapshot_syncs": 3,
+      "mixed_version_episodes": 0
+    },
+    "sync_acknowledgements": [
+      {
+        "worker": 0,
+        "version": 0,
+        "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+      },
+      {
+        "worker": 0,
+        "version": 1,
+        "digest": "76a332ab1fd43811dbbdfbc7538bfee569581eb1bdd6c59f76804f4e5a23e391"
+      },
+      {
+        "worker": 0,
+        "version": 2,
+        "digest": "dec1cad3cf11e426af8ba63d44b7c2f3ef5c17bbfb62a83292197c1e3a257484"
+      }
+    ],
+    "lifecycle": {
+      "processes": [
+        {
+          "role": "infer-0",
+          "pid": 42220,
+          "exitcode": 0,
+          "alive": false
+        },
+        {
+          "role": "sampler-0",
+          "pid": 50576,
+          "exitcode": 0,
+          "alive": false
+        },
+        {
+          "role": "sampler-1",
+          "pid": 10964,
+          "exitcode": 0,
+          "alive": false
+        }
+      ],
+      "forced": [],
+      "events": [
+        {
+          "role": "sampler-1",
+          "kind": "PROCESS_STARTED",
+          "worker_id": 1
+        },
+        {
+          "role": "sampler-0",
+          "kind": "PROCESS_STARTED",
+          "worker_id": 0
+        },
+        {
+          "role": "sampler-1",
+          "kind": "STOPPED",
+          "worker_id": 1,
+          "env_closed": true,
+          "error": null
+        },
+        {
+          "role": "sampler-0",
+          "kind": "STOPPED",
+          "worker_id": 0,
+          "env_closed": true,
+          "error": null
+        }
+      ]
+    },
+    "evaluation": {
+      "records": [],
+      "skipped_busy_updates": [],
+      "forced": false
+    },
+    "partial_confirmed_steps": 0,
+    "samplers_closed": 2,
+    "inference_stop_reports": [
+      {
+        "kind": "STOPPED",
+        "calls": 20,
+        "syncs": [
+          {
+            "version": 0,
+            "digest": "4fd7cb5cde1b977e7b141089ee349c272a2b872f83b684dbc6b9f14f8d8364d4"
+          },
+          {
+            "version": 1,
+            "digest": "76a332ab1fd43811dbbdfbc7538bfee569581eb1bdd6c59f76804f4e5a23e391"
+          },
+          {
+            "version": 2,
+            "digest": "dec1cad3cf11e426af8ba63d44b7c2f3ef5c17bbfb62a83292197c1e3a257484"
+          }
+        ],
+        "sync_count": 3,
+        "request_id": 24
+      }
+    ]
+  },
+  "ports_rebound": true
+}

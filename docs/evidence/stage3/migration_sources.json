@@ -1,0 +1,530 @@
+[
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/components/action_selectors.py",
+    "source_sha256": "f9dbc6051114b31f255556c638a83ecd3ed093ac6e1de5e42ebdd8af5ec705b6",
+    "target": "src/unified_marl/algorithms/rghmf/components/action_selectors.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/components/episode_buffer.py",
+    "source_sha256": "26b2f8f442792f66709137a32e749107c6d1379beab064d1f42993943fc416d0",
+    "target": "src/unified_marl/algorithms/rghmf/components/episode_buffer.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/components/epsilon_schedules.py",
+    "source_sha256": "3a37fe95e641b8cb84c329ac655383aa84c4080569d1ef606660bb9e512b7473",
+    "target": "src/unified_marl/algorithms/rghmf/components/epsilon_schedules.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/components/transforms.py",
+    "source_sha256": "0884dccb4d105a823c3487b09cfae0c47a09d5c1f044781f1d857cac3252157a",
+    "target": "src/unified_marl/algorithms/rghmf/components/transforms.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/components/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/algorithms/rghmf/components/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/controllers/basic_controller.py",
+    "source_sha256": "9f9c7da6f6a42648c228c03008311490c42d0fadd335b5d647a5b203b8857c26",
+    "target": "src/unified_marl/algorithms/rghmf/controllers/basic_controller.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/controllers/rode_controller.py",
+    "source_sha256": "d89bb41e10ebb88cf47553d359ee74cbb922ec6415c010a11e9da61632872428",
+    "target": "src/unified_marl/algorithms/rghmf/controllers/rode_controller.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/controllers/__init__.py",
+    "source_sha256": "baa72c97238f5a22b3da52beeea3c38c2c1502cbdec470da57d98cb5a5e5e740",
+    "target": "src/unified_marl/algorithms/rghmf/controllers/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/coma_learner.py",
+    "source_sha256": "b1405cc36d850e0a250ecbf600d94f2d9c8e05f722701c9beffa778c8acd4b36",
+    "target": "src/unified_marl/algorithms/rghmf/learners/coma_learner.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/qtran_learner.py",
+    "source_sha256": "c12ac82be6fb0f2891d9dfe184adb2fe5cdc7483782b5fce528f877149e19287",
+    "target": "src/unified_marl/algorithms/rghmf/learners/qtran_learner.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/q_learner.py",
+    "source_sha256": "ffef0b0c7db6c11f47698805fddce1df10194ece359eaabe9978865ff577527e",
+    "target": "src/unified_marl/algorithms/rghmf/learners/q_learner.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/rode_hmf_learner.py",
+    "source_sha256": "85f3505260589cefa66c8de89e090df449c21d2299b7d8215ed930c6e4552946",
+    "target": "src/unified_marl/algorithms/rghmf/learners/rode_hmf_learner.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/rode_learner.py",
+    "source_sha256": "17331bd6124446f0d83061ee961b80e36dc4c8aa8319093cf7a5cd081f7169d6",
+    "target": "src/unified_marl/algorithms/rghmf/learners/rode_learner.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/learners/__init__.py",
+    "source_sha256": "627033c628dd6051c12b619c853a85470e1ec17aea8b1427fcd26cf2b7449986",
+    "target": "src/unified_marl/algorithms/rghmf/learners/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/algorithms/rghmf/modules/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/action_encoders/obs_reward_encoder.py",
+    "source_sha256": "1666a8319df9c04c76bbb81e8b621dafd6e1d6d17b670e8adbced30b82274a12",
+    "target": "src/unified_marl/algorithms/rghmf/modules/action_encoders/obs_reward_encoder.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/action_encoders/__init__.py",
+    "source_sha256": "a8315667b56ab03dbb20becc8b53f48732ecc0c4abbde0bf0ca087de222af366",
+    "target": "src/unified_marl/algorithms/rghmf/modules/action_encoders/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/agents/rnn_agent.py",
+    "source_sha256": "c14fc450038da2446642cb0575b480f21b5c53faca72f7640faff788a6b80ec9",
+    "target": "src/unified_marl/algorithms/rghmf/modules/agents/rnn_agent.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/agents/rode_agent.py",
+    "source_sha256": "8205040e632d26a7b6d5cb1e61e3c970dc02affaf898e9feb0e2c3d311550c1f",
+    "target": "src/unified_marl/algorithms/rghmf/modules/agents/rode_agent.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/agents/__init__.py",
+    "source_sha256": "c5b9cac743be951d5a1a04eb69610eb1ef3d13bdb65c8c8e25433cbe405a4f8a",
+    "target": "src/unified_marl/algorithms/rghmf/modules/agents/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/base/networks.py",
+    "source_sha256": "c49aa0f576dabe3c217e99fb9993576e32b24303b7bb10db556de09c20783fcc",
+    "target": "src/unified_marl/algorithms/rghmf/modules/base/networks.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/critics/coma.py",
+    "source_sha256": "5a8f502cacea8d58f907bfd84ae62f79424f994afaae1e784dcb57835278be0e",
+    "target": "src/unified_marl/algorithms/rghmf/modules/critics/coma.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/critics/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/algorithms/rghmf/modules/critics/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/mixers/qmix.py",
+    "source_sha256": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "target": "src/unified_marl/algorithms/rghmf/modules/mixers/qmix.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/mixers/qtran.py",
+    "source_sha256": "b67b60eb5c39908aa6c9d8ecf5b67ef2a7da0ef0472b10cdf1eaa71674cb4a29",
+    "target": "src/unified_marl/algorithms/rghmf/modules/mixers/qtran.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/mixers/vdn.py",
+    "source_sha256": "1681c32585cda8065fc82e66cb0670282334067eeb4f2162f28f39d7876b813a",
+    "target": "src/unified_marl/algorithms/rghmf/modules/mixers/vdn.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/mixers/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/algorithms/rghmf/modules/mixers/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/roles/dot_role.py",
+    "source_sha256": "d5028fc15ccd5adfcf9d670ce5f6dd68524b3955f324a6a0325f77c3f9d6f269",
+    "target": "src/unified_marl/algorithms/rghmf/modules/roles/dot_role.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/roles/q_role.py",
+    "source_sha256": "c8a3a4415d8399bb49a8e83d9103ecfcb41af3119a083a305666cb3c1236904d",
+    "target": "src/unified_marl/algorithms/rghmf/modules/roles/q_role.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/roles/__init__.py",
+    "source_sha256": "245634673aa93dbf483c7fcd1059f3148205d48027976b1974a3038cee38f7a4",
+    "target": "src/unified_marl/algorithms/rghmf/modules/roles/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/role_selectors/dot_selector.py",
+    "source_sha256": "149d59244afec1bb384ded14554599e1d38e82e279f059bf560e9c0b7193c5de",
+    "target": "src/unified_marl/algorithms/rghmf/modules/role_selectors/dot_selector.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/role_selectors/q_selector.py",
+    "source_sha256": "9dedca13f49babe68f654e6114b4ce06c52b10b1411f33c50a711dfc0dad4f5f",
+    "target": "src/unified_marl/algorithms/rghmf/modules/role_selectors/q_selector.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/modules/role_selectors/__init__.py",
+    "source_sha256": "a8bbf36f60ac2116dc1ca3fd815a48d1926c6f45b24c639e11dd9d8bed617379",
+    "target": "src/unified_marl/algorithms/rghmf/modules/role_selectors/__init__.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/utils/dict2namedtuple.py",
+    "source_sha256": "6f0ebf7235eaeadb95cdb100bbd3d67c93d421395ec7881e8f167b4056158364",
+    "target": "src/unified_marl/algorithms/rghmf/utils/dict2namedtuple.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/utils/logging.py",
+    "source_sha256": "88509ae51203772fb3d1d197a44dde074b8275cc704a9db9cadc40784314b4a6",
+    "target": "src/unified_marl/algorithms/rghmf/utils/logging.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/utils/rl_utils.py",
+    "source_sha256": "f675e6e831b28a022f61a9cd54a468e0e947d90cdbc4b0dc4a0b5c84e92d9715",
+    "target": "src/unified_marl/algorithms/rghmf/utils/rl_utils.py"
+  },
+  {
+    "family": "rghmf",
+    "source": "marl平台代码/王思哲/code/large_scale/RGHMF/utils/timehelper.py",
+    "source_sha256": "9705deb0ea64cd501a4eef83f55179777bdd477a3cd602d1f3e82b5eebccac12",
+    "target": "src/unified_marl/algorithms/rghmf/utils/timehelper.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/dqn_agents.py",
+    "source_sha256": "567b72c1b8343264c661c1e6deeebbc9174d7e2b52d501999721fd486feb7fc7",
+    "target": "src/unified_marl/algorithms/hmf/agent/dqn_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/hierarchical_agent.py",
+    "source_sha256": "369db30329dc13f83cd24b324895a0a264914d07ca54c606b50b15cea9ae0835",
+    "target": "src/unified_marl/algorithms/hmf/agent/hierarchical_agent.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/hierarchical_qmix_agent.py",
+    "source_sha256": "7b00654864cd75d03252d5b3fa7737cb193d2e366b0fbf8defeb4ab34b6bb0cd",
+    "target": "src/unified_marl/algorithms/hmf/agent/hierarchical_qmix_agent.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/hierarchical_roma_agents.py",
+    "source_sha256": "b2ed0b850c4d00114b66181464f887276c97e811c4960a38219a3c512a69080c",
+    "target": "src/unified_marl/algorithms/hmf/agent/hierarchical_roma_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/hierarchical_vdac_agent.py",
+    "source_sha256": "510fa65cf5f5dd85ef2199c596bb2fed70e4df2cd2ca9cf1a2b53062edfb7692",
+    "target": "src/unified_marl/algorithms/hmf/agent/hierarchical_vdac_agent.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/hierarchical_vdn_agents.py",
+    "source_sha256": "e4a91a190578354ad90063f8bd219eaf78d6436f27451fb801def4fab2697578",
+    "target": "src/unified_marl/algorithms/hmf/agent/hierarchical_vdn_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/hierarchical_vdn_agents_IPC.py",
+    "source_sha256": "53205a4be08b4a56f39b71fa466e7051bee958c70c2612f644d88e5f62784b06",
+    "target": "src/unified_marl/algorithms/hmf/agent/hierarchical_vdn_agents_IPC.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/maddpg_agents.py",
+    "source_sha256": "278ca0e06c9a76835543383836285b0db0d5d43792ceda48b7d9dd7f1b5b4efb",
+    "target": "src/unified_marl/algorithms/hmf/agent/maddpg_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/mfac_agents.py",
+    "source_sha256": "0a0126edc04bc393e4031ddb80f3c3b57ff433e22cc333fd304b37be50f6db08",
+    "target": "src/unified_marl/algorithms/hmf/agent/mfac_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/mfq_agents.py",
+    "source_sha256": "567b72c1b8343264c661c1e6deeebbc9174d7e2b52d501999721fd486feb7fc7",
+    "target": "src/unified_marl/algorithms/hmf/agent/mfq_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/mfvfd_agents.py",
+    "source_sha256": "a6c19efa9f2ccb3af48008404f2eb8f13964bd04df9ba7bf2f44eab0ddbb61c1",
+    "target": "src/unified_marl/algorithms/hmf/agent/mfvfd_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/qmix_agents.py",
+    "source_sha256": "8e324ea8ead0fa4924a85081ee1ce0b071e2925755928e2b8179050ef18a3f8f",
+    "target": "src/unified_marl/algorithms/hmf/agent/qmix_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/rode_action_encoder.py",
+    "source_sha256": "312bb20ae532cef747dbd7bffe459d407158806ff247353e5babb07e1e24ee72",
+    "target": "src/unified_marl/algorithms/hmf/agent/rode_action_encoder.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/rode_agents.py",
+    "source_sha256": "a7971e73414ae757eecf1072f16562219f197ca7dc4adb9d40b49c573cea22fa",
+    "target": "src/unified_marl/algorithms/hmf/agent/rode_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/rode_selector.py",
+    "source_sha256": "c4c443bb6a89465e480888fad3bd8a0d2c41b619283e58e30c6a1e861b06f880",
+    "target": "src/unified_marl/algorithms/hmf/agent/rode_selector.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/roma_agent.py",
+    "source_sha256": "238df71eed5cd38786e84e8ea76a53fefe2bb02d9bb7bde316c972fc27fedd69",
+    "target": "src/unified_marl/algorithms/hmf/agent/roma_agent.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/agent/vdn_agents.py",
+    "source_sha256": "7f3cdc11a8bc36d67dfaede370933d9fcead3b781319c2fe0b98f16fa1a8d9b2",
+    "target": "src/unified_marl/algorithms/hmf/agent/vdn_agents.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/dqn.py",
+    "source_sha256": "773f99b531634329c4d6b0459f66cb372e05aeaabf529a1e69510fc3881b5577",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/dqn.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical.py",
+    "source_sha256": "80175436ea52ad26153f9a642063b8a482a8957b88ff76f367337124896a674b",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_qmix.py",
+    "source_sha256": "e078de83de6530553ef8a09c11e957ebc100661c84d478db68870312180f486a",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_qmix.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdac.py",
+    "source_sha256": "9f158d6028fcb6905f45b01652c4b851a1749b8012e1add81acbed2b8ae2ba41",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_vdac.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn copy.py",
+    "source_sha256": "2f3c66f84a1ea5ddb7d164af99a3fdbe0f07f969814d27bc6acb6eab843c6dcc",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_vdn copy.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn.py",
+    "source_sha256": "ff5f9cd5022f845ae5596a611f53263f62e863b20330ec7429f65f48172ec7de",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_vdn.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_02_formulate_meanQ.py",
+    "source_sha256": "258e56c16ce2f0c4dac9e3d295b8b16b156c0564a45ede49a269c8f07e1d2d7f",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_02_formulate_meanQ.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_02_formulate_meanQ_IPC.py",
+    "source_sha256": "403bef6cc28c4f7a6dbaf51cc83c8e8950c8290d8f20a0e81a56bc5e7cb40778",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_02_formulate_meanQ_IPC.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_IPC.py",
+    "source_sha256": "b8d1c97a1fe5bb5e03825fe01246ad3ee3d818d6ca080a8b5afda8e6a0a13bf0",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_IPC.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_k_means.py",
+    "source_sha256": "e6f2b67437abfbc28b42922ca7b3ff7ae337da8ff048fdadfc811155fb4f9c71",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_k_means.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_roma.py",
+    "source_sha256": "6292aed5929b75ac4ed404c4e0cb9d4014162a663028f673f07a7406aac33450",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_roma.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/hierarchical_vdn_without_high_level.py",
+    "source_sha256": "b2e6571624e1b5c996e118d94f3376e04df0dd258f1a9e3a99817d5c48a6d74e",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_without_high_level.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/maddpg.py",
+    "source_sha256": "9cc52eaf08406fb9d92832ec9d035af8e8e3b8a31048dda168a176bf8fd4ba31",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/maddpg.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/mfac.py",
+    "source_sha256": "81c0d67aa84b1b168aa566deb02e2e4f346b67b0df410ea82acb9740f09760b4",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/mfac.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/mfq.py",
+    "source_sha256": "fd46c9885d252d40884998d3fbcca427264281c0a7a62ac348eaa35aca36f8a8",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/mfq.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/mfvfd.py",
+    "source_sha256": "10b7330757536ca80d4c509c899d4d55bbcece309ac5d59767b7870e5238da68",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/mfvfd.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/qmix.py",
+    "source_sha256": "cf864e6aba9300eccd3754bd038cb45bf43680b4b9b71162e9e50306493f3ff8",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/qmix.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/vdn.py",
+    "source_sha256": "671b1e0fc7fbde8d7f2dde5227407b07005de496b05103df0b02d38e408522f8",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/vdn.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/algorithms/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/algorithms/hmf/algorithms/__init__.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/buffer.py",
+    "source_sha256": "dc35bf70de1c9fd8831c07970a5d0d74790658584e3699edeff0a8d47f9f0f23",
+    "target": "src/unified_marl/algorithms/hmf/utils/buffer.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/buffer_mfq.py",
+    "source_sha256": "c36dac3042535fe265efda0154d032cc0154c2eff452550adc146b828a6f35c8",
+    "target": "src/unified_marl/algorithms/hmf/utils/buffer_mfq.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/buffer_roma.py",
+    "source_sha256": "58e0c7c90b411999524a706983e1df7da745ae66151ebcb4b32b37dd5b195a0b",
+    "target": "src/unified_marl/algorithms/hmf/utils/buffer_roma.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/create_map.py",
+    "source_sha256": "7ce7e897c0357b526ad08987e280dca5bdfff01648f7064204b54be7468ba6af",
+    "target": "src/unified_marl/algorithms/hmf/utils/create_map.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/env_wrappers.py",
+    "source_sha256": "de69b0f06e1f2d4f647cadc0cfe53c2196a0c57d060415b75989c9e2c08470f2",
+    "target": "src/unified_marl/algorithms/hmf/utils/env_wrappers.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/gnn.py",
+    "source_sha256": "ed178a00051c6605346b5cc0131662f795bc839fec31988e31f80c03654c6148",
+    "target": "src/unified_marl/algorithms/hmf/utils/gnn.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/make_env.py",
+    "source_sha256": "860cfca40909beee8d8b4e486eebf7dc51898ccffd02c4b7d0af27780c0ffbcd",
+    "target": "src/unified_marl/algorithms/hmf/utils/make_env.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/misc.py",
+    "source_sha256": "88aeff6129e5f6ded4acdf749ad7a8fc82054f092d04ad6f8a5ddd3a0d59d4ab",
+    "target": "src/unified_marl/algorithms/hmf/utils/misc.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/multiagentenv.py",
+    "source_sha256": "3e17a3c78277403654f26fc6ace22cb4d2be4de98dece06b3e6da239cbd77fcf",
+    "target": "src/unified_marl/algorithms/hmf/utils/multiagentenv.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/networks.py",
+    "source_sha256": "3e2387e87f1b4f22a210aa55efd73621f55af99c624e780f3d77c0eefd588470",
+    "target": "src/unified_marl/algorithms/hmf/utils/networks.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/noise.py",
+    "source_sha256": "96c8e9527ea7c2e00cf886e5d17206fdcb1e56c14ad9f300d2ae95cfcaa4976b",
+    "target": "src/unified_marl/algorithms/hmf/utils/noise.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/ReplenishmentEnv.py",
+    "source_sha256": "6f38ae051d2ca7046caf2d5c78bc75b72315125857f84327627d31356cb57462",
+    "target": "src/unified_marl/algorithms/hmf/utils/ReplenishmentEnv.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/replenishment_env_wrappers.py",
+    "source_sha256": "0e89b9bf27de161dbb95ba28be1c542aa016b682380ad2e5888e54e7e709e6a6",
+    "target": "src/unified_marl/algorithms/hmf/utils/replenishment_env_wrappers.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/vec_env.py",
+    "source_sha256": "9fad81453513320697057928f84c30d6ea0cce5a1d531ab1bf54ff22d4a64eb2",
+    "target": "src/unified_marl/algorithms/hmf/utils/vec_env.py"
+  },
+  {
+    "family": "hmf",
+    "source": "marl平台代码/王思哲/code/large_scale/hmf_replenishment/utils/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/algorithms/hmf/utils/__init__.py"
+  }
+]

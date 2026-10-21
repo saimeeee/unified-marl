@@ -1,0 +1,224 @@
+[
+  {
+    "model": "MR",
+    "status": "PASS",
+    "result": {
+      "model_type": "MR",
+      "updates": 1,
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\MR",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\MR\\reward.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\MR\\reward-training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\MR\\metrics.jsonl",
+      "parameter_delta_l2": 0.013430027999095163,
+      "output_semantics": "team",
+      "metrics": {
+        "trans_loss": 0.6932463645935059,
+        "pi_loss": 0.5578436851501465,
+        "loss": 0.5816776156425476
+      }
+    },
+    "prediction_shape": [
+      2,
+      16,
+      1
+    ],
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "model": "NMR",
+    "status": "NO_PARAMETER_CHANGE",
+    "result": {
+      "model_type": "NMR",
+      "updates": 1,
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\NMR",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\NMR\\reward.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\NMR\\reward-training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\NMR\\metrics.jsonl",
+      "parameter_delta_l2": 0.0,
+      "output_semantics": "team",
+      "metrics": {
+        "trans_loss": 0.6931471824645996,
+        "pi_loss": 0.49747955799102783,
+        "loss": 0.593651294708252
+      }
+    },
+    "prediction_shape": [
+      2,
+      16,
+      1
+    ],
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "model": "PrefTransformer",
+    "status": "PASS",
+    "result": {
+      "model_type": "PrefTransformer",
+      "updates": 1,
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\PrefTransformer",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\PrefTransformer\\reward.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\PrefTransformer\\reward-training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\PrefTransformer\\metrics.jsonl",
+      "parameter_delta_l2": 0.006376207367118519,
+      "output_semantics": "team",
+      "metrics": {
+        "trans_loss": 0.7176679968833923,
+        "pi_loss": 0.4039115905761719,
+        "loss": 0.6368857026100159
+      }
+    },
+    "prediction_shape": [
+      2,
+      16,
+      1
+    ],
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "model": "MultiPrefTransformerDivide",
+    "status": "PASS",
+    "result": {
+      "model_type": "MultiPrefTransformerDivide",
+      "updates": 1,
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\MultiPrefTransformerDivide",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\MultiPrefTransformerDivide\\reward.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\MultiPrefTransformerDivide\\reward-training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\MultiPrefTransformerDivide\\metrics.jsonl",
+      "parameter_delta_l2": 0.019697661128893453,
+      "output_semantics": "individual",
+      "metrics": {
+        "trans_loss": 2.572345733642578,
+        "pi_loss": 0.5118381977081299,
+        "loss": 2.469978094100952
+      }
+    },
+    "prediction_shape": [
+      2,
+      16,
+      3,
+      1
+    ],
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "model": "old_global",
+    "status": "PASS",
+    "result": {
+      "model_type": "old_global",
+      "updates": 1,
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\old_global",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\old_global\\reward.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\old_global\\reward-training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\old_global\\metrics.jsonl",
+      "parameter_delta_l2": 0.028174027380961992,
+      "output_semantics": "team",
+      "metrics": {
+        "loss": 1.3309779167175293,
+        "accuracy": 0.75
+      }
+    },
+    "prediction_shape": [
+      2,
+      16,
+      1
+    ],
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou_old/qmix_w_globalRM",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou_old/qmix_w_globalRM",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qmix_w_globalRM",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qmix_w_globalRM\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qmix_w_globalRM\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qmix_w_globalRM\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qmix_w_globalRM\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.12760426289062538,
+      "metrics": {
+        "loss": 0.028413349762558937,
+        "grad_norm": 0.5217524170875549,
+        "td_error_abs": 0.13137888113657634,
+        "q_taken_mean": 0.03449633121490479,
+        "target_mean": 0.061182165145874025
+      }
+    }
+  },
+  {
+    "algorithm": "kou_old/qplex_w_globalRM",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou_old/qplex_w_globalRM",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qplex_w_globalRM",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qplex_w_globalRM\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qplex_w_globalRM\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qplex_w_globalRM\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\kou_old-qplex_w_globalRM\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.07390248977840626,
+      "metrics": {
+        "loss": 0.003658129135146737,
+        "hit_prob": 0.5611111521720886,
+        "grad_norm": 0.0896068811416626,
+        "td_error_abs": 0.04953744411468506,
+        "q_taken_mean": 0.07177552117241753,
+        "target_mean": 0.06775409380594889
+      }
+    }
+  },
+  {
+    "model": "old_reward_global",
+    "status": "PASS",
+    "result": {
+      "model_type": "old_reward_global",
+      "updates": 1,
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\old_reward_global",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\old_reward_global\\reward.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\old_reward_global\\reward-training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\old_reward_global\\metrics.jsonl",
+      "parameter_delta_l2": 0.02821248193839277,
+      "output_semantics": "team",
+      "metrics": {
+        "loss": 1.3683269619941711,
+        "accuracy": 0.625
+      }
+    },
+    "prediction_shape": [
+      2,
+      16,
+      1
+    ],
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "model": "old_new_global",
+    "status": "BLOCKED",
+    "error": "'NoneType' object has no attribute 'load_models'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_rewards.py\", line 20, in main\n    result=train_reward_model(name,str(path),updates=1,batch_size=4,output_dir=runs/name,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 21, in train_reward_model\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\rewards\\__init__.py\", line 4, in train_reward_model\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\rewards\\service.py\", line 239, in train_reward_model\n    model=RewardModel(model_type,data.env_info,device=check_device(device),model_config=model_config,mode=mode)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\rewards\\service.py\", line 57, in __init__\n    self._construct_old()\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\rewards\\service.py\", line 101, in _construct_old\n    else: self.native = module.RewardModel(args,None,Logger())\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\old\\components\\reward_model_new.py\", line 89, in __init__\n    self.mac.load_models(self.args.policy_dir)\n    ^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'load_models'\n"
+  },
+  {
+    "model": "MultiPrefTransformerDivide/diverse",
+    "status": "PASS",
+    "result": {
+      "model_type": "MultiPrefTransformerDivide",
+      "updates": 1,
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\diverse",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\diverse\\reward.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\diverse\\reward-training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-reward-probes\\4de24559\\diverse\\metrics.jsonl",
+      "parameter_delta_l2": 0.01935365895984623,
+      "output_semantics": "individual",
+      "metrics": {
+        "trans_loss": 1.1014034748077393,
+        "loss": 3.352745532989502,
+        "in_loss": 0.7105808854103088,
+        "between_loss": 0.8301801681518555
+      }
+    }
+  }
+]

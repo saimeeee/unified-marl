@@ -1,0 +1,16 @@
+sadma/qmix PASS
+sadma/ppo PASS
+sadma/vdn PASS
+sadma_yi/qmix PASS
+sadma_yi/ppo PASS
+sadma_yi_closed/qmix PASS
+sadma_yi_closed/ppo PASS
+pymarl/qmix REGRESSION_PASS
+wang/rode_hmf REGRESSION_PASS
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+wang_hmf/mfq REGRESSION_PASS
+kou/bc REAL_DATA_REGRESSION_PASS
+kou/cpl REAL_DATA_REGRESSION_PASS

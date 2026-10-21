@@ -1,0 +1,26 @@
+kou/bc PASS 
+kou/cpl PASS 
+kou/icq_ma PASS 
+kou/iql PASS 
+kou/cql PASS 
+kou/dppo PASS 
+kou/madpo_aux PASS 
+kou/madpo PASS 
+kou/bcmapt PASS 
+kou/acpl BLOCKED AttributeError: 'types.SimpleNamespace' object has no attribute 'NLL_lamda'
+training!
+kou/bcq_qmix BLOCKED ValueError: too many values to unpack (expected 3)
+training!
+kou/bcq_vdn BLOCKED ValueError: too many values to unpack (expected 3)
+kou_old/qmix PASS 
+kou_old/qmix_differ BLOCKED KeyError: 'indi_terminated'
+kou_old/qplex PASS 
+kou_old/cw_qmix PASS 
+kou_old/ow_qmix PASS 
+kou_old/qmix_w_globalRM BLOCKED KeyError: 'reward_hat'
+kou_old/qmix_new BLOCKED ValueError: This historical variant requires its actual reference policy_dir; no policy is substituted
+kou_old/pref_qmix BLOCKED FileNotFoundError: [Errno 2] No such file or directory: 'None/agent.th'
+kou_old/pref_qmix_new BLOCKED ValueError: This historical variant requires its actual reference policy_dir; no policy is substituted
+kou_old/qplex_w_globalRM BLOCKED KeyError: 'reward_hat'
+kou_old/cw_qmix_w_globalRM PASS 
+kou_old/ow_qmix_w_globalRM PASS 

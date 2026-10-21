@@ -1,0 +1,29 @@
+{
+  "train": {
+    "algorithm": "pymarl/coma",
+    "output_dir": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_training_evaluation_infer3\\coma",
+    "checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_training_evaluation_infer3\\coma\\policy.pt",
+    "training_checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_training_evaluation_infer3\\coma\\training.pt",
+    "metrics_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_training_evaluation_infer3\\coma\\metrics.jsonl",
+    "config_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_training_evaluation_infer3\\coma\\config.json",
+    "env_steps": 24,
+    "episodes": 6,
+    "updates": 3,
+    "parameter_delta_l2": 0.20380624961178967,
+    "metrics": {
+      "loss": 0.006032904610037804,
+      "coma_loss": 0.006032904610037804,
+      "critic_loss": 0.28786156699061394,
+      "grad_norm": 0.04599243775010109
+    }
+  },
+  "evaluation": {
+    "episodes": 2,
+    "returns": [
+      2.0,
+      2.0
+    ],
+    "return_mean": 2.0,
+    "return_std": 0.0
+  }
+}

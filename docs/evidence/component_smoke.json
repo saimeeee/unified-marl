@@ -1,0 +1,47 @@
+{
+  "source": "pymarl-master/pymarl-master/src/components/epsilon_schedules.py",
+  "result": "PASS",
+  "cases": [
+    {
+      "decay": "linear",
+      "t": 0,
+      "epsilon": 1.0
+    },
+    {
+      "decay": "linear",
+      "t": 50,
+      "epsilon": 0.525
+    },
+    {
+      "decay": "linear",
+      "t": 100,
+      "epsilon": 0.050000000000000044
+    },
+    {
+      "decay": "linear",
+      "t": 200,
+      "epsilon": 0.05
+    },
+    {
+      "decay": "exp",
+      "t": 0,
+      "epsilon": 1.0
+    },
+    {
+      "decay": "exp",
+      "t": 50,
+      "epsilon": 0.223606797749979
+    },
+    {
+      "decay": "exp",
+      "t": 100,
+      "epsilon": 0.05000000000000001
+    },
+    {
+      "decay": "exp",
+      "t": 200,
+      "epsilon": 0.05
+    }
+  ],
+  "scope": "Original epsilon schedule component only; NOT a training baseline"
+}

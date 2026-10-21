@@ -1,0 +1,134 @@
+[
+  {
+    "source": "pymarl-master/pymarl-master/src/components/action_selectors.py",
+    "source_sha256": "01e85a7ca69fa5589a52bb96688dd15ef5cd052e6016cfa37cf560a3dcb0a57f",
+    "target": "src/unified_marl/components/action_selectors.py",
+    "initial_target_sha256": "50505affe5b9240e69c13f927bcb22ece2443eea84737c5c9811260f549f75a6"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/components/episode_buffer.py",
+    "source_sha256": "26b2f8f442792f66709137a32e749107c6d1379beab064d1f42993943fc416d0",
+    "target": "src/unified_marl/components/episode_buffer.py",
+    "initial_target_sha256": "069c318603c71ff2a2f8562a781fd652df27809c73ec92a95fa4e3ad128f2ea1"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/components/epsilon_schedules.py",
+    "source_sha256": "42bc0b063e1619f57b022b7fdf8bf007394fd63a78f2375a579372eb0a6abb93",
+    "target": "src/unified_marl/components/epsilon_schedules.py",
+    "initial_target_sha256": "9bf266394693a9d31b3b80554e3396d79ce8d3e0217c2e89b9317cd9adce32d5"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/components/transforms.py",
+    "source_sha256": "0884dccb4d105a823c3487b09cfae0c47a09d5c1f044781f1d857cac3252157a",
+    "target": "src/unified_marl/components/transforms.py",
+    "initial_target_sha256": "29bf96a61ab1f8163393116425996b584f9b7cd3215e434dcb1f093fe4e3d1b6"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/components/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/components/__init__.py",
+    "initial_target_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/controllers/basic_controller.py",
+    "source_sha256": "9f9c7da6f6a42648c228c03008311490c42d0fadd335b5d647a5b203b8857c26",
+    "target": "src/unified_marl/controllers/basic_controller.py",
+    "initial_target_sha256": "3fe5a809ec099e9c352dddf3984ce6fe84be775bd11cbc0bfde147deefde26d3"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/controllers/__init__.py",
+    "source_sha256": "5e5c5b78b2141934ac82ee248c832c2b7a0e4315ddf915f5a9a9424e8321d50b",
+    "target": "src/unified_marl/controllers/__init__.py",
+    "initial_target_sha256": "81041d6af181f420ce1783cf05a5c30eee30ebb2eb85c9d635aff9a67b59062d"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/learners/coma_learner.py",
+    "source_sha256": "b1405cc36d850e0a250ecbf600d94f2d9c8e05f722701c9beffa778c8acd4b36",
+    "target": "src/unified_marl/learners/coma_learner.py",
+    "initial_target_sha256": "fc6f6abc56a6461e9f0a782f54dc84977d54ac98d54f50a031227dbbac6daa0d"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/learners/qtran_learner.py",
+    "source_sha256": "c12ac82be6fb0f2891d9dfe184adb2fe5cdc7483782b5fce528f877149e19287",
+    "target": "src/unified_marl/learners/qtran_learner.py",
+    "initial_target_sha256": "f6b4ccee27b6243e42991e9267d6ebb6d9621da01fee84f391485381603cc02b"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/learners/q_learner.py",
+    "source_sha256": "ffef0b0c7db6c11f47698805fddce1df10194ece359eaabe9978865ff577527e",
+    "target": "src/unified_marl/learners/q_learner.py",
+    "initial_target_sha256": "7c69df1c56b34beef38159fed64a36106f08a3a4f4fdce07cc6620bfa70e8cc5"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/learners/__init__.py",
+    "source_sha256": "411f810e95e369b0ece215684bb4bccbaf4400b2a2d19f3609a395b611fca80c",
+    "target": "src/unified_marl/learners/__init__.py",
+    "initial_target_sha256": "307f6d7961f1f61b9fb08b476d964ef93f46dc4e3cad93d39200411033473ef8"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/modules/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/modules/__init__.py",
+    "initial_target_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/modules/agents/rnn_agent.py",
+    "source_sha256": "c14fc450038da2446642cb0575b480f21b5c53faca72f7640faff788a6b80ec9",
+    "target": "src/unified_marl/modules/agents/rnn_agent.py",
+    "initial_target_sha256": "3b291e3c3f7aaf8185d3ac5fd7ebcd78301da5c83ff6b0c90d02ea8bf6c5cf05"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/modules/agents/__init__.py",
+    "source_sha256": "54d556de2c22556999ff792d91ec1333835f8a99a9c432a70ca1e12070814100",
+    "target": "src/unified_marl/modules/agents/__init__.py",
+    "initial_target_sha256": "167007f2ff1464f1a749d679b57542b791680892ee8efbc06abf17f9fe0d7134"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/modules/critics/coma.py",
+    "source_sha256": "5a8f502cacea8d58f907bfd84ae62f79424f994afaae1e784dcb57835278be0e",
+    "target": "src/unified_marl/modules/critics/coma.py",
+    "initial_target_sha256": "4463f709087ca03fb913d68c8177df466f9d27af8c8cc9aa771c77c09ce22af9"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/modules/critics/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/modules/critics/__init__.py",
+    "initial_target_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/modules/mixers/qmix.py",
+    "source_sha256": "3973679f5123119d5f0814193c8cebd01148ede57633c1135ae332f207525d18",
+    "target": "src/unified_marl/modules/mixers/qmix.py",
+    "initial_target_sha256": "ede5fbb74650e00f2cdccabd55dc67ec260c335fbae5a9f313d3ad7e4aefecc3"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/modules/mixers/qtran.py",
+    "source_sha256": "b67b60eb5c39908aa6c9d8ecf5b67ef2a7da0ef0472b10cdf1eaa71674cb4a29",
+    "target": "src/unified_marl/modules/mixers/qtran.py",
+    "initial_target_sha256": "5fe3fb66f94509a1616e43500c610efd492cdfe29a286c47fc3c5d7f0342afc4"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/modules/mixers/vdn.py",
+    "source_sha256": "1681c32585cda8065fc82e66cb0670282334067eeb4f2162f28f39d7876b813a",
+    "target": "src/unified_marl/modules/mixers/vdn.py",
+    "initial_target_sha256": "05cd04721177ea52012904ce0a03731ca86014a11c497fb694a0c64ee5f40b2f"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/modules/mixers/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "target": "src/unified_marl/modules/mixers/__init__.py",
+    "initial_target_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/utils/rl_utils.py",
+    "source_sha256": "f675e6e831b28a022f61a9cd54a468e0e947d90cdbc4b0dc4a0b5c84e92d9715",
+    "target": "src/unified_marl/utils/rl_utils.py",
+    "initial_target_sha256": "e0e9306ee19e24e50f06dabdc8c9704529b2298cf868ae8bbba371321148ae2a"
+  },
+  {
+    "source": "pymarl-master/pymarl-master/src/envs/multiagentenv.py",
+    "source_sha256": "59325d8f10be7c15beb8df1f0c912d2d623151979aac0acd30841dc113f8a2d8",
+    "target": "src/unified_marl/envs/multiagentenv.py",
+    "initial_target_sha256": "0a2606001eb0e7436d69d65a558950e9bec1086c1df0f1ef32a1f9832ec7ca97"
+  }
+]

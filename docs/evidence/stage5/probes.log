@@ -1,0 +1,13 @@
+sadma/qmix {} PASS
+sadma/ppo {} PASS
+sadma/vdn {} PASS
+sadma_yi/qmix {} PASS
+sadma_yi/ppo {} PASS
+sadma_yi_closed/qmix {} PASS
+sadma_yi_closed/ppo {} PASS
+sadma/ppo {'agent_type': 'mlp', 'critic_type': 'mlp', 'use_value_norm': False} PASS
+sadma/ppo {'critic_inputs': ['independent_obs', 'agent_id', 'last_action']} PASS
+sadma/ppo {'critic_inputs': ['central_obs', 'state']} PASS
+sadma/ppo {'use_vtrace': True, 'dual_clip': 3} PASS
+sadma/qmix {'q_lambda': True} PASS
+sadma/qmix {'agent_type': 'mlp'} PASS

@@ -1,0 +1,440 @@
+[
+  {
+    "algorithm": "kou/bc",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou/bc",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bc",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bc\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bc\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bc\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bc\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.158104690649761,
+      "metrics": {
+        "loss": 1.55877685546875,
+        "grad_norm": 0.3085710406303406,
+        "agent_grad_norm": 0.3085710406303406
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou/cpl",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou/cpl",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cpl",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cpl\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cpl\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cpl\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cpl\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.14306880180774897,
+      "metrics": {
+        "loss": 1.6413347721099854,
+        "cpl_loss": 1.6413347721099854,
+        "nll_loss": 0.0,
+        "prefer_p_log": 0.20672522485256195,
+        "prefer_p_real": 0.22031190991401672,
+        "unprefer_p_log": 0.2044694870710373,
+        "unprefer_p_real": 0.20656538009643555,
+        "agent_grad_norm": 0.11753490567207336
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou/icq_ma",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou/icq_ma",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-icq_ma",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-icq_ma\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-icq_ma\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-icq_ma\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-icq_ma\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.1319410748715782,
+      "metrics": {
+        "critic_loss": 0.020071106031537056,
+        "critic_grad_norm": 0.45375239849090576,
+        "q_taken_mean": 0.12070386111736298,
+        "beta_q": 100.0,
+        "coma_loss": 0.5231919288635254,
+        "agent_grad_norm": 0.09641184657812119,
+        "pi_max": 0.2203646573153409,
+        "loss": 0.5231919288635254
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou/iql",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou/iql",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-iql",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-iql\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-iql\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-iql\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-iql\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.02342871997078267,
+      "metrics": {
+        "value_loss": 0.004775688052177429,
+        "value_grad_norm": 0.1594657152891159,
+        "q_loss": 0.02635347843170166,
+        "q_grad_norm": 0.26529985666275024,
+        "policy_loss": 1.100447177886963,
+        "policy_grad_norm": 0.20132607221603394,
+        "v_mean": 0.07675392925739288,
+        "q_taken_mean": -0.022815201431512833,
+        "target_mean": -0.04290292412042618,
+        "v_loss": 0.004775688052177429,
+        "loss": 1.100447177886963
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou/cql",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou/cql",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cql",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cql\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cql\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cql\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-cql\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.023932821150754728,
+      "metrics": {
+        "loss_td": 0.09859118610620499,
+        "grad_norm": 1.4495676755905151,
+        "td_error_abs": 0.0985911867835305,
+        "q_taken_mean": 0.3449758833104914,
+        "target_mean": 0.7357527992942117,
+        "q_local_taken_mean": 0.04471447251059792,
+        "cql_loss": 1.580148696899414,
+        "negtive_sampling_mean": 1.925124775279652,
+        "loss": 1.6787399053573608
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou/dppo",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou/dppo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-dppo",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-dppo\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-dppo\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-dppo\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-dppo\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.20944887275075078,
+      "metrics": {
+        "loss": 82.85063934326172,
+        "agent_grad_norm": 6.868353366851807
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou/madpo_aux",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou/madpo_aux",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo_aux",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo_aux\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo_aux\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo_aux\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo_aux\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.18438944220174658,
+      "metrics": {
+        "loss": 11.627130508422852,
+        "agent_grad_norm": 0.6532487869262695
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou/madpo",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou/madpo",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-madpo\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.07555809007418328,
+      "metrics": {
+        "loss": 0.7336578369140625,
+        "agent_grad_norm": 0.006880173925310373
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou/bcmapt",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou/bcmapt",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bcmapt",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bcmapt\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bcmapt\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bcmapt\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou-bcmapt\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.20335178638219306,
+      "metrics": {
+        "loss": 25.455408096313477,
+        "grad_norm": 2.7945058345794678,
+        "agent_grad_norm": 2.7945058345794678
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou/acpl",
+    "status": "BLOCKED",
+    "error": "AttributeError: 'types.SimpleNamespace' object has no attribute 'NLL_lamda'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_core.py\", line 22, in main\n    run = train(name,dataset=str(data),output_dir=run_root / name.replace(\"/\",\"-\"),overrides=opts)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 127, in train\n    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\offline.py\", line 52, in train_offline\n    args, scheme, groups, prep, mac, learner = _make_model(cfg, data.env_info, logger)\n                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 96, in _make_model\n    learner = learner_class(mac, template.scheme, logger, args).to(args.device)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\adapter.py\", line 59, in __init__\n    self.native = cls(mac, scheme, logger, args)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\icq\\learners\\cpl_learner.py\", line 22, in __init__\n    self.NLL_lamda = args.NLL_lamda\n                     ^^^^^^^^^^^^^^\nAttributeError: 'types.SimpleNamespace' object has no attribute 'NLL_lamda'. Did you mean: 'cpl_lambda'?\n"
+  },
+  {
+    "algorithm": "kou/bcq_qmix",
+    "status": "BLOCKED",
+    "error": "ValueError: too many values to unpack (expected 3)",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_core.py\", line 22, in main\n    run = train(name,dataset=str(data),output_dir=run_root / name.replace(\"/\",\"-\"),overrides=opts)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 127, in train\n    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\offline.py\", line 75, in train_offline\n    metrics = learner.update(batch,UpdateContext(0,0,update))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\adapter.py\", line 100, in update\n    method(batch, **kwargs)\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\icq\\learners\\q_learner.py\", line 57, in train\n    agent_outs, imt, out_i = self.mac.forward(batch, t=t)\n    ^^^^^^^^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 3)\n"
+  },
+  {
+    "algorithm": "kou/bcq_vdn",
+    "status": "BLOCKED",
+    "error": "ValueError: too many values to unpack (expected 3)",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_core.py\", line 22, in main\n    run = train(name,dataset=str(data),output_dir=run_root / name.replace(\"/\",\"-\"),overrides=opts)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 127, in train\n    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\offline.py\", line 75, in train_offline\n    metrics = learner.update(batch,UpdateContext(0,0,update))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\adapter.py\", line 100, in update\n    method(batch, **kwargs)\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\icq\\learners\\q_learner.py\", line 57, in train\n    agent_outs, imt, out_i = self.mac.forward(batch, t=t)\n    ^^^^^^^^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 3)\n"
+  },
+  {
+    "algorithm": "kou_old/qmix",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou_old/qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qmix",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qmix\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qmix\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qmix\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qmix\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.13348319631693648,
+      "metrics": {
+        "loss": 0.035123560577631,
+        "grad_norm": 0.6657483577728271,
+        "td_error_abs": 0.14466597817160867,
+        "q_taken_mean": 0.036552841013128105,
+        "target_mean": 0.0708428007183653
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou_old/qmix_differ",
+    "status": "BLOCKED",
+    "error": "KeyError: 'indi_terminated'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_core.py\", line 22, in main\n    run = train(name,dataset=str(data),output_dir=run_root / name.replace(\"/\",\"-\"),overrides=opts)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 127, in train\n    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\offline.py\", line 75, in train_offline\n    metrics = learner.update(batch,UpdateContext(0,0,update))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\adapter.py\", line 100, in update\n    method(batch, **kwargs)\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\old\\learners\\q_learner_differ.py\", line 57, in train\n    indi_terminated = batch[\"indi_terminated\"][:, :-1].float()\n                      ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\datasets\\episodes.py\", line 26, in __getitem__\n    return super().__getitem__(key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'indi_terminated'\n"
+  },
+  {
+    "algorithm": "kou_old/qplex",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou_old/qplex",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qplex",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qplex\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qplex\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qplex\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-qplex\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.08388734505092624,
+      "metrics": {
+        "loss": 0.007822372950613499,
+        "hit_prob": 0.5833333730697632,
+        "grad_norm": 0.11099263280630112,
+        "td_error_abs": 0.058680377223274925,
+        "q_taken_mean": 0.08160644589048444,
+        "target_mean": 0.08557469194585626
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou_old/cw_qmix",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou_old/cw_qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.1508999300343524,
+      "metrics": {
+        "loss": 0.06803268939256668,
+        "qmix_loss": 0.05939184129238129,
+        "grad_norm": 1.1712011098861694,
+        "mixer_norm": 1.1159697365325163,
+        "agent_norm": 0.3220254835991963,
+        "td_error_abs": 0.2311180071397261,
+        "q_taken_mean": 0.036552841013128105,
+        "target_mean": -0.03194776087096243,
+        "central_loss": 0.00864084716886282,
+        "w_to_use": 0.7840909361839294
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou_old/ow_qmix",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou_old/ow_qmix",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.1396574680411253,
+      "metrics": {
+        "loss": 0.04654891416430473,
+        "qmix_loss": 0.03790806606411934,
+        "grad_norm": 0.7300986647605896,
+        "mixer_norm": 0.6866427089008694,
+        "agent_norm": 0.19733890420014713,
+        "td_error_abs": 0.2311180071397261,
+        "q_taken_mean": 0.036552841013128105,
+        "target_mean": -0.03194776087096243,
+        "central_loss": 0.00864084716886282,
+        "w_to_use": 0.5795454382896423
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou_old/qmix_w_globalRM",
+    "status": "BLOCKED",
+    "error": "KeyError: 'reward_hat'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_core.py\", line 22, in main\n    run = train(name,dataset=str(data),output_dir=run_root / name.replace(\"/\",\"-\"),overrides=opts)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 127, in train\n    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\offline.py\", line 75, in train_offline\n    metrics = learner.update(batch,UpdateContext(0,0,update))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\adapter.py\", line 100, in update\n    method(batch, **kwargs)\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\old\\learners\\q_learner_globalRM.py\", line 45, in train\n    rewards = batch[\"reward_hat\"][:, :-1]\n              ~~~~~^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\datasets\\episodes.py\", line 26, in __getitem__\n    return super().__getitem__(key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'reward_hat'\n"
+  },
+  {
+    "algorithm": "kou_old/qmix_new",
+    "status": "BLOCKED",
+    "error": "ValueError: This historical variant requires its actual reference policy_dir; no policy is substituted",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_core.py\", line 22, in main\n    run = train(name,dataset=str(data),output_dir=run_root / name.replace(\"/\",\"-\"),overrides=opts)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 127, in train\n    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\offline.py\", line 52, in train_offline\n    args, scheme, groups, prep, mac, learner = _make_model(cfg, data.env_info, logger)\n                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 96, in _make_model\n    learner = learner_class(mac, template.scheme, logger, args).to(args.device)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\adapter.py\", line 56, in __init__\n    if not args.policy_dir: raise ValueError(\"This historical variant requires its actual reference policy_dir; no policy is substituted\")\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: This historical variant requires its actual reference policy_dir; no policy is substituted\n"
+  },
+  {
+    "algorithm": "kou_old/pref_qmix",
+    "status": "BLOCKED",
+    "error": "FileNotFoundError: [Errno 2] No such file or directory: 'None/agent.th'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_core.py\", line 22, in main\n    run = train(name,dataset=str(data),output_dir=run_root / name.replace(\"/\",\"-\"),overrides=opts)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 127, in train\n    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\offline.py\", line 52, in train_offline\n    args, scheme, groups, prep, mac, learner = _make_model(cfg, data.env_info, logger)\n                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 96, in _make_model\n    learner = learner_class(mac, template.scheme, logger, args).to(args.device)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\adapter.py\", line 59, in __init__\n    self.native = cls(mac, scheme, logger, args)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\old\\learners\\pref_qmix_learner.py\", line 40, in __init__\n    self.script_preferences = ScriptPreferences(args=self.args, prefer_mac=copy.deepcopy(mac))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\old\\components\\preference.py\", line 7, in __init__\n    self.prefer_mac.load_models(self.args.policy_dir)\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\old\\controllers\\basic_controller.py\", line 79, in load_models\n    self.agent.load_state_dict(th.load(\"{}/agent.th\".format(path), map_location=lambda storage, loc: storage))\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv\\Lib\\site-packages\\torch\\serialization.py\", line 1425, in load\n    with _open_file_like(f, \"rb\") as opened_file:\n         ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv\\Lib\\site-packages\\torch\\serialization.py\", line 751, in _open_file_like\n    return _open_file(name_or_buffer, mode)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.venv\\Lib\\site-packages\\torch\\serialization.py\", line 732, in __init__\n    super().__init__(open(name, mode))\n                     ^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'None/agent.th'\n"
+  },
+  {
+    "algorithm": "kou_old/pref_qmix_new",
+    "status": "BLOCKED",
+    "error": "ValueError: This historical variant requires its actual reference policy_dir; no policy is substituted",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_core.py\", line 22, in main\n    run = train(name,dataset=str(data),output_dir=run_root / name.replace(\"/\",\"-\"),overrides=opts)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 127, in train\n    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\offline.py\", line 52, in train_offline\n    args, scheme, groups, prep, mac, learner = _make_model(cfg, data.env_info, logger)\n                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 96, in _make_model\n    learner = learner_class(mac, template.scheme, logger, args).to(args.device)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\adapter.py\", line 56, in __init__\n    if not args.policy_dir: raise ValueError(\"This historical variant requires its actual reference policy_dir; no policy is substituted\")\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: This historical variant requires its actual reference policy_dir; no policy is substituted\n"
+  },
+  {
+    "algorithm": "kou_old/qplex_w_globalRM",
+    "status": "BLOCKED",
+    "error": "KeyError: 'reward_hat'",
+    "traceback": "Traceback (most recent call last):\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\tools\\probe_stage4_core.py\", line 22, in main\n    run = train(name,dataset=str(data),output_dir=run_root / name.replace(\"/\",\"-\"),overrides=opts)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\__init__.py\", line 7, in train\n    return implementation(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\api.py\", line 127, in train\n    return train_offline(algorithm, dataset=dataset, env=env, env_args=env_args, device=device, seed=seed,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\trainers\\offline.py\", line 75, in train_offline\n    metrics = learner.update(batch,UpdateContext(0,0,update))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\adapter.py\", line 100, in update\n    method(batch, **kwargs)\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\old\\learners\\dmaq_qatten_learner_globalRM.py\", line 195, in train\n    self.sub_train(batch, t_env, episode_num, show_demo=show_demo, save_data=save_data)\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\algorithms\\kou\\old\\learners\\dmaq_qatten_learner_globalRM.py\", line 43, in sub_train\n    rewards = batch[\"reward_hat\"][:, :-1]\n              ~~~~~^^^^^^^^^^^^^^\n  File \"G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\src\\unified_marl\\datasets\\episodes.py\", line 26, in __getitem__\n    return super().__getitem__(key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'reward_hat'\n"
+  },
+  {
+    "algorithm": "kou_old/cw_qmix_w_globalRM",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou_old/cw_qmix_w_globalRM",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix_w_globalRM",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix_w_globalRM\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix_w_globalRM\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix_w_globalRM\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-cw_qmix_w_globalRM\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.6035997201374096,
+      "metrics": {
+        "loss": 0.06803268939256668,
+        "qmix_loss": 0.05939184129238129,
+        "grad_norm": 1.1712011098861694,
+        "mixer_norm": 1.1159697365325163,
+        "agent_norm": 0.3220254835991963,
+        "td_error_abs": 0.2311180071397261,
+        "q_taken_mean": 0.036552841013128105,
+        "target_mean": -0.03194776087096243,
+        "central_loss": 0.00864084716886282,
+        "w_to_use": 0.7840909361839294
+      }
+    },
+    "data_kind": "real delivered 3m"
+  },
+  {
+    "algorithm": "kou_old/ow_qmix_w_globalRM",
+    "status": "PASS",
+    "result": {
+      "algorithm": "kou_old/ow_qmix_w_globalRM",
+      "output_dir": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix_w_globalRM",
+      "checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix_w_globalRM\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix_w_globalRM\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix_w_globalRM\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\.work\\stage4-probes\\9c98fb30\\kou_old-ow_qmix_w_globalRM\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 1,
+      "parameter_delta_l2": 0.5586298588272612,
+      "metrics": {
+        "loss": 0.04654891416430473,
+        "qmix_loss": 0.03790806606411934,
+        "grad_norm": 0.7300986051559448,
+        "mixer_norm": 0.6866427089008694,
+        "agent_norm": 0.19733890420014713,
+        "td_error_abs": 0.2311180071397261,
+        "q_taken_mean": 0.036552841013128105,
+        "target_mean": -0.03194776087096243,
+        "central_loss": 0.00864084716886282,
+        "w_to_use": 0.5795454382896423
+      }
+    },
+    "data_kind": "real delivered 3m"
+  }
+]

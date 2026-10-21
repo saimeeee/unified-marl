@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "behavior_version": 0,
+  "learner_version_before": 2,
+  "loss_abs_error": 0.0,
+  "updated_actor_max_abs_error": 0.0,
+  "old_log_probabilities_preserved": true,
+  "source": "original Wang SADMA PPOPolicy with existing compatibility fixes only"
+}

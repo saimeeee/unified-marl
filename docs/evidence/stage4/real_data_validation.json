@@ -1,0 +1,50 @@
+{
+  "result": "PASS",
+  "source": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\marl\u5e73\u53f0\u4ee3\u7801\\\u5bc7\u8c26\\\u8bba\u6587\u4ee3\u7801\u53ca\u6280\u672f\u6587\u6863\\\u8bba\u6587\u4ee3\u7801\u53ca\u6280\u672f\u6587\u6863\\MADiversePreferDatasets\\3m\\3m.th",
+  "read_episodes": 400,
+  "read_pairs": 200,
+  "small_batch": 4,
+  "policy_runs": [
+    {
+      "algorithm": "kou/bc",
+      "output_dir": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-bc",
+      "checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-bc\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-bc\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-bc\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-bc\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 2,
+      "parameter_delta_l2": 0.24685697075682414,
+      "metrics": {
+        "loss": 1.5473659038543701,
+        "grad_norm": 0.25113850831985474,
+        "agent_grad_norm": 0.25113850831985474
+      }
+    },
+    {
+      "algorithm": "kou/cpl",
+      "output_dir": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-cpl",
+      "checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-cpl\\policy.pt",
+      "training_checkpoint": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-cpl\\training.pt",
+      "metrics_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-cpl\\metrics.jsonl",
+      "config_path": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\unified-marl\\.work\\tmp\\pytest-of-71919\\pytest-27\\test_real_data_small_read_and_0\\kou-cpl\\config.json",
+      "env_steps": 0,
+      "episodes": 0,
+      "updates": 2,
+      "parameter_delta_l2": 0.18738087192052016,
+      "metrics": {
+        "loss": 1.731657862663269,
+        "cpl_loss": 1.731657862663269,
+        "nll_loss": 0.0,
+        "prefer_p_log": 0.18818020820617676,
+        "prefer_p_real": 0.20260700583457947,
+        "unprefer_p_log": 0.2149086445569992,
+        "unprefer_p_real": 0.2155933678150177,
+        "agent_grad_norm": 0.13597585260868073
+      }
+    }
+  ],
+  "labels_match_unmasked_return_comparison_fraction": 1.0,
+  "policy_effectiveness": "NOT_VALIDATED"
+}

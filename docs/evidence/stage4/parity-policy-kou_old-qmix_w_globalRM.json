@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "source": "G:\\AI\\Codex\\\u591a\u667a\u80fd\u4f53\u4ee3\u7801\u6574\u5408\\marl\u5e73\u53f0\u4ee3\u7801\\\u5bc7\u8c26\\\u8bba\u6587\u4ee3\u7801\u53ca\u6280\u672f\u6587\u6863\\\u8bba\u6587\u4ee3\u7801\u53ca\u6280\u672f\u6587\u6863\\old_src",
+  "algorithm": "kou_old/qmix_w_globalRM",
+  "seed": 2026,
+  "loss_max_abs_error": 0.0,
+  "updated_network_max_abs_error": 0.0,
+  "optimized_actor_parameter_delta_l2": 0.19024301627473408,
+  "scope": "fixed synthetic inputs; CPU allocation adaptation in reference only"
+}

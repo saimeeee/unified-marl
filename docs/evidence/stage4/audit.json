@@ -1,0 +1,4032 @@
+{
+  "sources": [
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/components/reward_model.py",
+      "classes": [
+        {
+          "name": "RewardModel",
+          "methods": {
+            "__init__": "self, args",
+            "train": "self, pref_dataset",
+            "train_predicter": "self, pref_dataset",
+            "predict_for_unlabeled_dataset_using_predictor": "self, pref_dataset",
+            "e2e_rm_forward": "self, batch",
+            "get_threshold_beta": "self, update_step",
+            "train_diverse_predictor": "self, pref_dataset"
+          }
+        }
+      ],
+      "args": [
+        "action_type",
+        "device",
+        "max_traj_length",
+        "model_type",
+        "n_actions",
+        "n_agents",
+        "obs_shape",
+        "pi_accuracy",
+        "reward_batch_size",
+        "reward_train_epoch",
+        "use_cuda"
+      ],
+      "imports": [
+        "import torch",
+        "import math",
+        "import numpy as np",
+        "import transformers",
+        "from utils.logging import Logger, get_logger",
+        "from components.MAPT.mat.algorithms.reward_model.models.MR import MR",
+        "from components.MAPT.mat.algorithms.reward_model.models.NMR import NMR",
+        "from components.MAPT.mat.algorithms.reward_model.models.lstm import LSTMRewardModel",
+        "from components.MAPT.mat.algorithms.reward_model.models.PrefTransformer import PrefTransformer",
+        "from components.MAPT.mat.algorithms.reward_model.models.trajectory_gpt2 import TransRewardModel",
+        "from components.MAPT.mat.algorithms.reward_model.models.MultiPrefTransformer import MultiPrefTransformer",
+        "from components.MAPT.mat.algorithms.reward_model.models.encoder_decoder_divide import MultiTransRewardDivideModel",
+        "from components.MAPT.mat.algorithms.reward_model.models.q_function import FullyConnectedQFunction",
+        "from tqdm import tqdm"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/controllers/__init__.py",
+      "classes": [],
+      "args": [],
+      "imports": [
+        "from .basic_controller import BasicMAC",
+        "from .n_controller import NMAC",
+        "from .cql_basic_controller import CQLBasicMAC"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/controllers/basic_controller.py",
+      "classes": [
+        {
+          "name": "BasicMAC",
+          "methods": {
+            "__init__": "self, scheme, groups, args",
+            "select_actions": "self, ep_batch, t_ep, t_env, bs=slice(None), test_mode=False",
+            "forward": "self, ep_batch, t, test_mode=False",
+            "init_hidden": "self, batch_size",
+            "parameters": "self",
+            "load_state": "self, other_mac",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path",
+            "_build_agents": "self, input_shape",
+            "_build_inputs": "self, batch, t",
+            "_get_input_shape": "self, scheme"
+          }
+        }
+      ],
+      "args": [
+        "action_selector",
+        "agent",
+        "agent_output_type",
+        "device",
+        "n_agents",
+        "obs_agent_id",
+        "obs_last_action"
+      ],
+      "imports": [
+        "from modules.agents import REGISTRY as agent_REGISTRY",
+        "from components.action_selectors import REGISTRY as action_REGISTRY",
+        "import torch as th"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/controllers/cql_basic_controller.py",
+      "classes": [
+        {
+          "name": "CQLBasicMAC",
+          "methods": {
+            "__init__": "self, scheme, groups, args",
+            "select_actions": "self, ep_batch, t_ep, t_env, bs=slice(None), test_mode=False",
+            "forward": "self, ep_batch, t, test_mode=False",
+            "init_hidden": "self, batch_size",
+            "parameters": "self",
+            "load_state": "self, other_mac",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path",
+            "_build_agents": "self, input_shape",
+            "_build_inputs": "self, batch, t",
+            "_get_input_shape": "self, scheme"
+          }
+        }
+      ],
+      "args": [
+        "action_selector",
+        "agent",
+        "agent_output_type",
+        "device",
+        "n_agents",
+        "obs_agent_id",
+        "obs_last_action"
+      ],
+      "imports": [
+        "from modules.agents import REGISTRY as agent_REGISTRY",
+        "from components.action_selectors import REGISTRY as action_REGISTRY",
+        "import torch as th"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/controllers/n_controller.py",
+      "classes": [
+        {
+          "name": "NMAC",
+          "methods": {
+            "__init__": "self, scheme, groups, args",
+            "select_actions": "self, ep_batch, t_ep, t_env, bs=slice(None), test_mode=False",
+            "forward": "self, ep_batch, t, test_mode=False"
+          }
+        }
+      ],
+      "args": [
+        "action_selector",
+        "agent_output_type",
+        "n_agents"
+      ],
+      "imports": [
+        "from modules.agents import REGISTRY as agent_REGISTRY",
+        "from components.action_selectors import REGISTRY as action_REGISTRY",
+        "from .cql_basic_controller import CQLBasicMAC",
+        "import torch as th",
+        "import numpy as np"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/__init__.py",
+      "classes": [],
+      "args": [],
+      "imports": [
+        "from .q_learner import QLearner",
+        "from .offpg_learner import OffPGLearner",
+        "from .bc_learner import BCLearner",
+        "from .bcmapt_learner import BCMAPTLearner",
+        "from .cpl_learner import CPLLearner",
+        "from .dppo_learner import DPPOLearner",
+        "from .madpo_learner import MADPOLearner",
+        "from .madpo_aux_learner import MADPOauxLearner",
+        "from .cql_learner import CQLearner",
+        "from .iql_learner import IQLLearner"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/bc_learner.py",
+      "classes": [
+        {
+          "name": "BCLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch, t_env, running_log",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "n_actions",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps"
+      ],
+      "imports": [
+        "from components.episode_buffer import EpisodeBatch",
+        "import torch as th",
+        "from torch.optim import RMSprop, Adam",
+        "import torch.nn.functional as F",
+        "import wandb"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/bcmapt_learner.py",
+      "classes": [
+        {
+          "name": "BCMAPTLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch0, batch1, t_env, running_log",
+            "get_logprob": "self, pi_distribution, actions",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "T",
+        "batch_size",
+        "env",
+        "grad_norm_clip",
+        "lamda",
+        "learner_log_interval",
+        "lr",
+        "n_actions",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps"
+      ],
+      "imports": [
+        "import copy",
+        "from torch.distributions import Categorical",
+        "from components.episode_buffer import EpisodeBatch",
+        "import torch as th",
+        "from torch.optim import RMSprop",
+        "import torch.nn.functional as F",
+        "import numpy as np"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/cpl_learner.py",
+      "classes": [
+        {
+          "name": "CPLLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch0, batch1, t_env, labels, running_log",
+            "get_logprob": "self, pi_distribution, actions",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "NLL_lamda",
+        "batch_size",
+        "cpl_alpha",
+        "cpl_constrain_coe",
+        "cpl_constrain_type",
+        "cpl_lambda",
+        "env",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "n_actions",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "use_nll"
+      ],
+      "imports": [
+        "import copy",
+        "from torch.distributions import Categorical",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.critics.offpg import OffPGCritic",
+        "import torch as th",
+        "from utils.offpg_utils import build_target_q",
+        "from utils.rl_utils import build_td_lambda_targets",
+        "from torch.optim import RMSprop",
+        "from modules.mixers.qmix import QMixer",
+        "import torch.nn.functional as F",
+        "import numpy as np",
+        "import wandb"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/cql_learner.py",
+      "classes": [
+        {
+          "name": "CQLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "save_behaviour_model": "self, path",
+            "load_behaviour_model": "self, path",
+            "train_behaviour": "self, batch: EpisodeBatch",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, running_log: dict",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path",
+            "cal_Dcql": "self, batch: EpisodeBatch, t_env: int"
+          }
+        }
+      ],
+      "args": [
+        "action_selector",
+        "agent",
+        "agent_output_type",
+        "cql_alpha",
+        "device",
+        "epsilon_anneal_time",
+        "epsilon_finish",
+        "epsilon_start",
+        "gamma",
+        "global_cql_alpha",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "mask_before_softmax",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "optimizer",
+        "raw_cql",
+        "raw_sample_actions",
+        "softmax_temp",
+        "target_update_interval",
+        "td_lambda",
+        "use_cuda",
+        "use_sarsa"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.nmix import Mixer",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qatten import QattenMixer",
+        "from utils.rl_utils import build_td_lambda_targets, build_q_lambda_targets",
+        "import torch as th",
+        "from torch.optim import RMSprop, Adam",
+        "import numpy as np",
+        "import torch.nn.functional as F"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/dppo_learner.py",
+      "classes": [
+        {
+          "name": "DPPOLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch0, batch1, t_env, labels, running_log",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "dppo_alpha",
+        "dppo_lambda",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "n_actions",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps"
+      ],
+      "imports": [
+        "import copy",
+        "from torch.distributions import Categorical",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.critics.offpg import OffPGCritic",
+        "import torch as th",
+        "from utils.offpg_utils import build_target_q",
+        "from utils.rl_utils import build_td_lambda_targets",
+        "from torch.optim import RMSprop",
+        "from modules.mixers.qmix import QMixer",
+        "import torch.nn.functional as F",
+        "import numpy as np",
+        "import wandb"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/iql_learner.py",
+      "classes": [
+        {
+          "name": "IQLLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch: EpisodeBatch, t_env: int, running_log: dict",
+            "cuda": "self"
+          }
+        }
+      ],
+      "args": [
+        "alpha",
+        "beta",
+        "gamma",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "n_actions",
+        "n_agents",
+        "t_max",
+        "tau"
+      ],
+      "imports": [
+        "import copy",
+        "from torch.distributions import Categorical",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.critics.doubleqv import DoubleQNetwork, ValueNetwork",
+        "import torch as th",
+        "from utils.rl_utils import build_td_lambda_targets",
+        "from torch.optim import RMSprop, Adam",
+        "import torch.nn.functional as F",
+        "import numpy as np",
+        "from torch.optim.lr_scheduler import CosineAnnealingLR"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/madpo_aux_learner.py",
+      "classes": [
+        {
+          "name": "MADPOauxLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch0, batch1, t_env, labels, running_log",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "aux_loss_coe",
+        "cpl_alpha",
+        "cpl_constrain_coe",
+        "cpl_constrain_type",
+        "cpl_lambda",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "n_actions",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps"
+      ],
+      "imports": [
+        "import copy",
+        "from torch.distributions import Categorical",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.critics.offpg import OffPGCritic",
+        "import torch as th",
+        "from utils.offpg_utils import build_target_q",
+        "from utils.rl_utils import build_td_lambda_targets",
+        "from torch.optim import RMSprop",
+        "from modules.mixers.qmix import QMixer",
+        "import torch.nn.functional as F",
+        "import numpy as np",
+        "import wandb"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/madpo_learner.py",
+      "classes": [
+        {
+          "name": "MADPOLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch0, batch1, t_env, labels, running_log",
+            "get_logprob": "self, pi_distribution, actions",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "T",
+        "batch_size",
+        "distence_type",
+        "dpo_alpha",
+        "dpo_lambda",
+        "env",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "n_actions",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps"
+      ],
+      "imports": [
+        "import copy",
+        "from torch.distributions import Categorical",
+        "from components.episode_buffer import EpisodeBatch",
+        "import torch as th",
+        "from torch.optim import RMSprop",
+        "import torch.nn.functional as F",
+        "import numpy as np"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/offpg_learner.py",
+      "classes": [
+        {
+          "name": "OffPGLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch: EpisodeBatch, t_env: int, running_log: dict",
+            "train_critic": "self, on_batch, best_batch=None, running_log=None, t_env=None",
+            "get_logprob": "self, pi_distribution, actions",
+            "_update_targets": "self",
+            "cuda": "self"
+          }
+        }
+      ],
+      "args": [
+        "batch_size",
+        "critic_lr",
+        "gamma",
+        "grad_norm_clip",
+        "icq_alpha",
+        "icq_beta",
+        "learner_log_interval",
+        "lr",
+        "n_actions",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "target_update_interval",
+        "td_lambda"
+      ],
+      "imports": [
+        "import copy",
+        "from torch.distributions import Categorical",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.critics.offpg import OffPGCritic",
+        "import torch as th",
+        "from utils.offpg_utils import build_target_q",
+        "from utils.rl_utils import build_td_lambda_targets",
+        "from torch.optim import RMSprop",
+        "from modules.mixers.qmix import QMixer",
+        "import torch.nn.functional as F",
+        "import numpy as np",
+        "import wandb"
+      ]
+    },
+    {
+      "family": "icq",
+      "file": "ICQ-MA/src/learners/q_learner.py",
+      "classes": [
+        {
+          "name": "QLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, log",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "gamma",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "target_update_interval"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qmix import QMixer",
+        "import torch as th",
+        "import torch.nn.functional as F",
+        "from torch.optim import RMSprop"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/components/reward_model.py",
+      "classes": [
+        {
+          "name": "RewardNet",
+          "methods": {
+            "__init__": "self, in_size, out_size, hidden_size, active",
+            "reset_params": "self",
+            "forward": "self, x"
+          }
+        },
+        {
+          "name": "RewardModel",
+          "methods": {
+            "__init__": "self, args, mac, logger",
+            "get_feedbacks": "self",
+            "get_acc": "self",
+            "change_batch": "self, new_frac",
+            "reset_local_params": "self",
+            "construct_ensemble": "self",
+            "uniform_sampling": "self, buffer",
+            "get_queries": "self, buffer",
+            "get_labels": "self, query1, query2",
+            "get_global_labels": "self, query1, query2",
+            "get_local_labels": "self, query1, query2",
+            "get_local_labels_between_seg": "self, query1, query2",
+            "get_local_labels_k_wise": "self, query1, query2",
+            "put_queries": "self, query1, query2, labels, local_labels",
+            "r_hat_member": "self, x, member=-1",
+            "local_r_hat_member": "self, x, member=-1",
+            "r_hat": "self, x",
+            "local_r_hat": "self, x",
+            "cross_entropy_loss": "self, r_hat, labels",
+            "KL_loss": "self, r_hat, labels",
+            "train_global_reward": "self",
+            "train_local_reward": "self",
+            "train_local_reward_between_seg": "self",
+            "train_local_reward_k_wise": "self",
+            "train_local_reward_in_seg": "self",
+            "learn_reward": "self, buffer"
+          }
+        },
+        {
+          "name": "GlobalRewardModel",
+          "methods": {
+            "__init__": "self, args, mac",
+            "change_batch": "self, new_frac",
+            "construct_ensemble": "self",
+            "uniform_sampling": "self, buffer",
+            "get_queries": "self, buffer",
+            "get_labels": "self, query1, query2",
+            "put_queries": "self, query1, query2, labels",
+            "r_hat_member": "self, x, member=-1",
+            "r_hat": "self, x",
+            "cross_entropy_loss": "self, r_hat, labels",
+            "KL_loss": "self, r_hat, labels",
+            "train_reward": "self",
+            "learn_reward": "self, buffer"
+          }
+        }
+      ],
+      "args": [
+        "action_shape",
+        "actions_onehot",
+        "active",
+        "device",
+        "ensemble_size",
+        "global_preference_type",
+        "local_acc",
+        "local_preference_type",
+        "loss_func",
+        "n_actions",
+        "n_agents",
+        "obs_shape",
+        "policy_dir",
+        "reward_hidden_size",
+        "reward_lr",
+        "reward_train_batch_size",
+        "reward_update",
+        "sample_episode_size",
+        "sample_segment_size",
+        "segment_capacity",
+        "segment_size",
+        "state_or_obs",
+        "state_shape",
+        "use_cuda",
+        "use_global_reward",
+        "use_local_reward"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import torch",
+        "import torch.nn as nn",
+        "import torch.nn.functional as F",
+        "import copy",
+        "from scipy.special import comb"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/components/reward_model_new.py",
+      "classes": [
+        {
+          "name": "RewardNet",
+          "methods": {
+            "__init__": "self, in_size, out_size, hidden_size, active",
+            "forward": "self, x"
+          }
+        },
+        {
+          "name": "RewardModel",
+          "methods": {
+            "__init__": "self, args, policy_mac, logger",
+            "change_batch": "self, new_frac",
+            "construct_ensemble": "self",
+            "uniform_sampling": "self, episode_sample",
+            "get_global_labels": "self, queries",
+            "get_local_labels": "self, queries",
+            "global_r_hat_member": "self, x, member=-1",
+            "local_r_hat_member": "self, x, member=-1",
+            "train_global_reward": "self, global_labels, queries",
+            "train_local_reward": "self, local_labels, local_masks, queries",
+            "cross_entropy_loss": "self, r_hat, labels",
+            "KL_loss": "self, r_hat, labels",
+            "learn_reward": "self, episode_sample"
+          }
+        }
+      ],
+      "args": [
+        "action_shape",
+        "actions_onehot",
+        "active",
+        "add_batch_size",
+        "agent_state_shape",
+        "device",
+        "ensemble_size",
+        "loss_func",
+        "n_actions",
+        "n_agents",
+        "policy_dir",
+        "reward_hidden_size",
+        "reward_lr",
+        "reward_update_times",
+        "sample_batch_size",
+        "sample_method",
+        "segment_size",
+        "state_shape",
+        "use_cuda",
+        "use_global_reward",
+        "use_local_reward"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import torch",
+        "import torch.nn as nn",
+        "import torch.nn.functional as F",
+        "import copy",
+        "from scipy.special import comb"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/controllers/__init__.py",
+      "classes": [],
+      "args": [],
+      "imports": [
+        "from .basic_controller import BasicMAC",
+        "from .central_basic_controller import CentralBasicMAC",
+        "from .maddpg_controller import MADDPGMAC"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/controllers/basic_controller.py",
+      "classes": [
+        {
+          "name": "BasicMAC",
+          "methods": {
+            "__init__": "self, scheme, groups, args",
+            "select_actions": "self, ep_batch, t_ep, t_env, bs=slice(None), test_mode=False",
+            "forward": "self, ep_batch, t, test_mode=False",
+            "forward_query": "self, query, t",
+            "init_hidden": "self, batch_size",
+            "parameters": "self",
+            "load_state": "self, other_mac",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path",
+            "_build_agents": "self, input_shape",
+            "_build_inputs": "self, batch, t",
+            "_build_inputs_query": "self, query, t",
+            "_get_input_shape": "self, scheme"
+          }
+        }
+      ],
+      "args": [
+        "action_selector",
+        "agent",
+        "agent_output_type",
+        "device",
+        "n_agents",
+        "obs_agent_id",
+        "obs_last_action"
+      ],
+      "imports": [
+        "from modules.agents import REGISTRY as agent_REGISTRY",
+        "from components.action_selectors import REGISTRY as action_REGISTRY",
+        "import torch as th"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/controllers/central_basic_controller.py",
+      "classes": [
+        {
+          "name": "CentralBasicMAC",
+          "methods": {
+            "__init__": "self, scheme, args",
+            "forward": "self, ep_batch, t, test_mode=False",
+            "init_hidden": "self, batch_size",
+            "parameters": "self",
+            "load_state": "self, other_mac",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path",
+            "_build_agents": "self, input_shape",
+            "_build_inputs": "self, batch, t",
+            "_get_input_shape": "self, scheme"
+          }
+        }
+      ],
+      "args": [
+        "agent_output_type",
+        "central_agent",
+        "n_actions",
+        "n_agents",
+        "obs_agent_id",
+        "obs_last_action"
+      ],
+      "imports": [
+        "from modules.agents import REGISTRY as agent_REGISTRY",
+        "from components.action_selectors import REGISTRY as action_REGISTRY",
+        "import torch as th"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/controllers/maddpg_controller.py",
+      "classes": [
+        {
+          "name": "MADDPGMAC",
+          "methods": {
+            "__init__": "self, scheme, groups, args",
+            "select_actions": "self, ep_batch, t_ep, t_env=0, test_mode=False",
+            "target_actions": "self, ep_batch, t_ep",
+            "forward": "self, ep_batch, t",
+            "forward_by_agent": "self, ep_batch, t, agent_idx",
+            "init_hidden": "self, batch_size",
+            "init_hidden_one_agent": "self, batch_size",
+            "parameters_by_agent": "self",
+            "parameters": "self",
+            "load_state": "self, other_mac",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path",
+            "_build_agents": "self, input_shape",
+            "_build_inputs": "self, batch, t",
+            "_get_input_shape": "self, scheme"
+          }
+        }
+      ],
+      "args": [
+        "agent",
+        "agent_output_type",
+        "n_agents",
+        "obs_agent_id",
+        "obs_last_action"
+      ],
+      "imports": [
+        "from modules.agents import REGISTRY as agent_REGISTRY",
+        "from components.action_selectors import REGISTRY as action_REGISTRY",
+        "import torch as th",
+        "from torch.autograd import Variable",
+        "import torch.nn.functional as F",
+        "from utils.model import onehot_from_logits, sample_gumbel, gumbel_softmax_sample, gumbel_softmax"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/__init__.py",
+      "classes": [],
+      "args": [],
+      "imports": [
+        "from .q_learner import QLearner",
+        "from .q_learner_differ import QLearner_differ",
+        "from .pref_qmix_learner import Pref_QMIX_learner",
+        "from .q_learner_globalRM import QLearnerGlobalRM",
+        "from .dmaq_qatten_learner import DMAQ_qattenLearner",
+        "from .max_q_learner import MAXQLearner",
+        "from .dmaq_qatten_learner_globalRM import DMAQ_qattenLearnerGlobalRM",
+        "from .max_q_learner_globalRM import MAXQLearnerGlobalRM",
+        "from .pref_qmix_learner_new import Pref_QMIX_learner_new",
+        "from .q_learner_new import QLearnerNew"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/dmaq_qatten_learner.py",
+      "classes": [
+        {
+          "name": "DMAQ_qattenLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "sub_train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, mac, mixer, optimiser, params, show_demo=False, save_data=None",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, show_demo=False, save_data=None",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_actions",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "target_update_interval"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.dmaq_general import DMAQer",
+        "from modules.mixers.dmaq_qatten import DMAQ_QattenMixer",
+        "import torch.nn.functional as F",
+        "import torch as th",
+        "from torch.optim import RMSprop",
+        "import numpy as np"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/dmaq_qatten_learner_globalRM.py",
+      "classes": [
+        {
+          "name": "DMAQ_qattenLearnerGlobalRM",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "sub_train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, show_demo=False, save_data=None",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, show_demo=False, save_data=None",
+            "unsup_train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, full_batch: EpisodeBatch, show_demo=False, save_data=None",
+            "_compute_state_entropy_rewards": "self, state, full_state, mask, full_mask",
+            "reset_critic": "self",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "device",
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "k",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_actions",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "target_update_interval",
+        "use_cuda"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.dmaq_general import DMAQer",
+        "from modules.mixers.dmaq_qatten import DMAQ_QattenMixer",
+        "import torch.nn.functional as F",
+        "import torch as th",
+        "from torch.optim import RMSprop",
+        "import numpy as np"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/max_q_learner.py",
+      "classes": [
+        {
+          "name": "MAXQLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "central_action_embed",
+        "central_loss",
+        "central_mac",
+        "central_mixer",
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "hysteretic_qmix",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "qmix_loss",
+        "target_update_interval",
+        "w"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qmix import QMixer",
+        "from modules.mixers.qmix_central_no_hyper import QMixerCentralFF",
+        "from modules.mixers.qmix_central_attention import QMixerCentralAtten",
+        "import torch as th",
+        "from torch.optim import RMSprop",
+        "from collections import deque",
+        "from controllers import REGISTRY as mac_REGISTRY"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/max_q_learner_globalRM.py",
+      "classes": [
+        {
+          "name": "MAXQLearnerGlobalRM",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int",
+            "unsup_train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, full_batch: EpisodeBatch",
+            "_compute_state_entropy_rewards": "self, state, full_state, mask, full_mask",
+            "reset_critic": "self",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "central_action_embed",
+        "central_loss",
+        "central_mac",
+        "central_mixer",
+        "device",
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "hysteretic_qmix",
+        "k",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "qmix_loss",
+        "target_update_interval",
+        "use_cuda",
+        "w"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qmix import QMixer",
+        "from modules.mixers.qmix_central_no_hyper import QMixerCentralFF",
+        "from modules.mixers.qmix_central_attention import QMixerCentralAtten",
+        "import torch as th",
+        "from torch.optim import RMSprop",
+        "from collections import deque",
+        "from controllers import REGISTRY as mac_REGISTRY"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/pref_qmix_learner.py",
+      "classes": [
+        {
+          "name": "Pref_QMIX_learner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int",
+            "unsup_train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, full_batch: EpisodeBatch",
+            "_compute_state_entropy_rewards": "self, state, full_state, mask, full_mask",
+            "_compute_obs_entropy_rewards": "self, obs, full_obs, mask, full_mask",
+            "cal_indi_reward": "self, grad_qtot_qi, mixer_td_error, qi, target_qi, indi_terminated",
+            "cal_preference_loss": "self, q_rewards, q_mask, preference_labels, agent_num",
+            "_update_targets": "self",
+            "reset_critic": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "device",
+        "direct_local_preference",
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "k",
+        "lamda",
+        "lcoal_pretrain_timesteps",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "t_max",
+        "target_update_interval",
+        "use_cuda",
+        "use_global_reward",
+        "use_local_reward"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qmix import QMixer",
+        "import torch as th",
+        "from torch.optim import RMSprop",
+        "from components.preference import ScriptPreferences"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/pref_qmix_learner_new.py",
+      "classes": [
+        {
+          "name": "Pref_QMIX_learner_new",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args, pref_mac",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, reward_model",
+            "get_local_labels": "self, batch",
+            "cal_indi_reward": "self, grad_qtot_qi, mixer_td_error, qi, target_qi, indi_terminated",
+            "cal_preference_loss": "self, q_rewards, preference_mask, preference_labels",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "apply_local_timesteps",
+        "direct_local_preference",
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "lamda",
+        "lamda_decay",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "policy_dir",
+        "t_max",
+        "target_update_interval",
+        "use_cuda",
+        "use_local_reward"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qmix import QMixer",
+        "import torch as th",
+        "from torch.optim import RMSprop"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/q_learner.py",
+      "classes": [
+        {
+          "name": "QLearner",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "target_update_interval"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qmix import QMixer",
+        "import torch as th",
+        "from torch.optim import RMSprop"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/q_learner_differ.py",
+      "classes": [
+        {
+          "name": "QLearner_differ",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int",
+            "cal_indi_reward": "self, grad_qtot_qi, mixer_td_error, qi, target_qi, indi_terminated",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "target_update_interval"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qmix import QMixer",
+        "import torch as th",
+        "from torch.optim import RMSprop"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/q_learner_globalRM.py",
+      "classes": [
+        {
+          "name": "QLearnerGlobalRM",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int",
+            "unsup_train": "self, batch, t_env, episode_num, full_batch",
+            "_compute_state_entropy_rewards": "self, state, full_state, mask, full_mask",
+            "reset_critic": "self",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "device",
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "k",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "target_update_interval",
+        "use_cuda"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qmix import QMixer",
+        "import torch as th",
+        "from torch.optim import RMSprop"
+      ]
+    },
+    {
+      "family": "old",
+      "file": "old_src/learners/q_learner_new.py",
+      "classes": [
+        {
+          "name": "QLearnerNew",
+          "methods": {
+            "__init__": "self, mac, scheme, logger, args, pref_mac",
+            "train": "self, batch: EpisodeBatch, t_env: int, episode_num: int, reward_model",
+            "mix_qvals": "self, qvals, batch",
+            "_update_targets": "self",
+            "cuda": "self",
+            "save_models": "self, path",
+            "load_models": "self, path"
+          }
+        }
+      ],
+      "args": [
+        "double_q",
+        "gamma",
+        "grad_norm_clip",
+        "learner_log_interval",
+        "lr",
+        "mixer",
+        "n_agents",
+        "optim_alpha",
+        "optim_eps",
+        "policy_dir",
+        "target_update_interval",
+        "use_cuda"
+      ],
+      "imports": [
+        "import copy",
+        "from components.episode_buffer import EpisodeBatch",
+        "from modules.mixers.vdn import VDNMixer",
+        "from modules.mixers.qmix import QMixer",
+        "import torch as th",
+        "from torch.optim import RMSprop"
+      ]
+    }
+  ],
+  "configs": {
+    "icq": {
+      "acpl_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": false,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "env_args": {
+          "state_last_action": true
+        },
+        "lr": 0.0005,
+        "cpl_lambda": 0.1,
+        "cpl_alpha": 1000,
+        "cpl_constrain_coe": 1.0,
+        "cpl_constrain_type": "pi",
+        "mixing_embed_dim": 32,
+        "agent_output_type": "q",
+        "learner": "cpl_learner",
+        "q_nstep": 0,
+        "name": "ACPL",
+        "offline_dataset_dir": "/data/user/kouqian/SMAC410_pref_new/5m_vs_6m_good-medium_1000_30.th",
+        "offline_dataset_quality": "good-medium",
+        "pref_segment_pairs": 1000,
+        "use_pref": true,
+        "train_reward": false,
+        "max_traj_length": 30,
+        "model_type": "MR",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false
+      },
+      "bcmapt_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "env_args": {
+          "state_last_action": true
+        },
+        "e2e": false,
+        "agent_output_type": "pi_logits",
+        "learner": "bcmapt_learner",
+        "lr": 0.0005,
+        "lamda": 1,
+        "T": 0.5,
+        "mask_before_softmax": false,
+        "name": "BCMAPT",
+        "offline_dataset_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled.th",
+        "offline_dataset_quality": "low_1000episode_policypool_new",
+        "map_name": "10m_vs_11m",
+        "max_traj_length": 150,
+        "reward_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled_MultiPrefTransformerDivide_testrm_agent_reward.th",
+        "pref_segment_pairs": 500,
+        "use_pref": true,
+        "train_reward": false,
+        "model_type": "MultiPrefTransformerDivide",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false
+      },
+      "bc_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "e2e": false,
+        "env_args": {
+          "state_last_action": true
+        },
+        "agent_output_type": "pi_logits",
+        "learner": "bc_learner",
+        "lr": 0.0005,
+        "mask_before_softmax": false,
+        "name": "BC",
+        "offline_dataset_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled.th",
+        "offline_dataset_quality": "low_1000episode_policypool_new",
+        "map_name": "10m_vs_11m",
+        "max_traj_length": 150,
+        "reward_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled_MultiPrefTransformerDivide_testrm_agent_reward.th",
+        "pref_segment_pairs": 500,
+        "use_pref": false,
+        "train_reward": false,
+        "model_type": "MultiPrefTransformerDivide",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false
+      },
+      "cpl_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": false,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "env_args": {
+          "state_last_action": true
+        },
+        "lr": 0.0005,
+        "cpl_lambda": 0.1,
+        "cpl_alpha": 1,
+        "cpl_constrain_coe": 1.0,
+        "cpl_constrain_type": "pi",
+        "NLL_lamda": 0.2,
+        "use_nll": false,
+        "e2e": false,
+        "mixing_embed_dim": 32,
+        "agent_output_type": "pi_logits",
+        "learner": "cpl_learner",
+        "q_nstep": 0,
+        "name": "CPL",
+        "offline_dataset_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/8m/low_6-4_1000episode_policypool/500_120labeled.th",
+        "offline_dataset_quality": "low_6-4_1000episode_policypool",
+        "pref_segment_pairs": 500,
+        "use_pref": true,
+        "train_reward": false,
+        "max_traj_length": 30,
+        "model_type": "MultiPrefTransformerDivide",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false
+      },
+      "cql_smac.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 100000,
+        "runner": "parallel",
+        "batch_size_run": 8,
+        "t_max": 10050000,
+        "buffer_size": 5000,
+        "batch_size": 128,
+        "optimizer": "adam",
+        "off_batch_size": 32,
+        "pi_accuracy": 0.65,
+        "target_update_interval": 200,
+        "mac": "n_mac",
+        "agent": "n_rnn",
+        "agent_output_type": "q",
+        "learner": "cql_learner",
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_embed": 64,
+        "lr": 0.0005,
+        "td_lambda": 0.8,
+        "q_lambda": false,
+        "use_layer_norm": false,
+        "use_orthogonal": false,
+        "gain": 0.01,
+        "use_per": false,
+        "per_alpha": 0.6,
+        "per_beta": 0.4,
+        "return_priority": false,
+        "use_offline": true,
+        "use_sarsa": false,
+        "cql_alpha": 5.0,
+        "global_cql_alpha": 1.0,
+        "training_episodes": 5000,
+        "moderate_lambda": false,
+        "softmax_temp": 5,
+        "e2e": false,
+        "raw_cql": false,
+        "raw_sample_actions": 100,
+        "data_dir": "/home/limingyang/kouqian_code/MARLHF_for_dataset/ICQ-MA/save_models",
+        "name": "CQL",
+        "offline_dataset_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled.th",
+        "offline_dataset_quality": "low_1000episode_policypool_new",
+        "map_name": "10m_vs_11m",
+        "max_traj_length": 150,
+        "pref_segment_pairs": 500,
+        "use_pref": false,
+        "train_reward": false,
+        "model_type": "MultiPrefTransformerDivide",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false
+      },
+      "dppo_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": false,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "e2e": false,
+        "env_args": {
+          "state_last_action": true
+        },
+        "lr": 0.0005,
+        "dppo_alpha": 100,
+        "dppo_lambda": 0.5,
+        "mixing_embed_dim": 32,
+        "agent_output_type": "pi_logits",
+        "learner": "dppo_learner",
+        "q_nstep": 0,
+        "name": "DPPO",
+        "offline_dataset_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_discrete/500_150labeled.th",
+        "offline_dataset_quality": "low_1000episode_policypool_discrete",
+        "map_name": "10m_vs_11m",
+        "max_traj_length": 30,
+        "reward_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_6-4_1000episode_policypool/500_150labeled_MultiPrefTransformerDivide_agent_reward.th",
+        "use_pref": true,
+        "pref_segment_pairs": 500,
+        "train_reward": false,
+        "model_type": "MR",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false
+      },
+      "hacpl_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": false,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "env_args": {
+          "state_last_action": true
+        },
+        "lr": 0.0005,
+        "cpl_lambda": 0.1,
+        "cpl_alpha": 1000,
+        "cpl_constrain_coe": 1.0,
+        "cpl_constrain_type": "pi",
+        "mixing_embed_dim": 32,
+        "agent_output_type": "pi_logits",
+        "learner": "hacpl_learner",
+        "q_nstep": 0,
+        "name": "HACPL",
+        "fix_order": true,
+        "offline_dataset_dir": "/data/user/kouqian/SMAC410_pref_new/5m_vs_6m_good-medium_1000_30.th",
+        "offline_dataset_quality": "good-medium",
+        "pref_segment_pairs": 1000,
+        "use_pref": true,
+        "train_reward": false,
+        "max_traj_length": 30,
+        "model_type": "MR",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false
+      },
+      "iql_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": true,
+        "e2e": false,
+        "off_batch_size": 32,
+        "runner": "parallel",
+        "batch_size_run": 8,
+        "t_max": 10050000,
+        "buffer_size": 32,
+        "batch_size": 128,
+        "target_update_interval": 600,
+        "step": 5,
+        "lr": 0.0005,
+        "tau": 0.7,
+        "beta": 3.0,
+        "alpha": 0.005,
+        "agent_output_type": "pi_logits",
+        "learner": "iql_learner",
+        "use_offline": true,
+        "training_episodes": 5000,
+        "name": "IQL",
+        "offline_dataset_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_1000episode_policypool_new/500_150labeled.th",
+        "offline_dataset_quality": "low_1000episode_policypool_new",
+        "map_name": "10m_vs_11m",
+        "max_traj_length": 150,
+        "pref_segment_pairs": 500,
+        "use_pref": false,
+        "train_reward": false,
+        "model_type": "MultiPrefTransformerDivide",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false
+      },
+      "madpo_aux_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": false,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "env_args": {
+          "state_last_action": true
+        },
+        "lr": 0.0005,
+        "cpl_lambda": 0.1,
+        "cpl_alpha": 1,
+        "cpl_constrain_coe": 1.0,
+        "cpl_constrain_type": "pi",
+        "aux_loss_coe": 1,
+        "mixing_embed_dim": 32,
+        "agent_output_type": "pi_logits",
+        "learner": "madpo_aux_learner",
+        "q_nstep": 0,
+        "name": "MADPO_aux",
+        "offline_dataset_dir": "/data/user/kouqian/MAOfflineDatasets/SMAC410_imbalanced_pref/8m/medium_normal/100_120labeled.th",
+        "offline_dataset_quality": "medium_normal",
+        "pref_segment_pairs": 100,
+        "use_pref": true,
+        "reward_dir": "/data/user/kouqian/MAOfflineDatasets/SMAC410_imbalanced_pref/8m/medium_normal/100_120labeled_MultiPrefTransformerDivide_agent_reward.th",
+        "train_reward": false,
+        "max_traj_length": 120,
+        "model_type": "MR",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false
+      },
+      "madpo_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": false,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "pi_accuracy": 0.65,
+        "env_args": {
+          "state_last_action": true
+        },
+        "e2e": false,
+        "lr": 0.0005,
+        "dpo_lambda": 0.5,
+        "dpo_alpha": 0.1,
+        "T": 0.5,
+        "distence_type": "log_pi",
+        "mixing_embed_dim": 32,
+        "agent_output_type": "pi_logits",
+        "learner": "madpo_learner",
+        "q_nstep": 0,
+        "name": "MADPO",
+        "offline_dataset_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_6-4_1000episode_policypool/500_150labeled.th",
+        "offline_dataset_quality": "low_6-4_1000episode_policypool",
+        "map_name": "10m_vs_11m",
+        "max_traj_length": 150,
+        "reward_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_imbalanced_pref/10m_vs_11m/low_6-4_1000episode_policypool/500_150labeled_MultiPrefTransformerDivide_testrm_agent_reward.th",
+        "pref_segment_pairs": 500,
+        "use_pref": true,
+        "train_reward": false,
+        "model_type": "MultiPrefTransformerDivide",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false,
+        "train_diverse_predictor": false,
+        "diverse_dataset_dir": "/share/project/kouqian/Codes/MARLHF/MADiversePreferDatasets/3m/3m.th"
+      },
+      "maicpl_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": false,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "env_args": {
+          "state_last_action": true
+        },
+        "lr": 0.0005,
+        "cpl_lambda": 0.1,
+        "cpl_alpha": 1000,
+        "cpl_constrain_coe": 1.0,
+        "cpl_constrain_type": "pi",
+        "mixing_embed_dim": 32,
+        "agent_output_type": "pi_logits",
+        "learner": "maicpl_learner",
+        "q_nstep": 0,
+        "name": "MAICPL",
+        "offline_dataset_dir": "/home/kouqian/buffer/pref_datasets/3m_good_1000_16.th",
+        "offline_dataset_quality": "good",
+        "pref_segment_pairs": 1000,
+        "use_pref": true,
+        "train_reward": false,
+        "max_traj_length": 30,
+        "model_type": "MR",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false
+      },
+      "maidpo_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": false,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "env_args": {
+          "state_last_action": true
+        },
+        "lr": 0.0005,
+        "dpo_lambda": 0.1,
+        "dpo_alpha": 1000,
+        "distence_type": "log_pi",
+        "distence_log": true,
+        "n_query_embedding_layer1": 64,
+        "n_query_embedding_layer2": 32,
+        "n_key_embedding_layer1": 32,
+        "n_head_embedding_layer1": 64,
+        "n_head_embedding_layer2": 4,
+        "n_attention_head": 4,
+        "n_constant_value": 32,
+        "qatten_type": "none",
+        "traj_feature_rtgs": 4,
+        "mixing_embed_dim": 32,
+        "agent_output_type": "pi_logits",
+        "learner": "maidpo_learner",
+        "q_nstep": 0,
+        "name": "MAIDPO",
+        "offline_dataset_dir": "/home/kouqian/buffer/pref_datasets/3m_poor_1000_16.th",
+        "offline_dataset_quality": "poor",
+        "pref_segment_pairs": 1000,
+        "use_pref": true,
+        "train_reward": false,
+        "max_traj_length": 30,
+        "model_type": "MR",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 128,
+        "use_reward_hat": false,
+        "train_predicter": false,
+        "reward_dir": "/home/kouqian/buffer/pref_datasets/3m_poor_1000_16_MultiPrefTransformerDivide_agent_reward.th"
+      },
+      "offpg_smac.yaml": {
+        "action_selector": "multinomial",
+        "epsilon_start": 0.5,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 500000,
+        "mask_before_softmax": false,
+        "runner": "parallel",
+        "buffer_size": 32,
+        "off_buffer_size": 70000,
+        "batch_size_run": 10,
+        "batch_size": 16,
+        "off_batch_size": 32,
+        "e2e": false,
+        "env_args": {
+          "state_last_action": true
+        },
+        "target_update_interval": 600,
+        "step": 5,
+        "pi_accuracy": 0.5,
+        "lr": 0.0005,
+        "critic_lr": 0.0001,
+        "td_lambda": 0.8,
+        "icq_alpha": 1,
+        "icq_beta": 100,
+        "mixing_embed_dim": 32,
+        "agent_output_type": "pi_logits",
+        "learner": "offpg_learner",
+        "q_nstep": 0,
+        "name": "ICQ-MA",
+        "offline_dataset_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_balanced_pref/8m/good_200episode_final/100_120labeled.th",
+        "offline_dataset_quality": "good_200episode_final",
+        "map_name": "3m",
+        "max_traj_length": 60,
+        "reward_dir": "/share/project/kouqian/Codes/MARLHF/MADiversePreferDatasets/3m/reward.th",
+        "use_pref": false,
+        "pref_segment_pairs": 100,
+        "train_reward": false,
+        "train_predicter": false,
+        "model_type": "MultiPrefTransformerDivide",
+        "action_type": "Discrete",
+        "reward_train_epoch": 100,
+        "reward_batch_size": 32,
+        "use_reward_hat": false,
+        "train_diverse_predictor": true,
+        "diverse_dataset_dir": "/share/project/kouqian/Codes/MARLHF/MADiversePreferDatasets/3m/3m.th"
+      },
+      "qmix.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "episode",
+        "batch_size_run": 1,
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "q_learner",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "name": "qmix"
+      },
+      "qmix_smac.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "parallel",
+        "batch_size_run": 4,
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "env_args": {
+          "state_last_action": false
+        },
+        "agent_output_type": "q",
+        "learner": "q_learner",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "name": "qmix_smac_parallel"
+      },
+      "vdn_smac.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "parallel",
+        "batch_size_run": 8,
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "q_learner",
+        "double_q": true,
+        "mixer": "vdn",
+        "name": "vdn_smac_parallel"
+      }
+    },
+    "old": {
+      "cw_qmix.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "max_q_learner",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "central_loss": 1,
+        "qmix_loss": 1,
+        "w": 0.5,
+        "hysteretic_qmix": false,
+        "central_mixing_embed_dim": 256,
+        "central_action_embed": 1,
+        "central_mac": "basic_central_mac",
+        "central_agent": "central_rnn",
+        "central_rnn_hidden_dim": 64,
+        "central_mixer": "ff",
+        "name": "cw_qmix"
+      },
+      "cw_qmix_w_globalRM.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "pref_episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "max_q_learner_w_globalRM",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "central_loss": 1,
+        "qmix_loss": 1,
+        "w": 0.5,
+        "hysteretic_qmix": false,
+        "central_mixing_embed_dim": 256,
+        "central_action_embed": 1,
+        "central_mac": "basic_central_mac",
+        "central_agent": "central_rnn",
+        "central_rnn_hidden_dim": 64,
+        "central_mixer": "ff",
+        "name": "cw_qmix_w_globalRM",
+        "run": "pref",
+        "use_global_reward": true,
+        "use_local_reward": false,
+        "direct_local_preference": false,
+        "num_seed_timesteps": 10,
+        "num_unsup_timesteps": 10000,
+        "k": 6,
+        "num_interact": 3000,
+        "reset_critic": true,
+        "max_feedback": 40000,
+        "reward_schedule": true,
+        "active": "tan",
+        "reward_lr": 0.0003,
+        "reward_hidden_size": 256,
+        "reward_update": 250,
+        "ensemble_size": 3,
+        "state_or_obs": true,
+        "actions_onehot": true,
+        "reward_train_batch_size": 128,
+        "loss_func": "cross_entropy",
+        "local_acc": 0.97,
+        "sample_episode_size": 100,
+        "sample_segment_size": 128,
+        "segment_size": 10,
+        "segment_capacity": 50000,
+        "global_preference_type": "true_rewards",
+        "policy_dir": "results/models/qmix__5m_vs_6m__4__pos__2023-12-22_20-34-50/2000064",
+        "local_preference_type": "true_indi_rewards",
+        "local_preference_type_training": "indi_rewards",
+        "lamda": 0.01,
+        "lcoal_pretrain_timesteps": 200000,
+        "lcoal_label_equal_thres": 0.5
+      },
+      "ow_qmix.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "max_q_learner",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "central_loss": 1,
+        "qmix_loss": 1,
+        "w": 0.5,
+        "hysteretic_qmix": true,
+        "central_mixing_embed_dim": 256,
+        "central_action_embed": 1,
+        "central_mac": "basic_central_mac",
+        "central_agent": "central_rnn",
+        "central_rnn_hidden_dim": 64,
+        "central_mixer": "ff",
+        "name": "ow_qmix"
+      },
+      "ow_qmix_w_globalRM.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "pref_episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "max_q_learner_w_globalRM",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "central_loss": 1,
+        "qmix_loss": 1,
+        "w": 0.5,
+        "hysteretic_qmix": true,
+        "central_mixing_embed_dim": 256,
+        "central_action_embed": 1,
+        "central_mac": "basic_central_mac",
+        "central_agent": "central_rnn",
+        "central_rnn_hidden_dim": 64,
+        "central_mixer": "ff",
+        "name": "ow_qmix_w_globalRM",
+        "run": "pref",
+        "use_global_reward": true,
+        "use_local_reward": false,
+        "direct_local_preference": false,
+        "num_seed_timesteps": 10,
+        "num_unsup_timesteps": 10000,
+        "k": 6,
+        "num_interact": 3000,
+        "reset_critic": true,
+        "max_feedback": 40000,
+        "reward_schedule": true,
+        "active": "tan",
+        "reward_lr": 0.0003,
+        "reward_hidden_size": 256,
+        "reward_update": 250,
+        "ensemble_size": 3,
+        "state_or_obs": true,
+        "actions_onehot": true,
+        "reward_train_batch_size": 128,
+        "loss_func": "cross_entropy",
+        "local_acc": 0.97,
+        "sample_episode_size": 100,
+        "sample_segment_size": 128,
+        "segment_size": 10,
+        "segment_capacity": 50000,
+        "global_preference_type": "true_rewards",
+        "policy_dir": "results/models/qmix__5m_vs_6m__4__pos__2023-12-22_20-34-50/2000064",
+        "local_preference_type": "true_indi_rewards",
+        "local_preference_type_training": "indi_rewards",
+        "lamda": 0.01,
+        "lcoal_pretrain_timesteps": 200000,
+        "lcoal_label_equal_thres": 0.5
+      },
+      "pref_qmix.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "pref_episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "pref_qmix_learner",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "name": "pref_qmix",
+        "run": "pref",
+        "use_global_reward": false,
+        "use_local_reward": true,
+        "direct_local_preference": false,
+        "num_seed_timesteps": 10,
+        "num_unsup_timesteps": 1000,
+        "k": 6,
+        "num_interact": 3000,
+        "reset_critic": true,
+        "max_feedback": 40000,
+        "reward_schedule": true,
+        "active": "sig",
+        "reward_lr": 0.0003,
+        "reward_hidden_size": 256,
+        "reward_update": 250,
+        "ensemble_size": 3,
+        "state_or_obs": true,
+        "actions_onehot": true,
+        "reward_train_batch_size": 128,
+        "loss_func": "cross_entropy",
+        "local_acc": 0.97,
+        "sample_episode_size": 100,
+        "sample_segment_size": 50,
+        "segment_size": 10,
+        "segment_capacity": 3000,
+        "global_preference_type": "true_rewards",
+        "policy_dir": "results/models/qmix__3s_vs_5z__1__neg__2024-01-01_00-10-22/2000620",
+        "local_preference_type": "true_indi_rewards",
+        "local_preference_type_training": "indi_rewards",
+        "lamda": 10,
+        "lamda_decay": true,
+        "lcoal_pretrain_timesteps": 10000,
+        "lcoal_label_equal_thres": 0.4
+      },
+      "pref_qmix_new.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "pref_episode_new",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "pref_qmix_learner_new",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "name": "pref_qmix_new",
+        "run": "pref",
+        "pref_mac": "basic_mac",
+        "use_global_reward": false,
+        "use_local_reward": true,
+        "direct_local_preference": false,
+        "pretrain_timesteps": 1000,
+        "num_interact": 1,
+        "max_labels": 1000000,
+        "reward_schedule": false,
+        "active": "tan",
+        "reward_lr": 0.0005,
+        "reward_hidden_size": 64,
+        "reward_update_times": 250,
+        "ensemble_size": 3,
+        "actions_onehot": false,
+        "reward_train_batch_size": 128,
+        "loss_func": "cross_entropy",
+        "local_acc": 0.97,
+        "sample_method": "uniform",
+        "sample_batch_size": 32,
+        "add_batch_size": 10,
+        "segment_size": 10,
+        "policy_dir": "results/models/qmix__5m_vs_6m__173041785__neg__2024-02-01_10-10-35/4800754",
+        "lamda": 0.005,
+        "lamda_decay": false,
+        "apply_local_timesteps": 50000,
+        "lcoal_label_equal_thres": 0.4
+      },
+      "qmix.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "q_learner",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "name": "qmix"
+      },
+      "qmix_differ.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "qdiffer_learner",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "name": "qdiffer",
+        "seed": 667792542
+      },
+      "qmix_make_datasets.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "makedata_runner",
+        "buffer_size": 2000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "q_learner",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "name": "qmix",
+        "data_dir0": "/home/limingyang/kouqian_code/MARLHF_for_dataset/dataset_models/smac/2s3z/poor/",
+        "data_dir1": "/home/limingyang/kouqian_code/MARLHF_for_dataset/dataset_models/smac/2s3z/good/",
+        "dataset_type": "good_200episode_final",
+        "dataset_size": 200,
+        "save_buffer_dir": "/home/limingyang/kouqian_code/MAOfflineDatasets/SMAC410_balanced/2s3z/"
+      },
+      "qmix_new.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "pref_episode_new",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "q_learner_new",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "name": "qmix_new",
+        "run": "pref",
+        "pref_mac": "basic_mac",
+        "use_global_reward": false,
+        "use_local_reward": false,
+        "direct_local_preference": true,
+        "pretrain_timesteps": 1000,
+        "num_interact": 1,
+        "max_labels": 1000000,
+        "reward_schedule": false,
+        "active": "tan",
+        "reward_lr": 0.0005,
+        "reward_hidden_size": 64,
+        "reward_update_times": 250,
+        "ensemble_size": 3,
+        "actions_onehot": false,
+        "reward_train_batch_size": 128,
+        "loss_func": "cross_entropy",
+        "local_acc": 0.97,
+        "sample_method": "uniform",
+        "sample_batch_size": 32,
+        "add_batch_size": 10,
+        "segment_size": 10,
+        "policy_dir": "results/models/qmix__5m_vs_6m__173041785__neg__2024-02-01_10-10-35/4800754",
+        "lamda": 0.005,
+        "lamda_decay": false,
+        "apply_local_timesteps": 50000,
+        "lcoal_label_equal_thres": 0.4
+      },
+      "qmix_w_globalRM.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "pref_episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "q_learner_w_globalRM",
+        "double_q": true,
+        "mixer": "qmix",
+        "mixing_embed_dim": 32,
+        "hypernet_layers": 2,
+        "hypernet_embed": 64,
+        "name": "qmix_w_globalRM",
+        "run": "pref",
+        "use_global_reward": true,
+        "use_local_reward": false,
+        "direct_local_preference": false,
+        "num_seed_timesteps": 10,
+        "num_unsup_timesteps": 10000,
+        "k": 6,
+        "num_interact": 5000,
+        "reset_critic": true,
+        "max_feedback": 40000,
+        "reward_schedule": true,
+        "active": "tan",
+        "reward_lr": 0.0003,
+        "reward_hidden_size": 256,
+        "reward_update": 250,
+        "ensemble_size": 3,
+        "state_or_obs": true,
+        "actions_onehot": true,
+        "reward_train_batch_size": 128,
+        "loss_func": "cross_entropy",
+        "local_acc": 0.97,
+        "sample_episode_size": 100,
+        "sample_segment_size": 128,
+        "segment_size": 10,
+        "segment_capacity": 50000,
+        "global_preference_type": "policy",
+        "policy_dir": "results/models/qmix__2c_vs_64zg__3__neg__2024-01-01_00-09-55/2000673",
+        "local_preference_type": "true_indi_rewards",
+        "local_preference_type_training": "indi_rewards",
+        "lamda": 0.01,
+        "lcoal_pretrain_timesteps": 200000,
+        "lcoal_label_equal_thres": 0.5
+      },
+      "qplex.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "dmaq_qatten_learner",
+        "double_q": true,
+        "mixer": "dmaq",
+        "mixing_embed_dim": 32,
+        "hypernet_embed": 64,
+        "adv_hypernet_layers": 1,
+        "adv_hypernet_embed": 64,
+        "num_kernel": 4,
+        "is_minus_one": true,
+        "weighted_head": true,
+        "is_adv_attention": true,
+        "is_stop_gradient": true,
+        "burn_in_period": 100,
+        "name": "qplex"
+      },
+      "qplex_w_globalRM.yaml": {
+        "action_selector": "epsilon_greedy",
+        "epsilon_start": 1.0,
+        "epsilon_finish": 0.05,
+        "epsilon_anneal_time": 50000,
+        "runner": "pref_episode",
+        "buffer_size": 5000,
+        "target_update_interval": 200,
+        "agent_output_type": "q",
+        "learner": "dmaq_qatten_learner_w_globalRM",
+        "double_q": true,
+        "mixer": "dmaq",
+        "mixing_embed_dim": 32,
+        "hypernet_embed": 64,
+        "adv_hypernet_layers": 1,
+        "adv_hypernet_embed": 64,
+        "num_kernel": 4,
+        "is_minus_one": true,
+        "weighted_head": true,
+        "is_adv_attention": true,
+        "is_stop_gradient": true,
+        "burn_in_period": 100,
+        "name": "qplex_w_globalRM",
+        "run": "pref",
+        "use_global_reward": true,
+        "use_local_reward": false,
+        "direct_local_preference": false,
+        "num_seed_timesteps": 10,
+        "num_unsup_timesteps": 10000,
+        "k": 6,
+        "num_interact": 3000,
+        "reset_critic": true,
+        "max_feedback": 40000,
+        "reward_schedule": true,
+        "active": "tan",
+        "reward_lr": 0.0003,
+        "reward_hidden_size": 256,
+        "reward_update": 250,
+        "ensemble_size": 3,
+        "state_or_obs": true,
+        "actions_onehot": true,
+        "reward_train_batch_size": 128,
+        "loss_func": "cross_entropy",
+        "local_acc": 0.97,
+        "sample_episode_size": 100,
+        "sample_segment_size": 128,
+        "segment_size": 10,
+        "segment_capacity": 50000,
+        "global_preference_type": "true_rewards",
+        "policy_dir": "results/models/qmix__5m_vs_6m__4__pos__2023-12-22_20-34-50/2000064",
+        "local_preference_type": "true_indi_rewards",
+        "local_preference_type_training": "indi_rewards",
+        "lamda": 0.01,
+        "lcoal_pretrain_timesteps": 200000,
+        "lcoal_label_equal_thres": 0.5
+      }
+    }
+  },
+  "data": [
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/3m/3m.th",
+      "bytes": 17028642,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            3,
+            30
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            48
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            3,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            3,
+            9
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            3
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "global_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "between_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "in_labels": {
+          "type": "Tensor",
+          "shape": [
+            2,
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.3199999928474426
+        },
+        "global_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.4000000059604645
+        },
+        "between_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.4650000035762787
+        },
+        "in_labels": {
+          "values": [
+            1.0,
+            2.0,
+            3.0
+          ],
+          "mean": 2.0
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/3m/3m_labels.th",
+      "bytes": 9698,
+      "fields": {
+        "global_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "between_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "in_labels": {
+          "type": "Tensor",
+          "shape": [
+            2,
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "global_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.39500001072883606
+        },
+        "between_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.4566666781902313
+        },
+        "in_labels": {
+          "values": [
+            1.0,
+            2.0,
+            3.0
+          ],
+          "mean": 2.0
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/3m/llama70b_test_3m_labels.th",
+      "bytes": 9733,
+      "fields": {
+        "global_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "between_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "in_labels": {
+          "type": "Tensor",
+          "shape": [
+            2,
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "global_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.39500001072883606
+        },
+        "between_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.4416666626930237
+        },
+        "in_labels": {
+          "values": [
+            1.0,
+            2.0,
+            3.0
+          ],
+          "mean": 2.0
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/3m/qwen32b_test_3m_labels.th",
+      "bytes": 9733,
+      "fields": {
+        "global_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "between_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "in_labels": {
+          "type": "Tensor",
+          "shape": [
+            2,
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "global_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.36500000953674316
+        },
+        "between_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.31166666746139526
+        },
+        "in_labels": {
+          "values": [
+            1.0,
+            2.0,
+            3.0
+          ],
+          "mean": 2.0
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/3m/qwen8b_test_3m_labels.th",
+      "bytes": 9733,
+      "fields": {
+        "global_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "between_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "in_labels": {
+          "type": "Tensor",
+          "shape": [
+            2,
+            200,
+            3
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "global_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.5
+        },
+        "between_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.5950000286102295
+        },
+        "in_labels": {
+          "values": [
+            1.0,
+            2.0,
+            3.0
+          ],
+          "mean": 2.0
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/3m/reward.th",
+      "bytes": 289190,
+      "fields": {
+        "<root>": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            60,
+            3,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {},
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/8m/8m.th",
+      "bytes": 181888610,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            8,
+            80
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            168
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            8,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            8,
+            14
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            8
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "global_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "between_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            8
+          ],
+          "dtype": "torch.float32"
+        },
+        "in_labels": {
+          "type": "Tensor",
+          "shape": [
+            2,
+            200,
+            8
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.054999999701976776
+        },
+        "global_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.6200000047683716
+        },
+        "between_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.559374988079071
+        },
+        "in_labels": {
+          "values": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            8.0
+          ],
+          "mean": 4.5
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MADiversePreferDatasets/8m/8m_labels.th",
+      "bytes": 21730,
+      "fields": {
+        "global_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "between_labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            8
+          ],
+          "dtype": "torch.float32"
+        },
+        "in_labels": {
+          "type": "Tensor",
+          "shape": [
+            2,
+            200,
+            8
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "global_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.625
+        },
+        "between_labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.5556250214576721
+        },
+        "in_labels": {
+          "values": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            8.0
+          ],
+          "mean": 4.5
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/10m_vs_11m/good_400episode_final/200_150labeled.th",
+      "bytes": 359113752,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            10,
+            105
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            243
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            10,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            10,
+            17
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            10
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.1899999976158142
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/1c3s5z/good_400episode_final/200_180labeled.th",
+      "bytes": 545711384,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            9,
+            162
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            270
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            9,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            9,
+            15
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            9
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.004999999888241291
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/3m/good_400episode_final/200_60labeled.th",
+      "bytes": 17020173,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            3,
+            30
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            48
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            3,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            3,
+            9
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            61,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            3
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.3199999928474426
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/3s5z_vs_3s6z/good_400episode_final/200_170labeled.th",
+      "bytes": 398732952,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            171,
+            8,
+            136
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            171,
+            230
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            171,
+            8,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            171,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            171,
+            8,
+            15
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            171,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            171,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            8
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.009999999776482582
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/3s_vs_5z/good_400episode_final/200_250labeled.th",
+      "bytes": 102120152,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            251,
+            3,
+            48
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            251,
+            68
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            251,
+            3,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            251,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            251,
+            3,
+            11
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            251,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            251,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            3
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.2549999952316284
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/6h_vs_8z/good_400episode_final/200_150labeled.th",
+      "bytes": 170894552,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            6,
+            78
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            140
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            6,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            6,
+            14
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            151,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            6
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.09000000357627869
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/8m/good_400episode_final/200_120labeled.th",
+      "bytes": 181868184,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            8,
+            80
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            168
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            8,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            8,
+            14
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            8
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.054999999701976776
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/8m_vs_9m/good_400episode_final/200_120labeled.th",
+      "bytes": 193290584,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            8,
+            85
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            179
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            8,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            8,
+            15
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            121,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            8
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.14000000059604645
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/corridor/good_400episode_final/200_400labeled.th",
+      "bytes": 906764184,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            401,
+            6,
+            156
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            401,
+            282
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            401,
+            6,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            401,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            401,
+            6,
+            30
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            401,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            401,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            6
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.17499999701976776
+        }
+      },
+      "status": "TENSORS_READ"
+    },
+    {
+      "path": "marl平台代码/寇谦/论文代码及技术文档/论文代码及技术文档/MAOfflineDatasets_new/SMAC410_imbalanced_pref/MMM2/good_400episode_final/200_180labeled.th",
+      "bytes": 661844184,
+      "fields": {
+        "obs": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            10,
+            176
+          ],
+          "dtype": "torch.float32"
+        },
+        "state": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            322
+          ],
+          "dtype": "torch.float32"
+        },
+        "action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            10,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "reward": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "avail_action": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            10,
+            18
+          ],
+          "dtype": "torch.int32"
+        },
+        "filled": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "terminated": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            181,
+            1
+          ],
+          "dtype": "torch.uint8"
+        },
+        "agent_ids": {
+          "type": "Tensor",
+          "shape": [
+            400,
+            10
+          ],
+          "dtype": "torch.float64"
+        },
+        "labels": {
+          "type": "Tensor",
+          "shape": [
+            200,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "label_summary": {
+        "labels": {
+          "values": [
+            0.0,
+            1.0
+          ],
+          "mean": 0.03500000014901161
+        }
+      },
+      "status": "TENSORS_READ"
+    }
+  ]
+}

@@ -1,0 +1,1465 @@
+* Getting build dependencies for sdist...
+running egg_info
+writing src\unified_marl.egg-info\PKG-INFO
+writing dependency_links to src\unified_marl.egg-info\dependency_links.txt
+writing entry points to src\unified_marl.egg-info\entry_points.txt
+writing requirements to src\unified_marl.egg-info\requires.txt
+writing top-level names to src\unified_marl.egg-info\top_level.txt
+reading manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src\unified_marl.egg-info\PKG-INFO
+writing dependency_links to src\unified_marl.egg-info\dependency_links.txt
+writing entry points to src\unified_marl.egg-info\entry_points.txt
+writing requirements to src\unified_marl.egg-info\requires.txt
+writing top-level names to src\unified_marl.egg-info\top_level.txt
+reading manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+running check
+creating unified_marl-0.4.0
+creating unified_marl-0.4.0\src\unified_marl
+creating unified_marl-0.4.0\src\unified_marl.egg-info
+creating unified_marl-0.4.0\src\unified_marl\algorithms
+creating unified_marl-0.4.0\src\unified_marl\algorithms\hmf
+creating unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+creating unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+creating unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\components
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\controllers
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\agents
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\critics
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\mixers
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\utils
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\old
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\components
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\controllers
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\agents
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\critics
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\utils
+creating unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\components
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\controllers
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\learners
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\action_encoders
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\agents
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\base
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\critics
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\mixers
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\role_selectors
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\roles
+creating unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\utils
+creating unified_marl-0.4.0\src\unified_marl\components
+creating unified_marl-0.4.0\src\unified_marl\config
+creating unified_marl-0.4.0\src\unified_marl\config\algs
+creating unified_marl-0.4.0\src\unified_marl\config\envs
+creating unified_marl-0.4.0\src\unified_marl\config\kou\icq
+creating unified_marl-0.4.0\src\unified_marl\config\kou\old
+creating unified_marl-0.4.0\src\unified_marl\config\wang
+creating unified_marl-0.4.0\src\unified_marl\controllers
+creating unified_marl-0.4.0\src\unified_marl\datasets
+creating unified_marl-0.4.0\src\unified_marl\envs
+creating unified_marl-0.4.0\src\unified_marl\learners
+creating unified_marl-0.4.0\src\unified_marl\modules
+creating unified_marl-0.4.0\src\unified_marl\modules\agents
+creating unified_marl-0.4.0\src\unified_marl\modules\critics
+creating unified_marl-0.4.0\src\unified_marl\modules\mixers
+creating unified_marl-0.4.0\src\unified_marl\rewards
+creating unified_marl-0.4.0\src\unified_marl\runners
+creating unified_marl-0.4.0\src\unified_marl\trainers
+creating unified_marl-0.4.0\src\unified_marl\utils
+creating unified_marl-0.4.0\tests
+copying files to unified_marl-0.4.0...
+copying LICENSE -> unified_marl-0.4.0
+copying NOTICE -> unified_marl-0.4.0
+copying README.md -> unified_marl-0.4.0
+copying pyproject.toml -> unified_marl-0.4.0
+copying src\unified_marl\__init__.py -> unified_marl-0.4.0\src\unified_marl
+copying src\unified_marl\__main__.py -> unified_marl-0.4.0\src\unified_marl
+copying src\unified_marl\api.py -> unified_marl-0.4.0\src\unified_marl
+copying src\unified_marl\checkpoints.py -> unified_marl-0.4.0\src\unified_marl
+copying src\unified_marl\cli.py -> unified_marl-0.4.0\src\unified_marl
+copying src\unified_marl\registry.py -> unified_marl-0.4.0\src\unified_marl
+copying src\unified_marl.egg-info\PKG-INFO -> unified_marl-0.4.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\SOURCES.txt -> unified_marl-0.4.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\dependency_links.txt -> unified_marl-0.4.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\entry_points.txt -> unified_marl-0.4.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\requires.txt -> unified_marl-0.4.0\src\unified_marl.egg-info
+copying src\unified_marl.egg-info\top_level.txt -> unified_marl-0.4.0\src\unified_marl.egg-info
+copying src\unified_marl\algorithms\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms
+copying src\unified_marl\algorithms\hmf\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf
+copying src\unified_marl\algorithms\hmf\adapter.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf
+copying src\unified_marl\algorithms\hmf\agent\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\dqn_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_qmix_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_roma_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_vdac_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents_IPC.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\maddpg_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\mfac_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\mfq_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\mfvfd_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\qmix_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\rode_action_encoder.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\rode_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\rode_selector.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\roma_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\vdn_agents.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\algorithms\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\dqn.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_qmix.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdac.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn copy.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_02_formulate_meanQ.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_02_formulate_meanQ_IPC.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_IPC.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_k_means.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_roma.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_without_high_level.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\maddpg.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\mfac.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\mfq.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\mfvfd.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\qmix.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\vdn.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\utils\ReplenishmentEnv.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\buffer.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\buffer_mfq.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\buffer_roma.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\create_map.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\env_wrappers.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\gnn.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\make_env.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\misc.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\multiagentenv.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\networks.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\noise.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\replenishment_env_wrappers.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\vec_env.py -> unified_marl-0.4.0\src\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\kou\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou
+copying src\unified_marl\algorithms\kou\adapter.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou
+copying src\unified_marl\algorithms\kou\icq\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq
+copying src\unified_marl\algorithms\kou\icq\components\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\components
+copying src\unified_marl\algorithms\kou\icq\components\action_selectors.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\components
+copying src\unified_marl\algorithms\kou\icq\components\epsilon_schedules.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\components
+copying src\unified_marl\algorithms\kou\icq\components\reward_model.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\components
+copying src\unified_marl\algorithms\kou\icq\controllers\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\controllers
+copying src\unified_marl\algorithms\kou\icq\controllers\basic_controller.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\controllers
+copying src\unified_marl\algorithms\kou\icq\controllers\cql_basic_controller.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\controllers
+copying src\unified_marl\algorithms\kou\icq\controllers\n_controller.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\controllers
+copying src\unified_marl\algorithms\kou\icq\learners\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\bc_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\bcmapt_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\cpl_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\cql_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\dppo_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\iql_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\madpo_aux_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\madpo_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\offpg_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\q_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\modules\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules
+copying src\unified_marl\algorithms\kou\icq\modules\agents\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\agents\grnn_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\agents\n_rnn_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\agents\rnn_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\agents\rnn_ns_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\critics\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\critics
+copying src\unified_marl\algorithms\kou\icq\modules\critics\coma.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\critics
+copying src\unified_marl\algorithms\kou\icq\modules\critics\doubleqv.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\critics
+copying src\unified_marl\algorithms\kou\icq\modules\critics\offpg.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\critics
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\nmix.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\qatten.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\qmix.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\time_atten.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\vdn.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\utils\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\icq\utils\dict2namedtuple.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\icq\utils\offpg_utils.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\icq\utils\rl_utils.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\icq\utils\th_utils.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\old\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old
+copying src\unified_marl\algorithms\kou\old\components\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\action_selectors.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\epsilon_schedules.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\preference.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\reward_model.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\reward_model_new.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\controllers\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\controllers
+copying src\unified_marl\algorithms\kou\old\controllers\basic_controller.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\controllers
+copying src\unified_marl\algorithms\kou\old\controllers\central_basic_controller.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\controllers
+copying src\unified_marl\algorithms\kou\old\controllers\maddpg_controller.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\controllers
+copying src\unified_marl\algorithms\kou\old\learners\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\dmaq_qatten_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\dmaq_qatten_learner_globalRM.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\max_q_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\max_q_learner_globalRM.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\pref_qmix_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\pref_qmix_learner_new.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\q_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\q_learner_differ.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\q_learner_globalRM.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\q_learner_new.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\modules\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules
+copying src\unified_marl\algorithms\kou\old\modules\agents\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\agents\central_rnn_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\agents\mlp_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\agents\mlp_ns_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\agents\rnn_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\critics\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\critics
+copying src\unified_marl\algorithms\kou\old\modules\critics\coma.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\critics
+copying src\unified_marl\algorithms\kou\old\modules\critics\maddpg_ns.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\critics
+copying src\unified_marl\algorithms\kou\old\modules\mixers\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\dmaq_general.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\dmaq_qatten.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\dmaq_qatten_weight.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\dmaq_si_weight.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\qmix.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\qmix_central_attention.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\qmix_central_no_hyper.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\qtran.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\vdn.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\utils\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\utils
+copying src\unified_marl\algorithms\kou\old\utils\dict2namedtuple.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\utils
+copying src\unified_marl\algorithms\kou\old\utils\model.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\utils
+copying src\unified_marl\algorithms\kou\old\utils\rl_utils.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\old\utils
+copying src\unified_marl\algorithms\kou\reward_models\MR.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\MultiPrefTransformer.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\NMR.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\PrefTransformer.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\encoder_decoder_divide.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\lstm.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\ops.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\q_function.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\torch_utils.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\trajectory_gpt2.py -> unified_marl-0.4.0\src\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\rghmf\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf
+copying src\unified_marl\algorithms\rghmf\components\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\components\action_selectors.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\components\episode_buffer.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\components\epsilon_schedules.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\components\transforms.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\controllers\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\controllers
+copying src\unified_marl\algorithms\rghmf\controllers\basic_controller.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\controllers
+copying src\unified_marl\algorithms\rghmf\controllers\rode_controller.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\controllers
+copying src\unified_marl\algorithms\rghmf\learners\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\coma_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\q_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\qtran_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\rode_hmf_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\rode_learner.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\modules\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules
+copying src\unified_marl\algorithms\rghmf\modules\action_encoders\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\action_encoders
+copying src\unified_marl\algorithms\rghmf\modules\action_encoders\obs_reward_encoder.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\action_encoders
+copying src\unified_marl\algorithms\rghmf\modules\agents\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\agents
+copying src\unified_marl\algorithms\rghmf\modules\agents\rnn_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\agents
+copying src\unified_marl\algorithms\rghmf\modules\agents\rode_agent.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\agents
+copying src\unified_marl\algorithms\rghmf\modules\base\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\base
+copying src\unified_marl\algorithms\rghmf\modules\base\networks.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\base
+copying src\unified_marl\algorithms\rghmf\modules\critics\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\critics
+copying src\unified_marl\algorithms\rghmf\modules\critics\coma.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\critics
+copying src\unified_marl\algorithms\rghmf\modules\mixers\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\mixers
+copying src\unified_marl\algorithms\rghmf\modules\mixers\qmix.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\mixers
+copying src\unified_marl\algorithms\rghmf\modules\mixers\qtran.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\mixers
+copying src\unified_marl\algorithms\rghmf\modules\mixers\vdn.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\mixers
+copying src\unified_marl\algorithms\rghmf\modules\role_selectors\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\role_selectors
+copying src\unified_marl\algorithms\rghmf\modules\role_selectors\dot_selector.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\role_selectors
+copying src\unified_marl\algorithms\rghmf\modules\role_selectors\q_selector.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\role_selectors
+copying src\unified_marl\algorithms\rghmf\modules\roles\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\roles
+copying src\unified_marl\algorithms\rghmf\modules\roles\dot_role.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\roles
+copying src\unified_marl\algorithms\rghmf\modules\roles\q_role.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\modules\roles
+copying src\unified_marl\algorithms\rghmf\utils\__init__.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\algorithms\rghmf\utils\dict2namedtuple.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\algorithms\rghmf\utils\logging.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\algorithms\rghmf\utils\rl_utils.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\algorithms\rghmf\utils\timehelper.py -> unified_marl-0.4.0\src\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\components\__init__.py -> unified_marl-0.4.0\src\unified_marl\components
+copying src\unified_marl\components\action_selectors.py -> unified_marl-0.4.0\src\unified_marl\components
+copying src\unified_marl\components\episode_buffer.py -> unified_marl-0.4.0\src\unified_marl\components
+copying src\unified_marl\components\epsilon_schedules.py -> unified_marl-0.4.0\src\unified_marl\components
+copying src\unified_marl\components\transforms.py -> unified_marl-0.4.0\src\unified_marl\components
+copying src\unified_marl\config\__init__.py -> unified_marl-0.4.0\src\unified_marl\config
+copying src\unified_marl\config\default.yaml -> unified_marl-0.4.0\src\unified_marl\config
+copying src\unified_marl\config\hmf.yaml -> unified_marl-0.4.0\src\unified_marl\config
+copying src\unified_marl\config\kou_runtime.yaml -> unified_marl-0.4.0\src\unified_marl\config
+copying src\unified_marl\config\algs\coma.yaml -> unified_marl-0.4.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\iql.yaml -> unified_marl-0.4.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\iql_beta.yaml -> unified_marl-0.4.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\qmix.yaml -> unified_marl-0.4.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\qmix_beta.yaml -> unified_marl-0.4.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\qtran.yaml -> unified_marl-0.4.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\vdn.yaml -> unified_marl-0.4.0\src\unified_marl\config\algs
+copying src\unified_marl\config\algs\vdn_beta.yaml -> unified_marl-0.4.0\src\unified_marl\config\algs
+copying src\unified_marl\config\envs\replenishment.yaml -> unified_marl-0.4.0\src\unified_marl\config\envs
+copying src\unified_marl\config\envs\sc2.yaml -> unified_marl-0.4.0\src\unified_marl\config\envs
+copying src\unified_marl\config\envs\sc2_beta.yaml -> unified_marl-0.4.0\src\unified_marl\config\envs
+copying src\unified_marl\config\envs\toy.yaml -> unified_marl-0.4.0\src\unified_marl\config\envs
+copying src\unified_marl\config\kou\icq\acpl_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\bc_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\bcmapt_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\cpl_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\cql_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\default.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\dppo_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\hacpl_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\iql_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\madpo_aux_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\madpo_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\maicpl_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\maidpo_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\offpg_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\qmix.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\qmix_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\vdn_smac.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\old\cw_qmix.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\cw_qmix_w_globalRM.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\default.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\ow_qmix.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\ow_qmix_w_globalRM.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\pref_qmix.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\pref_qmix_new.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix_differ.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix_make_datasets.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix_new.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix_w_globalRM.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qplex.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qplex_w_globalRM.yaml -> unified_marl-0.4.0\src\unified_marl\config\kou\old
+copying src\unified_marl\config\wang\coma.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\default.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\iql.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\iql_beta.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\qmix.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\qmix_beta.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\qtran.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\rode.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\rode_hmf.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\vdn.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\config\wang\vdn_beta.yaml -> unified_marl-0.4.0\src\unified_marl\config\wang
+copying src\unified_marl\controllers\__init__.py -> unified_marl-0.4.0\src\unified_marl\controllers
+copying src\unified_marl\controllers\basic_controller.py -> unified_marl-0.4.0\src\unified_marl\controllers
+copying src\unified_marl\datasets\__init__.py -> unified_marl-0.4.0\src\unified_marl\datasets
+copying src\unified_marl\datasets\episodes.py -> unified_marl-0.4.0\src\unified_marl\datasets
+copying src\unified_marl\datasets\labels.py -> unified_marl-0.4.0\src\unified_marl\datasets
+copying src\unified_marl\datasets\prompts.py -> unified_marl-0.4.0\src\unified_marl\datasets
+copying src\unified_marl\datasets\segments.py -> unified_marl-0.4.0\src\unified_marl\datasets
+copying src\unified_marl\envs\__init__.py -> unified_marl-0.4.0\src\unified_marl\envs
+copying src\unified_marl\envs\multiagentenv.py -> unified_marl-0.4.0\src\unified_marl\envs
+copying src\unified_marl\envs\replenishment.py -> unified_marl-0.4.0\src\unified_marl\envs
+copying src\unified_marl\envs\smac.py -> unified_marl-0.4.0\src\unified_marl\envs
+copying src\unified_marl\envs\toy.py -> unified_marl-0.4.0\src\unified_marl\envs
+copying src\unified_marl\learners\__init__.py -> unified_marl-0.4.0\src\unified_marl\learners
+copying src\unified_marl\learners\base.py -> unified_marl-0.4.0\src\unified_marl\learners
+copying src\unified_marl\learners\coma_learner.py -> unified_marl-0.4.0\src\unified_marl\learners
+copying src\unified_marl\learners\q_learner.py -> unified_marl-0.4.0\src\unified_marl\learners
+copying src\unified_marl\learners\qtran_learner.py -> unified_marl-0.4.0\src\unified_marl\learners
+copying src\unified_marl\modules\__init__.py -> unified_marl-0.4.0\src\unified_marl\modules
+copying src\unified_marl\modules\agents\__init__.py -> unified_marl-0.4.0\src\unified_marl\modules\agents
+copying src\unified_marl\modules\agents\rnn_agent.py -> unified_marl-0.4.0\src\unified_marl\modules\agents
+copying src\unified_marl\modules\critics\__init__.py -> unified_marl-0.4.0\src\unified_marl\modules\critics
+copying src\unified_marl\modules\critics\coma.py -> unified_marl-0.4.0\src\unified_marl\modules\critics
+copying src\unified_marl\modules\mixers\__init__.py -> unified_marl-0.4.0\src\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\qmix.py -> unified_marl-0.4.0\src\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\qtran.py -> unified_marl-0.4.0\src\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\vdn.py -> unified_marl-0.4.0\src\unified_marl\modules\mixers
+copying src\unified_marl\rewards\__init__.py -> unified_marl-0.4.0\src\unified_marl\rewards
+copying src\unified_marl\rewards\service.py -> unified_marl-0.4.0\src\unified_marl\rewards
+copying src\unified_marl\runners\__init__.py -> unified_marl-0.4.0\src\unified_marl\runners
+copying src\unified_marl\runners\episode_runner.py -> unified_marl-0.4.0\src\unified_marl\runners
+copying src\unified_marl\runners\parallel_runner.py -> unified_marl-0.4.0\src\unified_marl\runners
+copying src\unified_marl\trainers\__init__.py -> unified_marl-0.4.0\src\unified_marl\trainers
+copying src\unified_marl\trainers\offline.py -> unified_marl-0.4.0\src\unified_marl\trainers
+copying src\unified_marl\utils\__init__.py -> unified_marl-0.4.0\src\unified_marl\utils
+copying src\unified_marl\utils\logging.py -> unified_marl-0.4.0\src\unified_marl\utils
+copying src\unified_marl\utils\rl_utils.py -> unified_marl-0.4.0\src\unified_marl\utils
+copying tests\test_core.py -> unified_marl-0.4.0\tests
+copying tests\test_data_helpers.py -> unified_marl-0.4.0\tests
+copying tests\test_offline.py -> unified_marl-0.4.0\tests
+copying tests\test_rewards.py -> unified_marl-0.4.0\tests
+copying tests\test_wang.py -> unified_marl-0.4.0\tests
+Writing unified_marl-0.4.0\setup.cfg
+Creating tar archive
+removing 'unified_marl-0.4.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src\unified_marl.egg-info\PKG-INFO
+writing dependency_links to src\unified_marl.egg-info\dependency_links.txt
+writing entry points to src\unified_marl.egg-info\entry_points.txt
+writing requirements to src\unified_marl.egg-info\requires.txt
+writing top-level names to src\unified_marl.egg-info\top_level.txt
+reading manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\unified_marl
+copying src\unified_marl\api.py -> build\lib\unified_marl
+copying src\unified_marl\checkpoints.py -> build\lib\unified_marl
+copying src\unified_marl\cli.py -> build\lib\unified_marl
+copying src\unified_marl\registry.py -> build\lib\unified_marl
+copying src\unified_marl\__init__.py -> build\lib\unified_marl
+copying src\unified_marl\__main__.py -> build\lib\unified_marl
+creating build\lib\unified_marl\algorithms
+copying src\unified_marl\algorithms\__init__.py -> build\lib\unified_marl\algorithms
+creating build\lib\unified_marl\components
+copying src\unified_marl\components\action_selectors.py -> build\lib\unified_marl\components
+copying src\unified_marl\components\episode_buffer.py -> build\lib\unified_marl\components
+copying src\unified_marl\components\epsilon_schedules.py -> build\lib\unified_marl\components
+copying src\unified_marl\components\transforms.py -> build\lib\unified_marl\components
+copying src\unified_marl\components\__init__.py -> build\lib\unified_marl\components
+creating build\lib\unified_marl\config
+copying src\unified_marl\config\__init__.py -> build\lib\unified_marl\config
+creating build\lib\unified_marl\controllers
+copying src\unified_marl\controllers\basic_controller.py -> build\lib\unified_marl\controllers
+copying src\unified_marl\controllers\__init__.py -> build\lib\unified_marl\controllers
+creating build\lib\unified_marl\datasets
+copying src\unified_marl\datasets\episodes.py -> build\lib\unified_marl\datasets
+copying src\unified_marl\datasets\labels.py -> build\lib\unified_marl\datasets
+copying src\unified_marl\datasets\prompts.py -> build\lib\unified_marl\datasets
+copying src\unified_marl\datasets\segments.py -> build\lib\unified_marl\datasets
+copying src\unified_marl\datasets\__init__.py -> build\lib\unified_marl\datasets
+creating build\lib\unified_marl\envs
+copying src\unified_marl\envs\multiagentenv.py -> build\lib\unified_marl\envs
+copying src\unified_marl\envs\replenishment.py -> build\lib\unified_marl\envs
+copying src\unified_marl\envs\smac.py -> build\lib\unified_marl\envs
+copying src\unified_marl\envs\toy.py -> build\lib\unified_marl\envs
+copying src\unified_marl\envs\__init__.py -> build\lib\unified_marl\envs
+creating build\lib\unified_marl\learners
+copying src\unified_marl\learners\base.py -> build\lib\unified_marl\learners
+copying src\unified_marl\learners\coma_learner.py -> build\lib\unified_marl\learners
+copying src\unified_marl\learners\qtran_learner.py -> build\lib\unified_marl\learners
+copying src\unified_marl\learners\q_learner.py -> build\lib\unified_marl\learners
+copying src\unified_marl\learners\__init__.py -> build\lib\unified_marl\learners
+creating build\lib\unified_marl\modules
+copying src\unified_marl\modules\__init__.py -> build\lib\unified_marl\modules
+creating build\lib\unified_marl\rewards
+copying src\unified_marl\rewards\service.py -> build\lib\unified_marl\rewards
+copying src\unified_marl\rewards\__init__.py -> build\lib\unified_marl\rewards
+creating build\lib\unified_marl\runners
+copying src\unified_marl\runners\episode_runner.py -> build\lib\unified_marl\runners
+copying src\unified_marl\runners\parallel_runner.py -> build\lib\unified_marl\runners
+copying src\unified_marl\runners\__init__.py -> build\lib\unified_marl\runners
+creating build\lib\unified_marl\trainers
+copying src\unified_marl\trainers\offline.py -> build\lib\unified_marl\trainers
+copying src\unified_marl\trainers\__init__.py -> build\lib\unified_marl\trainers
+creating build\lib\unified_marl\utils
+copying src\unified_marl\utils\logging.py -> build\lib\unified_marl\utils
+copying src\unified_marl\utils\rl_utils.py -> build\lib\unified_marl\utils
+copying src\unified_marl\utils\__init__.py -> build\lib\unified_marl\utils
+creating build\lib\unified_marl\algorithms\hmf
+copying src\unified_marl\algorithms\hmf\adapter.py -> build\lib\unified_marl\algorithms\hmf
+copying src\unified_marl\algorithms\hmf\__init__.py -> build\lib\unified_marl\algorithms\hmf
+creating build\lib\unified_marl\algorithms\kou
+copying src\unified_marl\algorithms\kou\adapter.py -> build\lib\unified_marl\algorithms\kou
+copying src\unified_marl\algorithms\kou\__init__.py -> build\lib\unified_marl\algorithms\kou
+creating build\lib\unified_marl\algorithms\rghmf
+copying src\unified_marl\algorithms\rghmf\__init__.py -> build\lib\unified_marl\algorithms\rghmf
+creating build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\dqn_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_agent.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_qmix_agent.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_roma_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_vdac_agent.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents_IPC.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\maddpg_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\mfac_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\mfq_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\mfvfd_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\qmix_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\rode_action_encoder.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\rode_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\rode_selector.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\roma_agent.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\vdn_agents.py -> build\lib\unified_marl\algorithms\hmf\agent
+copying src\unified_marl\algorithms\hmf\agent\__init__.py -> build\lib\unified_marl\algorithms\hmf\agent
+creating build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\dqn.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_qmix.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdac.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn copy.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_02_formulate_meanQ.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_02_formulate_meanQ_IPC.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_IPC.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_k_means.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_roma.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_without_high_level.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\maddpg.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\mfac.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\mfq.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\mfvfd.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\qmix.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\vdn.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+copying src\unified_marl\algorithms\hmf\algorithms\__init__.py -> build\lib\unified_marl\algorithms\hmf\algorithms
+creating build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\buffer.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\buffer_mfq.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\buffer_roma.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\create_map.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\env_wrappers.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\gnn.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\make_env.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\misc.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\multiagentenv.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\networks.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\noise.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\ReplenishmentEnv.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\replenishment_env_wrappers.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\vec_env.py -> build\lib\unified_marl\algorithms\hmf\utils
+copying src\unified_marl\algorithms\hmf\utils\__init__.py -> build\lib\unified_marl\algorithms\hmf\utils
+creating build\lib\unified_marl\algorithms\kou\icq
+copying src\unified_marl\algorithms\kou\icq\__init__.py -> build\lib\unified_marl\algorithms\kou\icq
+creating build\lib\unified_marl\algorithms\kou\old
+copying src\unified_marl\algorithms\kou\old\__init__.py -> build\lib\unified_marl\algorithms\kou\old
+creating build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\encoder_decoder_divide.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\lstm.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\MR.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\MultiPrefTransformer.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\NMR.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\ops.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\PrefTransformer.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\q_function.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\torch_utils.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\trajectory_gpt2.py -> build\lib\unified_marl\algorithms\kou\reward_models
+copying src\unified_marl\algorithms\kou\reward_models\__init__.py -> build\lib\unified_marl\algorithms\kou\reward_models
+creating build\lib\unified_marl\algorithms\kou\icq\components
+copying src\unified_marl\algorithms\kou\icq\components\action_selectors.py -> build\lib\unified_marl\algorithms\kou\icq\components
+copying src\unified_marl\algorithms\kou\icq\components\epsilon_schedules.py -> build\lib\unified_marl\algorithms\kou\icq\components
+copying src\unified_marl\algorithms\kou\icq\components\reward_model.py -> build\lib\unified_marl\algorithms\kou\icq\components
+copying src\unified_marl\algorithms\kou\icq\components\__init__.py -> build\lib\unified_marl\algorithms\kou\icq\components
+creating build\lib\unified_marl\algorithms\kou\icq\controllers
+copying src\unified_marl\algorithms\kou\icq\controllers\basic_controller.py -> build\lib\unified_marl\algorithms\kou\icq\controllers
+copying src\unified_marl\algorithms\kou\icq\controllers\cql_basic_controller.py -> build\lib\unified_marl\algorithms\kou\icq\controllers
+copying src\unified_marl\algorithms\kou\icq\controllers\n_controller.py -> build\lib\unified_marl\algorithms\kou\icq\controllers
+copying src\unified_marl\algorithms\kou\icq\controllers\__init__.py -> build\lib\unified_marl\algorithms\kou\icq\controllers
+creating build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\bcmapt_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\bc_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\cpl_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\cql_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\dppo_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\iql_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\madpo_aux_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\madpo_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\offpg_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\q_learner.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+copying src\unified_marl\algorithms\kou\icq\learners\__init__.py -> build\lib\unified_marl\algorithms\kou\icq\learners
+creating build\lib\unified_marl\algorithms\kou\icq\modules
+copying src\unified_marl\algorithms\kou\icq\modules\__init__.py -> build\lib\unified_marl\algorithms\kou\icq\modules
+creating build\lib\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\icq\utils\dict2namedtuple.py -> build\lib\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\icq\utils\offpg_utils.py -> build\lib\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\icq\utils\rl_utils.py -> build\lib\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\icq\utils\th_utils.py -> build\lib\unified_marl\algorithms\kou\icq\utils
+copying src\unified_marl\algorithms\kou\icq\utils\__init__.py -> build\lib\unified_marl\algorithms\kou\icq\utils
+creating build\lib\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\agents\grnn_agent.py -> build\lib\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\agents\n_rnn_agent.py -> build\lib\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\agents\rnn_agent.py -> build\lib\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\agents\rnn_ns_agent.py -> build\lib\unified_marl\algorithms\kou\icq\modules\agents
+copying src\unified_marl\algorithms\kou\icq\modules\agents\__init__.py -> build\lib\unified_marl\algorithms\kou\icq\modules\agents
+creating build\lib\unified_marl\algorithms\kou\icq\modules\critics
+copying src\unified_marl\algorithms\kou\icq\modules\critics\coma.py -> build\lib\unified_marl\algorithms\kou\icq\modules\critics
+copying src\unified_marl\algorithms\kou\icq\modules\critics\doubleqv.py -> build\lib\unified_marl\algorithms\kou\icq\modules\critics
+copying src\unified_marl\algorithms\kou\icq\modules\critics\offpg.py -> build\lib\unified_marl\algorithms\kou\icq\modules\critics
+copying src\unified_marl\algorithms\kou\icq\modules\critics\__init__.py -> build\lib\unified_marl\algorithms\kou\icq\modules\critics
+creating build\lib\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\nmix.py -> build\lib\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\qatten.py -> build\lib\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\qmix.py -> build\lib\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\time_atten.py -> build\lib\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\vdn.py -> build\lib\unified_marl\algorithms\kou\icq\modules\mixers
+copying src\unified_marl\algorithms\kou\icq\modules\mixers\__init__.py -> build\lib\unified_marl\algorithms\kou\icq\modules\mixers
+creating build\lib\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\action_selectors.py -> build\lib\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\epsilon_schedules.py -> build\lib\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\preference.py -> build\lib\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\reward_model.py -> build\lib\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\reward_model_new.py -> build\lib\unified_marl\algorithms\kou\old\components
+copying src\unified_marl\algorithms\kou\old\components\__init__.py -> build\lib\unified_marl\algorithms\kou\old\components
+creating build\lib\unified_marl\algorithms\kou\old\controllers
+copying src\unified_marl\algorithms\kou\old\controllers\basic_controller.py -> build\lib\unified_marl\algorithms\kou\old\controllers
+copying src\unified_marl\algorithms\kou\old\controllers\central_basic_controller.py -> build\lib\unified_marl\algorithms\kou\old\controllers
+copying src\unified_marl\algorithms\kou\old\controllers\maddpg_controller.py -> build\lib\unified_marl\algorithms\kou\old\controllers
+copying src\unified_marl\algorithms\kou\old\controllers\__init__.py -> build\lib\unified_marl\algorithms\kou\old\controllers
+creating build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\dmaq_qatten_learner.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\dmaq_qatten_learner_globalRM.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\max_q_learner.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\max_q_learner_globalRM.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\pref_qmix_learner.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\pref_qmix_learner_new.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\q_learner.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\q_learner_differ.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\q_learner_globalRM.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\q_learner_new.py -> build\lib\unified_marl\algorithms\kou\old\learners
+copying src\unified_marl\algorithms\kou\old\learners\__init__.py -> build\lib\unified_marl\algorithms\kou\old\learners
+creating build\lib\unified_marl\algorithms\kou\old\modules
+copying src\unified_marl\algorithms\kou\old\modules\__init__.py -> build\lib\unified_marl\algorithms\kou\old\modules
+creating build\lib\unified_marl\algorithms\kou\old\utils
+copying src\unified_marl\algorithms\kou\old\utils\dict2namedtuple.py -> build\lib\unified_marl\algorithms\kou\old\utils
+copying src\unified_marl\algorithms\kou\old\utils\model.py -> build\lib\unified_marl\algorithms\kou\old\utils
+copying src\unified_marl\algorithms\kou\old\utils\rl_utils.py -> build\lib\unified_marl\algorithms\kou\old\utils
+copying src\unified_marl\algorithms\kou\old\utils\__init__.py -> build\lib\unified_marl\algorithms\kou\old\utils
+creating build\lib\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\agents\central_rnn_agent.py -> build\lib\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\agents\mlp_agent.py -> build\lib\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\agents\mlp_ns_agent.py -> build\lib\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\agents\rnn_agent.py -> build\lib\unified_marl\algorithms\kou\old\modules\agents
+copying src\unified_marl\algorithms\kou\old\modules\agents\__init__.py -> build\lib\unified_marl\algorithms\kou\old\modules\agents
+creating build\lib\unified_marl\algorithms\kou\old\modules\critics
+copying src\unified_marl\algorithms\kou\old\modules\critics\coma.py -> build\lib\unified_marl\algorithms\kou\old\modules\critics
+copying src\unified_marl\algorithms\kou\old\modules\critics\maddpg_ns.py -> build\lib\unified_marl\algorithms\kou\old\modules\critics
+copying src\unified_marl\algorithms\kou\old\modules\critics\__init__.py -> build\lib\unified_marl\algorithms\kou\old\modules\critics
+creating build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\dmaq_general.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\dmaq_qatten.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\dmaq_qatten_weight.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\dmaq_si_weight.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\qmix.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\qmix_central_attention.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\qmix_central_no_hyper.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\qtran.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\vdn.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+copying src\unified_marl\algorithms\kou\old\modules\mixers\__init__.py -> build\lib\unified_marl\algorithms\kou\old\modules\mixers
+creating build\lib\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\components\action_selectors.py -> build\lib\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\components\episode_buffer.py -> build\lib\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\components\epsilon_schedules.py -> build\lib\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\components\transforms.py -> build\lib\unified_marl\algorithms\rghmf\components
+copying src\unified_marl\algorithms\rghmf\components\__init__.py -> build\lib\unified_marl\algorithms\rghmf\components
+creating build\lib\unified_marl\algorithms\rghmf\controllers
+copying src\unified_marl\algorithms\rghmf\controllers\basic_controller.py -> build\lib\unified_marl\algorithms\rghmf\controllers
+copying src\unified_marl\algorithms\rghmf\controllers\rode_controller.py -> build\lib\unified_marl\algorithms\rghmf\controllers
+copying src\unified_marl\algorithms\rghmf\controllers\__init__.py -> build\lib\unified_marl\algorithms\rghmf\controllers
+creating build\lib\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\coma_learner.py -> build\lib\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\qtran_learner.py -> build\lib\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\q_learner.py -> build\lib\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\rode_hmf_learner.py -> build\lib\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\rode_learner.py -> build\lib\unified_marl\algorithms\rghmf\learners
+copying src\unified_marl\algorithms\rghmf\learners\__init__.py -> build\lib\unified_marl\algorithms\rghmf\learners
+creating build\lib\unified_marl\algorithms\rghmf\modules
+copying src\unified_marl\algorithms\rghmf\modules\__init__.py -> build\lib\unified_marl\algorithms\rghmf\modules
+creating build\lib\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\algorithms\rghmf\utils\dict2namedtuple.py -> build\lib\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\algorithms\rghmf\utils\logging.py -> build\lib\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\algorithms\rghmf\utils\rl_utils.py -> build\lib\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\algorithms\rghmf\utils\timehelper.py -> build\lib\unified_marl\algorithms\rghmf\utils
+copying src\unified_marl\algorithms\rghmf\utils\__init__.py -> build\lib\unified_marl\algorithms\rghmf\utils
+creating build\lib\unified_marl\algorithms\rghmf\modules\action_encoders
+copying src\unified_marl\algorithms\rghmf\modules\action_encoders\obs_reward_encoder.py -> build\lib\unified_marl\algorithms\rghmf\modules\action_encoders
+copying src\unified_marl\algorithms\rghmf\modules\action_encoders\__init__.py -> build\lib\unified_marl\algorithms\rghmf\modules\action_encoders
+creating build\lib\unified_marl\algorithms\rghmf\modules\agents
+copying src\unified_marl\algorithms\rghmf\modules\agents\rnn_agent.py -> build\lib\unified_marl\algorithms\rghmf\modules\agents
+copying src\unified_marl\algorithms\rghmf\modules\agents\rode_agent.py -> build\lib\unified_marl\algorithms\rghmf\modules\agents
+copying src\unified_marl\algorithms\rghmf\modules\agents\__init__.py -> build\lib\unified_marl\algorithms\rghmf\modules\agents
+creating build\lib\unified_marl\algorithms\rghmf\modules\base
+copying src\unified_marl\algorithms\rghmf\modules\base\networks.py -> build\lib\unified_marl\algorithms\rghmf\modules\base
+copying src\unified_marl\algorithms\rghmf\modules\base\__init__.py -> build\lib\unified_marl\algorithms\rghmf\modules\base
+creating build\lib\unified_marl\algorithms\rghmf\modules\critics
+copying src\unified_marl\algorithms\rghmf\modules\critics\coma.py -> build\lib\unified_marl\algorithms\rghmf\modules\critics
+copying src\unified_marl\algorithms\rghmf\modules\critics\__init__.py -> build\lib\unified_marl\algorithms\rghmf\modules\critics
+creating build\lib\unified_marl\algorithms\rghmf\modules\mixers
+copying src\unified_marl\algorithms\rghmf\modules\mixers\qmix.py -> build\lib\unified_marl\algorithms\rghmf\modules\mixers
+copying src\unified_marl\algorithms\rghmf\modules\mixers\qtran.py -> build\lib\unified_marl\algorithms\rghmf\modules\mixers
+copying src\unified_marl\algorithms\rghmf\modules\mixers\vdn.py -> build\lib\unified_marl\algorithms\rghmf\modules\mixers
+copying src\unified_marl\algorithms\rghmf\modules\mixers\__init__.py -> build\lib\unified_marl\algorithms\rghmf\modules\mixers
+creating build\lib\unified_marl\algorithms\rghmf\modules\roles
+copying src\unified_marl\algorithms\rghmf\modules\roles\dot_role.py -> build\lib\unified_marl\algorithms\rghmf\modules\roles
+copying src\unified_marl\algorithms\rghmf\modules\roles\q_role.py -> build\lib\unified_marl\algorithms\rghmf\modules\roles
+copying src\unified_marl\algorithms\rghmf\modules\roles\__init__.py -> build\lib\unified_marl\algorithms\rghmf\modules\roles
+creating build\lib\unified_marl\algorithms\rghmf\modules\role_selectors
+copying src\unified_marl\algorithms\rghmf\modules\role_selectors\dot_selector.py -> build\lib\unified_marl\algorithms\rghmf\modules\role_selectors
+copying src\unified_marl\algorithms\rghmf\modules\role_selectors\q_selector.py -> build\lib\unified_marl\algorithms\rghmf\modules\role_selectors
+copying src\unified_marl\algorithms\rghmf\modules\role_selectors\__init__.py -> build\lib\unified_marl\algorithms\rghmf\modules\role_selectors
+creating build\lib\unified_marl\modules\agents
+copying src\unified_marl\modules\agents\rnn_agent.py -> build\lib\unified_marl\modules\agents
+copying src\unified_marl\modules\agents\__init__.py -> build\lib\unified_marl\modules\agents
+creating build\lib\unified_marl\modules\critics
+copying src\unified_marl\modules\critics\coma.py -> build\lib\unified_marl\modules\critics
+copying src\unified_marl\modules\critics\__init__.py -> build\lib\unified_marl\modules\critics
+creating build\lib\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\qmix.py -> build\lib\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\qtran.py -> build\lib\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\vdn.py -> build\lib\unified_marl\modules\mixers
+copying src\unified_marl\modules\mixers\__init__.py -> build\lib\unified_marl\modules\mixers
+running egg_info
+writing src\unified_marl.egg-info\PKG-INFO
+writing dependency_links to src\unified_marl.egg-info\dependency_links.txt
+writing entry points to src\unified_marl.egg-info\entry_points.txt
+writing requirements to src\unified_marl.egg-info\requires.txt
+writing top-level names to src\unified_marl.egg-info\top_level.txt
+reading manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+adding license file 'LICENSE'
+adding license file 'NOTICE'
+writing manifest file 'src\unified_marl.egg-info\SOURCES.txt'
+copying src\unified_marl\config\default.yaml -> build\lib\unified_marl\config
+copying src\unified_marl\config\hmf.yaml -> build\lib\unified_marl\config
+copying src\unified_marl\config\kou_runtime.yaml -> build\lib\unified_marl\config
+creating build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\coma.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\iql.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\iql_beta.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\qmix.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\qmix_beta.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\qtran.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\vdn.yaml -> build\lib\unified_marl\config\algs
+copying src\unified_marl\config\algs\vdn_beta.yaml -> build\lib\unified_marl\config\algs
+creating build\lib\unified_marl\config\envs
+copying src\unified_marl\config\envs\replenishment.yaml -> build\lib\unified_marl\config\envs
+copying src\unified_marl\config\envs\sc2.yaml -> build\lib\unified_marl\config\envs
+copying src\unified_marl\config\envs\sc2_beta.yaml -> build\lib\unified_marl\config\envs
+copying src\unified_marl\config\envs\toy.yaml -> build\lib\unified_marl\config\envs
+creating build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\acpl_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\bcmapt_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\bc_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\cpl_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\cql_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\default.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\dppo_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\hacpl_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\iql_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\madpo_aux_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\madpo_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\maicpl_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\maidpo_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\offpg_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\qmix.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\qmix_smac.yaml -> build\lib\unified_marl\config\kou\icq
+copying src\unified_marl\config\kou\icq\vdn_smac.yaml -> build\lib\unified_marl\config\kou\icq
+creating build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\cw_qmix.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\cw_qmix_w_globalRM.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\default.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\ow_qmix.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\ow_qmix_w_globalRM.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\pref_qmix.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\pref_qmix_new.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix_differ.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix_make_datasets.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix_new.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qmix_w_globalRM.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qplex.yaml -> build\lib\unified_marl\config\kou\old
+copying src\unified_marl\config\kou\old\qplex_w_globalRM.yaml -> build\lib\unified_marl\config\kou\old
+creating build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\coma.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\default.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\iql.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\iql_beta.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\qmix.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\qmix_beta.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\qtran.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\rode.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\rode_hmf.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\vdn.yaml -> build\lib\unified_marl\config\wang
+copying src\unified_marl\config\wang\vdn_beta.yaml -> build\lib\unified_marl\config\wang
+warning: build_py: byte-compiling is disabled, skipping.
+
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\unified_marl
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\hmf
+copying build\lib\unified_marl\algorithms\hmf\adapter.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\dqn_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\hierarchical_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\hierarchical_qmix_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\hierarchical_roma_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\hierarchical_vdac_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents_IPC.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\maddpg_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\mfac_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\mfq_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\mfvfd_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\qmix_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\rode_action_encoder.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\rode_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\rode_selector.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\roma_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\vdn_agents.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+copying build\lib\unified_marl\algorithms\hmf\agent\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\agent
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\dqn.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_qmix.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_vdac.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn copy.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_02_formulate_meanQ.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_02_formulate_meanQ_IPC.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_IPC.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_k_means.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_roma.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\hierarchical_vdn_without_high_level.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\maddpg.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\mfac.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\mfq.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\mfvfd.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\qmix.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\vdn.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+copying build\lib\unified_marl\algorithms\hmf\algorithms\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\algorithms
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\buffer.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\buffer_mfq.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\buffer_roma.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\create_map.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\env_wrappers.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\gnn.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\make_env.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\misc.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\multiagentenv.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\networks.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\noise.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\ReplenishmentEnv.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\replenishment_env_wrappers.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\vec_env.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\utils\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf\utils
+copying build\lib\unified_marl\algorithms\hmf\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\hmf
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou
+copying build\lib\unified_marl\algorithms\kou\adapter.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\icq
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\icq\components
+copying build\lib\unified_marl\algorithms\kou\icq\components\action_selectors.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\components
+copying build\lib\unified_marl\algorithms\kou\icq\components\epsilon_schedules.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\components
+copying build\lib\unified_marl\algorithms\kou\icq\components\reward_model.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\components
+copying build\lib\unified_marl\algorithms\kou\icq\components\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\components
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\icq\controllers
+copying build\lib\unified_marl\algorithms\kou\icq\controllers\basic_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\controllers
+copying build\lib\unified_marl\algorithms\kou\icq\controllers\cql_basic_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\controllers
+copying build\lib\unified_marl\algorithms\kou\icq\controllers\n_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\controllers
+copying build\lib\unified_marl\algorithms\kou\icq\controllers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\controllers
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\bcmapt_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\bc_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\cpl_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\cql_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\dppo_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\iql_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\madpo_aux_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\madpo_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\offpg_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\q_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+copying build\lib\unified_marl\algorithms\kou\icq\learners\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\learners
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\icq\modules
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\icq\modules\agents
+copying build\lib\unified_marl\algorithms\kou\icq\modules\agents\grnn_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\agents
+copying build\lib\unified_marl\algorithms\kou\icq\modules\agents\n_rnn_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\agents
+copying build\lib\unified_marl\algorithms\kou\icq\modules\agents\rnn_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\agents
+copying build\lib\unified_marl\algorithms\kou\icq\modules\agents\rnn_ns_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\agents
+copying build\lib\unified_marl\algorithms\kou\icq\modules\agents\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\agents
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\icq\modules\critics
+copying build\lib\unified_marl\algorithms\kou\icq\modules\critics\coma.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\critics
+copying build\lib\unified_marl\algorithms\kou\icq\modules\critics\doubleqv.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\critics
+copying build\lib\unified_marl\algorithms\kou\icq\modules\critics\offpg.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\critics
+copying build\lib\unified_marl\algorithms\kou\icq\modules\critics\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\critics
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\icq\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\icq\modules\mixers\nmix.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\icq\modules\mixers\qatten.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\icq\modules\mixers\qmix.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\icq\modules\mixers\time_atten.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\icq\modules\mixers\vdn.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\icq\modules\mixers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\icq\modules\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\modules
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\icq\utils
+copying build\lib\unified_marl\algorithms\kou\icq\utils\dict2namedtuple.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\utils
+copying build\lib\unified_marl\algorithms\kou\icq\utils\offpg_utils.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\utils
+copying build\lib\unified_marl\algorithms\kou\icq\utils\rl_utils.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\utils
+copying build\lib\unified_marl\algorithms\kou\icq\utils\th_utils.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\utils
+copying build\lib\unified_marl\algorithms\kou\icq\utils\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq\utils
+copying build\lib\unified_marl\algorithms\kou\icq\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\icq
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\old
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\old\components
+copying build\lib\unified_marl\algorithms\kou\old\components\action_selectors.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\components
+copying build\lib\unified_marl\algorithms\kou\old\components\epsilon_schedules.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\components
+copying build\lib\unified_marl\algorithms\kou\old\components\preference.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\components
+copying build\lib\unified_marl\algorithms\kou\old\components\reward_model.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\components
+copying build\lib\unified_marl\algorithms\kou\old\components\reward_model_new.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\components
+copying build\lib\unified_marl\algorithms\kou\old\components\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\components
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\old\controllers
+copying build\lib\unified_marl\algorithms\kou\old\controllers\basic_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\controllers
+copying build\lib\unified_marl\algorithms\kou\old\controllers\central_basic_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\controllers
+copying build\lib\unified_marl\algorithms\kou\old\controllers\maddpg_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\controllers
+copying build\lib\unified_marl\algorithms\kou\old\controllers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\controllers
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\dmaq_qatten_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\dmaq_qatten_learner_globalRM.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\max_q_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\max_q_learner_globalRM.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\pref_qmix_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\pref_qmix_learner_new.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\q_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\q_learner_differ.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\q_learner_globalRM.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\q_learner_new.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+copying build\lib\unified_marl\algorithms\kou\old\learners\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\learners
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\old\modules
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\old\modules\agents
+copying build\lib\unified_marl\algorithms\kou\old\modules\agents\central_rnn_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\agents
+copying build\lib\unified_marl\algorithms\kou\old\modules\agents\mlp_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\agents
+copying build\lib\unified_marl\algorithms\kou\old\modules\agents\mlp_ns_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\agents
+copying build\lib\unified_marl\algorithms\kou\old\modules\agents\rnn_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\agents
+copying build\lib\unified_marl\algorithms\kou\old\modules\agents\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\agents
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\old\modules\critics
+copying build\lib\unified_marl\algorithms\kou\old\modules\critics\coma.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\critics
+copying build\lib\unified_marl\algorithms\kou\old\modules\critics\maddpg_ns.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\critics
+copying build\lib\unified_marl\algorithms\kou\old\modules\critics\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\critics
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\dmaq_general.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\dmaq_qatten.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\dmaq_qatten_weight.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\dmaq_si_weight.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\qmix.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\qmix_central_attention.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\qmix_central_no_hyper.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\qtran.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\vdn.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\mixers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules\mixers
+copying build\lib\unified_marl\algorithms\kou\old\modules\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\modules
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\old\utils
+copying build\lib\unified_marl\algorithms\kou\old\utils\dict2namedtuple.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\utils
+copying build\lib\unified_marl\algorithms\kou\old\utils\model.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\utils
+copying build\lib\unified_marl\algorithms\kou\old\utils\rl_utils.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\utils
+copying build\lib\unified_marl\algorithms\kou\old\utils\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old\utils
+copying build\lib\unified_marl\algorithms\kou\old\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\old
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\encoder_decoder_divide.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\lstm.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\MR.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\MultiPrefTransformer.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\NMR.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\ops.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\PrefTransformer.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\q_function.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\torch_utils.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\trajectory_gpt2.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\reward_models\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou\reward_models
+copying build\lib\unified_marl\algorithms\kou\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\kou
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\components
+copying build\lib\unified_marl\algorithms\rghmf\components\action_selectors.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\components
+copying build\lib\unified_marl\algorithms\rghmf\components\episode_buffer.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\components
+copying build\lib\unified_marl\algorithms\rghmf\components\epsilon_schedules.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\components
+copying build\lib\unified_marl\algorithms\rghmf\components\transforms.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\components
+copying build\lib\unified_marl\algorithms\rghmf\components\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\components
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\controllers
+copying build\lib\unified_marl\algorithms\rghmf\controllers\basic_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\controllers
+copying build\lib\unified_marl\algorithms\rghmf\controllers\rode_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\controllers
+copying build\lib\unified_marl\algorithms\rghmf\controllers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\controllers
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\learners
+copying build\lib\unified_marl\algorithms\rghmf\learners\coma_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\learners
+copying build\lib\unified_marl\algorithms\rghmf\learners\qtran_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\learners
+copying build\lib\unified_marl\algorithms\rghmf\learners\q_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\learners
+copying build\lib\unified_marl\algorithms\rghmf\learners\rode_hmf_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\learners
+copying build\lib\unified_marl\algorithms\rghmf\learners\rode_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\learners
+copying build\lib\unified_marl\algorithms\rghmf\learners\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\learners
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\modules
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\modules\action_encoders
+copying build\lib\unified_marl\algorithms\rghmf\modules\action_encoders\obs_reward_encoder.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\action_encoders
+copying build\lib\unified_marl\algorithms\rghmf\modules\action_encoders\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\action_encoders
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\modules\agents
+copying build\lib\unified_marl\algorithms\rghmf\modules\agents\rnn_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\agents
+copying build\lib\unified_marl\algorithms\rghmf\modules\agents\rode_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\agents
+copying build\lib\unified_marl\algorithms\rghmf\modules\agents\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\agents
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\modules\base
+copying build\lib\unified_marl\algorithms\rghmf\modules\base\networks.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\base
+copying build\lib\unified_marl\algorithms\rghmf\modules\base\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\base
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\modules\critics
+copying build\lib\unified_marl\algorithms\rghmf\modules\critics\coma.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\critics
+copying build\lib\unified_marl\algorithms\rghmf\modules\critics\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\critics
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\modules\mixers
+copying build\lib\unified_marl\algorithms\rghmf\modules\mixers\qmix.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\mixers
+copying build\lib\unified_marl\algorithms\rghmf\modules\mixers\qtran.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\mixers
+copying build\lib\unified_marl\algorithms\rghmf\modules\mixers\vdn.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\mixers
+copying build\lib\unified_marl\algorithms\rghmf\modules\mixers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\mixers
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\modules\roles
+copying build\lib\unified_marl\algorithms\rghmf\modules\roles\dot_role.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\roles
+copying build\lib\unified_marl\algorithms\rghmf\modules\roles\q_role.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\roles
+copying build\lib\unified_marl\algorithms\rghmf\modules\roles\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\roles
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\modules\role_selectors
+copying build\lib\unified_marl\algorithms\rghmf\modules\role_selectors\dot_selector.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\role_selectors
+copying build\lib\unified_marl\algorithms\rghmf\modules\role_selectors\q_selector.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\role_selectors
+copying build\lib\unified_marl\algorithms\rghmf\modules\role_selectors\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules\role_selectors
+copying build\lib\unified_marl\algorithms\rghmf\modules\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\modules
+creating build\bdist.win-amd64\wheel\unified_marl\algorithms\rghmf\utils
+copying build\lib\unified_marl\algorithms\rghmf\utils\dict2namedtuple.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\utils
+copying build\lib\unified_marl\algorithms\rghmf\utils\logging.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\utils
+copying build\lib\unified_marl\algorithms\rghmf\utils\rl_utils.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\utils
+copying build\lib\unified_marl\algorithms\rghmf\utils\timehelper.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\utils
+copying build\lib\unified_marl\algorithms\rghmf\utils\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf\utils
+copying build\lib\unified_marl\algorithms\rghmf\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms\rghmf
+copying build\lib\unified_marl\algorithms\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\algorithms
+copying build\lib\unified_marl\api.py -> build\bdist.win-amd64\wheel\.\unified_marl
+copying build\lib\unified_marl\checkpoints.py -> build\bdist.win-amd64\wheel\.\unified_marl
+copying build\lib\unified_marl\cli.py -> build\bdist.win-amd64\wheel\.\unified_marl
+creating build\bdist.win-amd64\wheel\unified_marl\components
+copying build\lib\unified_marl\components\action_selectors.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+copying build\lib\unified_marl\components\episode_buffer.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+copying build\lib\unified_marl\components\epsilon_schedules.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+copying build\lib\unified_marl\components\transforms.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+copying build\lib\unified_marl\components\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\components
+creating build\bdist.win-amd64\wheel\unified_marl\config
+creating build\bdist.win-amd64\wheel\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\coma.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\iql.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\iql_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\qmix.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\qmix_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\qtran.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\vdn.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\algs\vdn_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\algs
+copying build\lib\unified_marl\config\default.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config
+creating build\bdist.win-amd64\wheel\unified_marl\config\envs
+copying build\lib\unified_marl\config\envs\replenishment.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\envs
+copying build\lib\unified_marl\config\envs\sc2.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\envs
+copying build\lib\unified_marl\config\envs\sc2_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\envs
+copying build\lib\unified_marl\config\envs\toy.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\envs
+copying build\lib\unified_marl\config\hmf.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config
+creating build\bdist.win-amd64\wheel\unified_marl\config\kou
+creating build\bdist.win-amd64\wheel\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\acpl_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\bcmapt_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\bc_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\cpl_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\cql_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\default.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\dppo_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\hacpl_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\iql_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\madpo_aux_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\madpo_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\maicpl_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\maidpo_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\offpg_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\qmix.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\qmix_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+copying build\lib\unified_marl\config\kou\icq\vdn_smac.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\icq
+creating build\bdist.win-amd64\wheel\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\cw_qmix.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\cw_qmix_w_globalRM.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\default.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\ow_qmix.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\ow_qmix_w_globalRM.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\pref_qmix.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\pref_qmix_new.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\qmix.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\qmix_differ.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\qmix_make_datasets.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\qmix_new.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\qmix_w_globalRM.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\qplex.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou\old\qplex_w_globalRM.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\kou\old
+copying build\lib\unified_marl\config\kou_runtime.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config
+creating build\bdist.win-amd64\wheel\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\coma.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\default.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\iql.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\iql_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\qmix.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\qmix_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\qtran.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\rode.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\rode_hmf.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\vdn.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\wang\vdn_beta.yaml -> build\bdist.win-amd64\wheel\.\unified_marl\config\wang
+copying build\lib\unified_marl\config\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\config
+creating build\bdist.win-amd64\wheel\unified_marl\controllers
+copying build\lib\unified_marl\controllers\basic_controller.py -> build\bdist.win-amd64\wheel\.\unified_marl\controllers
+copying build\lib\unified_marl\controllers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\controllers
+creating build\bdist.win-amd64\wheel\unified_marl\datasets
+copying build\lib\unified_marl\datasets\episodes.py -> build\bdist.win-amd64\wheel\.\unified_marl\datasets
+copying build\lib\unified_marl\datasets\labels.py -> build\bdist.win-amd64\wheel\.\unified_marl\datasets
+copying build\lib\unified_marl\datasets\prompts.py -> build\bdist.win-amd64\wheel\.\unified_marl\datasets
+copying build\lib\unified_marl\datasets\segments.py -> build\bdist.win-amd64\wheel\.\unified_marl\datasets
+copying build\lib\unified_marl\datasets\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\datasets
+creating build\bdist.win-amd64\wheel\unified_marl\envs
+copying build\lib\unified_marl\envs\multiagentenv.py -> build\bdist.win-amd64\wheel\.\unified_marl\envs
+copying build\lib\unified_marl\envs\replenishment.py -> build\bdist.win-amd64\wheel\.\unified_marl\envs
+copying build\lib\unified_marl\envs\smac.py -> build\bdist.win-amd64\wheel\.\unified_marl\envs
+copying build\lib\unified_marl\envs\toy.py -> build\bdist.win-amd64\wheel\.\unified_marl\envs
+copying build\lib\unified_marl\envs\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\envs
+creating build\bdist.win-amd64\wheel\unified_marl\learners
+copying build\lib\unified_marl\learners\base.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+copying build\lib\unified_marl\learners\coma_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+copying build\lib\unified_marl\learners\qtran_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+copying build\lib\unified_marl\learners\q_learner.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+copying build\lib\unified_marl\learners\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\learners
+creating build\bdist.win-amd64\wheel\unified_marl\modules
+creating build\bdist.win-amd64\wheel\unified_marl\modules\agents
+copying build\lib\unified_marl\modules\agents\rnn_agent.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\agents
+copying build\lib\unified_marl\modules\agents\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\agents
+creating build\bdist.win-amd64\wheel\unified_marl\modules\critics
+copying build\lib\unified_marl\modules\critics\coma.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\critics
+copying build\lib\unified_marl\modules\critics\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\critics
+creating build\bdist.win-amd64\wheel\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\mixers\qmix.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\mixers\qtran.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\mixers\vdn.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\mixers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules\mixers
+copying build\lib\unified_marl\modules\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\modules
+copying build\lib\unified_marl\registry.py -> build\bdist.win-amd64\wheel\.\unified_marl
+creating build\bdist.win-amd64\wheel\unified_marl\rewards
+copying build\lib\unified_marl\rewards\service.py -> build\bdist.win-amd64\wheel\.\unified_marl\rewards
+copying build\lib\unified_marl\rewards\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\rewards
+creating build\bdist.win-amd64\wheel\unified_marl\runners
+copying build\lib\unified_marl\runners\episode_runner.py -> build\bdist.win-amd64\wheel\.\unified_marl\runners
+copying build\lib\unified_marl\runners\parallel_runner.py -> build\bdist.win-amd64\wheel\.\unified_marl\runners
+copying build\lib\unified_marl\runners\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\runners
+creating build\bdist.win-amd64\wheel\unified_marl\trainers
+copying build\lib\unified_marl\trainers\offline.py -> build\bdist.win-amd64\wheel\.\unified_marl\trainers
+copying build\lib\unified_marl\trainers\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\trainers
+creating build\bdist.win-amd64\wheel\unified_marl\utils
+copying build\lib\unified_marl\utils\logging.py -> build\bdist.win-amd64\wheel\.\unified_marl\utils
+copying build\lib\unified_marl\utils\rl_utils.py -> build\bdist.win-amd64\wheel\.\unified_marl\utils
+copying build\lib\unified_marl\utils\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl\utils
+copying build\lib\unified_marl\__init__.py -> build\bdist.win-amd64\wheel\.\unified_marl
+copying build\lib\unified_marl\__main__.py -> build\bdist.win-amd64\wheel\.\unified_marl
+running install_egg_info
+warning: install_lib: byte-compiling is disabled, skipping.
+
+Copying src\unified_marl.egg-info to build\bdist.win-amd64\wheel\.\unified_marl-0.4.0-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\unified_marl-0.4.0.dist-info\WHEEL
+creating 'G:\\AI\\Codex\\多智能体代码整合\\unified-marl\\dist\\.tmp-zk8vbnr9\\unified_marl-0.4.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'unified_marl/__init__.py'
+adding 'unified_marl/__main__.py'
+adding 'unified_marl/api.py'
+adding 'unified_marl/checkpoints.py'
+adding 'unified_marl/cli.py'
+adding 'unified_marl/registry.py'
+adding 'unified_marl/algorithms/__init__.py'
+adding 'unified_marl/algorithms/hmf/__init__.py'
+adding 'unified_marl/algorithms/hmf/adapter.py'
+adding 'unified_marl/algorithms/hmf/agent/__init__.py'
+adding 'unified_marl/algorithms/hmf/agent/dqn_agents.py'
+adding 'unified_marl/algorithms/hmf/agent/hierarchical_agent.py'
+adding 'unified_marl/algorithms/hmf/agent/hierarchical_qmix_agent.py'
+adding 'unified_marl/algorithms/hmf/agent/hierarchical_roma_agents.py'
+adding 'unified_marl/algorithms/hmf/agent/hierarchical_vdac_agent.py'
+adding 'unified_marl/algorithms/hmf/agent/hierarchical_vdn_agents.py'
+adding 'unified_marl/algorithms/hmf/agent/hierarchical_vdn_agents_IPC.py'
+adding 'unified_marl/algorithms/hmf/agent/maddpg_agents.py'
+adding 'unified_marl/algorithms/hmf/agent/mfac_agents.py'
+adding 'unified_marl/algorithms/hmf/agent/mfq_agents.py'
+adding 'unified_marl/algorithms/hmf/agent/mfvfd_agents.py'
+adding 'unified_marl/algorithms/hmf/agent/qmix_agents.py'
+adding 'unified_marl/algorithms/hmf/agent/rode_action_encoder.py'
+adding 'unified_marl/algorithms/hmf/agent/rode_agents.py'
+adding 'unified_marl/algorithms/hmf/agent/rode_selector.py'
+adding 'unified_marl/algorithms/hmf/agent/roma_agent.py'
+adding 'unified_marl/algorithms/hmf/agent/vdn_agents.py'
+adding 'unified_marl/algorithms/hmf/algorithms/__init__.py'
+adding 'unified_marl/algorithms/hmf/algorithms/dqn.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_qmix.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_vdac.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_vdn copy.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_vdn.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_02_formulate_meanQ.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_02_formulate_meanQ_IPC.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_IPC.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_k_means.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_roma.py'
+adding 'unified_marl/algorithms/hmf/algorithms/hierarchical_vdn_without_high_level.py'
+adding 'unified_marl/algorithms/hmf/algorithms/maddpg.py'
+adding 'unified_marl/algorithms/hmf/algorithms/mfac.py'
+adding 'unified_marl/algorithms/hmf/algorithms/mfq.py'
+adding 'unified_marl/algorithms/hmf/algorithms/mfvfd.py'
+adding 'unified_marl/algorithms/hmf/algorithms/qmix.py'
+adding 'unified_marl/algorithms/hmf/algorithms/vdn.py'
+adding 'unified_marl/algorithms/hmf/utils/ReplenishmentEnv.py'
+adding 'unified_marl/algorithms/hmf/utils/__init__.py'
+adding 'unified_marl/algorithms/hmf/utils/buffer.py'
+adding 'unified_marl/algorithms/hmf/utils/buffer_mfq.py'
+adding 'unified_marl/algorithms/hmf/utils/buffer_roma.py'
+adding 'unified_marl/algorithms/hmf/utils/create_map.py'
+adding 'unified_marl/algorithms/hmf/utils/env_wrappers.py'
+adding 'unified_marl/algorithms/hmf/utils/gnn.py'
+adding 'unified_marl/algorithms/hmf/utils/make_env.py'
+adding 'unified_marl/algorithms/hmf/utils/misc.py'
+adding 'unified_marl/algorithms/hmf/utils/multiagentenv.py'
+adding 'unified_marl/algorithms/hmf/utils/networks.py'
+adding 'unified_marl/algorithms/hmf/utils/noise.py'
+adding 'unified_marl/algorithms/hmf/utils/replenishment_env_wrappers.py'
+adding 'unified_marl/algorithms/hmf/utils/vec_env.py'
+adding 'unified_marl/algorithms/kou/__init__.py'
+adding 'unified_marl/algorithms/kou/adapter.py'
+adding 'unified_marl/algorithms/kou/icq/__init__.py'
+adding 'unified_marl/algorithms/kou/icq/components/__init__.py'
+adding 'unified_marl/algorithms/kou/icq/components/action_selectors.py'
+adding 'unified_marl/algorithms/kou/icq/components/epsilon_schedules.py'
+adding 'unified_marl/algorithms/kou/icq/components/reward_model.py'
+adding 'unified_marl/algorithms/kou/icq/controllers/__init__.py'
+adding 'unified_marl/algorithms/kou/icq/controllers/basic_controller.py'
+adding 'unified_marl/algorithms/kou/icq/controllers/cql_basic_controller.py'
+adding 'unified_marl/algorithms/kou/icq/controllers/n_controller.py'
+adding 'unified_marl/algorithms/kou/icq/learners/__init__.py'
+adding 'unified_marl/algorithms/kou/icq/learners/bc_learner.py'
+adding 'unified_marl/algorithms/kou/icq/learners/bcmapt_learner.py'
+adding 'unified_marl/algorithms/kou/icq/learners/cpl_learner.py'
+adding 'unified_marl/algorithms/kou/icq/learners/cql_learner.py'
+adding 'unified_marl/algorithms/kou/icq/learners/dppo_learner.py'
+adding 'unified_marl/algorithms/kou/icq/learners/iql_learner.py'
+adding 'unified_marl/algorithms/kou/icq/learners/madpo_aux_learner.py'
+adding 'unified_marl/algorithms/kou/icq/learners/madpo_learner.py'
+adding 'unified_marl/algorithms/kou/icq/learners/offpg_learner.py'
+adding 'unified_marl/algorithms/kou/icq/learners/q_learner.py'
+adding 'unified_marl/algorithms/kou/icq/modules/__init__.py'
+adding 'unified_marl/algorithms/kou/icq/modules/agents/__init__.py'
+adding 'unified_marl/algorithms/kou/icq/modules/agents/grnn_agent.py'
+adding 'unified_marl/algorithms/kou/icq/modules/agents/n_rnn_agent.py'
+adding 'unified_marl/algorithms/kou/icq/modules/agents/rnn_agent.py'
+adding 'unified_marl/algorithms/kou/icq/modules/agents/rnn_ns_agent.py'
+adding 'unified_marl/algorithms/kou/icq/modules/critics/__init__.py'
+adding 'unified_marl/algorithms/kou/icq/modules/critics/coma.py'
+adding 'unified_marl/algorithms/kou/icq/modules/critics/doubleqv.py'
+adding 'unified_marl/algorithms/kou/icq/modules/critics/offpg.py'
+adding 'unified_marl/algorithms/kou/icq/modules/mixers/__init__.py'
+adding 'unified_marl/algorithms/kou/icq/modules/mixers/nmix.py'
+adding 'unified_marl/algorithms/kou/icq/modules/mixers/qatten.py'
+adding 'unified_marl/algorithms/kou/icq/modules/mixers/qmix.py'
+adding 'unified_marl/algorithms/kou/icq/modules/mixers/time_atten.py'
+adding 'unified_marl/algorithms/kou/icq/modules/mixers/vdn.py'
+adding 'unified_marl/algorithms/kou/icq/utils/__init__.py'
+adding 'unified_marl/algorithms/kou/icq/utils/dict2namedtuple.py'
+adding 'unified_marl/algorithms/kou/icq/utils/offpg_utils.py'
+adding 'unified_marl/algorithms/kou/icq/utils/rl_utils.py'
+adding 'unified_marl/algorithms/kou/icq/utils/th_utils.py'
+adding 'unified_marl/algorithms/kou/old/__init__.py'
+adding 'unified_marl/algorithms/kou/old/components/__init__.py'
+adding 'unified_marl/algorithms/kou/old/components/action_selectors.py'
+adding 'unified_marl/algorithms/kou/old/components/epsilon_schedules.py'
+adding 'unified_marl/algorithms/kou/old/components/preference.py'
+adding 'unified_marl/algorithms/kou/old/components/reward_model.py'
+adding 'unified_marl/algorithms/kou/old/components/reward_model_new.py'
+adding 'unified_marl/algorithms/kou/old/controllers/__init__.py'
+adding 'unified_marl/algorithms/kou/old/controllers/basic_controller.py'
+adding 'unified_marl/algorithms/kou/old/controllers/central_basic_controller.py'
+adding 'unified_marl/algorithms/kou/old/controllers/maddpg_controller.py'
+adding 'unified_marl/algorithms/kou/old/learners/__init__.py'
+adding 'unified_marl/algorithms/kou/old/learners/dmaq_qatten_learner.py'
+adding 'unified_marl/algorithms/kou/old/learners/dmaq_qatten_learner_globalRM.py'
+adding 'unified_marl/algorithms/kou/old/learners/max_q_learner.py'
+adding 'unified_marl/algorithms/kou/old/learners/max_q_learner_globalRM.py'
+adding 'unified_marl/algorithms/kou/old/learners/pref_qmix_learner.py'
+adding 'unified_marl/algorithms/kou/old/learners/pref_qmix_learner_new.py'
+adding 'unified_marl/algorithms/kou/old/learners/q_learner.py'
+adding 'unified_marl/algorithms/kou/old/learners/q_learner_differ.py'
+adding 'unified_marl/algorithms/kou/old/learners/q_learner_globalRM.py'
+adding 'unified_marl/algorithms/kou/old/learners/q_learner_new.py'
+adding 'unified_marl/algorithms/kou/old/modules/__init__.py'
+adding 'unified_marl/algorithms/kou/old/modules/agents/__init__.py'
+adding 'unified_marl/algorithms/kou/old/modules/agents/central_rnn_agent.py'
+adding 'unified_marl/algorithms/kou/old/modules/agents/mlp_agent.py'
+adding 'unified_marl/algorithms/kou/old/modules/agents/mlp_ns_agent.py'
+adding 'unified_marl/algorithms/kou/old/modules/agents/rnn_agent.py'
+adding 'unified_marl/algorithms/kou/old/modules/critics/__init__.py'
+adding 'unified_marl/algorithms/kou/old/modules/critics/coma.py'
+adding 'unified_marl/algorithms/kou/old/modules/critics/maddpg_ns.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/__init__.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/dmaq_general.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/dmaq_qatten.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/dmaq_qatten_weight.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/dmaq_si_weight.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/qmix.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/qmix_central_attention.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/qmix_central_no_hyper.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/qtran.py'
+adding 'unified_marl/algorithms/kou/old/modules/mixers/vdn.py'
+adding 'unified_marl/algorithms/kou/old/utils/__init__.py'
+adding 'unified_marl/algorithms/kou/old/utils/dict2namedtuple.py'
+adding 'unified_marl/algorithms/kou/old/utils/model.py'
+adding 'unified_marl/algorithms/kou/old/utils/rl_utils.py'
+adding 'unified_marl/algorithms/kou/reward_models/MR.py'
+adding 'unified_marl/algorithms/kou/reward_models/MultiPrefTransformer.py'
+adding 'unified_marl/algorithms/kou/reward_models/NMR.py'
+adding 'unified_marl/algorithms/kou/reward_models/PrefTransformer.py'
+adding 'unified_marl/algorithms/kou/reward_models/__init__.py'
+adding 'unified_marl/algorithms/kou/reward_models/encoder_decoder_divide.py'
+adding 'unified_marl/algorithms/kou/reward_models/lstm.py'
+adding 'unified_marl/algorithms/kou/reward_models/ops.py'
+adding 'unified_marl/algorithms/kou/reward_models/q_function.py'
+adding 'unified_marl/algorithms/kou/reward_models/torch_utils.py'
+adding 'unified_marl/algorithms/kou/reward_models/trajectory_gpt2.py'
+adding 'unified_marl/algorithms/rghmf/__init__.py'
+adding 'unified_marl/algorithms/rghmf/components/__init__.py'
+adding 'unified_marl/algorithms/rghmf/components/action_selectors.py'
+adding 'unified_marl/algorithms/rghmf/components/episode_buffer.py'
+adding 'unified_marl/algorithms/rghmf/components/epsilon_schedules.py'
+adding 'unified_marl/algorithms/rghmf/components/transforms.py'
+adding 'unified_marl/algorithms/rghmf/controllers/__init__.py'
+adding 'unified_marl/algorithms/rghmf/controllers/basic_controller.py'
+adding 'unified_marl/algorithms/rghmf/controllers/rode_controller.py'
+adding 'unified_marl/algorithms/rghmf/learners/__init__.py'
+adding 'unified_marl/algorithms/rghmf/learners/coma_learner.py'
+adding 'unified_marl/algorithms/rghmf/learners/q_learner.py'
+adding 'unified_marl/algorithms/rghmf/learners/qtran_learner.py'
+adding 'unified_marl/algorithms/rghmf/learners/rode_hmf_learner.py'
+adding 'unified_marl/algorithms/rghmf/learners/rode_learner.py'
+adding 'unified_marl/algorithms/rghmf/modules/__init__.py'
+adding 'unified_marl/algorithms/rghmf/modules/action_encoders/__init__.py'
+adding 'unified_marl/algorithms/rghmf/modules/action_encoders/obs_reward_encoder.py'
+adding 'unified_marl/algorithms/rghmf/modules/agents/__init__.py'
+adding 'unified_marl/algorithms/rghmf/modules/agents/rnn_agent.py'
+adding 'unified_marl/algorithms/rghmf/modules/agents/rode_agent.py'
+adding 'unified_marl/algorithms/rghmf/modules/base/__init__.py'
+adding 'unified_marl/algorithms/rghmf/modules/base/networks.py'
+adding 'unified_marl/algorithms/rghmf/modules/critics/__init__.py'
+adding 'unified_marl/algorithms/rghmf/modules/critics/coma.py'
+adding 'unified_marl/algorithms/rghmf/modules/mixers/__init__.py'
+adding 'unified_marl/algorithms/rghmf/modules/mixers/qmix.py'
+adding 'unified_marl/algorithms/rghmf/modules/mixers/qtran.py'
+adding 'unified_marl/algorithms/rghmf/modules/mixers/vdn.py'
+adding 'unified_marl/algorithms/rghmf/modules/role_selectors/__init__.py'
+adding 'unified_marl/algorithms/rghmf/modules/role_selectors/dot_selector.py'
+adding 'unified_marl/algorithms/rghmf/modules/role_selectors/q_selector.py'
+adding 'unified_marl/algorithms/rghmf/modules/roles/__init__.py'
+adding 'unified_marl/algorithms/rghmf/modules/roles/dot_role.py'
+adding 'unified_marl/algorithms/rghmf/modules/roles/q_role.py'
+adding 'unified_marl/algorithms/rghmf/utils/__init__.py'
+adding 'unified_marl/algorithms/rghmf/utils/dict2namedtuple.py'
+adding 'unified_marl/algorithms/rghmf/utils/logging.py'
+adding 'unified_marl/algorithms/rghmf/utils/rl_utils.py'
+adding 'unified_marl/algorithms/rghmf/utils/timehelper.py'
+adding 'unified_marl/components/__init__.py'
+adding 'unified_marl/components/action_selectors.py'
+adding 'unified_marl/components/episode_buffer.py'
+adding 'unified_marl/components/epsilon_schedules.py'
+adding 'unified_marl/components/transforms.py'
+adding 'unified_marl/config/__init__.py'
+adding 'unified_marl/config/default.yaml'
+adding 'unified_marl/config/hmf.yaml'
+adding 'unified_marl/config/kou_runtime.yaml'
+adding 'unified_marl/config/algs/coma.yaml'
+adding 'unified_marl/config/algs/iql.yaml'
+adding 'unified_marl/config/algs/iql_beta.yaml'
+adding 'unified_marl/config/algs/qmix.yaml'
+adding 'unified_marl/config/algs/qmix_beta.yaml'
+adding 'unified_marl/config/algs/qtran.yaml'
+adding 'unified_marl/config/algs/vdn.yaml'
+adding 'unified_marl/config/algs/vdn_beta.yaml'
+adding 'unified_marl/config/envs/replenishment.yaml'
+adding 'unified_marl/config/envs/sc2.yaml'
+adding 'unified_marl/config/envs/sc2_beta.yaml'
+adding 'unified_marl/config/envs/toy.yaml'
+adding 'unified_marl/config/kou/icq/acpl_smac.yaml'
+adding 'unified_marl/config/kou/icq/bc_smac.yaml'
+adding 'unified_marl/config/kou/icq/bcmapt_smac.yaml'
+adding 'unified_marl/config/kou/icq/cpl_smac.yaml'
+adding 'unified_marl/config/kou/icq/cql_smac.yaml'
+adding 'unified_marl/config/kou/icq/default.yaml'
+adding 'unified_marl/config/kou/icq/dppo_smac.yaml'
+adding 'unified_marl/config/kou/icq/hacpl_smac.yaml'
+adding 'unified_marl/config/kou/icq/iql_smac.yaml'
+adding 'unified_marl/config/kou/icq/madpo_aux_smac.yaml'
+adding 'unified_marl/config/kou/icq/madpo_smac.yaml'
+adding 'unified_marl/config/kou/icq/maicpl_smac.yaml'
+adding 'unified_marl/config/kou/icq/maidpo_smac.yaml'
+adding 'unified_marl/config/kou/icq/offpg_smac.yaml'
+adding 'unified_marl/config/kou/icq/qmix.yaml'
+adding 'unified_marl/config/kou/icq/qmix_smac.yaml'
+adding 'unified_marl/config/kou/icq/vdn_smac.yaml'
+adding 'unified_marl/config/kou/old/cw_qmix.yaml'
+adding 'unified_marl/config/kou/old/cw_qmix_w_globalRM.yaml'
+adding 'unified_marl/config/kou/old/default.yaml'
+adding 'unified_marl/config/kou/old/ow_qmix.yaml'
+adding 'unified_marl/config/kou/old/ow_qmix_w_globalRM.yaml'
+adding 'unified_marl/config/kou/old/pref_qmix.yaml'
+adding 'unified_marl/config/kou/old/pref_qmix_new.yaml'
+adding 'unified_marl/config/kou/old/qmix.yaml'
+adding 'unified_marl/config/kou/old/qmix_differ.yaml'
+adding 'unified_marl/config/kou/old/qmix_make_datasets.yaml'
+adding 'unified_marl/config/kou/old/qmix_new.yaml'
+adding 'unified_marl/config/kou/old/qmix_w_globalRM.yaml'
+adding 'unified_marl/config/kou/old/qplex.yaml'
+adding 'unified_marl/config/kou/old/qplex_w_globalRM.yaml'
+adding 'unified_marl/config/wang/coma.yaml'
+adding 'unified_marl/config/wang/default.yaml'
+adding 'unified_marl/config/wang/iql.yaml'
+adding 'unified_marl/config/wang/iql_beta.yaml'
+adding 'unified_marl/config/wang/qmix.yaml'
+adding 'unified_marl/config/wang/qmix_beta.yaml'
+adding 'unified_marl/config/wang/qtran.yaml'
+adding 'unified_marl/config/wang/rode.yaml'
+adding 'unified_marl/config/wang/rode_hmf.yaml'
+adding 'unified_marl/config/wang/vdn.yaml'
+adding 'unified_marl/config/wang/vdn_beta.yaml'
+adding 'unified_marl/controllers/__init__.py'
+adding 'unified_marl/controllers/basic_controller.py'
+adding 'unified_marl/datasets/__init__.py'
+adding 'unified_marl/datasets/episodes.py'
+adding 'unified_marl/datasets/labels.py'
+adding 'unified_marl/datasets/prompts.py'
+adding 'unified_marl/datasets/segments.py'
+adding 'unified_marl/envs/__init__.py'
+adding 'unified_marl/envs/multiagentenv.py'
+adding 'unified_marl/envs/replenishment.py'
+adding 'unified_marl/envs/smac.py'
+adding 'unified_marl/envs/toy.py'
+adding 'unified_marl/learners/__init__.py'
+adding 'unified_marl/learners/base.py'
+adding 'unified_marl/learners/coma_learner.py'
+adding 'unified_marl/learners/q_learner.py'
+adding 'unified_marl/learners/qtran_learner.py'
+adding 'unified_marl/modules/__init__.py'
+adding 'unified_marl/modules/agents/__init__.py'
+adding 'unified_marl/modules/agents/rnn_agent.py'
+adding 'unified_marl/modules/critics/__init__.py'
+adding 'unified_marl/modules/critics/coma.py'
+adding 'unified_marl/modules/mixers/__init__.py'
+adding 'unified_marl/modules/mixers/qmix.py'
+adding 'unified_marl/modules/mixers/qtran.py'
+adding 'unified_marl/modules/mixers/vdn.py'
+adding 'unified_marl/rewards/__init__.py'
+adding 'unified_marl/rewards/service.py'
+adding 'unified_marl/runners/__init__.py'
+adding 'unified_marl/runners/episode_runner.py'
+adding 'unified_marl/runners/parallel_runner.py'
+adding 'unified_marl/trainers/__init__.py'
+adding 'unified_marl/trainers/offline.py'
+adding 'unified_marl/utils/__init__.py'
+adding 'unified_marl/utils/logging.py'
+adding 'unified_marl/utils/rl_utils.py'
+adding 'unified_marl-0.4.0.dist-info/licenses/LICENSE'
+adding 'unified_marl-0.4.0.dist-info/licenses/NOTICE'
+adding 'unified_marl-0.4.0.dist-info/METADATA'
+adding 'unified_marl-0.4.0.dist-info/WHEEL'
+adding 'unified_marl-0.4.0.dist-info/entry_points.txt'
+adding 'unified_marl-0.4.0.dist-info/top_level.txt'
+adding 'unified_marl-0.4.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built unified_marl-0.4.0.tar.gz and unified_marl-0.4.0-py3-none-any.whl

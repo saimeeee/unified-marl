@@ -1,0 +1,45 @@
+...........................................................              [100%]
+============================== warnings summary ===============================
+tests/test_wang.py::test_hmf_native_source_loss_and_update_parity[hierarchical_vdn_IPC]
+tests/test_wang.py::test_wang_train_resume_policy_and_evaluation[wang_hmf/hierarchical_vdn_IPC]
+  G:\AI\Codex\多智能体代码整合\unified-marl\.venv\Lib\site-packages\torch\nn\modules\loss.py:610: UserWarning: Using a target size (torch.Size([8, 3])) that is different to the input size (torch.Size([8, 1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+    return F.mse_loss(input, target, reduction=self.reduction)
+
+tests/test_wang.py::test_hmf_native_source_loss_and_update_parity[hierarchical_vdn_IPC]
+  G:\AI\Codex\多智能体代码整合\marl平台代码\王思哲\code\large_scale\hmf_replenishment\agent\hierarchical_vdn_agents_IPC.py:80: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+    probs = F.softmax(pol_out)
+
+tests/test_wang.py::test_hmf_native_source_loss_and_update_parity[hierarchical_vdn_IPC]
+  G:\AI\Codex\多智能体代码整合\marl平台代码\王思哲\code\large_scale\hmf_replenishment\agent\hierarchical_vdn_agents_IPC.py:87: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+    probs = F.softmax(pol_out)
+
+tests/test_wang.py::test_hmf_native_source_loss_and_update_parity[hierarchical_vdn_IPC]
+tests/test_wang.py::test_wang_train_resume_policy_and_evaluation[wang_hmf/hierarchical_vdn_IPC]
+  G:\AI\Codex\多智能体代码整合\unified-marl\src\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents_IPC.py:80: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+    probs = F.softmax(pol_out)
+
+tests/test_wang.py::test_hmf_native_source_loss_and_update_parity[hierarchical_vdn_IPC]
+tests/test_wang.py::test_wang_train_resume_policy_and_evaluation[wang_hmf/hierarchical_vdn_IPC]
+  G:\AI\Codex\多智能体代码整合\unified-marl\src\unified_marl\algorithms\hmf\agent\hierarchical_vdn_agents_IPC.py:87: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+    probs = F.softmax(pol_out)
+
+tests/test_wang.py::test_hmf_native_source_loss_and_update_parity[maddpg]
+  G:\AI\Codex\多智能体代码整合\marl平台代码\王思哲\code\large_scale\hmf_replenishment\algorithms\maddpg.py:109: FutureWarning: `torch.nn.utils.clip_grad_norm` is now deprecated in favor of `torch.nn.utils.clip_grad_norm_`.
+    torch.nn.utils.clip_grad_norm(self.agent.critic.parameters(), 0.5)
+
+tests/test_wang.py::test_hmf_native_source_loss_and_update_parity[maddpg]
+  G:\AI\Codex\多智能体代码整合\marl平台代码\王思哲\code\large_scale\hmf_replenishment\algorithms\maddpg.py:132: FutureWarning: `torch.nn.utils.clip_grad_norm` is now deprecated in favor of `torch.nn.utils.clip_grad_norm_`.
+    torch.nn.utils.clip_grad_norm(self.agent.policy.parameters(), 0.5)
+
+tests/test_wang.py::test_hmf_native_source_loss_and_update_parity[maddpg]
+tests/test_wang.py::test_wang_train_resume_policy_and_evaluation[wang_hmf/maddpg]
+  G:\AI\Codex\多智能体代码整合\unified-marl\src\unified_marl\algorithms\hmf\algorithms\maddpg.py:109: FutureWarning: `torch.nn.utils.clip_grad_norm` is now deprecated in favor of `torch.nn.utils.clip_grad_norm_`.
+    torch.nn.utils.clip_grad_norm(self.agent.critic.parameters(), 0.5)
+
+tests/test_wang.py::test_hmf_native_source_loss_and_update_parity[maddpg]
+tests/test_wang.py::test_wang_train_resume_policy_and_evaluation[wang_hmf/maddpg]
+  G:\AI\Codex\多智能体代码整合\unified-marl\src\unified_marl\algorithms\hmf\algorithms\maddpg.py:132: FutureWarning: `torch.nn.utils.clip_grad_norm` is now deprecated in favor of `torch.nn.utils.clip_grad_norm_`.
+    torch.nn.utils.clip_grad_norm(self.agent.policy.parameters(), 0.5)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+59 passed, 14 warnings in 19.16s
