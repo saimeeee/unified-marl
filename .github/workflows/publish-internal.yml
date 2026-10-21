@@ -3,6 +3,7 @@ on:
   push:
     branches: [main]
     paths:
+      - .gitattributes
       - .github/workflows/publish-internal.yml
       - delivery/release/**
       - tools/publish_internal_github.py

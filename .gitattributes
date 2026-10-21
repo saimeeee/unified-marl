@@ -1,0 +1,2 @@
+# Release inputs must preserve exact accepted bytes on all checkout hosts.
+delivery/release/** -text
